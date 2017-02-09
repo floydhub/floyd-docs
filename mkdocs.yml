@@ -3,3 +3,5 @@ pages:
     - Home: index.md
     - About: about.md
 theme: bootstrap
+extra_css:
+    - css/bootstrap_paper.min.css
