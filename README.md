@@ -1,2 +1,0 @@
-# floyd-docs
-FloydHub Documentation
