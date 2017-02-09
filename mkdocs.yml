@@ -1,0 +1,5 @@
+site_name: FloydHub Docs
+pages:
+    - Home: index.md
+    - About: about.md
+theme: bootstrap
