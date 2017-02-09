@@ -1,4 +1,6 @@
-site_name: FloydHub Docs
+site_name: FloydHub
+site_url: https://www.floydhub.com
+site_author: FloydHub Team
 pages:
     - Home: index.md
     - Installation: installation.md
@@ -6,3 +8,4 @@ pages:
 theme: bootstrap
 extra_css:
     - css/bootstrap_paper.min.css
+copyright: Copyright &copy; 2017 Floyd Labs Inc.
