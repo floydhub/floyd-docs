@@ -5,7 +5,7 @@ pages:
     - Home: index.md
     - Installation: installation.md
     - Commands: commands.md
-theme: bootstrap
+theme: flatly
 extra_css:
     - css/bootstrap_paper.min.css
 copyright: Copyright &copy; 2017 Floyd Labs Inc.
