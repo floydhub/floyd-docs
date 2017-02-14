@@ -1,6 +1,6 @@
 # Installing Floyd
 
-Floyd CLI is a python based command line tool to interact with the Floyd server.
+Floyd CLI is a python based command line tool to interact with Floyd.
 
 ## Prerequisites
 
@@ -9,6 +9,6 @@ runs on both Python 2.7 and Python 3.5.
 
 Use pip to install the cli.
 
-```
+```bash
 pip install -U floyd-cli
 ```

@@ -4,6 +4,7 @@ site_author: FloydHub Team
 pages:
     - Home: index.md
     - Installation: installation.md
+    - Guides: guides.md
     - Commands: commands.md
 theme: flatly
 extra_css:
