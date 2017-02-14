@@ -1,12 +1,38 @@
 site_name: FloydHub
 site_url: https://www.floydhub.com
 site_author: FloydHub Team
+
 pages:
-    - Home: index.md
-    - Installation: installation.md
-    - Guides: guides.md
-    - Commands: commands.md
-theme: flatly
-extra_css:
-    - css/bootstrap_paper.min.css
+    - Home:
+        - 'FloydHub': index.md
+        - 'Get Started': home/getting_started.md
+        - 'Installing CLI': home/installation.md
+        - 'Infrastructure': home/infrastructure.md
+        - 'Environments': home/environments.md
+    - Guides:
+        - 'Jupyter Notebook': guides/jupyter.md
+        - 'Floyd Serving': guides/serving.md
+    - Commands:
+        - 'floyd': commands/index.md
+        - 'floyd login': commands/login.md
+        - 'floyd init': commands/init.md
+        - 'floyd run': commands/run.md
+        - 'floyd data': commands/data/index.md
+        - 'floyd logs': commands/logs.md
+        - 'floyd status': commands/status.md
+        - 'floyd output': commands/output.md
+        - 'floyd info': commands/info.md
+        - 'floyd stop': commands/stop.md
+theme: material
+extra:
+  palette:
+    primary: 'blue'
+    accent: 'blue'
+    extra:
+  logo: 'img/f_white_small.png'
+  font:
+    text: 'Roboto'
+    code: 'Source Code Pro'
+# extra_css:
+#     - css/bootstrap_paper.min.css
 copyright: Copyright &copy; 2017 Floyd Labs Inc.
