@@ -30,7 +30,7 @@ The init command also creates a `.floydignore` file. Any files and directories y
 to this file. When you upload this dataset to Floyd, these files will not be uploaded.
 
 ### Example
-Initialize a floyd data in your project directory.
+Initialize a floyd dataset in your data directory.
 ```bash
 $ cd /data/mnist
 $ floyd data init mnist-data

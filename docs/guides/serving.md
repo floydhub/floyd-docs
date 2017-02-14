@@ -11,6 +11,7 @@ project.
 
 ```bash
 $ git clone https://github.com/floydhub/fast-style-transfer
+$ cd fast-style-transfer
 $ floyd init fast-style-transfer
 ```
 
@@ -80,7 +81,7 @@ When the experiment is finished, you can see the style transfered images by runn
 $ floyd output <RUN_ID>
 ```
 
-![Jupyter](img/taipei101_wave.jpg)
+![Jupyter](../img/taipei101_wave.jpg)
 
 ### Model API
 
@@ -110,7 +111,7 @@ Now you can send any image file as request to this api and it will return the st
 curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c
 ```
 
-![Jupyter](img/taipei_muse.jpg)
+![Jupyter](../img/taipei_muse.jpg)
 
 You will see the default style ([la_muse](#la_muse)) is applied to the input image.
 
@@ -120,7 +121,7 @@ You can also pass in the checkpoint to use and the image will be style transfere
 curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.ckpt"  https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm
 ```
 
-![Jupyter](img/taipei_udnie.jpg)
+![Jupyter](../img/taipei_udnie.jpg)
 
 This uses a different style checkpoint to render the image. All the logic for this is present in the `app.py` file. You can update it to 
 be as complex as you prefer.

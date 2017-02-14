@@ -3,11 +3,12 @@ site_url: https://www.floydhub.com
 site_author: FloydHub Team
 
 pages:
-    - Home:
-        - 'FloydHub': index.md
-        - 'Get Started': home/getting_started.md
-        - 'Installing CLI': home/installation.md
-        - 'Infrastructure': home/infrastructure.md
+    - Home: index.md
+    - Get Started:
+        - 'First Floyd Project': home/getting_started.md
+        - 'Using Datasets': home/using_datasets.md
+        - 'Managing Output': home/managing_output.md
+        - 'Installing Dependencies': home/installing_dependencies.md
         - 'Environments': home/environments.md
     - Guides:
         - 'Jupyter Notebook': guides/jupyter.md
@@ -17,7 +18,7 @@ pages:
         - 'floyd login': commands/login.md
         - 'floyd init': commands/init.md
         - 'floyd run': commands/run.md
-        - 'floyd data': commands/data/index.md
+        - 'floyd data': commands/data.md
         - 'floyd logs': commands/logs.md
         - 'floyd status': commands/status.md
         - 'floyd output': commands/output.md
@@ -33,6 +34,6 @@ extra:
   font:
     text: 'Roboto'
     code: 'Source Code Pro'
-# extra_css:
-#     - css/bootstrap_paper.min.css
+extra_css:
+    - css/bootstrap_paper.min.css
 copyright: Copyright &copy; 2017 Floyd Labs Inc.

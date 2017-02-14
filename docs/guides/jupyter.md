@@ -36,7 +36,7 @@ To view logs enter:
 You can open the link to your jupyter notebook. The notebooks should be available and you can run 
 any of them.
 
-![Jupyter](img/jupyter_home.png)
+![Jupyter](../img/jupyter_home.png)
 
 ### Selecting the environment
 
