@@ -7,8 +7,7 @@ to be in the directory where you initialized the project and you should be able 
 runs. You can also use the [web dashboard](https://www.floydhub.com/experiments) to view all your 
 projects in one place.
 
-### What do I do when I get "What do you do when you get “You are over the allowed limits for 
-this operation. Consider upgrading your account”?
+### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
 
 Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact 
 us from the [pricing](https://www.floydhub.com/pricing) page.
