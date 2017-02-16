@@ -21,7 +21,7 @@ download it and keep it in current path.
 
 ### Training data
 
-This project also requires access to a the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
+This project also requires access to the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
 [jq4ZXUCSVer4t65rWeyieG](https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/). You can specify this at the 
 `--data` paramter. For more information on how data inputs work, see [Using Datasets](../home/using_datasets.md).
 
@@ -102,15 +102,15 @@ $ floyd output <RUN_ID>
 
 You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered. 
 
-### Serving mode
+### Serve mode
 
-Floyd [run](../commands/run.md) command has a `serving` mode. This will upload the files in the current directory and run a special command - 
+Floyd [run](../commands/run.md) command has a `serve` mode. This will upload the files in the current directory and run a special command - 
 `python app.py`. Floyd expects this file to contain the code to run a web server and listen on port `5000`. You can see the 
 [app.py](https://github.com/floydhub/fast-style-transfer/blob/master/app.py) file in the sample repository. This file should handles the 
 incoming request and execute the code in `evaluate.py` and returns the output.
 
 ```bash
-$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serving
+$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serve
 Syncing code ...
 RUN ID                  NAME                              VERSION
 ----------------------  ------------------------------  ---------

@@ -1,6 +1,6 @@
 ## Storing output files
 
-Most of the experiments generate output like model files. In Floyd, any file 
+Most of the experiments generate output files. (eg. model files, evaluation output). In Floyd, any file 
 or directory you create under `/output/` directory at run time will be available 
 to you for download after the experiment finishes.
 

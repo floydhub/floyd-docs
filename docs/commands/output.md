@@ -9,7 +9,7 @@ floyd output [OPTIONS] ID
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
 | `--url`, `-u` |      | Only print the URL. The output directory can be viewed in the browser. |
-| ID |      | ID of your job. You can get the ID by running the [status](#status) command.    |
+| ID |      | ID of your job. You can get the ID by running the [status](./status) command.    |
 
 ### Description
 Most jobs generate output. Any output that needs to be retained after the job is finised should be send to `/output` path.

@@ -62,8 +62,8 @@ Now initialize a new Floyd project with the [init](../commands/init.md) command 
 choose a project name.
 
 ```bash
-$ floyd init mnist
-Project "mnist" initialized in current directory
+$ floyd init first_proj
+Project "first_proj" initialized in current directory
 ```
 
 Now you are ready to run your first project on Floyd!
@@ -78,37 +78,15 @@ handwriting digit recognition with MNIST dataset.
 Use the floyd [run](../commands/run.md) command to run the code.
 
 ```bash
-$ floyd run "python train_tf.py -lr 0.01 -output /output/model.bin"
+$ floyd run "python 2_BasicModels/nearest_neighbor.py" 
 Syncing code ...
-RUN ID                  NAME                           VERSION
-----------------------  ---------------------------  ---------
-dTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project:7        7
+RUN ID                  NAME                      VERSION
+----------------------  ---------------- 	 ---------
+AKpnXqj9BEU6d8KhmygTyb  alice/first_proj:1         2
 ...
 ```
 
-Congratulations! your first experiment is now running on Floyd. 
-
-## Viewing logs
-
-You can view the logs of the experiment you just kicked off with the 
-[logs](../commands/logs.md) command. You need to pass the `RUN ID` from the 
-previous step to get the logs.
-
-```bash
-$ floyd logs dTe2cJJrNR2CBD74rSZXPA
-...
-################################################################################
-
-2017-01-20 19:18:41,353 INFO - Run Output:
-2017-01-20 19:18:42,306 INFO - Epoch: 0001 cost= 0.200682446
-2017-01-20 19:18:42,447 INFO - Epoch: 0002 cost= 0.165553480
-...
-################################################################################
-...
-```
-
-You can see the output of your code in the `Run Output` section of the logs.
-Any thing you log or print in your code will appear here.
+Congratulations! Your first experiment is now running on Floyd. 
 
 ## Checking run status
 
@@ -117,12 +95,38 @@ a single `RUN ID` to get its status. Or the CLI will show the results of all you
 in that project.
 
 ```bash
-$ floyd status
-RUN ID                  CREATED        STATUS      DURATION  NAME               INSTANCE      VERSION
-----------------------  -------------  --------  ----------  -----------------  ----------  ---------
-ncGPzDrm7XV58pBeKGUxd6  just now       success            3  alice/tf-demo:2     cpu                 2
-mBDHCqro9Hd2dHTYdRReGd  4 minutes ago  success            4  alice/tf-demo:1     cpu                 1
+RUN ID                  CREATED        STATUS    DURATION(s)  NAME                INSTANCE     VERSION
+----------------------  ---------      --------  -----------  ------------------- ---------   --------
+AKpnXqj9BEU6d8KhmygTyb  just now       running            13  alice/first_proj:1  cpu                2
+mBDHCqro9Hd2dHTYdRReGd  4 minutes ago  success           426  alice/tf-demo:1     cpu                1
 ```
+
+## Viewing logs
+
+You can view the logs of the experiment you just kicked off with the 
+[logs](../commands/logs.md) command. You need to pass the `RUN ID` from the 
+previous step to get the logs.
+
+```bash
+$ floyd logs AKpnXqj9BEU6d8KhmygTyb
+...
+##############################################################################
+
+2017-02-15 22:25:20,315 INFO - Run Output:
+...
+2017-02-15 22:25:26,540 INFO - Test 0 Prediction: 7 True Class: 7
+2017-02-15 22:25:26,555 INFO - Test 1 Prediction: 2 True Class: 2
+2017-02-15 22:25:26,569 INFO - Test 2 Prediction: 1 True Class: 1
+....
+2017-02-15 22:25:29,783 INFO - Done!
+2017-02-15 22:25:29,784 INFO - Accuracy: 0.9200000000000007
+2017-02-15 22:25:29,942 INFO - 
+##############################################################################
+...
+```
+
+You can see the output of your code in the `Run Output` section of the logs.
+Any thing you log or print in your code will appear here.
 
 ## Iterating on your project
 

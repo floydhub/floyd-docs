@@ -10,7 +10,7 @@ floyd logs [OPTIONS] ID
 | --------------- | ------- | ----------- |
 | `--url`, `-u` |      | Only print the URL. The logs can be viewed in the browser. |
 | `--tail`, `-t` |      | Stream the output of your code in real-time. |
-| ID |      | ID of your job. You can get the ID by running the [status](#status) command.    |
+| ID |      | ID of your job. You can get the ID by running the [status](./status) command.    |
 
 ### Description
 Any data sent to STDOUT and STDERR by your code will become available here. Make sure your 

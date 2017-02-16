@@ -1,12 +1,12 @@
 
 Manage your data sets on Floyd. The subcommands are:
 
-| Command            | Description              |
-| ------------------ | ------------------------ |
-| floyd data init    | Initialize a new dataset |
-| floyd data upload  | Create a new dataset by uploading data |
-| floyd data status  | List all your datasets  |
-| floyd data output  | View contents of a dataset |
+| Command              | Description              |
+| -------------------  | ------------------------ |
+| floyd data init      | Initialize a new dataset |
+| floyd data upload    | Create a new dataset by uploading data |
+| floyd data status    | List all your datasets  |
+| floyd data output    | View contents of a dataset |
 
 ## floyd data init 
 
@@ -24,7 +24,7 @@ floyd data init DATASET_NAME
 
 ### Description
 Floyd can manage your experiment datasets and make them available when running your projects.This command initializes a new 
-dataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run [upload](#upload).
+dataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run [upload](#floyd-data-upload).
 
 The init command also creates a `.floydignore` file. Any files and directories you do not want Floyd to track can be added 
 to this file. When you upload this dataset to Floyd, these files will not be uploaded.
@@ -49,7 +49,7 @@ floyd data upload
 ```
 
 ### Description
-Upload contents of the current directory as a new dataset. This data can now be referred to in the [run](#run) command.
+Upload contents of the current directory as a new dataset. This data can now be referred to in the [run](./run.md) command.
 At run time the data will be available at the `/input` path.
 
 Floyd also versions your data so you can choose any specific version to use in your runs.
@@ -58,7 +58,12 @@ Floyd also versions your data so you can choose any specific version to use in y
 ```bash
 $ floyd data upload
 Creating data source. Uploading files ...
+DATA ID                 NAME                    VERSION
+----------------------  --------------------  ---------
+GY3QRFFUA8KpbnqvroTPPW  alice/mnist-data:1            1
 ```
+Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
+using this data id. See [here](../home/using_datasets/#using-data-set-in-experiments) for more details.
 
 ---------------------------------
 
