@@ -17,7 +17,7 @@ $ floyd init neural-networks
 
 ### Run in Jupyter mode
 
-Floyd [run](#run) command has a `jupyter` mode. This will run upload the jupyter notebooks in the current 
+Floyd [run](../commands/run.md) command has a `jupyter` mode. This will upload the jupyter notebooks in the current 
 directory and start a jupyter server for you.
 
 ```bash
@@ -40,9 +40,9 @@ any of them.
 
 ### Selecting the environment
 
-Jupyter notebooks also run in the same environments as other jobs. You can select any environment you want 
-along with the `--env` parameter of the [run](#run) command. You can see the list of supported environments
-[here](#environments).
+Jupyter notebooks run in the same environments as other jobs. You can select any environment you want 
+along with the `--env` parameter of the [run](../commands/run.md) command. You can see the list of supported environments
+[here](../home/environments.md).
 
 ```bash
 $ floyd run --mode jupyter --env tensorflow_py2
@@ -63,5 +63,5 @@ relevant notebooks by selecting `File > Download as` menu from the Jupyter noteb
 
 ### Stopping the job
 
-Once you have experimented with your code, you still need to stop the job. Run the [stop](#stop) command 
+Once you have experimented with your code, you still need to stop the job. Run the [stop](../commands/stop.md) command 
 for this.

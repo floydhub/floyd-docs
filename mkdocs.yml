@@ -12,7 +12,8 @@ pages:
         - 'Environments': home/environments.md
     - Guides:
         - 'Jupyter Notebook': guides/jupyter.md
-        - 'Floyd Serving': guides/serving.md
+        - 'Style Transfer': guides/style_transfer.md
+        - 'Public Datasets': guides/datasets.md
     - Commands:
         - 'floyd': commands/index.md
         - 'floyd login': commands/login.md

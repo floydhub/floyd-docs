@@ -12,5 +12,3 @@ process payments.
 ### When will my credit card be charged?
 
 You can see your billing due date in the `Usage` tab on your Floydhub dashboard.
-
-

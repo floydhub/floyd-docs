@@ -17,3 +17,9 @@ Access token page will now open in your browser. Continue? [Y/n]:
 Please paste the code here:
 Login Successful
 ```
+
+### Authentication Tokens
+
+Floyd uses [Json Web Tokens](https://jwt.io/introduction/) for authentication. Your 
+token will be stored in the `~/.floydconfig` file. They are valid for 7 days after 
+which you need to login again. This file will be removed when you [logout](logout.md).

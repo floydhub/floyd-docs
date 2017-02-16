@@ -1,12 +1,15 @@
 ### Running on a GPU Instance
 
-It is very easy to run your code on a GPU instance of Floyd. Just add `--gpu` flag 
-to the floyd `run` command.
+It is very simple to run your code on a GPU instance of Floyd. Just add `--gpu` flag 
+to the floyd [run](../commands/run.md) command.
 
-    $ floyd run --gpu "python 1_Introduction/helloworld.py > /output/tf-output.txt"
-    Creating module. Uploading 20 files ...
-    RUN ID                  NAME                 VERSION
-    ----------------------  -----------------  ---------
-    KYBMnXZo3DsGGCiRdcYNUc  narenst/tf-demo:4          4
 
-Make sure your code is optimized to use the available GPU.
+```bash
+$ floyd run --gpu "python train_tf.py -lr 0.01 -output /output/model.bin"
+Syncing code ...
+RUN ID                  NAME                 VERSION
+----------------------  -----------------  ---------
+KYBMnXZo3DsGGCiRdcYNUc  floydhub/tf-demo:4         4
+```
+
+Just make sure your code is optimized to use the available GPU.
