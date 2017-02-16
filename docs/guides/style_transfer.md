@@ -40,7 +40,7 @@ $ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG "python style.py
 ```
 
 This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
-by using the [logs](../commands/logs.md) command.
+by using the [logs](../commands/logs.md) command. 
 
 ```bash
 $ floyd logs <RUN_ID> -t
@@ -83,7 +83,8 @@ It takes about 8 hours to train a model that works well. You can instead try one
 
 ## Evaluate pre-trained models
 
-If you want to try out some awesome pre-trained models, we have a datasource for that available ([Js534T344XYBPMvWqhxJNj](https://www.floydhub.com/viewer/data/Wociv8zwEmdRSSmNXbFwoK/)) publicly.
+If you want to try out some awesome pre-trained models for various styles, we have a datasource for that available 
+([Js534T344XYBPMvWqhxJNj](https://www.floydhub.com/viewer/data/Wociv8zwEmdRSSmNXbFwoK/)) publicly. 
 You can play with any of these model and style transfer any image you prefer. Just add them to `images` directory. And point to the 
 right model in the `--checkpoint` parameter.
 
@@ -114,8 +115,10 @@ You can now host this model as a REST API. This means you can send any image to 
 
 Floyd [run](../commands/run.md) command has a `serve` mode. This will upload the files in the current directory and run a special command - 
 `python app.py`. Floyd expects this file to contain the code to run a web server and listen on port `5000`. You can see the 
-[app.py](https://github.com/floydhub/fast-style-transfer/blob/master/app.py) file in the sample repository. This file should handles the 
-incoming request and execute the code in `evaluate.py` and returns the output.
+[app.py](https://github.com/floydhub/fast-style-transfer/blob/master/app.py) file in the sample repository. This file handles the 
+incoming request, executes the code in `evaluate.py` and returns the output.
+
+*Note that this feature is in preview mode and is not production ready yet*
 
 ```bash
 $ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serve

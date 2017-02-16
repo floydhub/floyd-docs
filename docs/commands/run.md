@@ -11,7 +11,7 @@ floyd run [OPTIONS] [COMMAND]
 | `--gpu/--cpu` |  cpu    | If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
 | `--data <ID>` |    | ID of the data source to link to. See [data](../home/using_datasets) section for more details. |
 | `--mode [jupyter|serve]` |  command  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [jupyter](../guides/jupyter) and [serve](#serve) sections for more info on them. |
-| `--env [tensorflow_py3|tensorflow_py2]` | tensorflow_py3  | Specify the environment you want to use for your project. See [environments](../home/environments) for the full list. |
+| `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../home/environments) for the full list. |
 | command |      | Command to execute when running your project on Floyd. |
 
 ### Description
