@@ -65,8 +65,8 @@ interactive Jupyter session (see [Managing Output](/home/managing_output)).
 
 ### Saving Jupyter Notebooks
 
-**IMPORTANT**: Floyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any 
-relevant notebooks by selecting `File > Download As` menu from the Jupyter notebook.
+Jupyter notebooks are saved as run outputs. You can view and download them after the Jupyter instance is 
+stopped. You can use the [output](../commands/output.md) command for this.
 
 ### Stopping Jupyter Server
 
