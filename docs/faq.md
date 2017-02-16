@@ -10,7 +10,7 @@ projects in one place.
 ### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
 
 Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact 
-us from the [pricing](http://localhost:3000/pricing) page.
+us from the [pricing](https://www.floydhub.com/pricing) page.
 
 ## Billing
 
