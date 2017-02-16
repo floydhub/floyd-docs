@@ -25,6 +25,39 @@ GY3QRFFUA8KpbnqvroTPPW  alice/sent-data:1            1
 Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
 using this data id. Read below for details.
 
+
+## Creating a dataset from downloads
+
+In the case where your datasets are available on the internet, you can download them directly into 
+Floyd. You can run your download script like any other job using the [run](../commands/run.md) command.
+Just store the downloaded files to the `/output` directory.
+
+```bash
+# Make sure the downloaded files are stored in /output
+$ floyd run "sh download_data.sh"
+Syncing code ...
+...
+
+$ floyd logs -t GY3QRFFUA8KpbnqvroTPPW
+...
+2017-02-16 03:41:15,863 INFO Downloading files to /output:
+2017-02-16 03:41:15,863 INFO Creating /output/Af4ssasdf.jpg
+2017-02-16 03:41:15,863 INFO Creating /output/2aF2safs2.jpg
+...
+```
+You can get the id of the output using the [info](../commands/info.md)
+
+```bash
+$ floyd info GY3QRFFUA8KpbnqvroTPPW
+-----------  ----------------------------------------------------
+Run ID       GY3QRFFUA8KpbnqvroTPPW
+Output ID    VB9bF6vtyvrHLdUsFbUuvW
+...
+-----------  ----------------------------------------------------
+```
+
+Now you can use the `Output_ID` as the value for `--data` parameter when running your next experiment.
+
 ## Using data set in experiments
 
 To use a public or your presonal dataset in your project you can use 
