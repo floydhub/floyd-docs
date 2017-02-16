@@ -25,7 +25,8 @@ $ floyd init fast-style-transfer
 ## Train a model
 
 You can train your model by running the `style.py` script in this repo on Floyd. You can specify any style image to use in the command line. Just 
-download it and keep it in current path.
+download it and keep it in current path. In this example we will be starting from a 
+[pre-trained model](https://github.com/floydhub/fast-style-transfer#evaluating-style-transfer-networks).
 
 ### Training data
 
@@ -36,7 +37,7 @@ This project also requires access to the imagenet-vgg-verydeep-19 model and imag
 ### Training
 
 ```bash
-$ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG "python style.py --style examples/style/la_muse.jpg --epoch 1 --total-iterations 10 --checkpoint-dir /output --content-weight 1.5e1 --batch-size 20"
+$ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG "python style.py --style examples/style/la_muse.jpg --base-model-path /input/pre-trained-tf/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output"
 ```
 
 This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
@@ -58,7 +59,7 @@ You can evaluate the generated model by running `evaluate.py` on sample images. 
 as the datasource in this step. Add any image you want to style transfer to the `images` directory. Then run `evaluate.py`.
 
 ```bash
-floyd run --gpu --env keras:py2 --data <REPLACE_WITH_OUTPUT_ID> "python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/"
+floyd run --env keras:py2 --data <REPLACE_WITH_OUTPUT_ID> "python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/"
 ```
 You can track the status of the run with the status or logs command.
 
