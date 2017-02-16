@@ -25,6 +25,7 @@ pages:
         - 'floyd output': commands/output.md
         - 'floyd info': commands/info.md
         - 'floyd stop': commands/stop.md
+        - 'floyd logout': commands/logout.md
     - FAQs: faq.md
 theme: material
 extra:

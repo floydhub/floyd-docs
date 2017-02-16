@@ -1,10 +1,12 @@
-This page will walk you through running your first project on Floyd. 
+This page will walk you through running your first project on Floyd. We will train a 
+convolutional neural network (CNN) model for handwritten digit recognition using the MNIST database. 
+For more information on this, visit [Tensorflow's tutorial](https://www.tensorflow.org/versions/r0.10/tutorials/mnist/pros/).
 We will be using Tensorflow but Floyd 
-can be used for a wide range of [frameworks](environments.md).
+supports a wide variety of other popular [deep learning frameworks](environments.md) also.
 
 ## Installing Floyd CLI 
 
-Floyd CLI is a python based command line tool to interact with Floyd.
+Floyd CLI is a python based command line tool to interact with FloydHub.
 
 `floyd-cli` is available on [pypi](https://pypi.python.org/pypi/floyd-cli) and
 runs on both Python 2.7 and Python 3.5.
@@ -15,7 +17,7 @@ Use pip to install the cli.
 pip install -U floyd-cli
 ```
 
-You can view the command supported by the CLI using the `--help` option.
+You can view the commands supported by the CLI using the `--help` option.
 
 ```bash
 $ floyd --help
@@ -47,12 +49,13 @@ Login Successful
 
 ## Creating a new project
 
-Clone any tensorflow project you want to run on Floyd.
+We will clone a [tensorflow-examples](https://github.com/floydhub/tensorflow-examples) repository. Alternatively, 
+you can use any of your own projects you want to run on Floyd.
 
 ```bash
 $ git clone https://github.com/floydhub/tensorflow-examples.git
 Cloning into 'tensorflow-examples'...
-$ cd tensorflow-examples
+$ cd tensorflow-examples/3_NeuralNetworks
 ```
 
 Now initialize a new Floyd project with the [init](../commands/init.md) command and 
