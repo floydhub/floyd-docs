@@ -1,10 +1,18 @@
-Floyd can be used to host REST API of your trained models which can be accessed over the web. This feature 
-is very useful if you want to quickly compare models or have others play with your models. This guide will 
+Neural Style Transfer is an algorithm for combining the content of one image with the style of another image 
+using convolutional neural networks. Here's an example that maps the artistic style of The Starry Night 
+onto a night-time photograph of the Stanford campus:
+
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/starry_night_google.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/hoovertowernight.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/outputs/starry_stanford_bigger.png" width="710px">
+
+We will use this example to demonstrate how Floyd can be used to deploy your trained model as a REST API endpoint that can be accessed over the web. 
+This feature is very useful if you want to quickly compare models or have others play with your models. This guide will 
 walk you through how to do this.
 
 ## Setup project
 
-Clone your favorite deep learning project. For this guide we will be using [Fast Style Transfer](https://github.com/floydhub/fast-style-transfer)
+For this guide we will be using [Fast Style Transfer](https://github.com/floydhub/fast-style-transfer)
 project.
 
 ```bash
@@ -22,7 +30,7 @@ download it and keep it in current path.
 ### Training data
 
 This project also requires access to the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
-[jq4ZXUCSVer4t65rWeyieG](https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/). You can specify this at the 
+[jq4ZXUCSVer4t65rWeyieG](https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/). You can mount this at runtime using the 
 `--data` paramter. For more information on how data inputs work, see [Using Datasets](../home/using_datasets.md).
 
 ### Training

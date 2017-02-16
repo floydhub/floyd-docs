@@ -1,6 +1,6 @@
 ## Storing output files
 
-Most of the experiments generate output files. (eg. model files, evaluation output). In Floyd, any file 
+Most of the experiments generate output files (eg. model files, evaluation output). In Floyd, any file 
 or directory you create under `/output/` directory at run time will be available 
 to you for download after the experiment finishes.
 
@@ -26,7 +26,7 @@ Output ID    VB9bF6vtyvrHLdUsFbUuvW
 
 ## Using output as a data source
 
-To use the output of a project as an input to another run you can pass the 
+To use the output of a project as an input to another job you can pass the 
 `Output ID` as the `--data` parameter in the [run](../commands/run.md) command.
 The contents of this will be available at `/input` in the new job.
 
@@ -35,3 +35,7 @@ $ floyd run --data VB9bF6vtyvrHLdUsFbUuvW "python train_tf.py -lr 0.01 -output /
 Syncing code ...
 ...
 ```
+
+This command mounts the data referenced by ID `VB9bF6vtyvrHLdUsFbUuvW ` under the `/input` dir. Hence, 
+your code can access it at `/input/tf-output.txt`. It then executes the provided command and 
+stores the output files that are written to `/output`.

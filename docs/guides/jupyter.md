@@ -1,17 +1,18 @@
 # Jupyter Notebook
 
-[Jupyter](http://jupyter.org/) or [IPython](https://ipython.org/) is an open source project that allows you 
-to create and share documents that contain live code, equations, visualizations and explanatory text. This 
-guide will show you how to run a Jupyter notebook on Floyd.
+[Jupyter](http://jupyter.org/) or [IPython](https://ipython.org/) Notebooks allow you 
+to create and share documents that contain live code, equations, visualizations and explanatory text. It is 
+great for interactive development of code. This guide will show you how to run a Jupyter notebook on Floyd.
 
 ### Setup project
 
-Clone a project which contain deep learning jupyter notebooks. For 
-example: [aymericdamien/TensorFlow-Examples](https://github.com/aymericdamien/TensorFlow-Examples).
+Clone a project which contain deep learning jupyter notebooks. See some great 
+Tensorflow Notebook examples at [floydhub/tensorflow-notebooks-examples](https://github.com/floydhub/tensorflow-notebooks-examples).
 Then initialize a floyd project inside that.
 
 ```bash
-$ cd TensorFlow-Examples/notebooks/3_NeuralNetworks
+$ git clone git@github.com:floydhub/tensorflow-notebooks-examples.git
+$ cd tensorFlow-notebooks-examples/3_NeuralNetworks
 $ floyd init neural-networks
 ```
 
@@ -33,8 +34,8 @@ To view logs enter:
     floyd logs dMoDZaCcvQMyfNbgwTx9f8
 ```
 
-You can open the link to your jupyter notebook. The notebooks should be available and you can run 
-any of them.
+You can open the link to your jupyter server (example `https://www.floydhub.com:8000/EQDsTpeqB3RkjpHUgBGDyB`). 
+All the notebooks in your project should be available for you to run.
 
 ![Jupyter](../img/jupyter_home.png)
 
@@ -45,23 +46,29 @@ along with the `--env` parameter of the [run](../commands/run.md) command. You c
 [here](../home/environments.md).
 
 ```bash
-$ floyd run --mode jupyter --env tensorflow_py2
+$ floyd run --mode jupyter --env tensorflow:py2
 Syncing code ...
 ```
 
+To use Jupyter Notebook in a GPU instance, use the `--gpu` flag with the `run` command.
 ### Additional dependencies
 
 If you have any additional python dependencies, you can also add a `floyd_requirements.txt` file to 
 the notebook directory before floyd run. The packages specified there will be installed before running the 
 jupyter server
 
+### Passing Input data and storing Output data
+
+Similar to regular jobs, any data passed during `floyd run` using the `--data` flag will be mounted 
+at `/input` (see [Using Datasets](/home/using_datasets/)). Any data that you write to `/output` will be stored for you, even after you end your 
+interactive Jupyter session (see [Managing Output](/home/managing_output)).
 
 ### Saving Jupyter Notebooks
 
-Floyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any 
-relevant notebooks by selecting `File > Download as` menu from the Jupyter notebook.
+**IMPORTANT**: Floyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any 
+relevant notebooks by selecting `File > Download As` menu from the Jupyter notebook.
 
-### Stopping the job
+### Stopping Jupyter Server
 
-Once you have experimented with your code, you still need to stop the job. Run the [stop](../commands/stop.md) command 
+Once you have experimented with your code, you need to manually stop your "job". Run the [stop](../commands/stop.md) command 
 for this.

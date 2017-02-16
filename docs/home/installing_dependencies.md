@@ -1,6 +1,9 @@
 ## Python Dependencies
 
-Floyd uses pre-defined docker [images](environments.md) to run your projects.
+Floyd uses pre-defined docker [environments](environments.md) to run your projects. 
+These are fairly exhaustive and comes with common packages such as NumPy, SciPy, 
+scikit-learn, OpenCV, etc. preinstalled.
+
 If your code needs additional Python packages to be available at run time, you 
 can add them to a `floyd_requirements.txt` file. This is a special file that 
 will be read at runtime and the packages listed here will be installed before 
