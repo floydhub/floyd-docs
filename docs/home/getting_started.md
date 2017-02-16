@@ -126,6 +126,13 @@ AKpnXqj9BEU6d8KhmygTyb  just now       running            13  alice/first_proj:1
 mBDHCqro9Hd2dHTYdRReGd  4 minutes ago  success           426  alice/tf-demo:1     cpu                1
 ```
 
+## Using the Web Dashboard
+
+You can also see your job runs and their latest status using the Web Dashboard. Login to your account 
+and visit [floydhub.com/experiments](https://www.floydhub.com/experiments)
+
+![Jupyter](../img/expts-table.png)
+
 ## Viewing logs
 
 You can view the logs of the experiment you just kicked off with the 
