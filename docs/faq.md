@@ -1,3 +1,26 @@
+## Signup
+
+### How does the free CPU / GPU hours work?
+
+Every one who signups to Floydhub will receive 100 hours of free CPU / GPU time for running 
+your projects. We hope this will give you enough time to evaluate Floydhub for your needs.
+
+### Is there a student discount?
+
+Not at the moment, but we are currently working out a Student Plan. We will post the details 
+very soon :)
+
+## Login
+
+### I get "Invalid Token" error on my Windows 10 machine when I run floyd login.
+
+If you are using Windows command shell, there is an issue with pasting the token using the 
+standard Ctrl + V. So you need to use the shell menu to paste the token. After copying the 
+token right click on the top bar of the command shell and select Paste. See image below:
+
+![Windows 10 Login](../img/login_win_10.jpg)
+
+
 ## Running Experiments
 
 ### Why does `floyd status` return an empty list even though I have several runs in my account?
@@ -7,10 +30,33 @@ to be in the directory where you initialized the project and you should be able 
 runs. You can also use the [web dashboard](https://www.floydhub.com/experiments) to view all your 
 projects in one place.
 
-### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
+
+### What do I do when I get "What do you do when you get “You are over the allowed limits for this 
+operation. Consider upgrading your account”?
 
 Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact 
 us from the [pricing](https://www.floydhub.com/pricing) page.
+
+
+### I get "Too many open files" error when I run my project.
+
+Floyd CLI throws this error when you have too many files in your current directory that needs to be uploaded. 
+The actual limit depends on your OS / machine specs.
+
+You can either:
+
+1. Remove unnecessary files from the directory (like build directory, docs etc.) 
+2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories.
+
+See the [init](../commands/init#description) command to understand how this can be configured.
+
+
+### I ran my project in Jupyter mode but the url does not seem to work.
+
+Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway" 
+or similar error when you access the URL. You can check the status of the Jupyter notebook 
+by runnin the [logs](../commands/logs) command.
+
 
 ## Billing
 
