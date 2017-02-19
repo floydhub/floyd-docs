@@ -10,6 +10,8 @@ your projects. We hope this will give you enough time to evaluate Floydhub for y
 Not at the moment, but we are currently working out a Student Plan. We will post the details 
 very soon :)
 
+
+
 ## Login
 
 ### I get "Invalid Token" error on my Windows 10 machine when I run floyd login.
@@ -19,6 +21,7 @@ standard Ctrl + V. So you need to use the shell menu to paste the token. After c
 token right click on the top bar of the command shell and select Paste. See image below:
 
 ![Windows 10 Login](../img/login_win_10.jpg)
+
 
 
 ## Running Experiments
@@ -55,7 +58,31 @@ See the [init](../commands/init#description) command to understand how this can 
 
 Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway" 
 or similar error when you access the URL. You can check the status of the Jupyter notebook 
-by runnin the [logs](../commands/logs) command.
+by running the [logs](../commands/logs) command.
+
+
+### Am I using the GPU instance by default?
+
+Jobs are run on CPU instances by default. You can specify `--gpu` to run them on GPU instances.
+
+
+### My job is taking a while to "sync changes". How do I make it go faster?
+
+Floyd CLI uploads *all* the files in your current directory before starting your experiment.
+There are a few ways to make this go faster:
+
+1. Remove unnecessary files from the directory (like build directory, docs etc.) 
+2. Add sub-directories to `.floydignore` file. Floyd CLI will ignore and not upload these sub-directories.
+See the [init](../commands/init#description) command to understand how this can be configured.
+3. If you have large data files consider uploading them separately as a [data source](../commands/data). 
+You can then [refer](../home/using_datasets#using-data-set-in-experiments) to them in your project.
+
+
+### My job finished but how I do I see my output?
+
+You can use the floyd [output](../commands/output) command to view the output of your 
+project. If you want to use this output in your next run view [this guide](../home/managing_output)
+
 
 
 ## Billing
