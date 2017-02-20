@@ -60,7 +60,7 @@ Now you can use the `Output_ID` as the value for `--data` parameter when running
 
 ## Using data set in experiments
 
-To use a public or your presonal dataset in your project you can use 
+To use a public or your personal dataset in your project you can use 
 the `--data` parameter in the floyd [run](../commands/run.md) command.
 The data will be mounted and available in `/input` directory at project during run time.
 

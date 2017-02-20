@@ -1,3 +1,29 @@
+## Signup
+
+### How does the free CPU / GPU hours work?
+
+Every one who signups to Floydhub will receive 100 hours of free CPU / GPU time for running 
+your projects. We hope this will give you enough time to evaluate Floydhub for your needs.
+
+### Is there a student discount?
+
+Not at the moment, but we are currently working out a Student Plan. We will post the details 
+very soon :)
+
+
+
+## Login
+
+### I get "Invalid Token" error on my Windows 10 machine when I run floyd login.
+
+If you are using Windows command shell, there is an issue with pasting the token using the 
+standard Ctrl + V. So you need to use the shell menu to paste the token. After copying the 
+token right click on the top bar of the command shell and select Paste. See image below:
+
+![Windows 10 Login](../img/login_win_10.jpg)
+
+
+
 ## Running Experiments
 
 ### Why does `floyd status` return an empty list even though I have several runs in my account?
@@ -7,10 +33,57 @@ to be in the directory where you initialized the project and you should be able 
 runs. You can also use the [web dashboard](https://www.floydhub.com/experiments) to view all your 
 projects in one place.
 
-### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
+
+### What do I do when I get "What do you do when you get “You are over the allowed limits for this 
+operation. Consider upgrading your account”?
 
 Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact 
 us from the [pricing](https://www.floydhub.com/pricing) page.
+
+
+### I get "Too many open files" error when I run my project.
+
+Floyd CLI throws this error when you have too many files in your current directory that needs to be uploaded. 
+The actual limit depends on your OS / machine specs.
+
+You can either:
+
+1. Remove unnecessary files from the directory (like build directory, docs etc.) 
+2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories.
+
+See the [init](../commands/init#description) command to understand how this can be configured.
+
+
+### I ran my project in Jupyter mode but the url does not seem to work.
+
+Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway" 
+or similar error when you access the URL. You can check the status of the Jupyter notebook 
+by running the [logs](../commands/logs) command.
+
+
+### Am I using the GPU instance by default?
+
+Jobs are run on CPU instances by default. You can specify `--gpu` to run them on GPU instances.
+
+
+### My job is taking a while to "sync changes". How do I make it go faster?
+
+Floyd CLI uploads *all* the files in your current directory before starting your experiment.
+There are a few ways to make this go faster:
+
+1. Remove unnecessary files from the directory (like build directory, docs etc.) 
+2. Add sub-directories to `.floydignore` file. Floyd CLI will ignore and not upload these sub-directories.
+See the [init](../commands/init#description) command to understand how this can be configured.
+3. If you have large data files consider uploading them separately as a [data source](../commands/data). 
+You can then [refer](../home/using_datasets#using-data-set-in-experiments) to them in your project.
+
+
+### My job finished but how I do I see my output?
+
+You can use the floyd [output](../commands/output) command to view the output of your 
+project. If you want to use this output in your next run view [this guide](../home/managing_output)
+
+
 
 ## Billing
 
