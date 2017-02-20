@@ -11,7 +11,7 @@ Tensorflow Notebook examples at [floydhub/tensorflow-notebooks-examples](https:/
 Then initialize a floyd project inside that.
 
 ```bash
-$ git clone git@github.com:floydhub/tensorflow-notebooks-examples.git
+$ git clone https://github.com/floydhub/tensorflow-notebooks-examples.git
 $ cd tensorFlow-notebooks-examples/3_NeuralNetworks
 $ floyd init neural-networks
 ```
