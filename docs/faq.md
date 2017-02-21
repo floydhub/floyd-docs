@@ -34,8 +34,7 @@ runs. You can also use the [web dashboard](https://www.floydhub.com/experiments)
 projects in one place.
 
 
-### What do I do when I get "What do you do when you get “You are over the allowed limits for this 
-operation. Consider upgrading your account”?
+### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
 
 Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact 
 us from the [pricing](https://www.floydhub.com/pricing) page.
@@ -49,9 +48,12 @@ The actual limit depends on your OS / machine specs.
 You can either:
 
 1. Remove unnecessary files from the directory (like build directory, docs etc.) 
-2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories.
+2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories. See the [init](../commands/init#description) command to understand how this can be configured.
+3. Tar them into a single file and untar them at runtime.
 
-See the [init](../commands/init#description) command to understand how this can be configured.
+Alternatively, instead of uploading files from your local machine, you can also 
+[download files](http://docs.floydhub.com/home/using_datasets/#creating-a-dataset-from-downloads) from a remote URL 
+directly into Floyd servers.
 
 
 ### I ran my project in Jupyter mode but the url does not seem to work.
