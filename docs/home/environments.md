@@ -4,17 +4,22 @@ Below is the list of Deep Learning environments supported by Floyd. Any of
 these can be specified in the floyd [run](../commands/run.md) command using the `--env` option.
 
 If no `--env` is provided, it uses the `keras` image, which comes with a Python 3 image containing 
-Keras 1.2.2, Tensorflow 0.12.1 and Theano rel-0.8.2 pre-installed.
+Keras 1.2.2 and Tensorflow 0.12.1 pre-installed.
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|
 | Tensorflow | tensorflow  | Tensorflow 0.12.1 on Python3. | [floydhub/tensorflow:latest-py3](https://hub.docker.com/r/floydhub/tensorflow/) | 
 | | tensorflow:py2  | Tensorflow 0.12.1 on Python2. | [floydhub/tensorflow:latest-py2](https://hub.docker.com/r/floydhub/tensorflow/) | 
-| Keras | keras  | Keras 1.2.2 on Python3. | [floydhub/keras:latest-py3](https://hub.docker.com/r/floydhub/keras/) | 
-| | keras:py2  | Keras 1.2.2 on Python2. | [floydhub/keras:latest-py2](https://hub.docker.com/r/floydhub/keras/) | 
-| Theano | theano  | Theano rel-0.8.2 on Python3. | [floydhub/theano:latest-py3](https://hub.docker.com/r/floydhub/theano/) | 
-| | theano:py2  | Theano rel-0.8.2 on Python2. | [floydhub/theano:latest-py2](https://hub.docker.com/r/floydhub/theano/) | 
-| Torch (coming soon) |   |  | [floydhub/torch:latest-py3](https://hub.docker.com/r/floydhub/torch/) | 
+| Tensorflow 1.0 | tensorflow-1.0  | Tensorflow 1.0.0 on Python3. | [floydhub/tensorflow:1.0.0-py3](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| | tensorflow-1.0:py2  | Tensorflow 1.0.0 on Python2. | [floydhub/tensorflow:1.0.0-py2](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| Keras | keras  | Keras 1.2.2 with Tensorflow on Python3. | [floydhub/tensorflow:latest-py3](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| | keras:py2  | Keras 1.2.2 with Tensorflow on Python2. | [floydhub/tensorflow:latest-py2](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| Theano | theano  | Theano rel-0.8.2 + Keras 1.2.2 on Python3. | [floydhub/theano:latest-py3](https://hub.docker.com/r/floydhub/theano/) | 
+| | theano:py2  | Theano rel-0.8.2 + Keras 1.2.2 on Python2. | [floydhub/theano:latest-py2](https://hub.docker.com/r/floydhub/theano/) | 
+| Caffe | caffe  | Caffe rc4 on Python3. | [floydhub/caffe:latest-py3](https://hub.docker.com/r/floydhub/caffe/) | 
+| | caffe:py2  | Caffe rc4 on Python2. | [floydhub/caffe:latest-py2](https://hub.docker.com/r/floydhub/caffe/) | 
+| Torch (GPU coming soon) | torch | Torch 7 on Python 3 | [floydhub/torch:latest-py3](https://hub.docker.com/r/floydhub/torch/) | 
+| | torch:py2 | Torch 7 on Python 2 | [floydhub/torch:latest-py2](https://hub.docker.com/r/floydhub/torch/) | 
 
 All environments are available for both CPU and GPU execution. For example, 
 
