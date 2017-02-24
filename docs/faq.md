@@ -86,6 +86,17 @@ You can use the floyd [output](../commands/output) command to view the output of
 project. If you want to use this output in your next run view [this guide](../home/managing_output)
 
 
+### Do I have to pay for the entire time my Jupyter Notebook is running?
+
+Unfortunately, yes. As much as we would like to, we are unable to charge you only for the *computation time*. 
+
+This is an engineering challenge. When you start a Jupyter Notebook instance and start executing commands, 
+your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the 
+entire duration of your notebook, not just when you are executing commands.
+
+For example, when you execute `import tensorflow` 
+command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
+
 
 ## Billing
 
