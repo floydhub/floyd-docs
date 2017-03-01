@@ -22,7 +22,7 @@ Keras 1.2.2 and Tensorflow 0.12.1 pre-installed.
 | PyTorch | pytorch | PyTorch 0.1.9 on Python 3. | [floydhub/pytorch:latest-py3](https://hub.docker.com/r/floydhub/pytorch/) | 
 | | torch:py2 | PyTorch 0.1.9 on Python 2. | [floydhub/pytorch:latest-py2](https://hub.docker.com/r/floydhub/pytorch/) |
 | Chainer (beta) | chainer | Chainer 1.21.0 on Python 3. | [floydhub/chainer:latest-py3](https://hub.docker.com/r/floydhub/chainer/) | 
-| | chainer:py2 | Chainer 1.21.0 on Python 3. | [floydhub/chainer:latest-py2](https://hub.docker.com/r/floydhub/chainer/) |
+| | chainer:py2 | Chainer 1.21.0 on Python 2. | [floydhub/chainer:latest-py2](https://hub.docker.com/r/floydhub/chainer/) |
 | MxNet (beta) | mxnet:py2 | MxNet 0.9.3a on Python 2. | [floydhub/mxnet:latest-py2](https://hub.docker.com/r/floydhub/mxnet/) |
 | Kur | kur | Kur 0.3.0 on Python 3. | [floydhub/kur:latest-py3](https://hub.docker.com/r/floydhub/kur/) |
 
