@@ -14,6 +14,7 @@ pages:
         - 'Jupyter Notebook': guides/jupyter.md
         - 'Style Transfer': guides/style_transfer.md
         - 'Public Datasets': guides/datasets.md
+        - 'Contributing': guides/contributing.md
     - Commands:
         - 'floyd': commands/index.md
         - 'floyd login': commands/login.md
