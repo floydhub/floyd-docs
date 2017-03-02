@@ -26,6 +26,7 @@ pages:
         - 'floyd output': commands/output.md
         - 'floyd info': commands/info.md
         - 'floyd stop': commands/stop.md
+        - 'floyd delete': commands/delete.md
         - 'floyd logout': commands/logout.md
     - Floydhub:
         - 'Privacy': floydhub/privacy.md

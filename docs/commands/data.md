@@ -6,6 +6,7 @@ Manage your data sets on Floyd. The subcommands are:
 | floyd data init      | Initialize a new dataset |
 | floyd data upload    | Create a new dataset by uploading data |
 | floyd data status    | List all your datasets  |
+| floyd data delete    | Delete your dataset |
 | floyd data output    | View contents of a dataset |
 
 ## floyd data init 
@@ -91,6 +92,37 @@ DATA ID                 CREATED         DISK USAGE    NAME                      
 ----------------------  --------------  ------------  ----------------------------------------  ---------
 HYLEc2czGKRpYVm7rGtBoY  12 minutes ago  372.0 MB      floydhub/mnist:1                                  1
 qNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7                					7
+```
+
+---------------------------------
+
+## floyd data delete
+
+Delete datasets on FloydHub
+
+### Usage
+```bash
+floyd data delete [OPTIONS] [ID]
+```
+
+### Options
+| Name, shorthand | Default | Description |
+| --------------- | ------- | ----------- |
+| ID |      | ID of your data. |
+| `--yes`, `-y` | False  | Skip delete confirmation step |
+
+### Description
+Deletes your datasets from FloydHub. This data will no longer 
+be accessible. You can use the same command to delete output 
+data as well.
+
+Note: You do *not* have to be in the project directory to run this command.
+
+#### Example
+```bash
+$ floyd data delete HYLEc2czGKRpYVm7rGtBoY
+Delete Data: floydhub/mnist:1/output? [y/N]: y
+Data deleted
 ```
 
 ---------------------------------
