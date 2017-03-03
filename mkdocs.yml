@@ -13,6 +13,7 @@ pages:
     - Guides:
         - 'Jupyter Notebook': guides/jupyter.md
         - 'Style Transfer': guides/style_transfer.md
+        - 'Deep Text Corrector': guides/deep_corrector.md
         - 'Public Datasets': guides/datasets.md
         - 'Contributing': guides/contributing.md
     - Commands:
