@@ -10,6 +10,7 @@ pages:
         - 'Managing Output': home/managing_output.md
         - 'Installing Dependencies': home/installing_dependencies.md
         - 'Environments': home/environments.md
+        - 'FloydIgnore': home/floyd_ignore.md
     - Guides:
         - 'Jupyter Notebook': guides/jupyter.md
         - 'Style Transfer': guides/style_transfer.md
