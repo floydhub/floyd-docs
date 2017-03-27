@@ -48,7 +48,8 @@ The actual limit depends on your OS / machine specs.
 You can either:
 
 1. Remove unnecessary files from the directory (like build directory, docs etc.) 
-2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories. See the [init](../commands/init#description) command to understand how this can be configured.
+2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories. 
+See the [floydignore](home/floyd_ignore) documentation to understand how this can be configured.
 3. Tar them into a single file and untar them at runtime.
 
 Alternatively, instead of uploading files from your local machine, you can also 
