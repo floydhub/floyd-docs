@@ -128,7 +128,7 @@ RUN ID                  NAME                              VERSION
 ----------------------  ------------------------------  ---------
 DJSdJAVa3u7AsFEMZMBBL5  floydhub/fast-style-transfer:5          5
 
-Path to service endpoint: https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c
+Path to service endpoint: https://www.floydhub.com:5000/t4AdkU6awahkT3ooNazw8c
 
 To view logs enter:
     floyd logs DJSdJAVa3u7AsFEMZMBBL5
@@ -140,7 +140,7 @@ To view logs enter:
 Now you can send any image file as request to this api and it will return the style transfered image.
 
 ```bash
-curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c
+curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydhub.com:5000/t4AdkU6awahkT3ooNazw8c
 ```
 
 ![Jupyter](../img/taipei_muse.jpg)
@@ -153,7 +153,7 @@ You will see the default style ([la_muse](https://github.com/floydhub/fast-style
 You can also pass in the name of the checkpoint to use and the image will be style transfered accordingly:
 
 ```bash
-curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.ckpt"  https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm
+curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.ckpt"  https://www.floydhub.com:5000/MUDFXViCLArG2drppvU3nm
 ```
 
 ![Jupyter](../img/taipei_udnie.jpg)
