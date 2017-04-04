@@ -5,6 +5,7 @@ site_author: FloydHub Team
 pages:
     - Home: index.md
     - Get Started:
+        - 'Installation': home/install.md
         - 'First Floyd Project': home/getting_started.md
         - 'Using Datasets': home/using_datasets.md
         - 'Managing Output': home/managing_output.md
@@ -30,6 +31,8 @@ pages:
         - 'floyd stop': commands/stop.md
         - 'floyd delete': commands/delete.md
         - 'floyd logout': commands/logout.md
+        - 'floyd upgrade': commands/upgrade.md
+        - 'floyd version': commands/version.md
     - Floydhub:
         - 'Privacy': floydhub/privacy.md
         - 'Terms of Service': floydhub/terms.md

@@ -6,30 +6,7 @@ supports a wide variety of other popular [deep learning frameworks](environments
 
 ## Installing Floyd CLI 
 
-Floyd CLI is a python based command line tool to interact with FloydHub.
-
-`floyd-cli` is available on [pypi](https://pypi.python.org/pypi/floyd-cli) and
-runs on both Python 2.7 and Python 3.5.
-
-Use pip to install the cli.
-
-```bash
-pip install -U floyd-cli
-```
-
-You can view the commands supported by the CLI using the `--help` option.
-
-```bash
-$ floyd --help
-Usage: floyd [OPTIONS] COMMAND [ARGS]...
-
-  Floyd CLI interacts with Floyd server and executes your commands. More
-  help is available under each command listed below.
-
-...
-```
-
-Detailed documentation for the floyd commands is available in the [documentation](../commands/index.md).
+Install Floyd CLI if you haven't already done it. Instructions for that are available [here](install.md)
 
 ## Create an account
 
