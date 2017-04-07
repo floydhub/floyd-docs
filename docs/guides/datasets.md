@@ -11,5 +11,6 @@ To use them, please pass it as `--data` <ID> in the [run](../commands/run.md) co
 | [Quora Duplicate Questions](https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs) | [XeyQLG4nb2psqRjmzCTsbN](https://www.floydhub.com/viewer/data/XeyQLG4nb2psqRjmzCTsbN/54QybuiiAzXpdseKoHcy5d/)  | Contains over 400K lines of potential question duplicate pairs|
 | [CIFAR 10/100](http://www.cs.utoronto.ca/~kriz/cifar.html) | [diSgciLH4WA7HpcHNasP9j](https://www.floydhub.com/viewer/data/diSgciLH4WA7HpcHNasP9j/FgfqKsTpQScuA7RMS25RSA/)  | Subset of 80 million tiny images dataset|
 | [Cats vs Dogs Redux: Kernels Edition](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition) | [SyccinddLDdS7p3vzcwGQ2](https://www.floydhub.com/viewer/data/SyccinddLDdS7p3vzcwGQ2/saKd5dpEThAkWxDevSr9Ef/)  | Dataset for Kaggle's famous Dogs vs Cats competition|
+| [CycleGAN](https://github.com/junyanz/CycleGAN) | [f9RVzpea4vb9uCLaDggUgX](https://www.floydhub.com/viewer/data/f9RVzpea4vb9uCLaDggUgX/C96ydwuPgbHRdfu8hbH3L4/)  | Dataset for CycleGAN|
 
 If you have requests or suggestions for any public datasets to add to our servers, let us know [contact@floydhub.com](mailto:contact@floydhub.com)
