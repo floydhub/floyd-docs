@@ -32,7 +32,7 @@ download it and keep it in current path. In this example we will be starting fro
 
 This project also requires access to the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
 [jq4ZXUCSVer4t65rWeyieG](https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/). You can mount this at runtime using the 
-`--data` paramter. For more information on how data inputs work, see [Using Datasets](../home/using_datasets.md).
+`--data` parameter. For more information on how data inputs work, see [Using Datasets](../home/using_datasets.md).
 
 ### Training
 
@@ -68,7 +68,7 @@ $ floyd status <RUN_ID>
 $ floyd logs <RUN_ID> -t
 ```
 
-After the job finishes successfuly, view the output directory to see the style transfered images. Run the floyd [output](../commands/output.md)
+After the job finishes successfully, view the output directory to see the style transferred images. Run the floyd [output](../commands/output.md)
 for this.
 
 ```bash
@@ -99,7 +99,7 @@ You can track the status of the run with the status command.
 $ floyd status <RUN_ID>
 ```
 
-When the experiment is finished, you can see the style transfered images by running:
+When the experiment is finished, you can see the style transferred images by running:
 
 ```bash
 $ floyd output <RUN_ID>
@@ -110,7 +110,7 @@ $ floyd output <RUN_ID>
 
 ## Model API
 
-You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered. 
+You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transferred. 
 
 ### Serve mode
 
@@ -137,7 +137,7 @@ To view logs enter:
 
 ### Sending requests to the REST API
 
-Now you can send any image file as request to this api and it will return the style transfered image.
+Now you can send any image file as request to this api and it will return the style transferred image.
 
 ```bash
 curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c
@@ -150,7 +150,7 @@ You will see the default style ([la_muse](https://github.com/floydhub/fast-style
 
 ### Trying out different models
 
-You can also pass in the name of the checkpoint to use and the image will be style transfered accordingly:
+You can also pass in the name of the checkpoint to use and the image will be style transferred accordingly:
 
 ```bash
 curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.ckpt"  https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm
