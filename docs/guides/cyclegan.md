@@ -76,6 +76,26 @@ for each epoch by viewing all the generated png files, which includes sampled
 result from both directions.
 
 
+### Testing
+
+To test a CycleGAN model you trained on FloydHub, you will need to first get
+the output ID for the training experiment using `floyd info` command.
+
+Then you can use the following command to spin up the test:
+
+```bash
+floyd run --gpu --env torch --data TRAINING_OUTPUT_ID 'bash ./floydhub/test.sh horse2zebra ./test_images'
+```
+
+Notes:
+
+- `./test_images` is a flat directory that contains images data you want to
+test with. The directory name is arbitrary.
+
+Once the test run is done, you should be able to view the result by opening the
+`index.html` file in your experiment output with a browser.
+
+
 ## Rest API
 
 Coming Soon!
