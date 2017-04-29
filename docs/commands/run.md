@@ -9,7 +9,7 @@ floyd run [OPTIONS] [COMMAND]
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
 | `--gpu/--cpu` |  cpu    | If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
-| `--data <ID>` |    | ID of the data source to link to. See [data](../home/using_datasets) section for more details. |
+| `--data <ID:mount>` |    | `ID` of the data source to link to. `mount` specifies the path to mount it at. You can use this parameter multiple times. See [data](../home/using_datasets) section for more details. |
 | `--mode [jupyter|serve]` |  command  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [jupyter](../guides/jupyter) and [serve](#serve) sections for more info on them. |
 | `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../home/environments) for the full list. |
 | command |      | Command to execute when running your project on Floyd. |
@@ -52,6 +52,22 @@ $ floyd run --mode jupyter
 ...
 Path to jupyter notebook: https://www.floydhub.com:8000/g8uGRZFQz85meArJGToEcs
 ```
+
+### Attaching multiple datasets
+
+You can attach upto 5 datasets when you run a project using the run command. You can specify both 
+datasets you uploaded and output datasets of your previous runs. You can specify the mount point 
+also when you specify the data id to mount.
+
+#### Example: 
+```bash
+$ floyd run --data GY3QRFFUA8KpbnqvroTPPW:training --data 4T9bF6vtyvrHLdUsFbUumA:testing "python script.py"
+```
+The above datasets will be mounted at `/training` and `/testing` respectively.
+
+In case you do not specify the mount points, it will be mounted at `/<ID>`. i.e., it will use its own
+ID as the mount point.
+
 ### Serve
 Floyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.
 Use `--mode serve` and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.

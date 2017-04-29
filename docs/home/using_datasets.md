@@ -45,7 +45,7 @@ $ floyd logs -t GY3QRFFUA8KpbnqvroTPPW
 2017-02-16 03:41:15,863 INFO Creating /output/2aF2safs2.jpg
 ...
 ```
-You can get the id of the output using the [info](../commands/info.md)
+You can get the id of the output using the [info](../commands/info.md) command.
 
 ```bash
 $ floyd info GY3QRFFUA8KpbnqvroTPPW
@@ -76,3 +76,19 @@ $ floyd logs -t GY3QRFFUA8KpbnqvroTPPW
 2017-02-16 03:41:15,863 INFO - -rw-r--r--  1 root root 7797 Feb 16 11:38 neutral_sentences.txt
 ...
 ```
+
+## Attaching multiple datasets
+
+You can attach upto 5 datasets when you run a project using the run command. You can specify both 
+datasets you uploaded and output datasets of your previous runs. You can specify the mount point 
+also when you specify the data id to mount.
+
+For example: 
+```bash
+$ floyd run --data GY3QRFFUA8KpbnqvroTPPW:training --data 4T9bF6vtyvrHLdUsFbUumA:testing "python script.py"
+```
+
+The above datasets will be mounted at `/training` and `/testing` respectively.
+
+In case you do not specify the mount points, it will be mounted at `/<ID>`. i.e., it will use its own
+ID as the mount point.

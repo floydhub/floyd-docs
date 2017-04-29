@@ -14,3 +14,5 @@ Below are the commands that are part of Floyd CLI.
 | floyd info         | See details of a job   |
 | floyd stop         | Terminate a job   |
 | floyd logout       | Logout from Floyd   |
+| floyd version      | See version of floyd client |
+| floyd upgrade      | Upgrade floyd client |
