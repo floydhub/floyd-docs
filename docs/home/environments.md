@@ -42,3 +42,5 @@ The following software packages (in addition to many other common libraries) are
 ```
 h5py, iPython, Jupyter, matplotlib, numpy, OpenCV, Pandas, Pillow, scikit-learn, scipy, sklearn
 ```
+
+{!contributing.md!}

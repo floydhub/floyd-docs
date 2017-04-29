@@ -37,3 +37,5 @@ Login Successful
 Floyd uses [Json Web Tokens](https://jwt.io/introduction/) for authentication. Your 
 token will be stored in the `~/.floydconfig` file. They are valid for 7 days after 
 which you need to login again. This file will be removed when you [logout](/commands/logout).
+
+{!contributing.md!}

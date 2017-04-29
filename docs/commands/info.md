@@ -36,3 +36,5 @@ Mode         jupyter
 Url          https://www.floydhub.com:8000/VB9bF6vtyvrHLdUsFbUuvW
 -----------  ----------------------------------------------------
 ```
+
+{!contributing.md!}

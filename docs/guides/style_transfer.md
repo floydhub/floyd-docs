@@ -160,3 +160,5 @@ curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.
 
 This uses a different style checkpoint to render the image. All the logic for this is present in the `app.py` file. You can update it to 
 be as complex as you prefer.
+
+{!contributing.md!}

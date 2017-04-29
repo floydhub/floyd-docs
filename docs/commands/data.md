@@ -152,3 +152,5 @@ The output command gives the url to access a dataset. This command by default op
 $ floyd data output dTe2cJJrNR2CBD74rSZXPA
 Opening output directory in your browser ...
 ```
+
+{!contributing.md!}

@@ -14,3 +14,5 @@ To use them, please pass it as `--data` <ID> in the [run](../commands/run.md) co
 | [CycleGAN](https://github.com/junyanz/CycleGAN) | [f9RVzpea4vb9uCLaDggUgX](https://www.floydhub.com/viewer/data/f9RVzpea4vb9uCLaDggUgX/C96ydwuPgbHRdfu8hbH3L4/)  | Dataset for CycleGAN|
 
 If you have requests or suggestions for any public datasets to add to our servers, let us know [contact@floydhub.com](mailto:contact@floydhub.com)
+
+{!contributing.md!}

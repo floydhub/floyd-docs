@@ -39,3 +39,5 @@ Syncing code ...
 This command mounts the data referenced by ID `VB9bF6vtyvrHLdUsFbUuvW ` under the `/input` dir. Hence, 
 your code can access it at `/input/tf-output.txt`. It then executes the provided command and 
 stores the output files that are written to `/output`.
+
+{!contributing.md!}

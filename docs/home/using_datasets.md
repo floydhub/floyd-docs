@@ -92,3 +92,5 @@ The above datasets will be mounted at `/training` and `/testing` respectively.
 
 In case you do not specify the mount points, it will be mounted at `/<ID>`. i.e., it will use its own
 ID as the mount point.
+
+{!contributing.md!}

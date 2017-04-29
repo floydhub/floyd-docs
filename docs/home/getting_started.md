@@ -143,3 +143,5 @@ streams the logs as they are generated.
 You can edit your code locally and re-run your project using the `run` command. 
 The CLI will upload the new version of your code and start another 
 run of your project. Floyd manages and keeps track of all revisions of your experiments.
+
+{!contributing.md!}

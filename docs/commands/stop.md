@@ -20,3 +20,5 @@ a job, you will be charged only for the duration your job was running.
 $ floyd stop FAGrKvd6GqwVdHMxxMwBZG
 Experiment shutdown request submitted. Check status to confirm shutdown
 ```
+
+{!contributing.md!}

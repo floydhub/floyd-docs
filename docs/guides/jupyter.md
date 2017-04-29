@@ -73,3 +73,5 @@ stopped. You can use the [output](../commands/output.md) command for this.
 Once you have experimented with your code, you need to manually stop your "job". Run the [stop](../commands/stop.md) command 
 for this. Remember Jupyter notebooks are charged for the entire duration they are up, not just when you
 execute code. So make sure the stop the notebooks when you are no longer working on them.
+
+{!contributing.md!}

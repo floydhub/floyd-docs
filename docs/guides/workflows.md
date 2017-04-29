@@ -48,3 +48,4 @@ Output ID    VB9bF6vtyvrHLdUsFbUuvW
 You want to unzip the downloaded data, split it in to training and test data.
 
 
+{!contributing.md!}

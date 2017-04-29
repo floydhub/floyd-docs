@@ -99,3 +99,5 @@ Once the test run is done, you should be able to view the result by opening the
 ## Rest API
 
 Coming Soon!
+
+{!contributing.md!}

@@ -13,3 +13,5 @@ the floyd commands are run from.
 ```bash
 $ echo "Pillow" > floyd_requirements.txt
 ```
+
+{!contributing.md!}

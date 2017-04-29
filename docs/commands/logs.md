@@ -33,3 +33,5 @@ Run Output:
 Waiting for container to complete...
 [success] Finishing execution
 ```
+
+{!contributing.md!}

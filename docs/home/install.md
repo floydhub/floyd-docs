@@ -104,3 +104,5 @@ you need to install `python-dev` package
 ```bash
 sudo apt-get install python-dev
 ```
+
+{!contributing.md!}

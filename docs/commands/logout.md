@@ -15,3 +15,5 @@ Logs you out and expires your current token. You will need to login again to run
 ```bash
 $ floyd logout
 ```
+
+{!contributing.md!}

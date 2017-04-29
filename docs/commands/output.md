@@ -21,3 +21,5 @@ output url in your default browser.
 $ floyd output dTe2cJJrNR2CBD74rSZXPA
 Opening output directory in your browser ...
 ```
+
+{!contributing.md!}

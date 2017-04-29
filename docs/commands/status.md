@@ -22,3 +22,5 @@ RUN ID                  CREATED         STATUS      DURATION(s)  NAME           
 dTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2
 B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1
 ```
+
+{!contributing.md!}

@@ -111,3 +111,5 @@ The model was trained using movie dialogues which are not the greatest sources o
 sentences. An improvement to this approach would be to use other datasources like [Project Gutenberg](https://www.gutenberg.org/).
 This project was also discussed on [HackerNews](https://news.ycombinator.com/item?id=13350972) and you can 
 find lots of interesting alternatives there.
+
+{!contributing.md!}

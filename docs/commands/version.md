@@ -13,3 +13,5 @@ Prints the current version of floyd-cli
 $ floyd version
 0.9.1
 ```
+
+{!contributing.md!}

@@ -80,3 +80,5 @@ $ floyd run --mode serve
 ...
 Path to service endpoint: https://www.floydhub.com:8000/vbKSKgVYGgZqmM9i3LjLBb
 ```
+
+{!contributing.md!}

@@ -3,6 +3,7 @@ click==6.7
 Jinja2==2.9.5
 livereload==2.5.1
 Markdown==2.6.8
+markdown-include==0.5.1
 MarkupSafe==0.23
 mkdocs==0.16.1
 mkdocs-bootstrap==0.1.1

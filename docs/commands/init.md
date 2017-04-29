@@ -27,3 +27,5 @@ $ cd /code/project
 $ floyd init style-transfer
 Project "style-transfer" initialized in current directory
 ```
+
+{!contributing.md!}

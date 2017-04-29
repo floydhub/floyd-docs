@@ -61,3 +61,5 @@ a list with examples:
 
 Minimizing the number of files to upload saves upload time and disk space used 
 by your experiments.
+
+{!contributing.md!}

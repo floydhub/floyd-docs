@@ -1,7 +1,7 @@
 site_name: FloydHub
 site_url: https://www.floydhub.com
 site_author: FloydHub Team
-
+repo_url: https://github.com/floydhub/floyd-docs
 pages:
     - Home: index.md
     - Get Started:
@@ -48,6 +48,14 @@ extra:
   font:
     text: 'Roboto'
     code: 'Source Code Pro'
+  social:
+    - type: 'github'
+      link: 'https://github.com/floydhub'
+    - type: 'twitter'
+      link: 'https://twitter.com/floydhub_'
+markdown_extensions:
+    - markdown_include.include:
+        base_path: docs
 extra_css:
     - css/bootstrap_paper.min.css
     - css/style.css

@@ -27,3 +27,5 @@ Experiment deleted
 Delete Run: floydhub/cnr:1? [y/N]: y
 Experiment deleted
 ```
+
+{!contributing.md!}
