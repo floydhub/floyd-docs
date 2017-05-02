@@ -1,5 +1,5 @@
 # floyd-docs
-FloydHub Documentation
+FloydHub Documentation [http://docs.floydhub.com/](http://docs.floydhub.com/)
 
 ## Steps to build and deploy documentation
 * Install requirements.txt with `pip install -r requirements.txt`
