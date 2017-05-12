@@ -12,7 +12,7 @@ Then initialize a floyd project inside that.
 
 ```bash
 $ git clone https://github.com/floydhub/tensorflow-notebooks-examples.git
-$ cd tensorFlow-notebooks-examples/3_NeuralNetworks
+$ cd tensorflow-notebooks-examples/3_NeuralNetworks
 $ floyd init neural-networks
 ```
 
