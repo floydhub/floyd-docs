@@ -8,10 +8,12 @@ Keras 1.2.2 and Tensorflow 0.12.1 pre-installed.
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|
-| Tensorflow | tensorflow  | Tensorflow 0.12.1 + Keras 1.2.2 on Python3. | [floydhub/tensorflow:latest-py3](https://hub.docker.com/r/floydhub/tensorflow/) | 
-| | tensorflow:py2  | Tensorflow 0.12.1 + Keras 1.2.2 on Python2. | [floydhub/tensorflow:latest-py2](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| Tensorflow 1.1 | tensorflow  | Tensorflow 1.1.0 + Keras 2.0.4 on Python3. | [floydhub/tensorflow:1.1.0-py3](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| | tensorflow:py2  | Tensorflow 1.1.0 + Keras 2.0.4 on Python2. | [floydhub/tensorflow:1.1.0-py2](https://hub.docker.com/r/floydhub/tensorflow/) | 
 | Tensorflow 1.0 | tensorflow-1.0  | Tensorflow 1.0.0 + Keras 1.2.2 on Python3. | [floydhub/tensorflow:1.0.0-py3](https://hub.docker.com/r/floydhub/tensorflow/) | 
 | | tensorflow-1.0:py2  | Tensorflow 1.0.0 + Keras 1.2.2 on Python2. | [floydhub/tensorflow:1.0.0-py2](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| Tensorflow 0.12 | tensorflow-0.12  | Tensorflow 0.12.1 + Keras 1.2.2 on Python3. | [floydhub/tensorflow:0.12.1-py3](https://hub.docker.com/r/floydhub/tensorflow/) | 
+| | tensorflow-0.12:py2  | Tensorflow 0.12.1 + Keras 1.2.2 on Python2. | [floydhub/tensorflow:0.12.1-py2](https://hub.docker.com/r/floydhub/tensorflow/) | 
 | Theano | theano  | Theano rel-0.8.2 + Keras 1.2.2 on Python3. | [floydhub/theano:latest-py3](https://hub.docker.com/r/floydhub/theano/) | 
 | | theano:py2  | Theano rel-0.8.2 + Keras 1.2.2 on Python2. | [floydhub/theano:latest-py2](https://hub.docker.com/r/floydhub/theano/) | 
 | Keras | -  | Use tensorflow or theano for the appropriate Keras backend |  | 
