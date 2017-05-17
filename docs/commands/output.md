@@ -22,4 +22,12 @@ $ floyd output dTe2cJJrNR2CBD74rSZXPA
 Opening output directory in your browser ...
 ```
 
+### Downloading output
+
+Full contents of the output can be downloaded as a tar file from the dashboard:
+
+1. Go the experiment in the dashboard.
+2. Double click on the task instance box.
+3. Click Output - Download button.
+
 {!contributing.md!}
