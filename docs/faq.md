@@ -23,6 +23,19 @@ token right click on the top bar of the command shell and select Paste. See imag
 ![Windows 10 Login](../img/login_win_10.jpg)
 
 
+### I still get the "Invalid Token" error after trying the above suggestion.
+
+In some windows shells (like Git Bash) there is an extra space added to the token field
+before you paste the token. So you need to backspace and clear out the field before pasting 
+the token. So the steps are:
+
+1. Type `floyd login` in the console.
+2. From the Floyd web page, select the token and click on the "Copy to clipboard" button.
+3. In the console, press "backspace" a few times to remove the extra characters from the token login prompt request.
+4. Right click on the menu bar, and select "Edit", and then "Paste"
+5. Then press "Enter"
+
+You should be able to login successfully now.
 
 ## Running Experiments
 
