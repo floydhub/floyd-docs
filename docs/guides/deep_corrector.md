@@ -34,7 +34,7 @@ You can train the deep corrector model by running `correct_text.py` script with 
 parameters. Below is the [command](../commands/run) to start a training job on Floyd:
 
 ```bash
-$ floyd run --gpu --env tensorflow:py2 --data feNGtpH9tZSj79NeqchSEB "python correct_text.py --num_steps 1000 --train_path /input/data/movie_dialog_train.txt --val_path /input/data/movie_dialog_val.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --output_path /output"
+$ floyd run --gpu --env tensorflow-0.12:py2 --data feNGtpH9tZSj79NeqchSEB "python correct_text.py --num_steps 1000 --train_path /input/data/movie_dialog_train.txt --val_path /input/data/movie_dialog_val.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --output_path /output"
 ```
 
 Notes:
@@ -70,7 +70,7 @@ inputs. You can update or add more strings to this file - one per line. You also
 use the output from the training step above as the datasource in this step.
 
 ```bash
-floyd run --gpu --env tensorflow:py2 --data <REPLACE_WITH_OUTPUT_ID> "python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode"
+floyd run --gpu --env tensorflow-0.12:py2 --data <REPLACE_WITH_OUTPUT_ID> "python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode"
 ```
 
 You can track the status of the run with the status or logs command. The logs should print the 
@@ -96,7 +96,7 @@ for this. Use the data source id [feNGtpH9tZSj79NeqchSEB](https://www.floydhub.c
 and you will have access to this.
 
 ```bash
-floyd run --gpu --env tensorflow:py2 --data feNGtpH9tZSj79NeqchSEB "python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode"
+floyd run --gpu --env tensorflow-0.12:py2 --data feNGtpH9tZSj79NeqchSEB "python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode"
 ```
 
 This model should perform better on the given inputs compared to the previous model.

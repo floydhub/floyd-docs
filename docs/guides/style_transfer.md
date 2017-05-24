@@ -37,7 +37,7 @@ This project also requires access to the imagenet-vgg-verydeep-19 model and imag
 ### Training
 
 ```bash
-$ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG "python style.py --style examples/style/la_muse.jpg --base-model-path /input/pre-trained-tf/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output"
+$ floyd run --gpu --env tensorflow-0.12:py2 --data jq4ZXUCSVer4t65rWeyieG "python style.py --style examples/style/la_muse.jpg --base-model-path /input/pre-trained-tf/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output"
 ```
 
 This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
@@ -59,7 +59,7 @@ You can evaluate the generated model by running `evaluate.py` on sample images. 
 as the datasource in this step. Add any image you want to style transfer to the `images` directory. Then run `evaluate.py`.
 
 ```bash
-floyd run --env keras:py2 --data <REPLACE_WITH_OUTPUT_ID> "python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/"
+floyd run --env tensorflow-0.12:py2 --data <REPLACE_WITH_OUTPUT_ID> "python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/"
 ```
 You can track the status of the run with the status or logs command.
 
@@ -90,7 +90,7 @@ You can play with any of these model and style transfer any image you prefer. Ju
 right model in the `--checkpoint` parameter.
 
 ```bash
-floyd run --gpu --env keras:py2 --data Js534T344XYBPMvWqhxJNj "python evaluate.py --allow-different-dimensions --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/"
+floyd run --gpu --env tensorflow-0.12:py2 --data Js534T344XYBPMvWqhxJNj "python evaluate.py --allow-different-dimensions --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/"
 ```
 
 You can track the status of the run with the status command.
@@ -122,7 +122,7 @@ incoming request, executes the code in `evaluate.py` and returns the output.
 *Note that this feature is in preview mode and is not production ready yet*
 
 ```bash
-$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serve
+$ floyd run --env tensorflow-0.12:py2 --data Js534T344XYBPMvWqhxJNj --mode serve
 Syncing code ...
 RUN ID                  NAME                              VERSION
 ----------------------  ------------------------------  ---------

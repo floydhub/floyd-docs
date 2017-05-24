@@ -4,7 +4,7 @@ Below is the list of Deep Learning environments supported by Floyd. Any of
 these can be specified in the floyd [run](../commands/run.md) command using the `--env` option.
 
 If no `--env` is provided, it uses the `keras` image, which comes with a Python 3 image containing 
-Keras 1.2.2 and Tensorflow 0.12.1 pre-installed.
+Keras 2.0.4 and Tensorflow 1.1.0 pre-installed.
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|

@@ -46,7 +46,7 @@ along with the `--env` parameter of the [run](../commands/run.md) command. You c
 [here](../home/environments.md).
 
 ```bash
-$ floyd run --mode jupyter --env tensorflow:py2
+$ floyd run --mode jupyter --env tensorflow-0.12:py2
 Syncing code ...
 ```
 
