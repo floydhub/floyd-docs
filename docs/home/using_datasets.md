@@ -29,8 +29,21 @@ using this data id. Read below for details.
 ## Creating a dataset from downloads
 
 In the case where your datasets are available on the internet, you can download them directly into 
-Floyd. You can run your download script like any other job using the [run](../commands/run.md) command.
-Just store the downloaded files to the `/output` directory.
+Floyd using a custom download script that you provide. You can run your download script like any other 
+job using the [run](../commands/run.md) command. Just store the downloaded files to the `/output` directory.
+
+Simple example script to download using wget and unzip a compressed data set:
+```sh
+#!/bin/sh
+# download_data.sh
+# Fetches data from remote site and saves it in the /output folder.
+# NOTE: Concatenate commands with && to break execution immediately on 
+#       failure and get a valid exit code.
+
+wget http://somesite.me/data/mydata.zip && \
+unzip -a -o mydata.zip -d /output && \
+rm mydata.zip
+```
 
 ```bash
 # Make sure the downloaded files are stored in /output
