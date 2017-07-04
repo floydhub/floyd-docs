@@ -22,6 +22,8 @@ Abuse or excessively frequent requests to Floydhub may result in the temporary o
 
 Floydhub reserves the right at any time to modify or discontinue, temporarily or permanently, your access with or without notice.
 
+Using free credits for any type of crypto concurrency mining is strictly prohibited and will result in forfeiture of free credits and permanent account closure.
+
 ## C. Payment, Refunds, Upgrading and Downgrading Terms
 1. You are not required to provide a credit card number to open an account.
 2. Once your free trial period has ended you will be required to enter a credit card to continue usage.
