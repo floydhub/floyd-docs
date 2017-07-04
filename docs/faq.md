@@ -35,7 +35,7 @@ the token. So the steps are:
 4. Right click on the menu bar, and select "Edit", and then "Paste"
 5. Then press "Enter"
 
-You should be able to login successfully now.
+You should be able to login successfully now. If it's still not working, please give it a try on powershell.
 
 ## Running Experiments
 
