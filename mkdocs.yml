@@ -5,7 +5,7 @@ repo_url: https://github.com/floydhub/floyd-docs
 pages:
     - Home: index.md
     - Get Started:
-        - 'First Project': getstarted/hello_world.md
+        - 'Quick Start': getstarted/quick_start.md
     - Guides:
         - 'Installation': guides/install.md
     - FAQs:
