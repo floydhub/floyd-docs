@@ -6,6 +6,7 @@ pages:
     - Home: index.md
     - Get Started:
         - 'Quick Start': getstarted/quick_start.md
+        - 'Quick Start - Jupyter Notebook': getstarted/quick_start_jupyter.md
     - Guides:
         - 'Installation': guides/install.md
     - FAQs:
