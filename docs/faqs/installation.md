@@ -28,7 +28,7 @@ You are now ready to use the [floyd commands](). Note: You need to activate your
 
 ### Using sudo to install floyd-cli
 
-If you are not using virtualenv and you are installing `floyd-cli` globally you may need to use `sudo`:
+Try this if you see a permission error, such as `Permission denied` or `Access is denied`. If you are not using virtualenv and you are installing `floyd-cli` globally you may need to use `sudo`:
 
 ```bash
 sudo pip install -U floyd-cli

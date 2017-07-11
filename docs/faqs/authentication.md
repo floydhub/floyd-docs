@@ -5,6 +5,8 @@
 
 ## Login
 
+### Windows
+
 ### I get "Invalid Token" error on my Windows 10 machine when I run floyd login.
 
 If you are using Windows command shell, there is an issue with pasting the token using the 
