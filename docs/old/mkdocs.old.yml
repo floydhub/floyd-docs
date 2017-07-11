@@ -1,0 +1,67 @@
+site_name: FloydHub
+site_url: https://www.floydhub.com
+site_author: FloydHub Team
+repo_url: https://github.com/floydhub/floyd-docs
+pages:
+    - Home: index.md
+    - Get Started:
+        - 'First Project': getstarted/hello_world.md
+        - 'Installation': home/install.md
+        - 'First Floyd Project': home/getting_started.md
+        - 'Using Datasets': home/using_datasets.md
+        - 'Managing Output': home/managing_output.md
+        - 'Installing Dependencies': home/installing_dependencies.md
+        - 'Environments': home/environments.md
+        - 'FloydIgnore': home/floyd_ignore.md
+    - Guides:
+        - 'Installation': guides/install.md
+        - 'Jupyter Notebook': guides/jupyter.md
+        - 'Style Transfer': guides/style_transfer.md
+        - 'Deep Text Corrector': guides/deep_corrector.md
+        - 'CycleGAN': guides/cyclegan.md
+        - 'Public Datasets': guides/datasets.md
+        - 'Contributing': guides/contributing.md
+    - Commands:
+        - 'floyd': commands/index.md
+        - 'floyd login': commands/login.md
+        - 'floyd init': commands/init.md
+        - 'floyd run': commands/run.md
+        - 'floyd data': commands/data.md
+        - 'floyd logs': commands/logs.md
+        - 'floyd status': commands/status.md
+        - 'floyd output': commands/output.md
+        - 'floyd info': commands/info.md
+        - 'floyd stop': commands/stop.md
+        - 'floyd delete': commands/delete.md
+        - 'floyd logout': commands/logout.md
+        - 'floyd upgrade': commands/upgrade.md
+        - 'floyd version': commands/version.md
+    - Floydhub:
+        - 'Privacy': floydhub/privacy.md
+        - 'Terms of Service': floydhub/terms.md
+    - FAQs:
+        - 'Installation FAQs': faqs/installation.md
+        - 'Signup and Login FAQs': faqs/authentication.md
+    - Old FAQs: faq.md
+theme: material
+extra:
+  palette:
+    primary: 'blue'
+    accent: 'blue'
+    extra:
+  logo: 'img/f_white_small.png'
+  font:
+    text: 'Roboto'
+    code: 'Source Code Pro'
+  social:
+    - type: 'github'
+      link: 'https://github.com/floydhub'
+    - type: 'twitter'
+      link: 'https://twitter.com/floydhub_'
+markdown_extensions:
+    - markdown_include.include:
+        base_path: docs
+extra_css:
+    - css/bootstrap_paper.min.css
+    - css/style.css
+copyright: Copyright &copy; 2017 Floyd Labs Inc.

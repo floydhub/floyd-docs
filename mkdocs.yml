@@ -5,39 +5,14 @@ repo_url: https://github.com/floydhub/floyd-docs
 pages:
     - Home: index.md
     - Get Started:
-        - 'Installation': home/install.md
-        - 'First Floyd Project': home/getting_started.md
-        - 'Using Datasets': home/using_datasets.md
-        - 'Managing Output': home/managing_output.md
-        - 'Installing Dependencies': home/installing_dependencies.md
-        - 'Environments': home/environments.md
-        - 'FloydIgnore': home/floyd_ignore.md
+        - 'First Project': getstarted/hello_world.md
     - Guides:
-        - 'Jupyter Notebook': guides/jupyter.md
-        - 'Style Transfer': guides/style_transfer.md
-        - 'Deep Text Corrector': guides/deep_corrector.md
-        - 'CycleGAN': guides/cyclegan.md
-        - 'Public Datasets': guides/datasets.md
-        - 'Contributing': guides/contributing.md
-    - Commands:
-        - 'floyd': commands/index.md
-        - 'floyd login': commands/login.md
-        - 'floyd init': commands/init.md
-        - 'floyd run': commands/run.md
-        - 'floyd data': commands/data.md
-        - 'floyd logs': commands/logs.md
-        - 'floyd status': commands/status.md
-        - 'floyd output': commands/output.md
-        - 'floyd info': commands/info.md
-        - 'floyd stop': commands/stop.md
-        - 'floyd delete': commands/delete.md
-        - 'floyd logout': commands/logout.md
-        - 'floyd upgrade': commands/upgrade.md
-        - 'floyd version': commands/version.md
-    - Floydhub:
-        - 'Privacy': floydhub/privacy.md
-        - 'Terms of Service': floydhub/terms.md
-    - FAQs: faq.md
+        - 'Installation': guides/install.md
+    - FAQs:
+        - 'Installation FAQs': faqs/installation.md
+        - 'Signup and Login FAQs': faqs/authentication.md
+    - Changelogs:
+        - 'July 12 2017': changelogs/1.md
 theme: material
 extra:
   palette:
