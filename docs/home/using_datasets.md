@@ -77,6 +77,10 @@ To use a public or your personal dataset in your project you can use
 the `--data` parameter in the floyd [run](../commands/run.md) command.
 The data will be mounted and available in `/input` directory at project during run time.
 
+Note: Here, you just want to use 'ls -la /input' to view the data. But, at first, floyd will upload all of 
+the data in current directory. The proposal is to make an empyt project and init it, then run the follow 
+command in that empty directory.
+
 ```bash
 $ floyd run --data GY3QRFFUA8KpbnqvroTPPW "ls -la /input"
 Syncing code ...
