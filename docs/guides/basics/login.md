@@ -4,7 +4,7 @@
 
 - You must have a [FloydHub account](https://www.floydhub.com/signup)
 - You must be [logged in to your web dashboard](https://www.floydhub.com/login)
-- You must have `floyd-cli` [installed on your computer](../../guides/install.md)
+- You must have `floyd-cli` [installed on your computer](install.md)
 
 You can use the [floyd login](../../commands/login.md) command to login to your FloydHub account through your command line
 
