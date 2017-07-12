@@ -46,7 +46,7 @@ If you are a new user, you should see a default project named `quick-start` in y
 
 If you don't see it, you can create a new project named `quick-start` and still follow through with the rest of this guide. See [instructions](../guides/basics/create_new/#create-a-new-project) to create a new project.
 
-A [Project](../guides/core_concepts.md#projects) is a space for tackling a specific problem. It is a collection of jobs that you run, data, logs and results. If you have used GitHub, projects in FloydHub are a lot like code repositories.
+A Project is a space for tackling a specific problem. It is a collection of jobs that you run, data, logs and results. If you have used GitHub, projects in FloydHub are a lot like code repositories.
 
 To start using this project, initialize it in your current directory in your terminal. 
 
@@ -59,7 +59,7 @@ This tells Floyd that all the jobs you run from this directory belong to the pro
 
 ## Running your first job on FloydHub
 
-A [Job](../guides/core_concepts.md#jobs) is created when you execute a command inside a project on FloydHub.
+A Job is created when you execute a command inside a project on FloydHub.
 
 Running a job on FloydHub is simple. It is very similar to running code on your local machine. Instead, when you use the `floyd run` command, the CLI syncs your code to the FloydHub's servers and runs it in the cloud. 
 
