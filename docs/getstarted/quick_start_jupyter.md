@@ -1,4 +1,4 @@
-In this tutorial, we will run a Python [Jupyter Notebook](http://jupyter.org/) on FloydHub. Notebooks allow you to create and share documents that contain live code, visualizations and explanatory texts. This is an [example Notebook](TODO). It is great for interactively writing and debugging your code and visualizing your results and data. 
+In this tutorial, we will run a Python [Jupyter Notebook](http://jupyter.org/) on FloydHub. Notebooks allow you to create and share documents that contain live code, visualizations and explanatory texts. This is an [example Notebook](https://github.com/floydhub/quick-start-pytorch/blob/master/mnist.ipynb). It is great for interactively writing and debugging your code and visualizing your results and data. 
 
 Similar to the [Quick Start guide](./quick_start.md), we will train a CNN model for handwritten digit recognition using PyTorch and the MNIST database.
 
