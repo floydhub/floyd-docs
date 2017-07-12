@@ -10,8 +10,8 @@ In this quick start guide, we will walk you through running your first project o
 ## Quick preparation checklist
 
 - You must have a [FloydHub account](https://www.floydhub.com/login)
-- You must have `floyd-cli` [installed on your computer](../guides/install.md)
-- You must [log in to FloydHub through the CLI](../guides/login.md)
+- You must have `floyd-cli` [installed on your computer](../guides/basics/install.md)
+- You must [log in to FloydHub through the CLI](../guides/basics/login.md)
 
 
 ## Web dashboard and floyd-cli
