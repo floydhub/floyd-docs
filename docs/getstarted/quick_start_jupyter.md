@@ -14,8 +14,8 @@ If you are new to FloydHub, please ensure you have followed the [Quick Start gui
 ## Quick preparation checklist
 
 - You must have a [FloydHub account](https://www.floydhub.com/login)
-- You must have `floyd-cli` [installed on your computer](../guides/install.md)
-- You must [log in to FloydHub through the CLI](../guides/login.md)
+- You must have `floyd-cli` [installed on your computer](../guides/basics/install.md)
+- You must [log in to FloydHub through the CLI](../guides/basics/login.md)
 
 ## Setup
 
@@ -84,7 +84,7 @@ Opening the jupyter notebook in your browser now ...
 This will take a little bit. As it executes, Floyd is doing the following behind the scenes:
 
 - Sync your local code to FloydHub's server
-- Provision a CPU instance on the cloud (if you want GPU, use the `--gpu` flag)
+- Provision a GPU instance on the cloud (if you want CPU, drop the `--gpu` flag)
 - Set up an deep learning environment with PyTorch installed (because `--env pytorch`)
 - Start a Jupyter server on the cloud, and open the url in your browser
 
