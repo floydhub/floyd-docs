@@ -12,6 +12,7 @@ pages:
             - 'Core concepts': guides/basics/core_concepts.md
             - 'Install Floyd CLI': guides/basics/install.md
             - 'Login using Floyd CLI': guides/basics/login.md
+            - 'Create new Project and Dataset': guides/basics/create_new.md
     - FAQs:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md

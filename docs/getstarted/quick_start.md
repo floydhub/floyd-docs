@@ -10,44 +10,41 @@ In this quick start guide, we will walk you through running your first project o
 ## Quick preparation checklist
 
 - You must have a [FloydHub account](https://www.floydhub.com/login)
-- You must have `floyd-cli` [installed on your computer](../guides/install.md)
-- You must [log in to FloydHub through the CLI](../guides/login.md)
+- You must have `floyd-cli` [installed on your computer](/guides/basics/install.md)
+- You must [log in to FloydHub through the CLI](/guides/basics/login.md)
 
 
 ## Web dashboard and floyd-cli
 
-FloydHub has a [web dashboard](https://www.floydhub.com/projects) and a [CLI](../guides/install.md) that you can interact with from your terminal. If you are familiar with Github, think of the CLI tool (`floyd` command) as the equivalent of the `git` command. You can initialize projects, run jobs, view logs and outputs, etc. all using the CLI. 
+FloydHub has a [web dashboard](https://www.floydhub.com/projects) and a [CLI](/guides/basics/install.md) that you can use to interact with FloydHub from your terminal. If you are familiar with Github, think of the CLI tool (`floyd` command) as the equivalent of the `git` command. You can initialize projects, run jobs, view logs and outputs, etc. all using the CLI. 
 
 The web dashboard is useful for getting an overview of your work and exploring others' projects and datasets.
 
 ## Setup
 
 ### Get the code
-We will clone the [quick-start repository](TODO) from Github and run it on FloydHub. 
+We will clone the [quick-start repository](https://github.com/floydhub/quick-start) from Github and run it on FloydHub. 
 
 ```bash
 $ git clone https://github.com/floydhub/quick-start.git
 Cloning into 'quick-start'...
+...
 $ cd quick-start
 ```
 
 ```bash
 $ ls
-$ mnist_cnn.py      mnist_cnn.ipynb
+LICENSE    mnist_cnn.py    mnist_cnn.ipynb    README.md
 ```
 
-This repository contains two files: `mnist_cnn.py` (a Python script) and `mnist_cnn.ipynb` (a Jupyter Notebook). In this guide, we will use the Python script. We will explore running the Jupyter Notebook in our [next tutorial](./quick_start_jupyter.md).
+This repository contains two main files: `mnist_cnn.py` (a Python script) and `mnist_cnn.ipynb` (a Jupyter Notebook). In this guide, we will use the Python script. We will explore running Jupyter Notebooks in our [next tutorial](/getstarted/quick_start_jupyter.md).
 
 ### Initialize project
 If you are a new user, you should see a default project named `quick-start` in your [Projects dashboard](https://www.floydhub.com/projects).
 
 ![Quick start project](../img/quick_start_project.jpg)
 
-If you don't see it, you can create it using the following steps and still follow through with this guide:
-
-```bash
-TODO: Steps to clone a quick-start project
-```
+If you don't see it, you can create a new project named `quick-start` and still follow through with this guide. See this [guide](../guides/basics/create_new/#create-a-new-project) to create a new project.
 
 A [Project](../guides/core_concepts.md#projects) is a space for tackling a specific problem. It is a collection of jobs that you run, data, logs and results. If you have used GitHub, projects in FloydHub are a lot like code repositories.
 
