@@ -13,6 +13,7 @@ pages:
             - 'Install Floyd CLI': guides/basics/install.md
             - 'Login using Floyd CLI': guides/basics/login.md
         - 'Mounting Data': guides/mounting_data.md
+        - 'Environments': guides/environments.md
     - FAQs:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md
