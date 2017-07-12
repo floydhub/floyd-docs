@@ -9,7 +9,7 @@ pages:
         - 'Quick Start - Jupyter Notebook': getstarted/quick_start_jupyter.md
     - Guides:
         - Basics:
-            - 'Core concepts': guides/basics/core_concepts.md
+            # - 'Core concepts': guides/basics/core_concepts.md
             - 'Install Floyd CLI': guides/basics/install.md
             - 'Login using Floyd CLI': guides/basics/login.md
             - 'Create new Project and Dataset': guides/basics/create_new.md
