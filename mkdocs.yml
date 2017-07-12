@@ -12,6 +12,22 @@ pages:
     - FAQs:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md
+    - Commands:
+        - 'floyd': commands/index.md
+        - 'floyd login': commands/login.md
+        - 'floyd init': commands/init.md
+        - 'floyd run': commands/run.md
+        - 'floyd data': commands/data.md
+        - 'floyd logs': commands/logs.md
+        - 'floyd status': commands/status.md
+        - 'floyd output': commands/output.md
+        - 'floyd clone': commands/clone.md
+        - 'floyd info': commands/info.md
+        - 'floyd stop': commands/stop.md
+        - 'floyd delete': commands/delete.md
+        - 'floyd logout': commands/logout.md
+        - 'floyd upgrade': commands/upgrade.md
+        - 'floyd version': commands/version.md
     - Changelogs:
         - 'July 12 2017': changelogs/1.md
 theme: material
