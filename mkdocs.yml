@@ -8,7 +8,10 @@ pages:
         - 'Quick Start': getstarted/quick_start.md
         - 'Quick Start - Jupyter Notebook': getstarted/quick_start_jupyter.md
     - Guides:
-        - 'Installation': guides/install.md
+        - Basics:
+            - 'Core concepts': guides/basics/core_concepts.md
+            - 'Install Floyd CLI': guides/basics/install.md
+            - 'Login using Floyd CLI': guides/basics/login.md
     - FAQs:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md

@@ -18,7 +18,7 @@ If you are a fan of analogies, we can be described as:
 
 Even though our current focus is on deep learning, FloydHub works great for other AI, machine learning and data science applications too.
 
-Click [here](./home/getting_started.md) to get started.
+Click [here](./getstarted/quick_start.md) to get started.
 
 
 ### Why use FloydHub?
