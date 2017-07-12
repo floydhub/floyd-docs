@@ -1,5 +1,13 @@
 In this guide, we will explain how to attach a dataset to your project run.
 
+### Quick Preparation Checklist
+
+- You must have a [FloydHub account](https://www.floydhub.com/signup)
+- You must be [logged in to your web dashboard](https://www.floydhub.com/login)
+- You must have `floyd-cli` [installed on your computer](basics/install.md)
+
+You can use the [floyd login](../commands/login.md) command to login to your FloydHub account through your command line
+
 ## Mounting datasets
 
 Floyd datasets are directories of data files that can be used in a project run. You can view the datasets you 
@@ -53,3 +61,8 @@ $ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/d
 ```
 In this case the above datasets will be mounted at `/training` and `/testing` respectively.
 
+## Web dashboard
+
+You can view the mounted datasets in a specific job by going to the `data` tab:
+
+![Data Mounts](../img/job_data_view.png)
