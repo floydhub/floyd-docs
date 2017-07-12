@@ -2,8 +2,8 @@ In this quick start guide, we will walk you through running your first project o
 
 ## What we will accomplish in this guide
 
-- Learn about `floyd-cli` and the web dashboard
-- Initialize a new project or clone an existing project
+- Learn about FloydHub's web dashboard and `floyd-cli` tool
+- Initialize an existing project locally
 - Run a job using `floyd run` command to train your deep learning model on FloydHub's GPU servers
 - View the logs and stored output
 
