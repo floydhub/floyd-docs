@@ -16,6 +16,7 @@ pages:
         - 'Mounting Data': guides/mounting_data.md
         - 'Environments': guides/environments.md
         - 'Ignore files': guides/floyd_ignore.md
+        - 'Installing extra dependencies': guides/installing_dependencies.md
     - FAQs:
         - 'Pricing FAQs': faqs/signup.md
         - 'Installation FAQs': faqs/installation.md
