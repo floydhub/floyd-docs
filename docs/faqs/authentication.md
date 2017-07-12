@@ -1,8 +1,3 @@
-## Signup
-
-
-
-
 ## Login
 
 ### Windows
