@@ -17,6 +17,8 @@ pages:
         - 'Environments': guides/environments.md
         - 'Ignore files': guides/floyd_ignore.md
         - 'Installing extra dependencies': guides/installing_dependencies.md
+    - Examples:
+        - 'Style Transfer': examples/style_transfer.md
     - FAQs:
         - 'Pricing FAQs': faqs/signup.md
         - 'Installation FAQs': faqs/installation.md
