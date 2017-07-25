@@ -9,7 +9,7 @@ projects in one place.
 
 ### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
 
-Floydhub currently allows only 1 active runs per user for trial plan and 3 active runs for individual plan. If you require more concurrency, contact
+Floydhub currently allows only 1 active job per user for trial plan and 3 active jobs for individual plan. If you require more concurrency, contact
 us from the [pricing](https://www.floydhub.com/pricing) page.
 
 
@@ -70,6 +70,31 @@ entire duration of your notebook, not just when you are executing commands.
 
 For example, when you execute `import tensorflow`
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
+
+
+### Why was my CPU job Killed without warning?
+
+Occasionally, you may notice that your CPU job died without warning. The output logs just display `Killed`. For example,
+
+```bash
+################################################################################
+
+2017-07-24 03:33:42,530 INFO - Run Output:
+...
+2017-07-24 03:33:52,920 INFO - Using TensorFlow backend.
+2017-07-24 03:34:04,381 INFO - >> loading UNet of size 1152x256...
+2017-07-24 03:34:10,942 INFO - Epoch 1/100
+2017-07-24 03:35:17,221 INFO - Killed
+2017-07-24 03:35:18,680 INFO - 
+################################################################################
+```
+
+This happens when your machine runs out of memory (OOM). i.e. your job consumes more memory than is available on our CPU machines.
+
+All jobs run on FloydHub are executed inside a Docker container. Our current CPU machines have [7GB memory](https://www.floydhub.com/pricing). When memory used by your job exceeds 7GB, Docker automatically kills the job to protect the system and avoid abuse.
+
+The resolution is to optimize your code to consume less memory. For example, read less data into your in-memory datastructures or reduce your batch size. We will be introducing more powerful CPUs, which higher memory in the near future.
+
 
 
 {!contributing.md!}
