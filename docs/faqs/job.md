@@ -72,6 +72,15 @@ For example, when you execute `import tensorflow`
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
 
 
+### Why did my job timeout after 1 hour?
+
+You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that. 
+
+![1HourTimeout](../img/1HrTimeout.jpg)
+
+You can upgrade to the [Paid Plan](https://www.floydhub.com/pricing) to overcome these limits.
+
+
 ### Why was my CPU job Killed without warning?
 
 Occasionally, you may notice that your CPU job died without warning. The output logs just display `Killed`. For example,
