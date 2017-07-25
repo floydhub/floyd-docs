@@ -24,6 +24,7 @@ pages:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md
         - 'Job FAQs': faqs/job.md
+        - 'Environments FAQs': faqs/environments.md
         - 'Plans FAQs': faqs/plans.md
         - 'Billing FAQs': faqs/billing.md
     - Commands:
