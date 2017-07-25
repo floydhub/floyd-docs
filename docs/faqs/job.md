@@ -72,6 +72,32 @@ For example, when you execute `import tensorflow`
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
 
 
+### Why is my job in the "Queued" state for several minutes?
+
+This means that a machine is being prepared to run your job. 
+
+Most times, we have several CPU and GPU machines that are ready and your job can start execution in a few seconds. During high traffic periods, we may not have a machine ready for you and have to spin up a new instance for your job on-demand (details below). This might take up to 10 minutes in some cases. We are actively working on reducing this wait time.
+
+**Details**: When you execute a `floyd run` command, Floyd does several things in the background:
+
+- Provision a CPU or GPU instance on the cloud
+- Set up a deep learning environment with GPU drivers and the correct environment (as specified by `--env`) installed using Docker
+- Mount any data you specify using the `--data` flag
+- Spin up a Jupyter server, if `--mode jupyter` flag
+
+Each of these steps can take up to a couple of minutes. Usually Steps 1 and 2 are already done, but during peak usage hours, we might have to do this on-demand.
+
+
+### Why do I see "Setting up your instance..." for several minutes when running a Jupyter Notebook?
+
+The *Setting up your instance...* message is displayed when a machine is being prepared to run your Jupyter Notebook.
+
+![1HourTimeout](../img/SettingUpInstance.jpg)
+
+When you execute a `floyd run --mode jupyter` command, the CLI waits for a CPU or GPU machine to be ready before it opens up an interactive Jupyter Notebook for your work on. Usually, this takes a few seconds, but during high traffic periods it can take up to 10 minutes in some cases.
+
+For more details on why it takes time, please see [Why is my job in the "Queued" state for several minutes?](#why-is-my-job-in-the-queued-state-for-several-minutes)
+
 ### Why did my job timeout after 1 hour?
 
 You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that. 
