@@ -20,7 +20,6 @@ pages:
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
     - FAQs:
-        - 'Pricing FAQs': faqs/signup.md
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md
         - 'Job FAQs': faqs/job.md
