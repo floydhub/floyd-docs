@@ -24,6 +24,7 @@ pages:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md
         - 'Job FAQs': faqs/job.md
+        - 'Plans FAQs': faqs/plans.md
         - 'Billing FAQs': faqs/billing.md
     - Commands:
         - 'floyd': commands/index.md

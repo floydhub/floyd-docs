@@ -22,10 +22,10 @@ Usage: floyd [OPTIONS] COMMAND [ARGS]...
 ...
 ```
 
-Detailed documentation for the floyd commands is available in the [documentation](../commands/index.md).
+Detailed documentation for the floyd commands is available in the [documentation](../../commands/index.md).
 
 ## Having trouble installing the CLI?
 
-See the list of [FAQs related to installation](../faqs/installation.md).
+See the list of [FAQs related to installation](../../faqs/installation.md).
 
 {!contributing.md!}

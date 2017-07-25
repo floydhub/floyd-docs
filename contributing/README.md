@@ -89,3 +89,5 @@
 
 ### Sites with great documentation
 - SendGrid: [https://sendgrid.com/docs](https://sendgrid.com/docs)
+
+- How to make pull requests to update the docs
