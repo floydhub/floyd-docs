@@ -1,6 +1,6 @@
 ## Running your job on CPU vs. GPU
 
-When you run a job using the [floyd run](../commands/run.md) command, it is executed on a CPU instance on FloydHub's servers, by default. 
+When you run a job using the [floyd run](../../commands/run.md) command, it is executed on a CPU instance on FloydHub's servers, by default. 
 
 ```bash
 $ floyd run "python mnist_cnn.py"
@@ -29,7 +29,7 @@ Syncing code...
 
 $ floyd logs -t <JOB_NAME>
 
-[TODO: Print the nvidia-smi output here]
+# GPU stats displayed here
 ```
 
 If you are using a Jupyter Notebook, you can also just execute the `!nvidia-smi` command inside it. (*Make note* of the `!` character at the beginning of the command)

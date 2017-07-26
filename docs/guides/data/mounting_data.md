@@ -1,12 +1,4 @@
-In this guide, we will explain how to attach a dataset to your project run.
-
-### Quick Preparation Checklist
-
-- You must have a [FloydHub account](https://www.floydhub.com/signup)
-- You must be [logged in to your web dashboard](https://www.floydhub.com/login)
-- You must have `floyd-cli` [installed on your computer](basics/install.md)
-
-You can use the [floyd login](../commands/login.md) command to login to your FloydHub account through your command line
+In this guide, we will explain how to attach a datasource to your job.
 
 ## Datasets
 
@@ -19,7 +11,7 @@ public datasets by searching for it on FloydHub.
 
 ### Overview
 
-You can mount one or more datasets when you run a job using the [floyd run](../commands/run) command. This automatically makes 
+You can mount one or more datasets when you run a job using the [floyd run](../../commands/run) command. This automatically makes 
 the mounted datasets available for you to use in your job, without having to download them each time.
 
 To mount a specific version of a dataset, you need to specify its full name and the mount point. 
@@ -32,7 +24,7 @@ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter
 
 This will spin up a Jupyter Notebook, inside which you will have access to the VGGNet pre-trained models under `/vgg`.
 
-![Mounted Data](../img/mounted_data.jpg)
+![Mounted Data](../../img/mounted_data.jpg)
 
 *Note*: You can use the `--data` flag with `floyd run` when you are running a command too.
 
@@ -62,7 +54,7 @@ This will make the output of `floydhub/projects/handwriting-recognition/12` avai
 
 ### Mounting multiple datasources
 
-You can attach upto 5 datasources when you run a job using the `--data` flag in the [floyd run](../commands/run) command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.
+You can attach upto 5 datasources when you run a job using the `--data` flag in the [floyd run](../../commands/run) command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.
 
 ```bash
 $ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:test "python script.py"
@@ -74,7 +66,7 @@ In this case, the above datasets will be mounted at `/training` and `/test` resp
 
 You can view the mounted datasets and their respective mount points for a specific job by going to the `Data` tab:
 
-![Data Mounts](../img/job_data_view.jpg)
+![Data Mounts](../../img/job_data_view.jpg)
 
 
 ### Details
