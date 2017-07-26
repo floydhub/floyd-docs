@@ -14,7 +14,7 @@ You can upgrade to the [Paid Plan](https://www.floydhub.com/pricing) to overcome
 
 We offered 100 hours of free GPU for all users during our promotional period. This has ended. 
 
-In our current Trial Plan, all users get 2 hours of free GPU compute time for running your projects. We hope this will give you enough time to evaluate Floydhub for your needs. We are working on a new free plan right now to better help new users explore the platform.
+In our current Trial Plan, all users get 2 hours of free GPU or 20 hours of CPU compute time for running your projects. We hope this will give you enough time to evaluate Floydhub for your needs. We are working on a new free plan right now to better help new users explore the platform.
 
 
 ### Is there a student discount?

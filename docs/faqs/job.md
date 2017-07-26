@@ -72,6 +72,38 @@ For example, when you execute `import tensorflow`
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
 
 
+### Can I view my Jupyter Notebook after my job has stopped?
+
+Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodically in the `/output` dir. So, your work is not lost after your job has ended, shutdown or timed out.
+
+You can view your saved Notebook using the [floyd output](../commands/output/) command. Example:
+
+```bash
+$ floyd output saip/projects/mnist-pytorch/3
+```
+
+Or in the `Output` tab of your job on the web dashboard, example: `www.floydhub.com/saip/projects/mnist-pytorch/3/output`
+
+
+### Can I restart a stopped or timed out job?
+
+Unfortunately, not directly. We will be implementing a single command to do this soon!
+
+In the meanwhile, you can follow these steps to do this manually:
+
+- **Jupyter Notebook**: Your Notebook is [saved periodically](#can-i-view-my-jupyter-notebook-after-my-job-has-stopped). To restart your Notebook after your job has stopped, please download the output of your stopped job to your machine and start another job. Example:
+
+```bash
+# Download the saved Notebook from previous job
+# NOTE: This will overwrite the contents of your current dir
+$ floyd data clone saip/projects/mnist-pytorch/3/output
+
+# Start a new job
+$ floyd run --mode jupyter
+```
+
+- **Script**: If you are running a script/command, you will have to start a new job using the `floyd run "<command>"` command.
+
 ### Why is my job in the "Queued" state for several minutes?
 
 This means that a machine is being prepared to run your job. 
