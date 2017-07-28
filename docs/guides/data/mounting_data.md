@@ -11,10 +11,10 @@ public datasets by searching for it on FloydHub.
 
 ### Overview
 
-You can mount one or more datasets when you run a job using the [floyd run](../../commands/run) command. This automatically makes 
-the mounted datasets available for you to use in your job, without having to download them each time.
+You can mount one or more datasets when you run a job using the [floyd run](../../commands/run) command. 
+This automatically makes the mounted datasets available for you to use in your job, without having to download them each time.
 
-To mount a specific version of a dataset, you need to specify its full name and the mount point. 
+To mount a specific version of a dataset, you need to specify its [full name](#datasource-name) and the [mount point](#mount-point). 
 The syntax is `--data <data_name>:<mount_point>`
 
 For example, to mount the [VGG 19-layers](https://www.floydhub.com/floydhub/datasets/vgg-ilsvrc-19-layers/1) dataset under `/vgg`:
@@ -69,6 +69,11 @@ You can view the mounted datasets and their respective mount points for a specif
 ![Data Mounts](../../img/job_data_view.jpg)
 
 
+### Symlinking your mounted data
+
+Sometimes, your code might require your data to be available at a hardcoded location. Or you might want to combine multiple mounted datasources under a single directory. One way to do this would be to copy the data from the mounted locations to the destination, but this is inefficient for large data. [Symlinking](https://en.wikipedia.org/wiki/Symbolic_link) is a great solution for this.
+
+Please see this guide: [Symlinking mounted data](./symlink_mounted_data)
 ### Details
 
 #### Datasource name
@@ -83,9 +88,10 @@ For example: `floydhub/datasets/mnist/2`
 
 #### Mount point
 
-The mount point is an absolute path. For example, `--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg` will mount the data at `/vgg`.
+The mount point is the name of the directory under which the datasource will be available in your job. 
 
-A common mistake is to look for the mounted data in the current directory (`./vgg`), rather than using the absolute path (`/vgg`)
+- It *cannot* contain subdirectories. `vgg` is a valid mount point, but `vgg/2017` is not.
+- The mount point is an absolute path. For example, `--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg` will mount the data at `/vgg`. A common mistake is to look for the mounted data in the current directory (`./vgg`), rather than using the absolute path (`/vgg`)
 
 #### Default mount points
 

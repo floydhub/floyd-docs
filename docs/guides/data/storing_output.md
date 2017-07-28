@@ -1,5 +1,3 @@
-## Storing output data
-
 Most jobs generate output files (eg. model checkpoints, logs, evaluation output). In Floyd, `/output` is a special directory used to store outputs. 
 
 Any file or directory you create at runtime under the `/output` directory will be retained and available to you for download after your job finishes.
