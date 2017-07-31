@@ -34,4 +34,4 @@ Some common causes are:
 - **Balance**: We issue a small $0-1 transaction on your card as a pending authorization request between our billing system and the bank that issued your credit or debit card. If this authorization fails, you won't be able to add your card. Please ensure you have enough balance and are using a valid card. *Note*: This is an authorization request only, not an actual charge.
 - **Fraud Detection**: We use Stripe for managing all our payments. They have their own fraud detection algorithm which can decline some cards. Please try a different payment method.
 
-If you are still unable to add your payment, please contact us directly at support@floydhub.com.
+If you are still unable to add your payment, please contact us directly at [support@floydhub.com](mailto:support@floydhub.com).

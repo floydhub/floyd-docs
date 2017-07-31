@@ -14,13 +14,15 @@ pages:
             - 'Login using Floyd CLI': guides/basics/login.md
             - 'Create new Project and Dataset': guides/basics/create_new.md
             - 'Using CPU vs GPU': guides/basics/using_gpu.md
+        - Jobs:
+            - 'Installing extra dependencies': guides/jobs/installing_dependencies.md
         - Data:
             - 'Storing output data': guides/data/storing_output.md
             - 'Mounting data': guides/data/mounting_data.md
             - 'Symlink mounted data': guides/data/symlink_mounted_data.md
         - 'Environments': guides/environments.md
         - 'Ignore files': guides/floyd_ignore.md
-        - 'Installing extra dependencies': guides/installing_dependencies.md
+        
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
     - FAQs:
