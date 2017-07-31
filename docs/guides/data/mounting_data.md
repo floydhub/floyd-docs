@@ -3,7 +3,7 @@ In this guide, we will explain how to attach a datasource to your job.
 ## Datasets
 
 Floyd datasets are directories of data files that can be used in a project run. To create a new dataset, please follow 
-[this guide](./basics/create_new/#create-a-new-dataset). You can view the datasets you 
+[this guide](../basics/create_new/#create-a-new-dataset). You can view the datasets you 
 have created in the [datasets page](https://www.floydhub.com/datasets) in the dashboard. You can also view 
 public datasets by searching for it on FloydHub.
 
