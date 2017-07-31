@@ -30,6 +30,25 @@ Syncing code...
 $ floyd logs -t <JOB_NAME>
 
 # GPU stats displayed here
+Mon Jul 31 22:45:14 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 375.66                 Driver Version: 375.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K80           Off  | 0000:00:1E.0     Off |                    0 |
+| N/A   43C    P8    25W / 149W |      0MiB / 11439MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
 ```
 
 If you are using a Jupyter Notebook, you can also just execute the `!nvidia-smi` command inside it. (*Make note* of the `!` character at the beginning of the command)
+
+![nvidia-smi Jupyter Notebook](../../img/nvidia-smi-jupyter.jpg)
