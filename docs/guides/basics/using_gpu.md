@@ -29,7 +29,6 @@ Syncing code...
 
 $ floyd logs -t <JOB_NAME>
 
-# GPU stats displayed here
 Mon Jul 31 22:45:14 2017       
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 375.66                 Driver Version: 375.66                    |
