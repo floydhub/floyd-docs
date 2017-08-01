@@ -9,10 +9,10 @@ floyd run [OPTIONS] [COMMAND]
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
 | `--gpu/--cpu` |  cpu    | If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
-| `--data <ID:mount>` |    | `ID` of the data source to link to. `mount` specifies the path to mount it at. You can use this parameter multiple times. See [data](../home/using_datasets) section for more details. |
+| `--data <ID:mount>` |    | `ID` of the data source to link to. `mount` specifies the path to mount it at. You can use this parameter multiple times. See [data](../guides/data/mounting_data) section for more details. |
 | `--mode [jupyter|serve]` |  command  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [jupyter](../guides/jupyter) and [serve](#serve) sections for more info on them. |
 | `--no-open` |   | You can disable the CLI from opening the jupyter notebook url. It will print the URL instead. |
-| `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../home/environments) for the full list. |
+| `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
 | `--tensorboard` |   | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
 | command |      | Command to execute when running your project on Floyd. |
@@ -34,7 +34,7 @@ $ floyd logs floydhub/tensorflow-project/7
 ```
 
 ### floyd_requirements.txt
-Floyd runs standard Docker images for various deep learning frameworks.(See [environments](../home/environments) for details). If your 
+Floyd runs standard Docker images for various deep learning frameworks.(See [environments](../guides/environments) for details). If your 
 code requires additional Python dependencies you can specify them in a `floyd_requirements.txt` file and place it at the root 
 directory of your project. These dependencies will be installed before running your code.
 

@@ -40,7 +40,7 @@ See the [floydignore](home/floyd_ignore) documentation to understand how this ca
 3. Tar them into a single file and untar them at runtime.
 
 Alternatively, instead of uploading files from your local machine, you can also 
-[download files](http://docs.floydhub.com/home/using_datasets/#creating-a-dataset-from-downloads) from a remote URL 
+[download files](./guides/data/mounting_data/#creating-a-dataset-from-downloads) from a remote URL 
 directly into Floyd servers.
 
 
@@ -65,7 +65,7 @@ There are a few ways to make this go faster:
 2. Add sub-directories to `.floydignore` file. Floyd CLI will ignore and not upload these sub-directories.
 See the [init](../commands/init#description) command to understand how this can be configured.
 3. If you have large data files consider uploading them separately as a [data source](../commands/data). 
-You can then [refer](../home/using_datasets#using-data-set-in-experiments) to them in your project.
+You can then [refer](../home/mounting_data#mounting-datasets) to use them in your project.
 
 
 ### My job finished but how I do I see my output?

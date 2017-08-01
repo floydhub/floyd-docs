@@ -66,7 +66,7 @@ DATA ID                 NAME
 GY3QRFFUA8KpbnqvroTPPW  alice/mnist-data:1  
 ```
 Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
-using this data id. See [here](../home/using_datasets/#using-data-set-in-experiments) for more details.
+using this data id. See [here](../guides/data/mounting_data/#mounting-datasets) for more details.
 
 ---------------------------------
 
