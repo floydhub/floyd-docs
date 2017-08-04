@@ -43,7 +43,7 @@ All the notebooks in your project should be available for you to run.
 
 Jupyter notebooks run in the same environments as other jobs. You can select any environment you want 
 along with the `--env` parameter of the [run](../commands/run.md) command. You can see the list of supported environments
-[here](../home/environments.md).
+[here](../guides/environments.md).
 
 ```bash
 $ floyd run --mode jupyter --env tensorflow-0.12:py2

@@ -8,11 +8,13 @@ floyd init PROJECT_NAME
 ### Options
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
-| PROJECT_NAME    |         | Name of your project (No spaces. Use letters, numbers, dash and underscore)    |
+| PROJECT_NAME    |         | Name of your project (Pick a name from the projects page in web dashboard) |
 
 ### Description
-Floyd tracks projects based on the location of your code. This command initializes a new project at the current directory and 
-tracks all files and subdirectories. These files will be uploaded when you run your project on Floyd.
+
+This command initializes the current directory for a given project name and tracks all the files and subdirectories. 
+Make sure that the project name you enter here already exists in Floyd. In case the project name does not exist, 
+the CLI will open the create project page in your browser.
 
 To initialize a new dataset you should use [floyd data init](data/#floyd-data-init) command.
 

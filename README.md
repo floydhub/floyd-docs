@@ -6,7 +6,7 @@ Please feel free to make pull requests, if there's anything you feel we could do
 
 ### Steps to build docs locally
 * Install requirements.txt with `pip install -r requirements.txt`
-* Use `mkdocs serve` to run a local server and build/preview documentation
+* Use `mkdocs serve` to run a local server and build/preview documentation. You can view the docs at [ http://127.0.0.1:8000]( http://127.0.0.1:8000)
 * To build the static site, use `mkdocs build`. This step is not necessary if hosting the site on Github Pages (which is what is currently done)
 
 ### Steps to deploy (only admins)

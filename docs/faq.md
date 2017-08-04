@@ -12,32 +12,6 @@ Not at the moment, but we are currently working out a Student Plan. We will post
 very soon :)
 
 
-
-## Login
-
-### I get "Invalid Token" error on my Windows 10 machine when I run floyd login.
-
-If you are using Windows command shell, there is an issue with pasting the token using the 
-standard Ctrl + V. So you need to use the shell menu to paste the token. After copying the 
-token right click on the top bar of the command shell and select Paste. See image below:
-
-![Windows 10 Login](../img/login_win_10.jpg)
-
-
-### I still get the "Invalid Token" error after trying the above suggestion.
-
-In some windows shells (like Git Bash) there is an extra space added to the token field
-before you paste the token. So you need to backspace and clear out the field before pasting 
-the token. So the steps are:
-
-1. Type `floyd login` in the console.
-2. From the Floyd web page, select the token and click on the "Copy to clipboard" button.
-3. In the console, press "backspace" a few times to remove the extra characters from the token login prompt request.
-4. Right click on the menu bar, and select "Edit", and then "Paste"
-5. Then press "Enter"
-
-You should be able to login successfully now. If it's still not working, please give it a try on powershell.
-
 ## Running Experiments
 
 ### Why does `floyd status` return an empty list even though I have several runs in my account?
@@ -67,7 +41,7 @@ See the [floydignore](home/floyd_ignore) documentation to understand how this ca
 3. Tar them into a single file and untar them at runtime.
 
 Alternatively, instead of uploading files from your local machine, you can also 
-[download files](http://docs.floydhub.com/home/using_datasets/#creating-a-dataset-from-downloads) from a remote URL 
+[download files](./guides/data/mounting_data/#creating-a-dataset-from-downloads) from a remote URL 
 directly into Floyd servers.
 
 
@@ -92,7 +66,7 @@ There are a few ways to make this go faster:
 2. Add sub-directories to `.floydignore` file. Floyd CLI will ignore and not upload these sub-directories.
 See the [init](../commands/init#description) command to understand how this can be configured.
 3. If you have large data files consider uploading them separately as a [data source](../commands/data). 
-You can then [refer](../home/using_datasets#using-data-set-in-experiments) to them in your project.
+You can then [refer](../home/mounting_data#mounting-datasets) to use them in your project.
 
 
 ### My job finished but how I do I see my output?

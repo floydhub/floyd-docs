@@ -5,20 +5,34 @@ repo_url: https://github.com/floydhub/floyd-docs
 pages:
     - Home: index.md
     - Get Started:
-        - 'Installation': home/install.md
-        - 'First Floyd Project': home/getting_started.md
-        - 'Using Datasets': home/using_datasets.md
-        - 'Managing Output': home/managing_output.md
-        - 'Installing Dependencies': home/installing_dependencies.md
-        - 'Environments': home/environments.md
-        - 'FloydIgnore': home/floyd_ignore.md
+        - 'Quick Start': getstarted/quick_start.md
+        - 'Jupyter Notebook': getstarted/quick_start_jupyter.md
     - Guides:
-        - 'Jupyter Notebook': guides/jupyter.md
-        - 'Style Transfer': guides/style_transfer.md
-        - 'Deep Text Corrector': guides/deep_corrector.md
-        - 'CycleGAN': guides/cyclegan.md
-        - 'Public Datasets': guides/datasets.md
-        - 'Contributing': guides/contributing.md
+        - Basics:
+            # - 'Core concepts': guides/basics/core_concepts.md
+            - 'Install Floyd CLI': guides/basics/install.md
+            - 'Login using Floyd CLI': guides/basics/login.md
+            - 'Create new Project and Dataset': guides/basics/create_new.md
+            - 'Delete Project, Jobs and Data': guides/basics/delete.md
+            - 'Using CPU vs GPU': guides/basics/using_gpu.md
+        - Jobs:
+            - 'Installing extra dependencies': guides/jobs/installing_dependencies.md
+        - Data:
+            - 'Storing output data': guides/data/storing_output.md
+            - 'Mounting data': guides/data/mounting_data.md
+            - 'Symlink mounted data': guides/data/symlink_mounted_data.md
+        - 'Environments': guides/environments.md
+        - 'Ignore files': guides/floyd_ignore.md
+        
+    - Examples:
+        - 'Style Transfer': examples/style_transfer.md
+    - FAQs:
+        - 'Installation FAQs': faqs/installation.md
+        - 'Signup and Login FAQs': faqs/authentication.md
+        - 'Job FAQs': faqs/job.md
+        - 'Environments FAQs': faqs/environments.md
+        - 'Plans FAQs': faqs/plans.md
+        - 'Billing FAQs': faqs/billing.md
     - Commands:
         - 'floyd': commands/index.md
         - 'floyd login': commands/login.md
@@ -28,16 +42,15 @@ pages:
         - 'floyd logs': commands/logs.md
         - 'floyd status': commands/status.md
         - 'floyd output': commands/output.md
+        - 'floyd clone': commands/clone.md
         - 'floyd info': commands/info.md
         - 'floyd stop': commands/stop.md
         - 'floyd delete': commands/delete.md
         - 'floyd logout': commands/logout.md
         - 'floyd upgrade': commands/upgrade.md
         - 'floyd version': commands/version.md
-    - Floydhub:
-        - 'Privacy': floydhub/privacy.md
-        - 'Terms of Service': floydhub/terms.md
-    - FAQs: faq.md
+    - Changelogs:
+        - 'July 12 2017': changelogs/1.md
 theme: material
 extra:
   palette:

@@ -9,7 +9,7 @@ floyd output [OPTIONS] ID
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
 | `--url`, `-u` |      | Only print the URL. The output directory can be viewed in the browser. |
-| ID |      | ID of your job. You can get the ID by running the [status](./status) command.    |
+| NAME or ID |      | Name or ID of your job. |
 
 ### Description
 Most jobs generate output. Any output that needs to be retained after the job is finished should be send to `/output` path.
@@ -18,16 +18,17 @@ output url in your default browser.
 
 ### Example
 ```bash
+$ floyd output floydhub/projects/style-transfer/4
+Opening output directory in your browser ...
+```
+or
+```bash
 $ floyd output dTe2cJJrNR2CBD74rSZXPA
 Opening output directory in your browser ...
 ```
 
 ### Downloading output
 
-Full contents of the output can be downloaded as a tar file from the dashboard:
-
-1. Go the experiment in the dashboard.
-2. Double click on the task instance box.
-3. Click Output - Download button.
+To download the output you can use the data [clone](data.md#floyd-data-clone) command.
 
 {!contributing.md!}

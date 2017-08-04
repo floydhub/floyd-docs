@@ -88,4 +88,10 @@
 - Sample Projects
 
 ### Sites with great documentation
+<<<<<<< HEAD
 - SendGrid: [https://sendgrid.com/docs](https://sendgrid.com/docs)
+=======
+- SendGrid: [https://sendgrid.com/docs](https://sendgrid.com/docs)
+
+- How to make pull requests to update the docs
+>>>>>>> feature/projects

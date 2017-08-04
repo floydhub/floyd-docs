@@ -2,13 +2,13 @@ View status of your jobs.
 
 ### Usage
 ```bash
-floyd status [ID]
+floyd status [NAME or ID]
 ```
 
 ### Options
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
-| ID |      | ID of your job. |
+| Name or ID |      | ID of your job. |
 
 ### Description
 Shows the status of a run, if the ID is specified. It can also list the status of all 
