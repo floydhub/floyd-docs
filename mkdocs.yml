@@ -5,7 +5,7 @@ repo_url: https://github.com/floydhub/floyd-docs
 pages:
     - Overview: index.md
     - Get Started:
-        - 'Quick Start': getstarted/quick_start.md
+        - 'Quickstart': getstarted/quick_start.md
         - 'Jupyter Notebook': getstarted/quick_start_jupyter.md
     - Guides:
         - Basics:
