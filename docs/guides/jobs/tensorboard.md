@@ -85,9 +85,10 @@ You can click into each part of the model to get more details.
 
 ### Stopping Tensorboard
 
-Tensorboard runs in the same instance where your code is running. It will be up only until 
-your job finishes. Tensorboard will also stop when the job stops in `Failed`, `Timeout` or
-`Shutdown` states.
+Tensorboard runs in the same instance where your code is running. So you do not have 
+to stop it explicitly. It will be up until your job finishes and then stop automatically. 
+Tensorboard will become inaccessible when the job finishes in any of the `Success`, `Failed`, 
+`Timeout` or `Shutdown` states.
 
 ### Tensorboard in Jupyter mode
 
