@@ -1,38 +1,34 @@
-## Explore, train and deploy your deep learning projects using FloydHub
+## Introduction
+Welcome to [FloydHub](https://www.floydhub.com/)! Here you'll find comprehensive information for training and deploying your deep learning and AI applications with our platform. We've tried to make this documentation user-friendly and example-filled, but if you have any questions, please visit the [community forum](https://forum.floydhub.com/) or [contact us](mailto:support@floydhub.com).
 
+The fastest way to get up and running is to use our [quickstart guide](http://docs.floydhub.com/getstarted/quick_start), which walks through an entire FloydHub training job step-by-step. You'll create a new Project on the FloydHub web dashboard, connect it to a local directory on your computer, and then kick-off a job using the FloydHub CLI to train your deep learning model on FloydHub's GPU servers.
 
-### What is FloydHub?
-[FloydHub](https://www.floydhub.com/) is a platform for data scientists building deep learning and AI applications. 
+## Deep learning without the DevOps:
 
-Using FloydHub, you can:
+### Frictionless data science
+Why worry about provisioning GPUs, installing drivers, or managing software dependency hell? With FloydHub, we take care of your entire deep learning DevOps workflow - so you can focus on the science.
 
-- Explore popular deep learning projects and datasets
-- Train your *own* deep learning models on the cloud without *any* DevOps
-- Share and collaborate on your projects
-- Deploy your models as REST endpoints
+Training a PyTorch model using GPUs on the cloud is as simple as executing this command on your terminal: 
+`floyd run --gpu --env pytorch "python train.py"`. Try it now with our [quickstart guide](http://docs.floydhub.com/getstarted/quick_start).
 
-If you are a fan of analogies, we can be described as:
+### Powerful workflow tools
+Whether you're using our web dashboard or our command line interface, our tools make your work easier and your team more productive:
 
-- **Github for deep learning**: Explore, share and collaborate on projects and datasets
-- **Heroku for deep learning**: Train and deploy your models with zero DevOps
+- [Interactive Jupyter Notebook support](http://docs.floydhub.com/getstarted/quick_start_jupyter/)
+- End-to-end version control for data science
+- Full reproducibility of experiments
+- Deploy models as REST endpoints to integrate with your apps
 
-Even though our current focus is on deep learning, FloydHub works great for other AI, machine learning and data science applications too.
+### Deep learning community
 
-Click [here](./getstarted/quick_start.md) to get started.
+FloydHub hosts open source Projects and Datasets that you can discover, clone, and reproduce (or reconfigure with your own Dataset).
 
+Try it now with the [Neural Style Transfer](http://docs.floydhub.com/examples/style_transfer/).
 
-### Why use FloydHub?
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/starry_night_google.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/hoovertowernight.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/outputs/starry_stanford_bigger.png" width="710px">
 
-- **Easy**: We worry about provisioning GPUs, installating drivers and managing software dependency hell, so you don't have to. Training a PyTorch model using GPUs on the cloud is as simple as executing this command on your terminal `floyd run --gpu --env pytorch "python train.py"`
-- **Tooling**: Our tools make your work easier and your team more productive. We offer Jupyter Notebook support, end-to-end version control, full reproducibility, and a lot more.
-- **Community**: Explore our community projects and datasets. Get inspired, fork and run your own version or create your own.
+## We're here to help!
 
-For a full list of our features: [FloydHub Features](https://www.floydhub.com/features)
-
-
-### Who can help me?
-- Use the *search* above to see if your question is already answered
-- Visit the [forum](https://forum.floydhub.com) for discussions, feature requests and help from the community
-- Can't find what you're looking for? [Contact us](mailto:support@floydhub.com)
-
-
+We're always happy to help with any questions you might have! [Search](http://docs.floydhub.com/) our documentation or check answers to [frequently asked questions](http://docs.floydhub.com/faqs/installation/). The [FloydHub community forum](https://forum.floydhub.com/) is another place to ask questions, request features, or share cool Projects. For more help, [send us an email]((mailto:support@floydhub.com)).

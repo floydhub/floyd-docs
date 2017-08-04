@@ -2,7 +2,7 @@
 This code generates FloydHub's documentation: [http://docs.floydhub.com/](http://docs.floydhub.com/). 
 
 ## Contributing
-Please feel free to make pull requests, if there's anything you feel we could do better!
+Please feel free to make pull requests or file issues if you feel there's anything we better explain!
 
 ### Steps to build docs locally
 * Install requirements.txt with `pip install -r requirements.txt`
