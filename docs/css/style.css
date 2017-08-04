@@ -6,3 +6,7 @@ img {
 	box-shadow: -1px 4px 22px -6px rgba(0,0,0,0.75);
 	border-radius: 3px;
 }
+
+pre {
+	border: none;
+}
