@@ -30,11 +30,12 @@ floyd init mnist-tensorboard
 floyd run --tensorboard "python mnist_tensorboard.py --log_dir /output/mnist --max_steps 5000"
 ```
 
-Notice that the the `log_dir` parameter is set to a path in the `/output` directory.
-In Floydhub Tensorboard is always pointed to the `/output` directory. So in order to 
-process any data using Tensorboard, make sure to log the data to `/output` path.
+!!! important ""
+    Notice that the the `log_dir` parameter is set to a path in the `/output` directory.
+    On Floydhub, Tensorboard only watches the `/output` directory. So you need to send 
+    any data meant for Tensorboard to any directory under `/output` path.
 
-Now you can go to the dashboard and go to the project page.
+Now you can go to the dashboard view the project page.
 
 ![Project Dashboard](../../img/tensorboard_dashboard.png)
 
@@ -49,7 +50,7 @@ to Tensorboard. Click on it to open the Tensorboard dashboard in a new tab.
 
 You can see that the "SCALARS" tab of Tensorboard is logging the accuracy of the 
 training and test data along with some other values. You may need to click on the title 
-bars (like accuracy_1) for the graph to open.
+bars (like `accuracy_1`) for the graph to open.
 
 The reason why these values are appearing on the dashboard is because the 
 `mnist_tensorboard.py` code has the following lines:
@@ -77,9 +78,10 @@ in real time while the training is happening.
 The GRAPHS dashboard shows a graphical representation of the layers in the model.
 You can click into each part of the model to get more details.
 
-Note: Tensorboard feature is only available for Tensorflow environments. 
-See [this](../environments.md) page for full list of Tensorflow environments you 
-can use.
+!!! Note ""
+    Tensorboard feature is only available for Tensorflow environments. 
+    See [this](../environments.md) page for full list of Tensorflow environments you 
+    can use.
 
 ## Offline Training
 
