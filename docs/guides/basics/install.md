@@ -9,7 +9,13 @@ Use pip to install the CLI.
 $ pip install -U floyd-cli
 ```
 
-If successfully installed you can view the commands supported by the CLI using the 
+Use pip3 if you only want to install the CLI for python 3:
+
+```bash
+$ pip3 install -U floyd-cli
+```
+
+After installation you can view the commands supported by the CLI using the
 `--help` option.
 
 ```bash
@@ -23,6 +29,7 @@ Usage: floyd [OPTIONS] COMMAND [ARGS]...
 ```
 
 Detailed documentation for the floyd commands is available in the [documentation](../../commands/index.md).
+
 
 ## Having trouble installing the CLI?
 
