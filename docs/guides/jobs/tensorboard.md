@@ -83,6 +83,19 @@ You can click into each part of the model to get more details.
     See [this](../environments.md) page for full list of Tensorflow environments you 
     can use.
 
+### Stopping Tensorboard
+
+Tensorboard runs in the same instance where your code is running. It will be up only until 
+your job finishes. Tensorboard will also stop when the job stops in `Failed`, `Timeout` or
+`Shutdown` states.
+
+### Tensorboard in Jupyter mode
+
+Tensorboard can be run in Jupyter mode as well. You will notice that the links for both 
+the Jupyter notebook and the Tensorboard appear in the Job page.
+
+![Tensorboard and Jupyter](../../img/tensorboard_jupyter.png)
+
 ## Offline Training
 
 Until now, we saw how to use Tensorboard directly on Floydhub _while_ your training 
