@@ -21,7 +21,7 @@ Jupyter notebooks.
 This code snipped will train an MNIST model and also store the training summary 
 to a log directory.
 
-```
+```bash
 git clone https://github.com/floydhub/tensorflow-examples
 cd tensorflow-examples/tensorboard
 
@@ -55,7 +55,7 @@ bars (like `accuracy_1`) for the graph to open.
 The reason why these values are appearing on the dashboard is because the 
 `mnist_tensorboard.py` code has the following lines:
 
-```
+```python
 tf.summary.scalar('cross_entropy', cross_entropy)
 ...
 tf.summary.scalar('accuracy', accuracy)
@@ -106,7 +106,7 @@ training is done.
 For that, you need to first download the output of your project to your local 
 machine.
 
-```
+```bash
 mkdir tensorboard_output && cd tensorboard_output
 floyd data clone floydhub/mnist-tensorboard/6/output
 ```
@@ -117,7 +117,7 @@ on your OS. See the Tensorflow install instructions [here](https://www.tensorflo
 After that you can just run the `tensorboard` command and point it to the output 
 directory downloaded from Floydhub.
 
-```
+```bash
 tensorboard --logdir=tensorboard_output
 ```
 
