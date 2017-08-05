@@ -17,6 +17,7 @@ pages:
             - 'Using CPU vs GPU': guides/basics/using_gpu.md
         - Jobs:
             - 'Installing extra dependencies': guides/jobs/installing_dependencies.md
+            - 'Enabling Tensorboard': guides/jobs/tensorboard.md
         - Data:
             - 'Storing output data': guides/data/storing_output.md
             - 'Mounting data': guides/data/mounting_data.md
