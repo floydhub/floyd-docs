@@ -1,7 +1,7 @@
 [Tensorboard](https://www.tensorflow.org/get_started/summaries_and_tensorboard) 
 is a visualization tool for Tensorflow projects. Tensorboard can help 
-visualize Tensorflow graph and plot quantitative metrics about your run. This 
-guide will help you understand how to enable Tensorboard in your Floydhub projects.
+visualize the Tensorflow computation graph and plot quantitative metrics about your run. This 
+guide will help you understand how to enable Tensorboard in your jobs.
 
 ## Key concepts of Tensorboard
 
@@ -18,7 +18,7 @@ Jupyter notebooks.
 
 ### Example
 
-This code snipped will train an mnist model and also store the training summary 
+This code snipped will train an MNIST model and also store the training summary 
 to a log directory.
 
 ```
@@ -32,10 +32,10 @@ floyd run --tensorboard "python mnist_tensorboard.py --log_dir /output/mnist --m
 
 !!! important ""
     Notice that the the `log_dir` parameter is set to a path in the `/output` directory.
-    On Floydhub, Tensorboard only watches the `/output` directory. So you need to send 
-    any data meant for Tensorboard to any directory under `/output` path.
+    On Floydhub, `/output` is a special directory that Tensorboard watches. Be sure to send 
+    all data meant for Tensorboard to any directory under `/output` path.
 
-Now you can go to the dashboard view the project page.
+Now you can view the job on your Project dashboard.
 
 ![Project Dashboard](../../img/tensorboard_dashboard.png)
 
@@ -75,7 +75,7 @@ in real time while the training is happening.
 
 ![Tensorboard Graphs](../../img/tensorboard_graph.png)
 
-The GRAPHS dashboard shows a graphical representation of the layers in the model.
+The GRAPHS dashboard shows a representation of Tensorflow's computation graph.
 You can click into each part of the model to get more details.
 
 !!! Note ""
@@ -85,7 +85,7 @@ You can click into each part of the model to get more details.
 
 ### Stopping Tensorboard
 
-Tensorboard runs in the same instance where your code is running. So you do not have 
+Tensorboard runs in the same machine where your code is running. So you do not have 
 to stop it explicitly. It will be up until your job finishes and then stop automatically. 
 Tensorboard will become inaccessible when the job finishes in any of the `Success`, `Failed`, 
 `Timeout` or `Shutdown` states.
@@ -99,8 +99,8 @@ the Jupyter notebook and the Tensorboard appear in the Job page.
 
 ## Offline Training
 
-Until now, we saw how to use Tensorboard directly on Floydhub _while_ your training 
-is happening. Alternatively you can also view the metrics offline after your 
+Until now, we saw how to use Tensorboard directly on Floydhub _while_ your job is actively running. 
+Alternatively you can also view the metrics offline after your 
 training is done.
 
 For that, you need to first download the output of your project to your local 
