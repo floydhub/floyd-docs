@@ -27,6 +27,7 @@ pages:
         
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
+        - 'Deep Text Corrector': examples/deep_corrector.md
     - FAQs:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md
