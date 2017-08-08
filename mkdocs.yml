@@ -27,7 +27,6 @@ pages:
         
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
-        - 'Cycle GAN': examples/cyclegan.md
         - 'Deep Text Corrector': examples/deep_corrector.md
     - FAQs:
         - 'Installation FAQs': faqs/installation.md
