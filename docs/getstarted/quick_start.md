@@ -98,7 +98,7 @@ RUN ID                  CREATED        STATUS    DURATION(s)  NAME              
 AKpnXqj9BEU6d8KhmygTyb  just now       running            15  alice/quick-start:1  gpu         
 ```
 
-You can also view the status of your job in your browser by visiting the `Job URL` printed by the `floyd run` command. For example, `www.floydhub.com/alice/quick-start/1`
+You can also view the status of your job in your browser by visiting the `Job URL` printed by the `floyd run` command. For example, `www.floydhub.com/alice/projects/quick-start/1`
 
 ![Job run](../img/job_run.jpg)
 
