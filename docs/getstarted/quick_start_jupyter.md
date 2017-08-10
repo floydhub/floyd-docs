@@ -66,7 +66,7 @@ Execute the following command from the command line:
 $ floyd run --mode jupyter --gpu --env pytorch
 Creating project run. Total upload size: 21.9KiB
 Syncing code ...
-Done=============================] 23333/23333 - 00:00:00
+[================================] 23333/23333 - 00:00:00
 RUN ID                  NAME
 ----------------------  ---------------------
 MhDNgxBHi74EKaffBKSbTN  saip/mnist-pytorch/3
