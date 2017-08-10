@@ -66,7 +66,7 @@ Execute the following command from the command line:
 $ floyd run --mode jupyter --gpu --env pytorch
 Creating project run. Total upload size: 21.9KiB
 Syncing code ...
-Done=============================] 23333/23333 - 00:00:00
+[================================] 23333/23333 - 00:00:00
 RUN ID                  NAME
 ----------------------  ---------------------
 MhDNgxBHi74EKaffBKSbTN  saip/mnist-pytorch/3
@@ -111,9 +111,10 @@ You can also view the status by going to the project page in the web dashboard.
 
 ### Stopping your Notebook
 
-**Important**: Jupyter Notebooks are designed for interactive development. Your job starts running on FloydHub's server when you execute the `floyd run --mode jupyter` command and it continues to be active till you explicitly stop your job.
+!!! warning
+    Jupyter Notebooks are designed for interactive development. Your job starts running on FloydHub's server when you execute the `floyd run --mode jupyter` command and it continues to be active till you explicitly stop your job.
 
-*Hence, even if you are not actively executing code inside your Notebook, the Jupyter server is still active on FloydHub and you are billed for the time.*
+    Hence, even if you are not actively executing code inside your Notebook, the Jupyter server is still active on FloydHub and you are billed for the time.
 
 To stop your notebook you can use the [floyd stop](../commands/stop.md) command.
 

@@ -17,6 +17,7 @@ pages:
             - 'Using CPU vs GPU': guides/basics/using_gpu.md
         - Jobs:
             - 'Installing extra dependencies': guides/jobs/installing_dependencies.md
+            - 'Enabling Tensorboard': guides/jobs/tensorboard.md
         - Data:
             - 'Storing output data': guides/data/storing_output.md
             - 'Mounting data': guides/data/mounting_data.md
@@ -26,6 +27,7 @@ pages:
         
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
+        - 'Deep Text Corrector': examples/deep_corrector.md
     - FAQs:
         - 'Installation FAQs': faqs/installation.md
         - 'Signup and Login FAQs': faqs/authentication.md
@@ -67,6 +69,23 @@ extra:
     - type: 'twitter'
       link: 'https://twitter.com/floydhub_'
 markdown_extensions:
+    - admonition
+    - codehilite
+    - footnotes
+    - toc(permalink=true)
+    - pymdownx.arithmatex
+    - pymdownx.betterem(smart_enable=all)
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist(custom_checkbox=true)
+    - pymdownx.tilde
     - markdown_include.include:
         base_path: docs
 extra_css:

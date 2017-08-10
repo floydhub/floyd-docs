@@ -30,6 +30,14 @@ Alternatively, instead of uploading files from your local machine, you can also
 directly into Floyd servers.
 
 
+### Why do I get an "Experiments limit reached" error when I run a job?
+
+FloydHub currently allows only 1 active job in the free Trial plan and 3 active jobs in the Individual plan. 
+If you see an `Error: Experiments limit reached` message when you run a job, it means you have maxed out your 
+concurrency limits. Please stop you running job(s) or wait for them to finish, and try again.
+
+We have to enforce this concurrency constraint because we have a finite number of GPU machines and have to ensure that no single user is starving the group. In the near future, we will support queueing of jobs so that you can queue multiple jobs to be run as slots become available.
+
 ### I ran my project in Jupyter mode but the url does not seem to work.
 
 Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway"
