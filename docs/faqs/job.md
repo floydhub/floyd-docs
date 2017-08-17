@@ -138,6 +138,20 @@ When you execute a `floyd run --mode jupyter` command, the CLI waits for a CPU o
 
 For more details on why it takes time, please see [Why is my job in the "Queued" state for several minutes?](#why-is-my-job-in-the-queued-state-for-several-minutes)
 
+
+### Why are my logs not displayed in real-time?
+
+You can stream your logs from the CLI using the `floyd logs -t <JOB_NAME>` command. However, sometimes you may notice that the logs are not displayed in real-time. This is because of output buffering. Please make sure that your logs are flushed out if you prefer to view real-time logs.
+
+For example, in Python:
+
+```python
+import sys
+...
+print("Hello world")
+sys.stdout.flush()
+```
+
 ### Why did my job timeout after 1 hour?
 
 You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that. 
