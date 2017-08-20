@@ -140,6 +140,10 @@ No.
 Our preemptible instances have a 98% job uptime SLA. By using them, you are accepting a small chance 
 of your job being terminated without notice, in exchange for paying a much lower price than dedicated instances.
 
+### How will I know when my job is preempted?
+
+Your job's state will turn from `Running` to `Shutdown`. We will send you a notification informing you about this. Unfortunately, we are currently unable to warn your ahead of time of an impending preemption.
+
 
 
 ## Powerups
@@ -167,6 +171,10 @@ If you run *critical jobs* that are not fault-tolerant, you should purchase the 
 
 You can purchase them from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups)
 
+### Why would I enable auto-refresh?
+
+Auto-refresh ensures your long-running jobs are never killed because you [ran out of computing hours](#what-will-happen-to-my-running-job-when-i-run-out-of-computing-credits). We'll automatically refresh your selected Powerup so that your Job can continue running.
+
 ### Can I buy a Powerup if I am in the Free Plan?
 
 No. You have to be enrolled in one of the Data Scientist plans to be eligible for 
@@ -176,11 +184,13 @@ purchasing Powerups.
 
 Yes. Powerups are valid for 1 year from the date of purchase.
 
-### Why would I enable auto-refresh?
+### How will my Powerups be used?
 
-Auto-refresh ensures your long-running jobs are never killed because you [ran out of computing hours](#what-will-happen-to-my-running-job-when-i-run-out-of-computing-credits). We'll automatically refresh your selected Powerup so that your Job can continue running.
+Your compute hours will be consumed in the following order:
 
-
+- Hours from your subscription plan
+- Hours from free credits
+- Hours from Powerups
 
 ## Storage
 
