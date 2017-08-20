@@ -140,7 +140,7 @@ No.
 Our preemptible instances have a 98% job uptime SLA. By using them, you are accepting a small chance 
 of your job being terminated without notice, in exchange for paying a much lower price than dedicated instances.
 
-### How will I know when my job is preempted?
+#### How will I know when my job is preempted?
 
 Your job's state will turn from `Running` to `Shutdown`. We will send you a notification informing you about this. Unfortunately, we are currently unable to warn your ahead of time of an impending preemption.
 
