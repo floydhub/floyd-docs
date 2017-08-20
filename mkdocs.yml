@@ -34,6 +34,7 @@ pages:
         - 'Job FAQs': faqs/job.md
         - 'Environments FAQs': faqs/environments.md
         - 'Plans FAQs': faqs/plans.md
+        - 'Plans v2 FAQs': faqs/plans2.md
         - 'Billing FAQs': faqs/billing.md
     - Commands:
         - 'floyd': commands/index.md
