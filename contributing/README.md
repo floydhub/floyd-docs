@@ -23,13 +23,14 @@
         - [ ]: Stopping Jupyter notebooks
     - [ ] **Detailed Guide**: 
         - [ ]: Create a new dataset
-        - [ ]: Upload new data from CLI
+        - [ ]: Upload new dataset from CLI
         - [ ]: Mount multiple datasets
         - [ ]: Reuse output from previous job
         - [ ]: Executign multiple commands using a bash script
         - [ ]: Deleting job, data, project
         - [ ]: `floyd_requirements.txt`
         - [ ]: `.floydignore`
+        - [ ]: Downloading output of a job
         - [ ]: Serving
 
 - Guides 
@@ -48,6 +49,7 @@
         - [ ]: Running a job using `floyd run`
             - Examples of common scenarios
             - Stopping a job
+            - Using the `--message` (or `-m`) flag with each `floyd run` command to attach a "job message" (similar to *commit message*) to each job. This will show up in the job dashboard
         - [ ]: Viewing output logs using CLI and dashboard
         - [ ]: Mounting data
             - Note that data mount paths are absolute, not relative
@@ -72,6 +74,11 @@
         - [ ]: Saving and using Tensorflow checkpoints
         - [ ]: Best practices:
             - [ ]: Load dataset into memory before processing using GPU
+        - [ ]: Benchmarks:
+            - [ ]: Benchmark CPU vs. GPU on FloydHub
+            - [ ]: Benchmark I/O intensive vs. memory intensive
+        - [ ]: Example documentation for algorithm development (vs. running an existing project): Debugging, logging internals, etc.
+        - [ ]: Using Tensorboard from Keras and PyTorch
 
 - Commands
 - Environments
@@ -82,16 +89,20 @@
 
     They should be 1-2 mins for shorter topics, and under 10 mins in all cases. Examples: [Domino Data Lab](https://support.dominodatalab.com/hc/en-us)
 
+- Contributing Guide
+
+    Write a short guide on how to make pull requests to improve docs
 
     
 
 - Sample Projects
 
 ### Sites with great documentation
-<<<<<<< HEAD
-- SendGrid: [https://sendgrid.com/docs](https://sendgrid.com/docs)
-=======
-- SendGrid: [https://sendgrid.com/docs](https://sendgrid.com/docs)
 
-- How to make pull requests to update the docs
->>>>>>> feature/projects
+- SendGrid: [https://sendgrid.com/docs](https://sendgrid.com/docs)
+- TensorPort: [https://tensorport.com/documentation/](https://tensorport.com/documentation/)
+
+
+## Notes
+
+- When restructuring pages, make sure to add redirects from the old page. Old fashioned redirects, like "This page has now been moved to {{new_location}}" should work. Also ensure that the redirect page is not listed in the table of contents
