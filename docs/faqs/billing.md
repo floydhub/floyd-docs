@@ -78,9 +78,12 @@ If you downgrade to the Free plan, you will no longer have access to any Powerup
 
 Please downgrade to the Free plan. We will remove your credit card at the end of your billing cycle.
 
+### Do my remaining compute credits roll over each month if I don't use them all?
+
+No, your monthly Plan compute credits are not rolled over. However, your Powerup credits will remain valid for one year from purchase date.
+
 ### Do you offer refunds?
 
 No, we do not offer refunds. If there are extenuating circumstances, please open a ticket by contacting our support team.
-
 
 {!contributing.md!}
