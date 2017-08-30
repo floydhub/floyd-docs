@@ -59,7 +59,7 @@ extra:
     primary: 'blue'
     accent: 'blue'
     extra:
-  logo: 'img/f_white_small.png'
+  logo: 'img/f_white_rect_small.png'
   font:
     text: 'Roboto'
     code: 'Source Code Pro'
