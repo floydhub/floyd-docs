@@ -43,6 +43,10 @@ The GPU and CPU compute hours included in your plan (Free or Data Scientist) are
 [preemptible instances](#preemptible-instances). This means that there is a small chance that your job will be terminated without notice. In practice, this happens infrequently and this is perfect for most users. If you need [dedicated instances](#dedicated-instances) for your jobs, you 
 can buy the GPU+ or CPU+ Powerups.
 
+### Do my remaining compute credits roll over each month if I don't use them all?
+
+No, your monthly Plan compute credits are not rolled over. However, your Powerup credits will remain valid for one year from purchase date.
+
 ### What happened to the old Pay-as-you-go Individual Plan?
 
 We are transitioning from the Individual Plan, which offered a pay-as-you-go payment method, to our current pricing plan. The Individual Plan is no longer available for new users. 
@@ -143,7 +147,6 @@ of your job being terminated without notice, in exchange for paying a much lower
 #### How will I know when my job is preempted?
 
 Your job's state will turn from `Running` to `Shutdown`. We will send you a notification informing you about this. Unfortunately, we are currently unable to warn your ahead of time of an impending preemption.
-
 
 
 ## Powerups
