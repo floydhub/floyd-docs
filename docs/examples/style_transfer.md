@@ -37,7 +37,7 @@ You can mount this at runtime using the `--data` parameter.
 ### Training
 
 ```bash
-$ floyd run --gpu --env tensorflow-0.12:py2 --data narenst/datasets/coco-train-2014/1:images --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models --data floydhub/datasets/imagenet-vgg-verydeep-19/3:vgg "python style.py --vgg-path /vgg/imagenet-vgg-verydeep-19.mat --train-path /images/train2014 --style examples/style/la_muse.jpg --base-model-path /models/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output"
+$ floyd run --gpu --env tensorflow-0.12:py2 --data narenst/datasets/coco-train-2014/1:images --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models --data floydhub/datasets/imagenet-vgg-verydeep-19/3:vgg "python style.py --vgg-path /vgg/imagenet-vgg-verydeep-19.mat --train-path /images/train2014 --style examples/style/la_muse.jpg  --epoch 1 --total-iterations 10 --checkpoint-dir /output"
 ```
 
 This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
