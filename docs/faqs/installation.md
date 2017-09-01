@@ -23,11 +23,11 @@ To install floyd-cli in this virtualenv:
 pip install -U floyd-cli
 ```
 
-You are now ready to use the [floyd commands](). Note: You need to activate your virtualenv using the `source` command above each time you open a new terminal and want to use `floyd-cli` in it.
+You are now ready to use the [floyd commands](http://docs.floydhub.com/commands/). Note: You need to activate your virtualenv using the `source` command above each time you open a new terminal and want to use `floyd-cli` in it.
 
 ### Using conda to install floyd-cli
 
-If you are using Anaconda Python, you can also use `conda` to install `floyd-cli`, instead of `virtualenv`. 
+If you are using Anaconda Python, you can also use `conda` to install `floyd-cli`, instead of `virtualenv`.
 
 ```bash
 conda create -n <insert-your-env-name-here>
@@ -48,7 +48,7 @@ sudo pip install -U floyd-cli
 
 ### Dealing with missing dependencies when installing floyd-cli
 
-Not all python environments are installed the same way. So sometimes you may run 
+Not all python environments are installed the same way. So sometimes you may run
 into install issues. If `pip` cannot install dependencies itself, you may see errors like:
 
 ```bash
