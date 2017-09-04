@@ -24,7 +24,7 @@ $ floyd run "echo 'Hello, world!' > /output/hello.txt"
 Syncing code ...
 ```
 
-!!! important
+!!! note
     If you are not familiar with what
     `echo 'Hello, world!' > /output/hello.txt` does, here's a quick
     explanation:
