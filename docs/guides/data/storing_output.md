@@ -29,12 +29,13 @@ Syncing code ...
     `echo 'Hello, world!' > /output/hello.txt` does, here's a quick
     explanation:
 
-    The `echo 'Hello, world!'` part outputs the string `Hello, world!`. The `>`
-    part of the command redirects the printed output of `echo ‘Hello, world!'`
-    (which is, of course, `Hello world!`) to the file specified after the `>`.
-    In this case, we redirect to a file located at `/output/hello.txt`.
-    Because `hello.txt` is in the `/output` directory, it will be preserved for
-    future reference and use.
+    - The `echo 'Hello, world!'` part outputs the string `Hello, world!`.
+    - The `>` part of the command redirects the printed output of `echo 'Hello, world!'`
+      (which is, of course, `Hello world!`) to the file specified after the `>`.
+    - The `/output/hello.txt` part of the command specifies where the `Hello,
+      world!` should be written to: `/output/hello.txt`. Because `hello.txt` is
+      in the `/output` directory, it will be preserved for future reference and
+      use.
 
 #### Example 2
 In this example, we'll use Python to save some data to a file in the `/output`
@@ -76,7 +77,7 @@ Here is a sample Tensorflow example that saves a model checkpoint. Because we
 write (save) the data to the `/output` directory, we'll be able to use it
 later. A future job can use this model checkpoint as a starting point.
 Consider this partial code, and note the call to `saver.save(sess,
-‘/output/model.ckpt')`:
+'/output/model.ckpt')`:
 
 ```python
 import tensorflow as tf
