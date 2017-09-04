@@ -7,35 +7,34 @@ pages:
     - Get Started:
         - 'Quick Start': getstarted/quick_start.md
         - 'Jupyter Notebook': getstarted/quick_start_jupyter.md
-    - Guides:
-        - Basics:
-            # - 'Core concepts': guides/basics/core_concepts.md
-            - 'Install Floyd CLI': guides/basics/install.md
-            - 'Login using Floyd CLI': guides/basics/login.md
-            - 'Create new Project and Dataset': guides/basics/create_new.md
-            - 'Delete Project, Jobs and Data': guides/basics/delete.md
-            - 'Using CPU vs GPU': guides/basics/using_gpu.md
-        - Jobs:
-            - 'Installing extra dependencies': guides/jobs/installing_dependencies.md
-            - 'Enabling Tensorboard': guides/jobs/tensorboard.md
-        - Data:
-            - 'Storing output data': guides/data/storing_output.md
-            - 'Mounting data': guides/data/mounting_data.md
-            - 'Symlink mounted data': guides/data/symlink_mounted_data.md
+    - Basics:
+        # - 'Core concepts': guides/basics/core_concepts.md
+        - 'Install Floyd CLI': guides/basics/install.md
+        - 'Login using Floyd CLI': guides/basics/login.md
+        - 'Create new Project and Dataset': guides/basics/create_new.md
+        - 'Delete Project, Jobs and Data': guides/basics/delete.md
+        - 'Using CPU vs GPU': guides/basics/using_gpu.md
+    - Jobs:
+        - 'Installing extra dependencies': guides/jobs/installing_dependencies.md
+        - 'Enabling Tensorboard': guides/jobs/tensorboard.md
         - 'Environments': guides/environments.md
         - 'Ignore files': guides/floyd_ignore.md
-        
+    - Data:
+        - 'Storing output data': guides/data/storing_output.md
+        - 'Mounting data': guides/data/mounting_data.md
+        - 'Symlink mounted data': guides/data/symlink_mounted_data.md
+
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
         - 'Deep Text Corrector': examples/deep_corrector.md
-    - FAQs:
-        - 'Installation FAQs': faqs/installation.md
-        - 'Signup and Login FAQs': faqs/authentication.md
-        - 'Job FAQs': faqs/job.md
-        - 'Environments FAQs': faqs/environments.md
-        - 'Plans FAQs': faqs/plans.md
-        - 'Billing FAQs': faqs/billing.md
-    - Commands:
+    - Troubleshooting & FAQs:
+        - 'Installation': faqs/installation.md
+        - 'Signup and Login': faqs/authentication.md
+        - 'Job': faqs/job.md
+        - 'Environments': faqs/environments.md
+        - 'Plans': faqs/plans.md
+        - 'Billing': faqs/billing.md
+    - Floyd CLI Commands:
         - 'floyd': commands/index.md
         - 'floyd login': commands/login.md
         - 'floyd init': commands/init.md
