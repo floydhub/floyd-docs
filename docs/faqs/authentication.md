@@ -1,29 +1,3 @@
-## Signup
-
-### How does the free CPU / GPU hours work?
-
-Every one who signups to Floydhub will receive 2 hours of free CPU / GPU time
-for running your projects. We hope this will give you enough time to evaluate
-Floydhub for your needs. We are working on a new free plan right now to better
-help new users explore the platform.
-
-### Email Verification
-
-After you signup on FloydHub, you have to verify your email address. You will receive an automated email from Floyd with a link that you can click to verify.
-
-### I did not receive my verification email
-
-As soon as you sign up on FloydHub, you should receive an automated email in your inbox with instructions to verify your email address. 
-
-If you do not receive an email within a few minutes:
-
-- Please check your spam folder. If the email is there, please "Mark as not Spam" to avoid this happening in the future
-- If you still don't receive an email, please try resending the verification email by clicking on "Resend Verification Email" at [floydhub.com/settings/security](https://www.floydhub.com/settings/security)
-
-![Resend Verification Email](../img/VerifyEmail.jpg)
-
-- If this still doesn't work, it is likely that your mail server (e.g. your work email server) is filtering out our emails. Please check with your email adminstrator to allow emails from the *floydhub.com* domain.
-
 ## Login
 
 ### Windows
@@ -50,6 +24,32 @@ the token. So the steps are:
 
 You should be able to login successfully now. If it's still not working, please give it a try on powershell.
 
+
+## Signup
+
+### How does the free CPU / GPU hours work?
+
+Every one who signups to Floydhub will receive 2 hours of free CPU / GPU time
+for running your projects. We hope this will give you enough time to evaluate
+Floydhub for your needs. We are working on a new free plan right now to better
+help new users explore the platform.
+
+### Email Verification
+
+After you signup on FloydHub, you have to verify your email address. You will receive an automated email from Floyd with a link that you can click to verify.
+
+### I did not receive my verification email
+
+As soon as you sign up on FloydHub, you should receive an automated email in your inbox with instructions to verify your email address. 
+
+If you do not receive an email within a few minutes:
+
+- Please check your spam folder. If the email is there, please "Mark as not Spam" to avoid this happening in the future
+- If you still don't receive an email, please try resending the verification email by clicking on "Resend Verification Email" at [floydhub.com/settings/security](https://www.floydhub.com/settings/security)
+
+![Resend Verification Email](../img/VerifyEmail.jpg)
+
+- If this still doesn't work, it is likely that your mail server (e.g. your work email server) is filtering out our emails. Please check with your email adminstrator to allow emails from the *floydhub.com* domain.
 
 
 {!contributing.md!}
