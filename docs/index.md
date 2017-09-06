@@ -1,5 +1,5 @@
 ## Introduction
-Welcome to [FloydHub](https://www.floydhub.com/)! Here you'll find comprehensive information for training and deploying your deep learning and AI applications with our platform. We've tried to make this documentation user-friendly and example-filled, but if you have any questions, please visit the [community forum](https://forum.floydhub.com/) or [contact us](mailto:support@floydhub.com).
+Welcome to [FloydHub](https://www.floydhub.com/)! Here you'll find comprehensive information for training and deploying your deep learning and AI applications with our platform. We do our best to make this documentation clear and user friendly, but if you have unanswered questions, please visit the [community forum](https://forum.floydhub.com/) or [contact us](mailto:support@floydhub.com).
 
 The fastest way to get up and running is to use our [quickstart guide](http://docs.floydhub.com/getstarted/quick_start), which walks through an entire FloydHub training job step-by-step. You'll create a new Project on the FloydHub web dashboard, connect it to a local directory on your computer, and then kick-off a job using the FloydHub CLI to train your deep learning model on FloydHub's GPU servers.
 
