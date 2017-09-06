@@ -94,11 +94,13 @@ with tf.Session() as sess:
 ```
 
 Because model is stored under the special `/output` directory, it will be saved
-even after your job ends, and can be used again in future jobs. You can view
-this output using the `floyd output` command:
+even after your job ends, and can be used again in future jobs.
+
+#### Viewing Saved Output Data
+You can view the saved output of a job using the `floyd output` command:
 
 ```bash
-$ floyd output floydhub/projects/quick-start/1/output
+$ floyd output floydhub/projects/quick-start/1/
 Opening output directory in your browser...
 ```
 
