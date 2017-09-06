@@ -1,17 +1,17 @@
 #### Overview
-Saving information generated during a run is easy.
+Saving information generated during a job is easy.
 
 On a FloydHub deep learning server your code has access to a directory called
 `/output`. The `/output` directory is a special directory that is used to store
 information you want to save for future use after a job finishes. Anything
-saved in the `/output` directory at the time a run finishes will be preserved
+saved in the `/output` directory at the time a job finishes will be preserved
 and can be accessed and reused later.
 
 The most common thing users save is model checkpoints, but anything that ends
-up in the `/output` directory at the end of a run will be saved (use your
+up in the `/output` directory at the end of a job will be saved (use your
 imagination!).
 
-Let's work through a couple of examples to see how to save data during a run.
+Let's work through a couple of examples to see how to save data during a job.
 
 #### Example 1
 This job prints the string "Hello, world!", and saves it to a file called
