@@ -50,8 +50,6 @@ pages:
         - 'floyd logout': commands/logout.md
         - 'floyd upgrade': commands/upgrade.md
         - 'floyd version': commands/version.md
-    - Changelogs:
-        - 'July 12 2017': changelogs/1.md
 theme: material
 extra:
   palette:
