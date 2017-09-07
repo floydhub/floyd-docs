@@ -22,6 +22,11 @@ data with your code and upload it with each job. Instead, we upload a
 dataset once, and attach, or "mount", it to each job. This saves a
 significant amount of time on each job.
 
+Beyond that, keeping data separate from code allows you to collaborate more
+easily with others. A dataset can be used by any user who has access to it, so
+teams and communities can work on solving problems together using the same
+underlying data.
+
 ### Mounting a Dataset
 
 #### What does it mean to "mount" a dataset to a job?
