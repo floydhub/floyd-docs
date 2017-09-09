@@ -1,13 +1,13 @@
-Neural Style Transfer is an algorithm for combining the content of one image with the style of another image 
-using convolutional neural networks. Here's an example that maps the artistic style of The Starry Night 
+Neural Style Transfer is an algorithm for combining the content of one image with the style of another image
+using convolutional neural networks. Here's an example that maps the artistic style of The Starry Night
 onto a night-time photograph of the Stanford campus:
 
 <img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/starry_night_google.jpg" height="200px">
 <img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/hoovertowernight.jpg" height="200px">
 <img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/outputs/starry_stanford_bigger.png" width="710px">
 
-We will use this example to demonstrate how Floyd can be used to deploy your trained model as a REST API endpoint that can be accessed over the web. 
-This feature is very useful if you want to quickly compare models or have others play with your models. This guide will 
+We will use this example to demonstrate how Floyd can be used to deploy your trained model as a REST API endpoint that can be accessed over the web.
+This feature is very useful if you want to quickly compare models or have others play with your models. This guide will
 walk you through how to do this.
 
 ## Setup project
@@ -25,8 +25,8 @@ Project "fast-style-transfer" initialized in the current directory
 
 ## Train a model
 
-You can train your model by running the `style.py` script in this repo on Floyd. You can specify any style image to use in the command line. Just 
-download it and keep it in current path. In this example we will be starting from a 
+You can train your model by running the `style.py` script in this repo on Floyd. You can specify any style image to use in the command line. Just
+download it and keep it in current path. In this example we will be starting from a
 [pre-trained model](https://github.com/floydhub/fast-style-transfer#evaluating-style-transfer-networks).
 
 ### Training data
@@ -40,8 +40,8 @@ You can mount this at runtime using the `--data` parameter.
 $ floyd run --gpu --env tensorflow-0.12:py2 --data narenst/datasets/coco-train-2014/1:images --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models --data floydhub/datasets/imagenet-vgg-verydeep-19/3:vgg "python style.py --vgg-path /vgg/imagenet-vgg-verydeep-19.mat --train-path /images/train2014 --style examples/style/la_muse.jpg --base-model-path /models/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output"
 ```
 
-This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
-by using the [logs](../commands/logs.md) command. 
+This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress
+by using the [logs](../commands/logs.md) command.
 
 ```bash
 $ floyd logs <JOB_NAME> -t
@@ -78,14 +78,14 @@ $ floyd output <JOB_NAME>
 
 ### Improving the model
 
-You may notice that the output does not look great. That is because we ran the training for a small number of iterations. To train 
+You may notice that the output does not look great. That is because we ran the training for a small number of iterations. To train
 a fully working model try the train step again, this time without setting `--total-iterations` and increasing the `--epoch` to 2.
 It takes about 8 hours to train a model that works well. You can instead try one of our pre-trained models in the next section.
 
 ## Evaluate pre-trained models
 
 If you want to try out some awesome pre-trained models for various styles, you can use the datasource with models available publicly.
-You can play with any of these model and style transfer any image you prefer. Just add them to `images` directory. And point to the 
+You can play with any of these model and style transfer any image you prefer. Just add them to `images` directory. And point to the
 right model in the `--checkpoint` parameter.
 
 ```bash
@@ -109,14 +109,15 @@ $ floyd output <JOB_NAME>
 
 ## Model API
 
-You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transferred. 
+You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transferred.
 
 ### Serve mode
 
-Floyd [run](../commands/run.md) command has a `serve` mode. This will upload the files in the current directory and run a special command - 
-`python app.py`. Floyd expects this file to contain the code to run a web server and listen on port `5000`. You can see the 
-[app.py](https://github.com/floydhub/fast-style-transfer/blob/master/app.py) file in the sample repository. This file handles the 
-incoming request, executes the code in `evaluate.py` and returns the output.
+Floyd [run](../commands/run.md) command has a `serve` mode. This will upload the files in the current directory and run a special command -
+`python app.py`. Floyd expects this file to contain the code to run a web server and listen on port `5000`. You can see the
+[app.py](https://github.com/floydhub/fast-style-transfer/blob/master/app.py) file in the sample repository. This file handles the
+incoming request, executes the code in `evaluate.py` and returns the output. Before serving your model through REST API,
+you need to create a `floyd_requirements.txt` and declare the flask requirement in it.
 
 *Note that this feature is in preview mode and is not production ready yet*
 
@@ -157,7 +158,7 @@ curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.
 
 ![Jupyter](../img/taipei_udnie.jpg)
 
-This uses a different style checkpoint to render the image. All the logic for this is present in the `app.py` file. You can update it to 
+This uses a different style checkpoint to render the image. All the logic for this is present in the `app.py` file. You can update it to
 be as complex as you prefer.
 
 {!contributing.md!}
