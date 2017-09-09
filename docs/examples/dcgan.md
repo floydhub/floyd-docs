@@ -19,7 +19,7 @@ $ floyd init dcgan
 ### Dataset
 /* TODO: change dataset floydhub page*/
 For this project we will use the [Labeled Faces in the Wild Home](http://vis-www.cs.umass.edu/lfw/) aka LFW for the training.
-Since we are learning in an unsupervised regime, there is not a train/dev/test split, but we use the BCE Loss Error of the Discriminator and Generator as good metric to learn(minmax from GT), moreover we can visualize the generated images every epoch.
+Since we are learning in an unsupervised regime, there is not a train/dev/test split, but we use the BCE Loss Error of the Discriminator and Generator as good metrics to learn(minmax game strategy from Game Theory), moreover we can visualize the generated images every epoch.
 This preprocessed dataset is available publicly on
 [FloydHub](https://www.floydhub.com/floydhub/datasets/lfw/1).
 
@@ -84,8 +84,7 @@ $ floyd logs <JOB_NAME> -t
 ## Improving your model
 
 You may notice that the output does not look great. In fact, the algorithm have not yet learned how to correctly represent a face.
-That is because we ran the training for a small number of iterations. To train a fully working model, try the training step again, this time by setting the flag `--niter` to a large value, such as 100. In general, about 100 epoch(or even more) are necessary to give a good
-working model. (Note: This takes a few hours to run on the GPU instance!).
+That is because we ran the training for a small number of iterations. To train a fully working model, try the training step again, this time by setting the flag `--niter` to a large value, such as 100. In general, about 100 epoch(or even more, much more!) are necessary to have an accetable model. (Note: This takes a few hours to run on the GPU instance!).
 Keep in mind that *all the class of generative networks are not neither stable nor production ready*, this is a exciting field of research and everyone can contribute with new ideas.
 
 ## Evaluate pre-trained models
