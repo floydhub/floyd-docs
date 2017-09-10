@@ -44,7 +44,7 @@ For example: `floydhub/projects/handwriting-recognition/12/output` refers to the
 You can mount this using the `--data` flag in the `floyd run` command, similar to datasets. For example:
 
 ```bash
-$ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data "python train.py"
+$ floyd run --data floydhub/projects/handwriting-recognition/12/output:filtered_training_data "python train.py"
 ```
 
 This will make the output of `floydhub/projects/handwriting-recognition/12` available at `/filtered_training_data` for the new job to use.
