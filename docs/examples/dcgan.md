@@ -41,7 +41,7 @@ mounted in this path.
 - The data name [floydhub/datasets/lfw/1](https://www.floydhub.com/floydhub/datasets/lfw/1)
 points to the pre-processed dataset on FloydHub.
 - The job is running on a gpu instance with cuda enabled (Because of the `--gpu` and `--cuda` flags ).
-- This project uses pytorch installed on Python 2. (See the `--env` flag)
+- This project uses pytorch installed on Python 3. (See the `--env` flag)
 
 This job takes about 20 minutes to run and generate a model. You can follow along the progress
 by using the [logs](../commands/logs.md) command. If you run the model with default value it will take about 1/5 minutes per epoch.
@@ -67,10 +67,10 @@ The output will be created in the folder you will provide as parameter(--outf) o
 Moreover you can provide a serialized Zvector(--Zvector) to experiment with latent Z vector arithmetic landscape and for analyzing the semantic information encoded during training.
 
 ```bash
-floyd run --gpu --env pytorch -data <REPLACE_WITH_JOB_OUTPUT_NAME> "python generator.py --netG <REPLACE_WITH_MODEL_CHECKPOINT_PATH>"
+floyd run --gpu --env pytorch -data <REPLACE_WITH_JOB_OUTPUT_NAME> "python generator.py --netG <REPLACE_WITH_MODEL_CHECKPOINT_PATH> --ngpu 1 --cuda"
 
 # Provide a serialized Zvector
-floyd run --gpu --env pytorch -data <REPLACE_WITH_JOB_OUTPUT_NAME> "python generator.py --netG <REPLACE_WITH_MODEL_CHECKPOINT_PATH> --Zvector <REPLACE_WITH_SERIALIZED_Z_VECTOR_PATH>"
+floyd run --gpu --env pytorch -data <REPLACE_WITH_JOB_OUTPUT_NAME> "python generator.py --netG <REPLACE_WITH_MODEL_CHECKPOINT_PATH> --Zvector <REPLACE_WITH_SERIALIZED_Z_VECTOR_PATH> --ngpu 1 --cuda"
 ```
 
 You can track the status of the run with the status or logs command.
@@ -84,7 +84,7 @@ $ floyd logs <JOB_NAME> -t
 ## Improving your model
 
 You may notice that the output does not look great. In fact, the algorithm have not yet learned how to correctly represent a face.
-That is because we ran the training for a small number of iterations. To train a fully working model, try the training step again, this time by setting the flag `--niter` to a large value, such as 100. In general, about 100 epoch(or even more, much more!) are necessary to have an accetable model. (Note: This takes a few hours to run on the GPU instance!).
+That is because we ran the training for a small number of iterations. To train a fully working model, try the training step again, this time by setting the flag `--niter` to a large value, such as 300. In general, about 300/500 epoch(or even more, much more!) are necessary to have an accetable model. (Note: This takes a few hours to run on the GPU instance!).
 Keep in mind that *all the class of generative networks are not neither stable nor production ready*, this is a exciting field of research and everyone can contribute with new ideas.
 
 ## Evaluate pre-trained models
@@ -95,7 +95,7 @@ this. You can mount it with job output name:
 .
 
 ```bash
-floyd run --gpu --env pytorch -data floydhub/dcgan/1/output:/model "python generator.py --netG /model/netG_epoch_99.pth"
+floyd run --gpu --env pytorch -data floydhub/dcgan/1/output:/model "python generator.py --netG /model/netG_epoch_299.pth --ngpu 1 --cuda"
 ```
 
 This model should perform better on the given inputs compared to the previous one.
@@ -121,7 +121,7 @@ The service endpoint will take couple minutes to become ready. Once it's up, you
 ```bash
 # e.g. of a GET req
 curl -X GET -o <NAME_&_PATH_DOWNLOADED_IMG> -F "ckp=<MODEL_CHECKPOINT>" <SERVICE_ENDPOINT>
-curl -X GET -o prova.png -F "ckp=netG_epoch_69.pth" https://www.floydhub.com/expose/hellllllllllllllo!!!!
+curl -X GET -o prova.png -F "ckp=netG_epoch_299.pth" https://www.floydhub.com/expose/hellllllllllllllo!!!!
 
 # e.g. of a POST req
 curl -X POST -o <NAME_&_PATH_DOWNLOADED_IMG> -F "file=@<ZVECTOR_SERIALIZED_PATH>" <SERVICE_ENDPOINT>
@@ -136,6 +136,6 @@ once you are done testing, remember to shutdown the job.
 
 ## What Next?
 
-In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and the learned features were used to perform an image classification task on ImageNet-1k dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime.
+In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and then, the learned features were used to perform an image classification task on the ImageNet-1k/CIFAR-10 dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime.
 
 {!contributing.md!}
