@@ -1,5 +1,7 @@
 Deep Convolution Generative Adversarial Network is one of the first approach which made GAN "stable" and usable to learn features from images with unsupervised learning. This project is a porting from the [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/master/dcgan). At the end of this example you will be able to use DCGAN for generating images from your dataset.
 
+![Generated images](../img/lfw-300epochs.gif)
+
 In this guide we will train a pytorch model in an unsupervised task and use it to
 generate images from an input latent vector Z. Finally we will deploy the trained model as a
 REST endpoint that can be used to generate images in real time.
@@ -136,6 +138,6 @@ once you are done testing, remember to shutdown the job.
 
 ## What Next?
 
-In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and then, the learned features were used to perform an image classification task on the ImageNet-1k/CIFAR-10 dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime.
+In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and then, the learned features were used to perform an image classification task on the CIFAR-10 dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime.
 
 {!contributing.md!}
