@@ -111,7 +111,7 @@ This model should perform better on the given inputs compared to the previous on
 ## Serve model through REST API
 
 FloydHub supports seving mode for demo and testing purpose. If you run a job
-with `--mode serve` flag, FloydHub will run the `app.py` file in your prorject
+with `--mode serve` flag, FloydHub will run the `app.py` file in your project
 and attach it to a dynamic service endpoint:
 
 ```bash
