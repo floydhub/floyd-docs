@@ -46,7 +46,7 @@ points to on of the pre-processed dataset on FloydHub, substitute USER and VERSI
 - This project uses pytorch installed on Python 3. (See the `--env` flag)
 
 This job takes about 20 minutes to run and generate a model. You can follow along the progress
-by using the [logs](../commands/logs.md) command. If you run the model with default value it will take about 1/5 minutes per epoch.
+by using the [logs](../commands/logs.md) command. If you run the model with default value it will take about 1-5 minutes per epoch.
 
 ```bash
 $ floyd logs <JOB_NAME> -t
@@ -86,7 +86,7 @@ $ floyd logs <JOB_NAME> -t
 ## Improving your model
 
 You may notice that the output does not look great. In fact, the algorithm have not yet learned how to correctly represent a face.
-That is because we ran the training for a small number of iterations. To train a fully working model, try the training step again, this time by setting the flag `--niter` to a large value, such as 300. In general, about 300/500 epoch(or even more, much more!) are necessary to have an accetable model. (Note: This takes a few hours to run on the GPU instance!).
+That is because we ran the training for a small number of iterations. To train a fully working model, try the training step again, this time by setting the flag `--niter` to a large value, such as 300. In general, about 300/500 epochs(or even more, much more!) are necessary to have an accetable model. (Note: This takes a few hours to run on the GPU instance!).
 Keep in mind that *all the class of generative networks are not neither stable nor production ready*, this is a exciting field of research and everyone can contribute with new ideas.
 
 ## Evaluate pre-trained models
