@@ -10,8 +10,8 @@ pages:
     - Basics:
         # - 'Core concepts': guides/basics/core_concepts.md
         - 'Install Floyd CLI': guides/basics/install.md
-        - 'Login using Floyd CLI': guides/basics/login.md
-        - 'Create new Project and Dataset': guides/basics/create_new.md
+        - 'Log In Using Floyd CLI': guides/basics/login.md
+        - 'Create New Project and Dataset': guides/basics/create_new.md
         - 'Delete Project, Jobs and Data': guides/basics/delete.md
         - 'Using CPU vs GPU': guides/basics/using_gpu.md
     - Jobs:
@@ -50,8 +50,6 @@ pages:
         - 'floyd logout': commands/logout.md
         - 'floyd upgrade': commands/upgrade.md
         - 'floyd version': commands/version.md
-    - Changelogs:
-        - 'July 12 2017': changelogs/1.md
 theme: material
 extra:
   palette:

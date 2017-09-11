@@ -120,9 +120,10 @@ the output of the job `floydhub/projects/handwriting-recognition/12`
 
 Use the `--data` flag in the `floyd run` command, mount past output to a job,
 just as you would to mount a dataset. For example:
+
 ```
 $ floyd run \
-  --data floydhub/projects/handwriting-recognition/12:filtered_training_data \
+  --data floydhub/projects/handwriting-recognition/12/output:filtered_training_data \
   "python train.py"
 ```
 
