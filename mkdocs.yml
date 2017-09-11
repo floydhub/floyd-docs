@@ -27,7 +27,7 @@ pages:
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
         - 'Deep Text Corrector': examples/deep_corrector.md
-        - 'Deep Convolution Generative Adversarial Networks': examples/dcgan.md
+        - 'Deep Convolutional Generative Adversarial Networks': examples/dcgan.md
     - Troubleshooting & FAQs:
         - 'Installation': faqs/installation.md
         - 'Signup and Login': faqs/authentication.md

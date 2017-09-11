@@ -1,9 +1,9 @@
-Deep Convolution Generative Adversarial Network is one of the first approach which made GAN "stable" and usable to learn features from images with unsupervised learning. This project is a porting from the [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/master/dcgan). At the end of this example you will be able to use DCGAN for generating images from your dataset.
+Deep Convolutional Generative Adversarial Networks are a class of CNN and one of the first approach which made GAN "stable" and usable to learn features from images in unsupervised learning. This project is a porting from the [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/master/dcgan). At the end of this example you will be able to use DCGAN for generating images from your dataset.
 
 ![Generated images](../img/lfw-300epochs.gif)
 
-In this guide we will train a pytorch model in an unsupervised task and use it to
-generate images from an input latent vector Z. Finally we will deploy the trained model as a
+In this guide we will train a [Pytorch](http://pytorch.org/) model in an unsupervised task and use it to
+generate images from an input vector Z(100 dimensional uniform distribution). Finally we will deploy the trained model as a
 REST endpoint that can be used to generate images in real time.
 
 ## Project setup
@@ -93,19 +93,18 @@ Keep in mind that *all the class of generative networks are not neither stable n
 
 If you want to try out a pre-trained model, FloydHub has a public dataset model with the checkpoints(300 epochs training) for
 this. You can mount it with `--data`:
-[redeipirati/datasets/dcgan-100-epoch-models/3](https://www.floydhub.com/redeipirati/datasets/dcgan-100-epoch-models/3)
+[redeipirati/datasets/dcgan-300-epochs-models/1](https://www.floydhub.com/redeipirati/datasets/dcgan-300-epochs-models/1)
 .
 
-Note: You can use these checkpoints only with a GPU instance.
 
 ```bash
-floyd run --gpu --env pytorch --data redeipirati/datasets/dcgan-100-epoch-models/3:/model "python generate.py --netG /model/netG_epoch_299.pth --ngpu 1 --cuda"
+floyd run --gpu --env pytorch --data redeipirati/datasets/dcgan-300-epochs-models/1:/model "python generate.py --netG /model/netG_epoch_299.pth --ngpu 1 --cuda"
 ```
 
 This model should perform better compared to the previous one. You can also provide the `--Zvector` parameter to explore the latent Z vector landscape. We have also provided to you the zvector used for evaluating our model in the attached dataset:
 
 ```bash
-floyd run --gpu --env pytorch --data redeipirati/datasets/dcgan-100-epoch-models/3:/model "python generate.py --netG /model/netG_epoch_299.pth --Zvector /model/zvector.pth --ngpu 1 --cuda"
+floyd run --gpu --env pytorch --data redeipirati/datasets/dcgan-300-epochs-models/1:/model "python generate.py --netG /model/netG_epoch_299.pth --Zvector /model/zvector.pth --ngpu 1 --cuda"
 ```
 
 
@@ -120,6 +119,8 @@ and attach it to a dynamic service endpoint:
 ```bash
 floyd run --gpu --mode serve --env pytorch --data <REPLACE_WITH_JOB_OUTPUT_NAME>:/model
 ```
+
+Note: If you want to serve the model on a CPU istance, comment this [line](https://github.com/ReDeiPirati/dcgan/blob/master/app.py#L65) and decomment [this other one](https://github.com/ReDeiPirati/dcgan/blob/master/app.py#L67).
 
 The above command will print out a service endpoint for this job in your terminal console.
 
@@ -143,6 +144,6 @@ once you are done testing, **remember to shutdown the job.**
 
 ## What Next?
 
-In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and then, the learned features were used to perform an image classification task on the CIFAR-10 dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime.
+In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and then, the learned features were used to perform an image classification task on the CIFAR-10 dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime. GANs is an extremely active research area because they can provide an unlimited amount of high quality data which is necessary to train Deep Learning models.
 
 {!contributing.md!}
