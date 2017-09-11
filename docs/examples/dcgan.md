@@ -7,11 +7,11 @@ generate images from an input latent vector Z. Finally we will deploy the traine
 REST endpoint that can be used to generate images in real time.
 
 ## Project setup
-/* TODO: change github page*/
-The code for this project is available on Floyd's [Github page](https://github.com/floydhub/dcgan). Once [logged in](../commands/login), clone the project and [initialize](../commands/init) a floyd project.
+
+The code for this project is available on this [Github repository](https://github.com/ReDeiPirati/dcgan.git). Once [logged in](../commands/login), clone the project and [initialize](../commands/init) a floyd project.
 
 ```bash
-$ git clone https://github.com/floydhub/dcgan
+$ git clone https://github.com/ReDeiPirati/dcgan.git
 $ cd dcgan
 $ floyd init dcgan
 ```
@@ -19,29 +19,29 @@ $ floyd init dcgan
 ## Training
 
 ### Dataset
-/* TODO: change dataset floydhub page*/
+
 For this project we will use the [Labeled Faces in the Wild Home](http://vis-www.cs.umass.edu/lfw/) aka LFW for the training.
 Since we are learning in an unsupervised regime, there is not a train/dev/test split, but we use the BCE Loss Error of the Discriminator and Generator as good metrics to learn(minmax game strategy from Game Theory), moreover we can visualize the generated images every epoch.
 This preprocessed dataset is available publicly on
-[FloydHub](https://www.floydhub.com/floydhub/datasets/lfw/1).
+[FloydHub](https://www.floydhub.com/search/datasets?query=lfw).
 
 
 ### Training
-/* TODO: change dataset floydhub page*/
+
 You can train the DCGAN model by running `main.py` script with required
 parameters. Below is the [command](../commands/run) to start a training job on Floyd:
 
 ```bash
-$ floyd run --gpu --env pytorch --data floydhub/datasets/lfw/1:lfw "python main.py --dataset lfw --dataroot /lfw --outf /output --cuda --ngpu 1 --niter 20"
+$ floyd run --gpu --env pytorch --data <USER>/datasets/lfw/<VERSION>:lfw "python main.py --dataset lfw --dataroot /lfw --outf /output --cuda --ngpu 1 --niter 20"
 ```
 
 Notes:
-/* TODO: change dataset floydhub page*/
+
 - The input dataset is passed using the `--data` parameter. This mounts the pre-processed
 LFW dataset at `/lfw` path. You will notice that the dataroot parameter uses files
 mounted in this path.
-- The data name [floydhub/datasets/lfw/1](https://www.floydhub.com/floydhub/datasets/lfw/1)
-points to the pre-processed dataset on FloydHub.
+- The data name [<USER>/datasets/lfw/<VERSION>](https://www.floydhub.com/search/datasets?query=lfw)
+points to on of the pre-processed dataset on FloydHub, substitute USER and VERSION with ones of the public dataset available
 - The job is running on a gpu instance with cuda enabled (Because of the `--gpu` and `--cuda` flags ).
 - This project uses pytorch installed on Python 3. (See the `--env` flag)
 
@@ -69,10 +69,10 @@ The output will be created in the folder you will provide as parameter(--outf) o
 Moreover you can provide a serialized Zvector(--Zvector) to experiment with latent Z vector arithmetic landscape and for analyzing the semantic information encoded during training.
 
 ```bash
-floyd run --gpu --env pytorch -data <REPLACE_WITH_JOB_OUTPUT_NAME> "python generator.py --netG <REPLACE_WITH_MODEL_CHECKPOINT_PATH> --ngpu 1 --cuda"
+floyd run --gpu --env pytorch --data <REPLACE_WITH_JOB_OUTPUT_NAME>:model "python generate.py --netG /model/<REPLACE_WITH_MODEL_CHECKPOINT_PATH> --ngpu 1 --cuda"
 
 # Provide a serialized Zvector
-floyd run --gpu --env pytorch -data <REPLACE_WITH_JOB_OUTPUT_NAME> "python generator.py --netG <REPLACE_WITH_MODEL_CHECKPOINT_PATH> --Zvector <REPLACE_WITH_SERIALIZED_Z_VECTOR_PATH> --ngpu 1 --cuda"
+floyd run --gpu --env pytorch --data <REPLACE_WITH_JOB_OUTPUT_NAME>:model "python generate.py --netG /model/<REPLACE_WITH_MODEL_CHECKPOINT_PATH> --Zvector /model/<REPLACE_WITH_SERIALIZED_Z_VECTOR_PATH> --ngpu 1 --cuda"
 ```
 
 You can track the status of the run with the status or logs command.
@@ -90,17 +90,23 @@ That is because we ran the training for a small number of iterations. To train a
 Keep in mind that *all the class of generative networks are not neither stable nor production ready*, this is a exciting field of research and everyone can contribute with new ideas.
 
 ## Evaluate pre-trained models
-/* Change output*/
-If you want to try out a pre-trained model, FloydHub has a public job output for
-this. You can mount it with job output name:
-[floydhub/dcgan/1/output](https://www.floydhub.com/floydhub/projects/dcgan/1/output)
+
+If you want to try out a pre-trained model, FloydHub has a public dataset model with the checkpoints(300 epochs training) for
+this. You can mount it with `--data`:
+[redeipirati/datasets/dcgan-100-epoch-models/3](https://www.floydhub.com/redeipirati/datasets/dcgan-100-epoch-models/3)
 .
 
+Note: You can use these checkpoints only with a GPU instance.
+
 ```bash
-floyd run --gpu --env pytorch -data floydhub/dcgan/1/output:/model "python generator.py --netG /model/netG_epoch_299.pth --ngpu 1 --cuda"
+floyd run --gpu --env pytorch --data redeipirati/datasets/dcgan-100-epoch-models/3:/model "python generate.py --netG /model/netG_epoch_299.pth --ngpu 1 --cuda"
 ```
 
-This model should perform better on the given inputs compared to the previous one.
+This model should perform better compared to the previous one. You can also provide the `--Zvector` parameter to explore the latent Z vector landscape. We have also provided to you the zvector used for evaluating our model in the attached dataset:
+
+```bash
+floyd run --gpu --env pytorch --data redeipirati/datasets/dcgan-100-epoch-models/3:/model "python generate.py --netG /model/netG_epoch_299.pth --Zvector /model/zvector.pth --ngpu 1 --cuda"
+```
 
 
 ## Serve model through REST API
@@ -111,27 +117,26 @@ with `--mode serve` flag, FloydHub will run the `app.py` file in your project
 and attach it to a dynamic service endpoint:
 
 
-/* Change output*/
 ```bash
-floyd run --gpu --mode serve --env pytorch --data floydhub/dcgan/1/output:/model:model
+floyd run --gpu --mode serve --env pytorch --data <REPLACE_WITH_JOB_OUTPUT_NAME>:/model
 ```
 
 The above command will print out a service endpoint for this job in your terminal console.
 
-The service endpoint will take couple minutes to become ready. Once it's up, you can interact with the model by sending serialized Zvector file with a POST request or simply generate images from random noise:
+The service endpoint will take couple minutes to become ready. Once it's up, you can interact with the model by sending serialized Zvector file with a POST request or simply generate images from random noise with a GET request(you can also use the ckp parameter to chose a specific checkpoint):
 
 ```bash
 # e.g. of a GET req
 curl -X GET -o <NAME_&_PATH_DOWNLOADED_IMG> -F "ckp=<MODEL_CHECKPOINT>" <SERVICE_ENDPOINT>
-curl -X GET -o prova.png -F "ckp=netG_epoch_299.pth" https://www.floydhub.com/expose/hellllllllllllllo!!!!
+curl -X GET -o prova.png -F "ckp=netG_epoch_99.pth" https://www.floydhub.com/expose/hellllllllo!!!!
 
 # e.g. of a POST req
 curl -X POST -o <NAME_&_PATH_DOWNLOADED_IMG> -F "file=@<ZVECTOR_SERIALIZED_PATH>" <SERVICE_ENDPOINT>
-curl -X POST -o prova.png -F "file=@./parameter/zvector.pth" https://www.floydhub.com/expose/hellllllllllllllo!!!!
+curl -X POST -o prova.png -F "file=@./parameter/zvector.pth" https://www.floydhub.com/expose/hellllllllo!!!!
 ```
 
 Any job running in serving mode will stay up until it reaches maximum runtime. So
-once you are done testing, remember to shutdown the job.
+once you are done testing, **remember to shutdown the job.**
 
 *Note that this feature is in preview mode and is not production ready yet*
 
