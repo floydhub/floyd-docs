@@ -55,8 +55,7 @@ things:
   1. The name of the dataset you want to mount.
   2. A name for the folder where the data will be
   accessible to your code during the job, we call this the "mount point". You
-  can give this folder (mount point) any name you want. Don't precede this name
-  with a forward slash `/`.
+  can give this folder (mount point) any name you want.
 
 These two things are separated by a `:` with no spaces. Here's the syntax:
 
@@ -72,22 +71,25 @@ The command below will mount FloydHub's public
 [Udacity GAN](https://www.floydhub.com/floydhub/datasets/udacity-gan/1)
  dataset at `/my_data`
 ```
-floyd run --data floydhub/datasets/udacity-gan/1:my_data "python my_script.py"
+floyd run --data floydhub/datasets/udacity-gan/1:/my_data "python my_script.py"
 ```
 
 A couple of things to note:
 
   - There is no space between the name of the dataset
-    (`floydhub/datasets/udacity-gan/1`) and the mount point name (`my_data`).
+    (`floydhub/datasets/udacity-gan/1`) and the mount point name (`/my_data`).
   - A colon (`:`) is used to separate the name of the dataset and the
     mount point.
-  - The mount point name does not have have a preceding `/`, but your code
-    needs to add the preceding slash to locate the dataset during the job.
-    This means that if you specify `my_data` as the mount point, your code can
-    find your dataset at `/my_data`. If you specify `mnist_data` as the mount
-    point, your code needs to look in `/mnist_data` for your data.
-  - Nested mount points are not supported. This means a mount point like
-    `my_data/foo` will not work.
+  - Datasets are always mounted at the root directory (`/`). This means that if
+    you specify `/foo` as the mountpoint, your data will be mounted at `/foo`.
+    If you specify `foo` as the mount point, your data will still be mounted
+    at `/foo`. Preceding the mount point with a `/` is optional‒your data will
+    be mounted at the same location either way. You'll see us use both
+    variations in this guide.
+  - Nested mount points are not supported. This means mount points like
+    `my_data/foo` or `/home/me/data` will not work. If you need your data
+    available at a nested directory, check out the [Symlinking mounted
+    data](./symlink_mounted_data) guide.
 
 !!! important
     A common mistake is to for code to reference a mounted dataset without a
