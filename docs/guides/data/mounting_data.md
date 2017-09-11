@@ -69,16 +69,16 @@ Let's go through a couple of examples to show how to mount one or more datasets 
 #### Example 1
 
 The command below will mount FloydHub's public
-[Udacity GAN](https://www.floydhub.com/floydhub/datasets/udacity-gan)
+[Udacity GAN](https://www.floydhub.com/floydhub/datasets/udacity-gan/1)
  dataset at `/my_data`
 ```
-floyd run --data floydhub/datasets/udacity-gan:my_data "python my_script.py"
+floyd run --data floydhub/datasets/udacity-gan/1:my_data "python my_script.py"
 ```
 
 A couple of things to note:
 
   - There is no space between the name of the dataset
-    (`floydhub/datasets/udacity-gan`) and the mount point name (`my_data`).
+    (`floydhub/datasets/udacity-gan/1`) and the mount point name (`my_data`).
   - A colon (`:`) is used to separate the name of the dataset and the
     mount point.
   - The mount point name does not have have a preceding `/`, but your code
