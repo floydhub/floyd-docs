@@ -68,13 +68,22 @@ You can view the mounted datasets and their respective mount points for a specif
 
 ![Data Mounts](../../img/job_data_view.jpg)
 
-
 ### Symlinking your mounted data
 
-Sometimes, your code might require your data to be available at a hardcoded location. Or you might want to combine multiple mounted datasources under a single directory. One way to do this would be to copy the data from the mounted locations to the destination, but this is inefficient for large data. [Symlinking](https://en.wikipedia.org/wiki/Symbolic_link) is a great solution for this.
+Floydhub's basic data-mounting functionality is sufficient for most users'
+needs. However, if you find yourself with more complex requirements, symlinking
+can almost certainly provide a solution.
 
-Please see this guide: [Symlinking mounted data](./symlink_mounted_data)
-### Details
+Here are some common FloydHub data-mounting needs that symlinking can solve:
+
+  - Code requires the data to be available at a location that is not valid with
+    the mounting syntax of `floyd run --data`.
+  - Multiple mounted datasources need to be available under a single directory.
+  - Directories in a single datasource need to be split into their own
+    locations.
+
+For documentation on symlinking, please see this guide: [Symlinking mounted
+data](./symlink_mounted_data)
 
 #### Datasource name
 
