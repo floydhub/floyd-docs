@@ -93,4 +93,4 @@ markdown_extensions:
 extra_css:
     - css/bootstrap_paper.min.css
     - css/style.css
-copyright: Copyright &copy; 2017 Floyd Labs Inc.
+copyright: Copyright &copy; 2017 FloydHub
