@@ -3,6 +3,7 @@ site_url: https://www.floydhub.com
 site_author: FloydHub Team
 repo_url: https://github.com/floydhub/floyd-docs
 theme_dir: 'theme_overrides'
+google_analytics: ['UA-90905407-1', 'auto']
 pages:
     - Home: index.md
     - Get Started:
