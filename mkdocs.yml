@@ -7,25 +7,50 @@ google_analytics: ['UA-90905407-1', 'floydhub.com']
 pages:
     - Home: index.md
     - Get Started:
+        - 'Core Concepts': getstarted/core_concepts.md
         - 'Quick Start': getstarted/quick_start.md
-        - 'Jupyter Notebook': getstarted/quick_start_jupyter.md
-    - Basics:
-        # - 'Core concepts': guides/basics/core_concepts.md
+        - 'Jupyter Notebook Quick Start': getstarted/quick_start_jupyter.md
+    - Projects:
+        - 'Create a new project': guides/basics/create_new.md
+        - 'Delete a project': guides/basics/delete.md
+    - Jobs:
+        - 'Delete a job': guides/delete_job.md
+        - 'Enable Tensorboard': guides/jobs/tensorboard.md
+        - 'Ignore files': guides/floyd_ignore.md
+        - 'Troubleshooting & FAQs': faqs/job.md
+    - Data:
+        - 'Create and upload a dataset': guides/create_and_upload_dataset.md
+        - 'Delete a dataset': guides/delete_dataset.md
+        - 'Mount data to a job': guides/data/mounting_data.md
+        - 'Symlink mounted data': guides/data/symlink_mounted_data.md
+    - Environments:
+        - 'List of available environments': guides/environments.md
+        - 'Install extra dependencies': guides/jobs/installing_dependencies.md
+        - 'Using CPU vs GPU': guides/basics/using_gpu.md
+        - 'Troubleshooting & FAQs': faqs/environments.md
+    - Output:
+        - 'Save output': guides/data/storing_output.md
+        - 'Delete output': guides/delete_output.md
+        - 'Using previous outputs in a new job': guides/reusing_output.md
+    - Floyd CLI:
         - 'Install Floyd CLI': guides/basics/install.md
         - 'Log In Using Floyd CLI': guides/basics/login.md
-        - 'Create New Project and Dataset': guides/basics/create_new.md
-        - 'Delete Project, Jobs and Data': guides/basics/delete.md
-        - 'Using CPU vs GPU': guides/basics/using_gpu.md
-    - Jobs:
-        - 'Installing extra dependencies': guides/jobs/installing_dependencies.md
-        - 'Enabling Tensorboard': guides/jobs/tensorboard.md
-        - 'Environments': guides/environments.md
-        - 'Ignore files': guides/floyd_ignore.md
-    - Data:
-        - 'Storing output data': guides/data/storing_output.md
-        - 'Mounting data': guides/data/mounting_data.md
-        - 'Symlink mounted data': guides/data/symlink_mounted_data.md
-
+        - Commands:
+          - 'floyd': commands/index.md
+          - 'floyd login': commands/login.md
+          - 'floyd init': commands/init.md
+          - 'floyd run': commands/run.md
+          - 'floyd data': commands/data.md
+          - 'floyd logs': commands/logs.md
+          - 'floyd status': commands/status.md
+          - 'floyd output': commands/output.md
+          - 'floyd clone': commands/clone.md
+          - 'floyd info': commands/info.md
+          - 'floyd stop': commands/stop.md
+          - 'floyd delete': commands/delete.md
+          - 'floyd logout': commands/logout.md
+          - 'floyd upgrade': commands/upgrade.md
+          - 'floyd version': commands/version.md
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
         - 'Deep Text Corrector': examples/deep_corrector.md
@@ -33,31 +58,17 @@ pages:
         - 'Installation': faqs/installation.md
         - 'Signup and Login': faqs/authentication.md
         - 'Job': faqs/job.md
-        - 'Environments': faqs/environments.md
         - 'Plans': faqs/plans.md
         - 'Billing': faqs/billing.md
-    - Floyd CLI Commands:
-        - 'floyd': commands/index.md
-        - 'floyd login': commands/login.md
-        - 'floyd init': commands/init.md
-        - 'floyd run': commands/run.md
-        - 'floyd data': commands/data.md
-        - 'floyd logs': commands/logs.md
-        - 'floyd status': commands/status.md
-        - 'floyd output': commands/output.md
-        - 'floyd clone': commands/clone.md
-        - 'floyd info': commands/info.md
-        - 'floyd stop': commands/stop.md
-        - 'floyd delete': commands/delete.md
-        - 'floyd logout': commands/logout.md
-        - 'floyd upgrade': commands/upgrade.md
-        - 'floyd version': commands/version.md
 theme: material
 extra:
   nav_items_open_by_default:
-    - Basics
+    - Projects
     - Jobs
     - Data
+    - Environments
+    - Code
+    - Output
   palette:
     primary: 'blue'
     accent: 'blue'
