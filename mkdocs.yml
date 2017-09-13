@@ -2,6 +2,7 @@ site_name: FloydHub
 site_url: https://www.floydhub.com
 site_author: FloydHub Team
 repo_url: https://github.com/floydhub/floyd-docs
+theme_dir: 'theme_overrides'
 pages:
     - Home: index.md
     - Get Started:
@@ -52,6 +53,10 @@ pages:
         - 'floyd version': commands/version.md
 theme: material
 extra:
+  nav_items_open_by_default:
+    - Basics
+    - Jobs
+    - Data
   palette:
     primary: 'blue'
     accent: 'blue'
