@@ -85,7 +85,7 @@ code.
 
 ### Why keep datasets separate from code?
 
-A data scientist you tweak your code often during the process of creating a
+As a data scientist you tweak your code often during the process of creating a
 deep-learning model. However, you don't change the underlying data nearly
 as often, if at all.
 
