@@ -35,7 +35,7 @@ pages:
     - Floyd CLI:
         - 'Install Floyd CLI': guides/basics/install.md
         - 'Log In Using Floyd CLI': guides/basics/login.md
-        - Commands:
+        - CLI Commands:
           - 'floyd': commands/index.md
           - 'floyd login': commands/login.md
           - 'floyd init': commands/init.md
@@ -67,8 +67,8 @@ extra:
     - Jobs
     - Data
     - Environments
-    - Code
     - Output
+    - CLI Commands # This category's parent is collapsed
   palette:
     primary: 'blue'
     accent: 'blue'
