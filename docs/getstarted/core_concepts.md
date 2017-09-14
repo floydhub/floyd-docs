@@ -14,6 +14,16 @@ you're ready to dive deeper, each category has its own section in our
 documentation that you can explore.
 
 ## Projects
+
+!!! tip "Quick Look"
+    A project is a group of [jobs]() aimed at accomplishing the same goal. A
+    project keeps track of each job, along with its [output](#output) and logs.
+
+!!! warning "Key Points of Understanding"
+    - [Creating a project](../guides/basics/create_new)
+
+### Overview
+
 The project is the most central construct of the FloydHub platform.
 Understanding what a project is on FloydHub isn't too difficult because it
 directly correlates with what you'd think of as a deep learning project outside
@@ -29,10 +39,16 @@ learning workflow, your experiments and iterations (we call them
 [jobs](#jobs)) will be versioned and kept organized for you to reference in the
 future.
 
-In short, think of a project as a group of [jobs]() aimed at accomplishing the
-same goal.
-
 ## Jobs
+
+!!! tip "Quick Look"
+    A job is an execution of your code on FloydHub's deep-learning servers.
+
+!!! warning "Key Points of Understanding"
+    - [Running a job](../commands/run)
+
+### Overview
+
 A job is what pulls together your [code]() and [dataset(s)](), sends them to a
 deep-learning server configured with the right [environment](), and
 actually kicks off the necessary code to get the data science done.
@@ -53,6 +69,18 @@ GPU? What command(s) should the server use to run your code? Any other commands
 you'd like to run on the server to set it up before running your job? Etc.
 
 ## Datasets
+
+!!! tip "Quick Look"
+    Datasets are securely uploaded to FloydHub. They are versioned and can be
+    attached to any job.
+
+!!! warning "Key Points of Understanding"
+    - [How to upload a dataset](../guides/create_and_upload_dataset)
+    - [How to attach, or "mount", a dataset to a job so your code can use it](../guides/data/mounting_data)
+    - [Making sure your code references your data in the correct location](#connecting-code-and-datasets)
+
+
+### Overview
 FloydHub's dataset workflow is one of two things that tend to feel a bit
 foreign to users who are used to local development (the other being
 [output]()). When working on your local machine, you might have your dataset in
@@ -87,16 +115,18 @@ You can specify the places where your datasets will be
 sure that your code references your datasets with the file paths of the data on
 the *server*, not where you might have them locally.
 
-### Key Concepts
-The main things you need to understand about datasets on FloydHub are:
-
-1. [How to upload a dataset](../guides/create_and_upload_dataset)
-2. [How to attach, or "mount", a dataset to a job](../guides/data/mounting_data) so your code can use it
-
-Equally important to knowing how to do those things is making sure that your
-code knows where to find your dataset during a job.
-
 ## Environments
+
+!!! tip "Quick Look"
+    An environment is what defines the software packages that will be available
+    to your code during a job
+
+!!! warning "Key Points of Understanding"
+    - [How to select an environment for your job](../guides/data/storing_output)
+    - [How to customize your environment](../guides/reusing_output)
+
+### Overview
+
 FloydHub has a bunch of different [deep learning environments to choose
 from](../guides/environments). When you run a job on FloydHub, you'll be able
 to specify the environment you want use, straight from the command line. You'll
@@ -107,12 +137,18 @@ If FloydHub's stock deep learning environments don't meet your needs, you can
 create a custom environment for your job. See [this
 guide](../guides/jobs/installing_dependencies) for instructions on that.
 
-The main things you need to understand about environments on FloydHub are how
-to specify which of the available environments you want to use for your job,
-and how to customize your environment if the available environments don't meet
-your needs.
-
 ## Output
+
+!!! tip "Quick Look"
+    Output is any data, logs, or files you want to save for future reference
+    and use.
+
+!!! warning "Key Points of Understanding"
+    - [How to capture/save output from a job](../guides/data/storing_output)
+    - [How to use it again in a future job](../guides/reusing_output)
+
+### Overview
+
 Output is anything from a job that you want to save for future use. The most
 common form of output is model checkpoints (the weights and biases of your
 model) that you developed during a job. If you save these checkpoints (or
@@ -129,13 +165,3 @@ output is key to optimizing your deep learning workflow.
 output on FloydHub can feel foriegn to users who are used to working on their
 own machines. But once you learn how to do it, it becomes very simple and is
 one of the most valuable parts of the FloydHub workflow.
-
-### Key concepts
-The main things you need to understand about output on FloydHub are:
-
-1. [How to capture/save output from a job](../guides/data/storing_output)
-2. [How to use it again in a future job](../guides/reusing_output)
-
-Understanding these concepts will allow you to successfully iterate on ideas
-and will make your workflow much more efficient.
-
