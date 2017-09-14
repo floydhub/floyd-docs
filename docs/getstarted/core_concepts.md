@@ -1,7 +1,7 @@
 # Core Concepts
 
 FloydHub is a platform that enables data scientists use to create deep learning
-models more efficiently. FloyHub removes the of the hassle of maintaining and
+models more efficiently. FloyHub removes the hassle of maintaining and
 provisioning deep-learning servers, allowing data scientists to focus on the
 science of deep learning. It's deep learning without the DevOps.
 
