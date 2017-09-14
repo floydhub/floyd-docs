@@ -1,19 +1,22 @@
 # Core Concepts
 
-FloydHub is a platform that enables a workflow that data scientists use to
-create deep learning models more efficiently. FloyHub allows data scientists to
-work more effectively by relieving them of the hassle of maintaining and
-provisioning deep-learning servers, allowing them to focus on the science. It's
-deep learning without the DevOps.
+FloydHub is a platform that enables data scientists use to create deep learning
+models more efficiently. FloyHub removes the of the hassle of maintaining and
+provisioning deep-learning servers, allowing data scientists to focus on the
+science of deep learning. It's deep learning without the DevOps.
 
-The topics essential to understanding and effectively using FloydHub and its
-workflow can be broken down into the following categories:
+The topics essential to effectively using FloydHub can be grouped into the
+following categories:
 
 - [Projects](#projects)
 - [Jobs](#jobs)
 - [Datasets](#datasets)
 - [Environments](#environments)
 - [Output](#output)
+
+This document serves as an introduction to each of these categories. When
+you're ready to dive deeper, each category has its own section in our
+documentation that you can explore.
 
 ## Projects
 The project is the most central construct of the FloydHub platform.
@@ -81,15 +84,13 @@ underlying data.
 
 ### Connecting code and datasets
 You'll still be writing your code locally when using FloydHub, but when you run
-a job, your code will be sent to a powerful deep-learning server that has your
-datasets mounted to it and run there.
+a job, your code will be uploaded to FloydHub and executed on a powerful
+deep-learning server that has your datasets mounted to it.
 
 You can specify the places where your datasets will be
-[mounted](../guides/data/mounting_data) on the server, but you'll have to take
-care that your code references your datasets using the file paths where the
-data will be on the *server*, not where you have them locally. You'll need to
-make sure that your code references your data in the
-right place (the place where the data is mounted on the deep-learning server).
+[mounted](../guides/data/mounting_data) on the server, but you'll have to make
+sure that your code references your datasets with the file paths of the data on
+the *server*, not where you might have them locally.
 
 ### Key Concepts
 The main things you need to understand about datasets on FloydHub are:
@@ -101,12 +102,11 @@ Equally important to knowing how to do those things is making sure that your
 code knows where to find your dataset during a job.
 
 ## Environments
-Locally, you've probably got a few different versions of Python and/or your
-preferred deep learning libraries installed, etc. FloydHub has a myriad of
-different deep learning environments to choose from, which already have these
-dependencies installed, and have varying levels of hardware to meet your needs.
-When you run a job on FloydHub, you'll be able to specify the environment you
-want use, straight from the command line.
+FloydHub has a bunch of different [deep learning environments to choose
+from](../guides/environments). When you run a job on FloydHub, you'll be able
+to specify the environment you want use, straight from the command line. You'll
+also be able to specify whether you want the job run using a [GPU or a
+CPU](../guides/basics/using_gpu).
 
 If FloydHub's stock deep learning environments don't meet your needs, you can
 create a custom environment for your job. See [this
@@ -119,21 +119,21 @@ your needs.
 
 ## Output
 Output is anything from a job that you want to save for future use. The most
-common form of output are model checkpoints (the weights and biases of your
-model) that you developed during a job. You can save these checkpoints (or
-anything else you'd like to preserve) during a job, and have them to reference,
-download, and reuse in the future.
+common form of output is model checkpoints (the weights and biases of your
+model) that you developed during a job. If you save these checkpoints (or
+anything else you'd like to preserve) during a job, you'll have them to
+reference, download, and reuse in the future.
 
-Output is the way that you can link jobs together. You run a job to test an
+Output is the way that you can link jobs together: You run a job to test an
 idea you have. If it works, you may want to start where you left off and run
 another job. If going down that path leads to a dead end, you may want to go
 back to a previous output and start again from there. Knowing how to store
 output is key to optimizing your deep learning workflow.
 
-Saving and reusing output on FloydHub tends to feel foriegn to a lot of people
-who are new to FloydHub and are used to working on their own machines, but once
-you learn how to do it, it becomes very simple and is one of the most valuable
-parts of the FloydHub workflow.
+[Saving](../guides/data/storing_output) and [reusing](../guides/reusing_output)
+output on FloydHub can feel foriegn to users who are used to working on their
+own machines. But once you learn how to do it, it becomes very simple and is
+one of the most valuable parts of the FloydHub workflow.
 
 ### Key concepts
 The main things you need to understand about output on FloydHub are:
