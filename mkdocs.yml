@@ -68,6 +68,7 @@ extra:
     - Data
     - Environments
     - Output
+    - Get Started
     - CLI Commands # This category's parent is collapsed
   palette:
     primary: 'blue'
