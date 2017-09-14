@@ -135,8 +135,8 @@ guide](../guides/jobs/installing_dependencies) for instructions on that.
 ## Output
 
 !!! tip "Quick Look"
-    Output is any data, logs, or files you want to save for future reference
-    and use.
+    Output is any data, logs, or files from a job you want to save for future
+    reference and use.
 
 !!! warning "Key Points of Understanding"
     - [How to capture/save output from a job](../guides/data/storing_output)
