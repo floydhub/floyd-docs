@@ -29,7 +29,7 @@ To open the browsing window from the CLI, use the
 job's output:
 
 ```
-$ floyd output mckay/projects/my_proj/1/output
+$ floyd output mckay/projects/my_proj/1
 Opening output directory in your browser ...
 ```
 
