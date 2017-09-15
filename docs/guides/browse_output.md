@@ -5,7 +5,7 @@
 
     Or from the CLI:
     ```
-    $ floyd output <username>/<project_name>/<run_number>
+    $ floyd output <username>/projects/<project_name>/<run_number>
     ```
 
 After you've [saved output](data/storing_output) from a job, you can browse the
@@ -28,7 +28,7 @@ To open the browsing window from the CLI, use the [`floyd data
 clone`](../commands/data) command and pass it the path of the job's output:
 
 ```
-$ floyd data clone mckay/projects/my_proj/1/output
+$ floyd output mckay/projects/my_proj/1/output
 Opening output directory in your browser ...
 ```
 
