@@ -15,9 +15,10 @@ pages:
         - 'Delete a Project': guides/basics/delete.md
     - Jobs:
         - 'Delete a Job': guides/delete_job.md
+        - 'Stop a Job Early': guides/stop_job.md
         - 'Enable Tensorboard': guides/jobs/tensorboard.md
         - 'Ignore Files': guides/floyd_ignore.md
-        - 'SSH into a job': guides/ssh.md
+        - 'SSH into a Job': guides/ssh.md
         - 'Troubleshooting & FAQs': faqs/job.md
     - Data:
         - 'Create and Upload a Dataset': guides/create_and_upload_dataset.md
@@ -29,7 +30,7 @@ pages:
         - 'Install Extra Dependencies': guides/jobs/installing_dependencies.md
         - 'Using CPU vs GPU': guides/basics/using_gpu.md
         - 'Troubleshooting & FAQs': faqs/environments.md
-        - 'SSH into a job': guides/ssh.md
+        - 'SSH into a Job': guides/ssh.md
     - Output:
         - 'Save Output': guides/data/storing_output.md
         - 'Delete Output': guides/delete_output.md
@@ -66,6 +67,10 @@ pages:
         - 'Billing': faqs/billing.md
 theme: material
 extra:
+  # Use this to make a section open by default in the sidebar. These names have
+  # to match the titles in the `pages` section above. If a child section is
+  # defaulted to open, but its parent is not, the parent will be closed, but
+  # when you open the parent, the child will be open
   nav_items_open_by_default:
     - Projects
     - Jobs
@@ -73,7 +78,7 @@ extra:
     - Environments
     - Output
     - Get Started
-    - CLI Commands # This category's parent is collapsed
+    - CLI Commands
   palette:
     primary: 'blue'
     accent: 'blue'
