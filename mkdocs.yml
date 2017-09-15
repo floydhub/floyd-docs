@@ -11,28 +11,28 @@ pages:
         - 'Quick Start': getstarted/quick_start.md
         - 'Jupyter Notebook Quick Start': getstarted/quick_start_jupyter.md
     - Projects:
-        - 'Create a new project': guides/basics/create_new.md
-        - 'Delete a project': guides/basics/delete.md
+        - 'Create a New Project': guides/basics/create_new.md
+        - 'Delete a Project': guides/basics/delete.md
     - Jobs:
-        - 'Delete a job': guides/delete_job.md
+        - 'Delete a Job': guides/delete_job.md
         - 'Enable Tensorboard': guides/jobs/tensorboard.md
-        - 'Ignore files': guides/floyd_ignore.md
+        - 'Ignore Files': guides/floyd_ignore.md
         - 'Troubleshooting & FAQs': faqs/job.md
     - Data:
-        - 'Create and upload a dataset': guides/create_and_upload_dataset.md
-        - 'Delete a dataset': guides/delete_dataset.md
-        - 'Mount data to a job': guides/data/mounting_data.md
-        - 'Symlink mounted data': guides/data/symlink_mounted_data.md
+        - 'Create and Upload a Dataset': guides/create_and_upload_dataset.md
+        - 'Delete a Dataset': guides/delete_dataset.md
+        - 'Mount Data to a Job': guides/data/mounting_data.md
+        - 'Symlink Mounted Data': guides/data/symlink_mounted_data.md
     - Environments:
-        - 'List of available environments': guides/environments.md
-        - 'Install extra dependencies': guides/jobs/installing_dependencies.md
+        - 'List of Available Environments': guides/environments.md
+        - 'Install Extra Dependencies': guides/jobs/installing_dependencies.md
         - 'Using CPU vs GPU': guides/basics/using_gpu.md
         - 'Troubleshooting & FAQs': faqs/environments.md
     - Output:
-        - 'Save output': guides/data/storing_output.md
-        - 'Delete output': guides/delete_output.md
-        - 'Browse and Download saved output': guides/download_output.md
-        - 'Using previous outputs in a new job': guides/reusing_output.md
+        - 'Save Output': guides/data/storing_output.md
+        - 'Delete Output': guides/delete_output.md
+        - 'Browse and Download Saved Output': guides/download_output.md
+        - 'Using Previous Outputs in a New Job': guides/reusing_output.md
     - Floyd CLI:
         - 'Install Floyd CLI': guides/basics/install.md
         - 'Log In Using Floyd CLI': guides/basics/login.md
