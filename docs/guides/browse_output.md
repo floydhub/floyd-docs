@@ -24,8 +24,9 @@ the job by using the "Browse" and "Download" icons found on the "Output" tab:
 ![Download Output](../img/browse_output_full.jpg)
 
 ## From the CLI
-To open the browsing window from the CLI, use the [`floyd data
-clone`](../commands/data) command and pass it the path of the job's output:
+To open the browsing window from the CLI, use the
+[`floyd data clone`](../commands/data) command and pass it the path of the
+job's output:
 
 ```
 $ floyd output mckay/projects/my_proj/1/output
