@@ -15,7 +15,6 @@ pages:
         - 'Delete a Project': guides/basics/delete.md
     - Jobs:
         - 'Delete a Job': guides/delete_job.md
-        - 'Stop a Job Early': guides/stop_job.md
         - 'Enable Tensorboard': guides/jobs/tensorboard.md
         - 'Ignore Files': guides/floyd_ignore.md
         - 'SSH into a Job': guides/ssh.md
