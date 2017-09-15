@@ -35,5 +35,5 @@ access:
 ![Jupyter Notebook Terminal Session](../img/jupyter_terminal.jpg)
 
 Currently, FloydHub does not offer true SSH access into instances, but the
-method described above is sufficient for what most users want to use SSH.
+method described above is sufficient for what most users request SSH for.
 
