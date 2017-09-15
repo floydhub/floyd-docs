@@ -31,6 +31,7 @@ pages:
     - Output:
         - 'Save output': guides/data/storing_output.md
         - 'Delete output': guides/delete_output.md
+        - 'Browse and Download saved output': guides/download_output.md
         - 'Using previous outputs in a new job': guides/reusing_output.md
     - Floyd CLI:
         - 'Install Floyd CLI': guides/basics/install.md
