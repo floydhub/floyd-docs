@@ -17,6 +17,7 @@ pages:
         - 'Delete a Job': guides/delete_job.md
         - 'Enable Tensorboard': guides/jobs/tensorboard.md
         - 'Ignore Files': guides/floyd_ignore.md
+        - 'SSH into a job': guides/ssh.md
         - 'Troubleshooting & FAQs': faqs/job.md
     - Data:
         - 'Create and Upload a Dataset': guides/create_and_upload_dataset.md
@@ -28,6 +29,7 @@ pages:
         - 'Install Extra Dependencies': guides/jobs/installing_dependencies.md
         - 'Using CPU vs GPU': guides/basics/using_gpu.md
         - 'Troubleshooting & FAQs': faqs/environments.md
+        - 'SSH into a job': guides/ssh.md
     - Output:
         - 'Save Output': guides/data/storing_output.md
         - 'Delete Output': guides/delete_output.md
