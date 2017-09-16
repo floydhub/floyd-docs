@@ -117,10 +117,9 @@ and attach it to a dynamic service endpoint:
 
 
 ```bash
-floyd run --gpu --mode serve --env pytorch --data <REPLACE_WITH_JOB_OUTPUT_NAME>:/model
+floyd run --gpu --mode serve --env pytorch --data <REPLACE_WITH_JOB_OUTPUT_NAME>
 ```
 
-Note: If you want to serve the model on a CPU istance, comment this [line](https://github.com/ReDeiPirati/dcgan/blob/master/app.py#L65) and decomment [this other one](https://github.com/ReDeiPirati/dcgan/blob/master/app.py#L67).
 
 The above command will print out a service endpoint for this job in your terminal console.
 
@@ -144,6 +143,6 @@ once you are done testing, **remember to shutdown the job.**
 
 ## What Next?
 
-In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and then, the learned features were used to perform an image classification task on the CIFAR-10 dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime. GANs is an extremely active research area because they can provide an unlimited amount of high quality data which is necessary to train Deep Learning models.
+In the original paper the model was trained on the [LSUN](http://www.yf.io/p/lsun) dataset and then, the learned features were used to perform an image classification task on the CIFAR-10 dataset. DCGAN was one of the first "stable" model based on GAN and the first which tried to learn features from images in an unsupervised regime. GAN is an extremely active research area because they can provide an unlimited amount of high quality data which is necessary to train Deep Learning models.
 
 {!contributing.md!}
