@@ -1,15 +1,15 @@
-wloyd CLI is a python-based command line tool to interact with FloydHub from your terminal.
+Floyd CLI is a Python-based command line tool to interact with FloydHub from your terminal.
 
 `floyd-cli` is available on [pypi](https://pypi.python.org/pypi/floyd-cli) and
 runs on both Python 2.7 and Python 3.5.
 
-Use pip to install the CLI.
+Use `pip` to install the CLI.
 
 ```bash
 $ pip install -U floyd-cli
 ```
 
-Use pip3 if you only want to install the CLI for python 3:
+Use `pip3` if you only want to install the CLI for Python 3:
 
 ```bash
 $ pip3 install -U floyd-cli
@@ -29,7 +29,6 @@ Usage: floyd [OPTIONS] COMMAND [ARGS]...
 ```
 
 Detailed documentation for the floyd commands is available in the [documentation](../../commands/index.md).
-
 
 ## Using virtualenv to install floyd-cli
 
