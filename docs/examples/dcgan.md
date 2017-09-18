@@ -23,7 +23,7 @@ $ floyd init dcgan
 For this project we will use the [Labeled Faces in the Wild Home](http://vis-www.cs.umass.edu/lfw/) aka LFW for the training.
 Since we are learning in an unsupervised regime, there is not a train/dev/test split, but we use the BCE Loss Error of the Discriminator and Generator as good metrics to learn(minmax game strategy from Game Theory), moreover we can visualize the generated images every epoch.
 This preprocessed dataset is available publicly on
-[FloydHub](https://www.floydhub.com/search/datasets?query=lfw).
+[FloydHub](https://www.floydhub.com/redeipirati/datasets/lfw/).
 
 
 ### Training
@@ -32,7 +32,7 @@ You can train the DCGAN model by running `main.py` script with required
 parameters. Below is the [command](../commands/run) to start a training job on Floyd:
 
 ```bash
-$ floyd run --gpu --env pytorch --data <USER>/datasets/lfw/<VERSION>:lfw "python main.py --dataset lfw --dataroot /lfw --outf /output --cuda --ngpu 1 --niter 20"
+$ floyd run --gpu --env pytorch --data redeipirati/datasets/lfw/1:lfw "python main.py --dataset lfw --dataroot /lfw --outf /output --cuda --ngpu 1 --niter 20"
 ```
 
 Notes:
@@ -40,7 +40,7 @@ Notes:
 - The input dataset is passed using the `--data` parameter. This mounts the pre-processed
 LFW dataset at `/lfw` path. You will notice that the dataroot parameter uses files
 mounted in this path.
-- The data name [<USER>/datasets/lfw/<VERSION>](https://www.floydhub.com/search/datasets?query=lfw)
+- The data name [redeipirati/datasets/lfw/1](https://www.floydhub.com/redeipirati/datasets/lfw/1)
 points to on of the pre-processed dataset on FloydHub, substitute USER and VERSION with ones of the public dataset available
 - The job is running on a gpu instance with cuda enabled (Because of the `--gpu` and `--cuda` flags ).
 - This project uses pytorch installed on Python 3. (See the `--env` flag)
