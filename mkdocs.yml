@@ -115,3 +115,8 @@ extra_css:
     - css/bootstrap_paper.min.css
     - css/style.css
 copyright: Copyright &copy; 2017 FloydHub
+
+# We were having some favicon issues, likely in our theme's code. This is a
+# config setting offered by our theme that fixes the issue
+# https://github.com/squidfunk/mkdocs-material/pull/319
+site_favicon: 'img/favicon.ico'
