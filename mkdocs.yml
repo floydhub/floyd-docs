@@ -5,6 +5,7 @@ repo_url: https://github.com/floydhub/floyd-docs
 theme_dir: 'theme_overrides'
 google_analytics: ['UA-90905407-1', 'floydhub.com']
 pages:
+    - home/using_datasets.md
     - Home: index.md
     - Get Started:
         - 'Core Concepts': getstarted/core_concepts.md
@@ -65,6 +66,9 @@ pages:
         - 'Job': faqs/job.md
         - 'Plans': faqs/plans.md
         - 'Billing': faqs/billing.md
+    # Any page with a "" title will not show up in the sidebar. This is a hack
+    # we use to allow old URLs to exist while not showing them in the nav.
+    - "": home/using_datasets.md
 theme: material
 extra:
   # Use this to make a section open by default in the sidebar. These names have

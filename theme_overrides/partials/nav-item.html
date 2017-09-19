@@ -2,7 +2,8 @@
 {% if nav_item.active %}
   {% set class = "md-nav__item md-nav__item--active" %}
 {% endif %}
-{% if nav_item.children %}
+{% if nav_item.title == "" %}
+{% elif nav_item.children %}
   <li class="{{ class }} md-nav__item--nested">
     {% if nav_item.active or nav_item.title in config.extra.nav_items_open_by_default %}
       <input class="md-toggle md-nav__toggle" data-md-toggle="{{ path }}" type="checkbox" id="{{ path }}" checked>
