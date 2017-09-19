@@ -1,7 +1,7 @@
 !!! important "Quick Look"
     From the CLI:
     ```
-    $ floyd stop <username>/<project_name>/<job_number>
+    $ floyd stop <username>/projects/<project_name>/<job_number>
     ```
 
     From floydhub.com:
