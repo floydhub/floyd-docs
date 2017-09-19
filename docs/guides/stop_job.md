@@ -13,7 +13,7 @@ on [floydhub.com](https://www.floydhub.com).
 
 ## Using the CLI
 A job can be stopped using the `floyd stop` command and passing it the name of
-your project, as shown below:
+your job, as shown below:
 
 ```
 $ floyd stop mckay/projects/my-project/4
