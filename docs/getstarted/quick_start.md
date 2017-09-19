@@ -72,9 +72,9 @@ For this tutorial, we'll run the `mnist_cnn.py` Python script on FloydHub's GPU 
 ```bash
 $ floyd run --gpu --env tensorflow "python mnist_cnn.py"
 Syncing code ...
-RUN ID                  NAME               
-----------------------  -------------------
-AKpnXqj9BEU6d8KhmygTyb  alice/quick-start/1
+NAME               
+-------------------
+alice/quick-start/1
 
 To view the logs enter:
     floyd logs alice/quick-start/1
@@ -95,9 +95,9 @@ You can view the status of your Job from your terminal using the [`floyd status`
 
 ```bash
 $ floyd status
-RUN ID                  CREATED        STATUS    DURATION(s)  NAME                 INSTANCE    DESCRIPTION
-----------------------  ---------      --------  -----------  -------------------  ---------   -----------
-AKpnXqj9BEU6d8KhmygTyb  just now       running            15  alice/quick-start:1  gpu         
+JOB NAME             CREATED        STATUS    DURATION(s)  INSTANCE    DESCRIPTION
+-------------------  ---------      --------  -----------  ---------   -----------
+alice/quick-start:1  just now       running            15  gpu         
 ```
 
 You can also view the status of your job in your browser by visiting the `Job URL` printed by the `floyd run` command. For example, `https://www.floydhub.com/alice/quick-start/1`

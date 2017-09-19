@@ -67,18 +67,13 @@ $ floyd run --mode jupyter --gpu --env pytorch
 Creating project run. Total upload size: 21.9KiB
 Syncing code ...
 [================================] 23333/23333 - 00:00:00
-RUN ID                  NAME
-----------------------  ---------------------
-MhDNgxBHi74EKaffBKSbTN  saip/mnist-pytorch/3
+NAME
+--------------------
+saip/mnist-pytorch/3
 
 Setting up your instance and waiting for Jupyter notebook to become available ..............
 
 Path to jupyter notebook: https://www.floydhub.com/notebooks/pCoPyzZtYeo6mE9PpSWsmY
-
-To view logs enter:
-    floyd logs saip/mnist-pytorch/3
-
-Opening the jupyter notebook in your browser now ...
 ```
 
 This will take a little bit. As it executes, Floyd is doing the following behind the scenes:
@@ -102,9 +97,9 @@ You can view the status of your job from your terminal using the [floyd status](
 
 ```bash
 $ floyd status saip/mnist-pytorch/3
-RUN ID                  CREATED         STATUS      DURATION(s)  NAME                   INSTANCE    DESCRIPTION
-----------------------  --------------  --------  -------------  ---------------------  ----------  -------------
-MhDNgxBHi74EKaffBKSbTN  16 minutes ago  running               0  saip/mnist-pytorch/3   gpu
+JOB NAME                CREATED         STATUS      DURATION(s)  INSTANCE    DESCRIPTION
+----------------------  --------------  --------  -------------  ----------  -------------
+saip/mnist-pytorch/3    16 minutes ago  running               0  gpu
 ```
 
 You can also view the status by going to the project page in the web dashboard.
