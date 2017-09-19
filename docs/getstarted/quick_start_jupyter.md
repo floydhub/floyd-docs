@@ -63,7 +63,7 @@ Starting a Jupyter Notebook on FloydHub is very simple. Use the [floyd run](../c
 Execute the following command from the command line:
 
 ```bash
-$ floyd run --mode jupyter --gpu --env pytorch
+$ floyd run --mode jupyter --gpu --env pytorch-0.2
 Creating project run. Total upload size: 21.9KiB
 Syncing code ...
 [================================] 23333/23333 - 00:00:00
