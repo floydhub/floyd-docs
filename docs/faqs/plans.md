@@ -5,42 +5,35 @@ Please see here for [Billing FAQs](./billing.md)
 ### Which Plan is right for me?
 
 #### Free Plan
-If you're just exploring, the Free plan is for you! You are automatically enrolled in the Free plan when you sign up on FloydHub. It includes 
-20 hours of free CPU every month. You cannot, however, use a GPU or run multiple jobs 
-in parallel.
+If you're just exploring, the Free plan is for you! You are automatically
+enrolled in the Free plan when you sign up on FloydHub. It includes 20 hours of
+free CPU every month. You cannot, however, use a GPU or run multiple jobs in
+parallel.
 
 #### Data Scientist Plan
-Our Data Scientist plans offer varying levels of [job concurrency](#what-is-job-concurrency), GPU computing hours 
+Our Data Scientist plans offer varying levels of [job concurrency](#what-is-job-concurrency), GPU computing hours
 and storage. You can also purchase [Powerups](#powerups) to add more compute hours to supplement your plan.
 
-**Data Scientist Base Plan**: If you are getting started with deep learning and primarily use Jupyter Notebooks, the Base plan should work well for you. You can run 2 concurrent jobs on GPU and get 100 GB of storage included in the plan. 
-
-**Data Scientist Plus and Pro Plans**: If you are a more advanced user, you may need more job concurrency to run multiple parallel experiments and more storage for your data. The Plus and Pro plans will serve you better. 
-
-Please see the [feature comparison table](https://www.floydhub.com/pricing/#features) for a full list of features.
+For more details on our different plans, visit our [pricing
+page](https://www.floydhub.com/pricing). Please see the [feature comparison
+table](https://www.floydhub.com/pricing/#features) for a full list of each
+plan's features.
 
 ### What is in the Trial plan?
 
-All users that sign up on FloydHub are automatically enrolled in the Free plan. Additionally, we offer 2 hours of free GPU credits to try out FloydHub. The GPU credits expire in 14 days, but you will be able to use all the features of the Free plan forever.
+All users that sign up on FloydHub are automatically enrolled in the Free plan.
+Refer to our [pricing page](https://www.floydhub.com/pricing/#features) for
+details on the Free plan.
 
-Take FloydHub for a pin with our [Quick Start Guide](../getstarted/quick_start.md) or [Jupyter Notebook Guide](../getstarted/quick_start_jupyter.md)!
 
-### What is included in the Free plan?
-
-The free plan comes with the following:
-
-- 20 hours of CPU compute / month
-- 10 GB free storage
-- Unlimited public projects and datasets
-- Concurrent jobs: You can only run one job at a time
-- 6 hour job timeout: The maximum runtime of a job on the Trial Plan is 6 hours. It will automatically timeout after that
-
-You can upgrade to one of the [Data Scientist Plan](https://www.floydhub.com/pricing) to overcome these limits.
+Once you've signed up, take FloydHub for a spin with our [Quick Start
+Guide](../getstarted/quick_start.md) or [Jupyter Notebook
+Guide](../getstarted/quick_start_jupyter.md)!
 
 ### Do the plans come with preemptible or dedicated instances?
 
-The GPU and CPU compute hours included in your plan (Free or Data Scientist) are 
-[preemptible instances](#preemptible-instances). This means that there is a small chance that your job will be terminated without notice. In practice, this happens infrequently and this is perfect for most users. If you need [dedicated instances](#dedicated-instances) for your jobs, you 
+The GPU and CPU compute hours included in your plan (Free or Data Scientist) are
+[preemptible instances](#preemptible-instances). This means that there is a small chance that your job will be terminated without notice. In practice, this happens infrequently and this is perfect for most users. If you need [dedicated instances](#dedicated-instances) for your jobs, you
 can buy the GPU+ or CPU+ Powerups.
 
 ### Do my remaining compute credits roll over each month if I don't use them all?
@@ -49,7 +42,7 @@ No, your monthly Plan compute credits are not rolled over. However, your Powerup
 
 ### What happened to the old Pay-as-you-go Individual Plan?
 
-We are transitioning from the Individual Plan, which offered a pay-as-you-go payment method, to our current pricing plan. The Individual Plan is no longer available for new users. 
+We are transitioning from the Individual Plan, which offered a pay-as-you-go payment method, to our current pricing plan. The Individual Plan is no longer available for new users.
 
 ### I am in the Pay-as-you-go Individual Plan. What will happen to me?
 
@@ -61,15 +54,11 @@ Please [upgrade](https://www.floydhub.com/settings/plan) to one of the Data Scie
 
 We offered 100 hours of free GPU for all users during our promotional period. This has ended.
 
-### Will my free credits expire?
-
-The current Trial plan includes 2 hours of free GPU credits. These will expire 14 days from the day you sign up. After 14 days, you will be transitioned to our Free plan.
-
 ### Are there any academic discounts for students?
 
-We don't have discounts. However, a lot of students create content for us. If you are willing to contribute high quality content to FLoydHub, we will give you *free GPU credits* in exchange! 
+We don't have discounts. However, a lot of students create content for us. If you are willing to contribute high quality content to FLoydHub, we will give you *free GPU credits* in exchange!
 
-Content we are looking for: 
+Content we are looking for:
 
 - Technical blogs on deep learning and AI
 - FloydHub tutorials, text or video
@@ -79,23 +68,21 @@ Content we are looking for:
 
 If this is interesting to you, please let us know about it [here](https://docs.google.com/forms/d/1dBA_KJ0_su8m8O2ij3dqF7aI3-EK89zjzxA0k-y8FdM/viewform?edit_requested=true).
 
-
-
 ## Compute
 
 ### What is job concurrency?
 
-Job concurrency is the number of jobs you can run in parallel. Each plan has a limit 
-on the number of concurrent jobs you can run. For example, in the Free plan, 
-you can only run 1 job at a time. In the Data Scientist Pro plan, you can run up 
+Job concurrency is the number of jobs you can run in parallel. Each plan has a limit
+on the number of concurrent jobs you can run. For example, in the Free plan,
+you can only run 1 job at a time. In the Data Scientist Pro plan, you can run up
 to 8 jobs in parallel.
 
-Having a higher concurrency is useful when you want to parallelize your training, for 
+Having a higher concurrency is useful when you want to parallelize your training, for
 example while hyperparameter sweeping.
 
 ### What will happen to my running job when I run out of computing credits?
 
-You job will be shutdown immediately when you run out of computing credits. 
+You job will be shutdown immediately when you run out of computing credits.
 
 If you run long-running jobs and expect them to exceed the computing hours offered by your plan, you can purchase [Powerups](#powerups).
 
@@ -103,7 +90,7 @@ You can also enable auto-refresh on your Powerups to ensure your long-running jo
 
 ### Preemptible Instances
 
-Preemptible instances have medium job uptime SLA of 98%. This means that there is a small chance that your job can be terminated (preempted) at any point during its runtime by FloydHub if it requires access to those resources for other, higher priority tasks. 
+Preemptible instances have medium job uptime SLA of 98%. This means that there is a small chance that your job can be terminated (preempted) at any point during its runtime by FloydHub if it requires access to those resources for other, higher priority tasks.
 
 Preemptible instances (CPU / GPU) offer top notch compute at affordable prices, in exchange for fault tolerance.
 
@@ -121,12 +108,12 @@ We have a fixed pool of resources that we have to allocate amongst all our users
 
 #### Should I use Dedicated instances?
 
-If your job is not fault tolerant and cannot withstand a small (&lt;2%) chance 
-of your job being shutdown without notice, you should use our `"+"` Dedicated instances. 
-Price sensitivity also plays a factor - dedicated instances are more expensive than 
+If your job is not fault tolerant and cannot withstand a small (&lt;2%) chance
+of your job being shutdown without notice, you should use our `"+"` Dedicated instances.
+Price sensitivity also plays a factor - dedicated instances are more expensive than
 premptible instances.
 
-Given that deep learning models typically train over long periods of time, it 
+Given that deep learning models typically train over long periods of time, it
 is good practice to build your application to be fault tolerant by regularly checkpointing your training.
 
 #### What is the difference between GPU vs. GPU+ and CPU vs. CPU+?
@@ -139,9 +126,9 @@ Preemptible instances have 98% job up time SLA. Dedicated instances have 99.95% 
 
 #### Will I get a refund if my job is preempted?
 
-No. 
+No.
 
-Our preemptible instances have a 98% job uptime SLA. By using them, you are accepting a small chance 
+Our preemptible instances have a 98% job uptime SLA. By using them, you are accepting a small chance
 of your job being terminated without notice, in exchange for paying a much lower price than dedicated instances.
 
 #### How will I know when my job is preempted?
@@ -153,7 +140,7 @@ Your job's state will turn from `Running` to `Shutdown`. We will send you a noti
 
 ### What are Powerups?
 
-Your subscription plan comes with a monthly quota of CPU and GPU computing hours. 
+Your subscription plan comes with a monthly quota of CPU and GPU computing hours.
 If you need more computing hours, you can buy Powerups to supplement your plan.
 
 ### What Powerups should I buy?
@@ -164,7 +151,7 @@ This depends on your computing needs. We offer multiple tiers of Powerups:
 - **10 vs. 50 vs. 100 hours**: Purchase a pack that suits your computing needs. Note that the larger packs offer compute at a much cheaper rate/hour than smaller packs.
 - **Auto-refresh**: You can enable auto-refresh on any pack.
 
-If you are *just starting out* and need more computing hours than your plan offers, you can start with the *GPU10 Powerup*. 
+If you are *just starting out* and need more computing hours than your plan offers, you can start with the *GPU10 Powerup*.
 
 If you run *long-running jobs*, you should purchase the *GPU100 with auto-refresh enabled*, to ensure that you never run out of computing credits.
 
@@ -180,7 +167,7 @@ Auto-refresh ensures your long-running jobs are never killed because you [ran ou
 
 ### Can I buy a Powerup if I am in the Free Plan?
 
-No. You have to be enrolled in one of the Data Scientist plans to be eligible for 
+No. You have to be enrolled in one of the Data Scientist plans to be eligible for
 purchasing Powerups.
 
 ### Do Powerups expire?
@@ -199,9 +186,8 @@ Your compute hours will be consumed in the following order:
 
 ### How much storage do I get?
 
-Each plan comes with its own storage limit. For example, the Free plan has 
-10GB storage, while the Data Scientist Pro plan has 400GB. Please see the 
-[feature comparison table](https://www.floydhub.com/pricing/#features) for details.
+Each plan comes with its own storage limit. Please see the [feature comparison
+table](https://www.floydhub.com/pricing/#features) for details.
 
 ### What counts against my storage?
 
@@ -211,9 +197,9 @@ Note that you are only responsible for the data that you own. For example, if yo
 
 ### Can I buy more storage than my plan offers?
 
-The Data Scientist Pro plan includes 400GB of storage. If this doesn't fit your needs, 
-please contact us at [support@floydhub.com](mailto:support@floydhub.com).
+If our Data Scientist Pro plan's storage doesn't meet your needs, please
+contact us at [support@floydhub.com](mailto:support@floydhub.com).
 
-We will soon have a storage Powerup that can you buy to add more storage to your base plan. 
+We will soon have a storage Powerup that can you buy to add more storage to your base plan.
 
 {!contributing.md!}
