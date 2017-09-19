@@ -20,7 +20,7 @@ $ floyd stop mckay/projects/my-project/4
 Experiment shutdown request submitted. Check status to confirm shutdown
 ```
 
-To check the status of your job to make sure it shut down properly, use the
+To check the status of your job to make sure it has shut down properly, use the
 `floyd status` command, as shown below:
 
 ```
