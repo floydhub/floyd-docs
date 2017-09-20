@@ -88,7 +88,9 @@ If you run long-running jobs and expect them to exceed the computing hours offer
 
 You can also enable auto-refresh on your Powerups to ensure your long-running jobs are never killed because you ran out of computing hours. We'll automatically refresh your selected Powerup so that your job can continue running.
 
-### Preemptible Instances
+### Preemptible vs. Dedicated Instances
+
+#### Preemptible Instances
 
 Preemptible instances have medium job uptime SLA of 98%. This means that there is a small chance that your job can be terminated (preempted) at any point during its runtime by FloydHub if it requires access to those resources for other, higher priority tasks.
 
@@ -96,45 +98,52 @@ Preemptible instances (CPU / GPU) offer top notch compute at affordable prices, 
 
 Note that SLA refers to what we can guarantee. In practice, this happens infrequently. Historically, less than 0.1% of jobs run on FloydHub have encountered interruption. However, you need to be aware that there is the possibility.
 
-### Dedicated Instances
-
-Dedicated instances have high job uptime SLA of 99.95%. Use dedicated instances for your jobs if they are critical or not fault tolerant. You can purchase '+' [Powerups](#powerups) (CPU+ / GPU+) to utilize dedicated instances.
-
-#### Why do you use preemptible instances?
+##### Why Do You Use Preemptible Instances?
 
 To be able to offer you compute at a much lower cost.
 
 We have a fixed pool of resources that we have to allocate amongst all our users. Some of our users require dedicated instances and are willing to pay the premium for uninterrupted access. But, the majority of our users can tolerate a 98% job uptime SLA for the significant price savings that preemptible instances offer.
 
-#### Should I use Dedicated instances?
+##### Will I Get a Refund if My Job is Preempted?
+
+No.
+
+Our preemptible instances have a 98% job uptime SLA. By using them, you are
+accepting a small chance of your job being terminated without notice, in
+exchange for paying a much lower price than dedicated instances.
+
+##### How Will I Know When My Job Is Preempted?
+
+Your job's state will turn from `Running` to `Shutdown`. We will send you a
+notification informing you about this. Unfortunately, we are currently unable
+to warn your ahead of time of an impending preemption.
+
+##### What is the SLA of Preemptible Instances?
+
+Preemptible instances have 98% job up time SLA.
+
+#### Dedicated Instances
+
+Dedicated instances have high job uptime SLA of 99.95%. Use dedicated instances for your jobs if they are critical or not fault tolerant. You can purchase '+' [Powerups](#powerups) (CPU+ / GPU+) to utilize dedicated instances.
+
+##### Why Do You Use Dedicated Instances?
 
 If your job is not fault tolerant and cannot withstand a small (&lt;2%) chance
 of your job being shutdown without notice, you should use our `"+"` Dedicated instances.
-Price sensitivity also plays a factor - dedicated instances are more expensive than
-premptible instances.
+
+Price sensitivity also plays a factor - dedicated instances are more expensive
+than premptible instances.
 
 Given that deep learning models typically train over long periods of time, it
 is good practice to build your application to be fault tolerant by regularly checkpointing your training.
 
-#### What is the difference between GPU vs. GPU+ and CPU vs. CPU+?
+##### What is the SLA of Dedicated instances?
+
+Dedicated instances have 99.95% job up time SLA.
+
+### What is the difference between GPU vs. GPU+ and CPU vs. CPU+?
 
 GPU and CPU are preemptible instances. GPU+ and CPU+ are dedicated instances.
-
-#### What is the SLA of Preemptible instances and Dedicated instances?
-
-Preemptible instances have 98% job up time SLA. Dedicated instances have 99.95% job up time SLA.
-
-#### Will I get a refund if my job is preempted?
-
-No.
-
-Our preemptible instances have a 98% job uptime SLA. By using them, you are accepting a small chance
-of your job being terminated without notice, in exchange for paying a much lower price than dedicated instances.
-
-#### How will I know when my job is preempted?
-
-Your job's state will turn from `Running` to `Shutdown`. We will send you a notification informing you about this. Unfortunately, we are currently unable to warn your ahead of time of an impending preemption.
-
 
 ## Powerups
 
