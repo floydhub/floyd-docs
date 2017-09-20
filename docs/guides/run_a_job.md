@@ -4,7 +4,7 @@
     **[[OPTIONS]](#options_1):**
 
     - [Instance Type](#instance-type): `--cpu --gpu --cpu+ --gpu+`
-    - [Dataset(s)](#datasets): `--data <name_of_datasource>:<mount_point_on_server`
+    - [Dataset(s)](#datasets): `--data <name_of_datasource>:<mount_point_on_server>`
     - [Mode](#mode): `--mode <mode_name>`
     - [Environment](#environment): `--env <environment_name`
     - [Message](#message) `--message` or `-m`

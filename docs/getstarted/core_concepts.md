@@ -43,7 +43,7 @@ future.
     A job is an execution of your code on FloydHub's deep-learning servers.
 
 !!! warning "Key Points of Understanding"
-    - [Running a job](../commands/run)
+    - [Running a job](../../guides/run_a_job)
 
 A job is what pulls together your [code]() and [dataset(s)](), sends them to a
 deep-learning server configured with the right [environment](), and
