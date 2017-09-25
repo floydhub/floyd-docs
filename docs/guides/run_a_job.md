@@ -26,7 +26,7 @@ quick reference.
 ## Parts of the `floyd run` Command
 
 ### [[OPTIONS]](#options_1)
-    - [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu+` **or** `--gpu+`
+- [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu+` **or** `--gpu+`
 - [Dataset(s)](#datasets): `--data`
 - [Mode](#mode): `--mode`
 - [Environment](#environment): `--env`
