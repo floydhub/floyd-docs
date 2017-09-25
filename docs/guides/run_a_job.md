@@ -3,10 +3,10 @@
 
     **[[OPTIONS]](#options_1):**
 
-    - [Instance Type](#instance-type): `--cpu --gpu --cpu+ --gpu+`
+    - [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu+` **or** `--gpu+`
     - [Dataset(s)](#datasets): `--data <name_of_datasource>:<mount_point_on_server>`
     - [Mode](#mode): `--mode <mode_name>`
-    - [Environment](#environment): `--env <environment_name`
+    - [Environment](#environment): `--env <environment_name>`
     - [Message](#message) `--message` or `-m`
     - [Tensorboard](#tensorboard): `--tensorboard`
 
@@ -26,7 +26,7 @@ quick reference.
 ## Parts of the `floyd run` Command
 
 ### [[OPTIONS]](#options_1)
-- [Instance Type](#instance-type): `--cpu --gpu --cpu+ --gpu+`
+    - [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu+` **or** `--gpu+`
 - [Dataset(s)](#datasets): `--data`
 - [Mode](#mode): `--mode`
 - [Environment](#environment): `--env`
@@ -83,7 +83,7 @@ For more detailed information on mounting data to jobs, see
 
 FloydHub jobs can currently be run in one of three modes:
 
-1. `--mode job`
+1. `--mode job` (DEFAULT)
 2. `--mode jupyter`
 3. `--mode serve`
 
@@ -92,9 +92,10 @@ Here is a description of each mode:
 #### `--mode job`
 
 This is the default mode so there is no need to specify `--mode job` when
-running `floyd run`. You can think of this mode as "regular mode". When you run
-your job in this mode, your code is sent up to a FloydHub deep-learning server
-and the [[COMMAND]](#command) portion of `floyd run` executed.
+running `floyd run`. You can think of this mode as "regular mode" or "command
+mode". When you run your job in this mode, your code is sent up to a FloydHub
+deep-learning server and the [[COMMAND]](#command) portion of `floyd run`
+is executed.
 
 #### `--mode jupyter`
 
@@ -123,7 +124,7 @@ requirements:
   declares it as a dependency.
 
 !!! warning
-    This mode is currently in development, and not appropriate for production
+    This mode is currently in preview, and is not appropriate for production
     use.
 
 ### Environment
@@ -138,9 +139,27 @@ pre-installed.  You can find a list of all the available environments
 [here](../guides/environments).
 
 Use the `--env` flag to specify which environment you would like your job to
-run in. It is best practice to pass the entire name of the environment,
-including the version number, to the `--env` flag. For example, instead of
-`--env tensorflow`, use `--env tensorflow-1.3`.
+run in.
+
+!!! important
+
+    It is best practice to pass the entire name of the environment,
+    including the version number, to the `--env` flag. For example, instead of
+    `--env tensorflow`, use `--env tensorflow-1.3`.
+
+!!! note "Examples"
+
+    ```
+    $ floyd run --env tensorflow-1.3 "python train.py"
+    ```
+
+    ```
+    $ floyd run --env theano-0.8 "python train.py"
+    ```
+
+    ```
+    $ floyd run --env pytorch-0.2 "python train.py"
+    ```
 
 ### Message
 
@@ -205,7 +224,8 @@ $ floyd run "python -v"
 $ floyd run "echo 'Hello, world!'"
 ```
 
-Most commonly, you'll be kicking off a Pyton script in your `[COMMAND]` with something like:
+Most commonly you'll be kicking off a Python script with your `[COMMAND]`, with
+something like this:
 
 ```
 $ floyd run "python train.py"
@@ -223,5 +243,19 @@ But you can feel free to get creative!
 
     For more examples, check out our
     [symlinking tutorial](../guides/data/symlink_mounted_data/#1-using-the-command-portion-of-floyd-run).
+
+!!! note
+
+    Jupyter Note book mode (`--mode jupyter`) and serve mode (`--mode serve`)
+    do not take a `[COMMAND]`. You'll kick off your job without passing a
+    `[COMMAND],` with something like the following:
+
+    ```
+    $ floyd run --env pytorch-0.2 --mode jupyter
+    ```
+
+    ```
+    $ floyd run --env pytorch-0.2 --mode serve --data a/datasets/b/1:mount
+    ```
 
 {!contributing.md!}
