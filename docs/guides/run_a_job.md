@@ -63,7 +63,9 @@ detailed below:
 
 #### What is the difference between a preemptible and a dedicated instance?
 
-Refer to [this section](../faqs/plans/#preemptible-vs-dedicated-instances)
+Refer to [this section](../faqs/plans/#preemptible-vs-dedicated-instances) of
+the documentation for more information about dedicated and preemptible
+instances.
 
 
 ### Dataset(s)
