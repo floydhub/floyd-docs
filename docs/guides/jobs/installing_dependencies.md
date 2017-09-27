@@ -4,7 +4,9 @@ If you need additional or custom packages, you can install them before running y
 
 ## Installing Python dependencies
 
-If your code needs additional Python packages at run time, you can add them to a special file named `floyd_requirements.txt`.
+If your code needs additional Python packages at run time, you can add them to
+a special file named `floyd_requirements.txt`. If you want to install
+non-Python packages, please see [here](#installing-non-python-dependencies).
 
 It is similar to Python's [requirements.txt](https://pip.pypa.io/en/stable/user_guide/#requirements-files) file and should be present in the same directory from where you issue the `floyd run` command. This is a special file that will be read before your job is started and the packages listed here will be installed before running your job.
 
