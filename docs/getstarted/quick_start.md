@@ -292,7 +292,10 @@ For more information on reusing output, check out
 
 ### Run Your Second Job
 
-Follow this command to run your second job. Note that we are mounting our dataset again at `/mnist` and also mounting our model at `/model`:
+Follow this command to run your second job. Note that we are mounting our
+dataset again at `/mnist` and also mounting our model at `/model`. Be sure to
+replace `mckay/projects/quickstart/1/output` with the name of the output you
+want to mount (something like `<username>/projects/quick-start/<run_number>/output`)
 
 ```
 
