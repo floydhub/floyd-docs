@@ -56,13 +56,13 @@ Cloning into 'quick-start'...
 ...
 $ cd quick-start
 $ ls
-LICENSE    mnist_cnn.py    mnist_cnn.ipynb    README.md
+eval.py  LICENSE  mnist_cnn.ipynb  README.md  train_and_eval.py  train.py
 ```
 
-This repository contains a file we'll use to get started: `mnist_cnn.py`. It's
-a Python script that trains a convolutional neural network model against the
-MNIST dataset. Feel free to look through the file if you'd like, but you don't
-need to.
+This repository contains a file we'll use to get started: `train.py`.
+It's a Python script that trains a convolutional neural network model against
+the MNIST dataset. Feel free to look through the file if you'd like, but you
+don't need to.
 
 #### Initialize the Project Locally
 
@@ -87,7 +87,7 @@ dataset. You probably know that the MNIST dataset is actually available within
 the TensorFlow package itself, but for the purposes of this tutorial we have
 separated out the dataset so you can get a feel for what it's like to work
 with datasets on FloydHub. We have the MNIST dataset pulicly available on
-FloydHub [here]().
+FloydHub [here](https://www.floydhub.com/mckay/datasets/mnist).
 
 !!! note
 
@@ -122,7 +122,7 @@ $ floyd run \
 --gpu \
 --data mckay/datasets/mnist/1:/mnist \
 --env tensorflow-1.3 \
-"python mnist_cnn_train.py"
+"python train.py"
 
 Creating project run. Total upload size: 25.4KiB
 Syncing code ...
@@ -143,7 +143,7 @@ Behind the scenes, FloydHub does the following:
 - Provisions a GPU instance on the cloud (because you set the `--gpu` flag)
 - Sets up a deep learning environment with GPU drivers and TensorFlow 1.3
   installed (because you set the enviroment flag to `--env tensorflow-1.3`)
-- Executes the command `python mnist_cnn.py` inside this environment
+- Executes the command `python train.py` inside this environment
 - Stores the output logs and generated output data
 - Terminates the GPU instance once the command finishes execution
 
@@ -161,9 +161,10 @@ on instance types [here](../../guides/run_a_job/#instance-type).
 
 ### --data mckay/datasets/mnist/1:/mnist
 
-The `mnist_cnn.py` script expects the MNIST data to be located at `/mnist` on
-the computer where the script runs. We can use the `--data` flag to ensure that
-our dataset is available to our code at `/mnist`.
+The `train.py` script expects the [MNIST
+data](https://www.floydhub.com/mckay/datasets/mnist/1) to be located at
+`/mnist` on the computer where the script runs. We can use the `--data` flag to
+ensure that our dataset is available to our code at `/mnist`.
 
 We pass the `--data` flag the name of our dataset (`mckay/datasets/mnist/1`)
 and the location on the server where we want our dataset to be available
@@ -183,7 +184,7 @@ When you're ready to dive in, take a read through it [here](../../guides/data/mo
 Ensures our job is run on a server that has TensorFlow 1.3 installed. More info
 on job environments [here](../../guides/run_a_job/#environment)
 
-### "python mnist_cnn_train.py"
+### "python train.py"
 
 The command we want the server to execute to kick off our code. More info
 on how to specify commands [here](../../guides/run_a_job/#command_1).
@@ -238,10 +239,9 @@ accuracy of our model.
 
 Using the `-t` (tail) flag will stream the logs as they are generated.
 
-You can also view the logs in your browser using your `Job URL`. However, the
-logs in the Dashboard are not currently refreshed dynamically, so you'll need
-to refresh your browser periodically or press `F5` to get the latest logs from
-the Dashboard.
+You can also view the logs in your browser using your `Job URL`. (The `Job URL`
+will look something like
+`https://www.floydhub.com/<username>/projects/quick-start/<job_number>`.)
 
 ## Storing Your Model for Future Use
 
@@ -250,10 +250,16 @@ on it or to check its accuracy using an evaluation script.
 
 To save something during our job that we want to save for later, we just need
 to make sure it gets saved at `/output` during our job. Anything in `/output`
-at the end of a job will be saved for us and we can reuse it later. Take a look
-at [line 108](https://github.com/floydhub/quick-start/blob/master/mnist_cnn_train.py#L108)
-in our `mnist_cnn_train.py` script. With that line, we store our model under
-`/output`, which means that FloydHub will save it for us to use later.
+at the end of a job will be saved for us and we can reuse it later.  Take a
+look at [line
+108](https://github.com/floydhub/quick-start/blob/master/train.py#L108) of our
+`train.py` script. Here's the line:
+
+```
+builder = tf.saved_model.builder.SavedModelBuilder("/output/cnn_model")
+```
+We're setting up our model to be saved under `/output`. This ensures that
+FloydHub will save it for us to use later.
 
 For more details on how to save and reuse job output, see
 [this article](../../guides/data/storing_output).
@@ -264,7 +270,7 @@ Now let's evaluate our model by checking it against our evaluation script.
 
 To finish off this tutorial, we'll evaluate the model we trained in our first
 job. The repository we cloned early has a script we can use to do this:
-`mnist_cnn_eval.py`.
+`eval.py`.
 
 The script expects our model to be located at `/model` on the machine where the
 script runs. Somehow we've got to make sure that the model we saved in our
@@ -304,8 +310,25 @@ $ floyd run \
 --env tensorflow-1.3 \
 --data mckay/datasets/mnist/1:/mnist \
 --data alice/projects/quick-start/1/output:/model \
-'python mnist_cnn_eval.py'
+'python eval.py'
+
+Creating project run. Total upload size: 26.3KiB
+Syncing code ...
+[================================] 28620/28620 - 00:00:01
+
+JOB NAME
+---------------------------
+mckay/projects/quick-start/2
+
+To view logs enter:
+   floyd logs mckay/projects/quick-start/2
 ```
+
+You know how to check the logs, so go ahead and check the logs of your second
+job and see how accurate your model is!
+
+If you forgot how to check the logs, take a look at [this
+section](#viewing-your-jobs-logs) of the page.
 
 ## Iterating on Your Model
 
