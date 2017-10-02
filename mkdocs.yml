@@ -16,6 +16,7 @@ pages:
     - Jobs:
         - 'Run a Job': guides/run_a_job.md
         - 'Stop a Job': guides/stop_job.md
+        - 'Restart a Job': guides/restart_job.md
         - 'Enable Tensorboard': guides/jobs/tensorboard.md
         - 'Delete a Job': guides/delete_job.md
         - 'Ignore Files': guides/floyd_ignore.md
@@ -57,6 +58,7 @@ pages:
           - 'floyd logout': commands/logout.md
           - 'floyd upgrade': commands/upgrade.md
           - 'floyd version': commands/version.md
+          - 'floyd restart': commands/restart.md
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
         - 'Deep Text Corrector': examples/deep_corrector.md
