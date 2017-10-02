@@ -13,11 +13,11 @@ floyd restart JOB_NAME [OPTIONS] [COMMAND]
 
 ### Description
 
-Use this command to restart/rerun a previous job.  Any `[OPTIONS]` or
+Use this command to restart/re-run a previous job.  Any `[OPTIONS]` or
 `[COMMAND]` passed to `floyd restart` will override the `[OPTIONS]` or
-`[COMMAND]` of the original job. This can be useful if you want to run a
-previous job with different `[OPTIONS]` (like a different instance type), or
-override its `[COMMAND]`.
+`[COMMAND]` of the original job. This can be useful if you want to
+restart/re-run a previous job with different `[OPTIONS]` (like a different
+instance type), or override its `[COMMAND]`.
 
 When using `floyd restart`, a copy of your code is not uploaded (since the code
 of the previous job is used). This can save on startup time.

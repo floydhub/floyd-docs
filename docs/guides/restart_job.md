@@ -29,12 +29,12 @@ All jobs can be restarted/re-run using Floyd CLI's `floyd restart` command. This
 command takes a `<job_name>`, and allows the same `[OPTIONS]` and `[COMMAND]`
 parameters as the `floyd run` command.
 
-This is most useful when you want to re-run a job, but override certain
+This is most useful when you want to restart/re-run a job, but override certain
 parameters of the job (like upgrading its instance type) or overriding the
 `[COMMAND]` that was used in the job.
 
-Below are a few examples. Each examples re-runs the `mckay/projects/mnist/1`
-job, but overrides different parts of the job:
+Below are a few examples. Each examples restarts/re-runs the
+`mckay/projects/mnist/1` job, but overrides different parts of the job:
 
 ```
 # Override the command
