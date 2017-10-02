@@ -1,4 +1,4 @@
-Restat/rerun a previous job
+Restat/re-run a previous job
 
 ### Usage
 ```bash
