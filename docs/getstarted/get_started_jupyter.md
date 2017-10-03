@@ -44,7 +44,7 @@ $ ls
 $ README.md mnist.ipynb
 ```
 
-In this guide, we will use the `mnist_cnn.ipynb` Jupyter Notebook.
+In this guide, we will use the `mnist.ipynb` Jupyter Notebook.
 
 ### Initialize new project
 Now that we have the code, we want to associate this directory with the new project you just created on FloydHub. Ensure that you are inside the `quick-start-pytorch` directory and execute:
