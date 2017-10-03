@@ -9,7 +9,9 @@ pages:
     - Get Started:
         - 'Core Concepts': getstarted/core_concepts.md
         - 'Quick Start': getstarted/quick_start.md
-        - 'Jupyter Notebook Quick Start': getstarted/quick_start_jupyter.md
+        - 'Quick Start - Jupyter Notebook': getstarted/quick_start_jupyter.md
+        - 'Getting Started Tutorial': getstarted/get_started.md
+        - 'Getting Started Tutorial - Jupyter Notebook': getstarted/get_started_jupyter.md
     - Projects:
         - 'Create a New Project': guides/basics/create_new.md
         - 'Delete a Project': guides/basics/delete.md
