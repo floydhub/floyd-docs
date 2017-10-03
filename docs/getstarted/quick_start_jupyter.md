@@ -22,8 +22,8 @@ Follow this guide to learn how to spin up a Jupyter Notebook on FloydHub's deep-
     Project "my_jupyter_project" initialized in current directory
     ```
 
-3. Then, kick off your first Jupyter Notebook with `floyd run --gpu --mode
-   jupyter`
+3. Then, kick off your first Jupyter Notebook with
+    `floyd run --gpu --mode jupyter`
 
     ```
     $ floyd run --mode jupyter
