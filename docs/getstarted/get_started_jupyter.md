@@ -69,7 +69,7 @@ Syncing code ...
 [================================] 23333/23333 - 00:00:00
 NAME
 --------------------
-saip/mnist-pytorch/3
+saip/projects/mnist-pytorch/3
 
 Setting up your instance and waiting for Jupyter notebook to become available ..............
 
@@ -93,28 +93,37 @@ Open the `mnist.ipynb` Notebook and start training your model interactively!
 
 ### Check the status of your job
 
-You can view the status of your job from your terminal using the [floyd status](../commands/status.md) command
+You can view the job's status by going to the job's page in the web dashboard:
+
+![job status in dashboard](../../img/project_page_job_status.jpg)
+
+Alternatively, you can view the status from your terminal using the
+[`floyd status`](../commands/status.md) command:
 
 ```bash
-$ floyd status saip/mnist-pytorch/3
+$ floyd status saip/mnist-pytorch/projects/3
 JOB NAME                CREATED         STATUS      DURATION(s)  INSTANCE    DESCRIPTION
 ----------------------  --------------  --------  -------------  ----------  -------------
-saip/mnist-pytorch/3    16 minutes ago  running               0  gpu
+saip/mnist-pytorch/projects/3    16 minutes ago  running               0  gpu
 ```
 
-You can also view the status by going to the project page in the web dashboard.
-
 ### Stopping your Notebook
+
+On the project page, click the `Cancel` button below the icon that shows the status of your job, as shown in the picture below:
+
+![Stop Job](../img/stop_job.jpg)
+
+Then click the `Confirm` button in the modal that pops up:
+![Stop Job Confirm](../img/stop_job_modal.jpg)
 
 !!! warning
     Jupyter Notebooks are designed for interactive development. Your job starts running on FloydHub's server when you execute the `floyd run --mode jupyter` command and it continues to be active till you explicitly stop your job.
 
     Hence, even if you are not actively executing code inside your Notebook, the Jupyter server is still active on FloydHub and you are billed for the time.
 
-To stop your notebook you can use the [floyd stop](../commands/stop.md) command.
+### Learn More
 
-```bash
-$ floyd stop saip/mnist-pytorch/3
-Experiment shutdown request submitted. Check status to confirm shutdown
-```
+For a more in-depth tutorial about FloydHub that uses FloydHub's "command
+mode", check out [this tutorial](get_started).
+
 {!contributing.md!}

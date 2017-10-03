@@ -75,8 +75,8 @@ quick look at how easy it is to use FloydHub.
     ...
     ```
 
-    Be sure to use the `JOB NAME` that was printed out when you ran the `floyd
-    run` command.
+    Be sure to use the `JOB NAME` that was printed out when you ran the
+    `floyd run` command.
 
 Congratulations! You've trained and tested your first model on FloydHub 🎉
 
