@@ -1,3 +1,5 @@
+Follow this guide to learn how to spin up a Jupyter Notebook on FloydHub's deep-learning servers.
+
 ## Quick Preparation Checklist
 
 - You must have a [FloydHub account](https://www.floydhub.com/login)
@@ -41,3 +43,9 @@
 
     This will open up a Jupyter Notebook in your browser. The notebook is
     running on FloyHub's GPU servers. Just like that, you're up and running!
+
+Congratulations! You've just started your first Jupyter Notebook on FloydHub 🎉
+
+To go a bit more in depth and learn more about using Jupyter Notebooks on FloydHub, check out the [Getting Started Tutorial - Jupyter Notebook](get_started_jupyter)
+
+

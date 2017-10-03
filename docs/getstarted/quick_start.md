@@ -1,3 +1,6 @@
+Let's train our first deep learning model on Floydhub! Follow this guide for a
+quick look at how easy it is to use FloydHub.
+
 ## Quick Preparation Checklist
 - [Create a FloydHub account](https://www.floydhub.com/login)
 - [Install `floyd-cli` on your computer](../guides/basics/install.md)
@@ -10,9 +13,9 @@
     ![create jupyter notebook](../img/create_project.jpg)
 
 2. In your terminal, use `git` to clone FloydHub's
-    [quick-start repository](https://github.com/floydhub/quick-start)
-    repository. It contains the code we'll use to train our CNN. Clone it and
-    switch directories into it:
+    [quick-start repository](https://github.com/floydhub/quick-start). It
+    contains the code we'll use to train our CNN. Clone it and switch
+    directories into it:
 
     ```bash
     $ git clone https://github.com/floydhub/quick-start.git
@@ -51,15 +54,14 @@
     ```
 
     Here's what Floyd did when you ran that command:
-    - Synced your local code to FloydHub's servers
-    - Provisioned a GPU instance on the cloud (because you set the `--gpu` flag)
-    - Sets up a deep learning environment with GPU drivers and TensorFlow 1.3
-      installed (because you set the enviroment flag to `--env tensorflow`)
-    - Executed the command `python train_and_eval.py` inside this environment
-    - Stored the output logs and generated output data
-    - Terminated the GPU instance once the command finished execution
 
-5. View your job's logs using the `floyd logs -t` command:
+    - Synced your local code to FloydHub's servers
+    - Provisioned a GPU instance on the cloud with TensorFlow 1.3 installed
+    - Executed the command `python train_and_eval.py` on the GPU server
+    - Stored the output logs and generated output data
+    - Terminated the GPU instance once the command finished executing
+
+5. View your job's logs in real time using the `floyd logs -t` command:
 
     ```
     $ floyd logs -t alice/projects/mnist-cnn/1
@@ -78,7 +80,7 @@
 
 Congratulations! You've trained and tested your first model on FloydHub 🎉
 
-Yeah, that was pretty high level. To get a bit more in depth and learn more
+Yeah, that was pretty high level. To go a bit more in depth and learn more
 about what you actually just did, check out the [Getting Started
 Tutorial](get_started)
 
