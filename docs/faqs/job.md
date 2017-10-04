@@ -185,5 +185,10 @@ All jobs run on FloydHub are executed inside a Docker container. Our current CPU
 The resolution is to optimize your code to consume less memory. For example, read less data into your in-memory datastructures or reduce your batch size. We will be introducing more powerful CPUs, which higher memory in the near future.
 
 
+### Why did I get a "Long running FloydHub Jupyter job detected" email?
+
+FloydHub monitors Jupyter notebook instances that are no longer actively used and notifies the owner. This is a reminder in case the user forgot to turn off the instance after use and should help save resources.
+
+Note: If you create [Terminals within Jupyter notebooks](../guides/ssh/), this feature will not work. This is because FloydHub cannot reliably detect if the instance is being used or not.
 
 {!contributing.md!}
