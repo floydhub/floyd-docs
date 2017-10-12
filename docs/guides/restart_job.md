@@ -19,7 +19,10 @@ as shown in the screenshot below:
 ![restart job image](../../img/restart_jupyter.jpg)
 
 This will start your Jupyter Notebook where you last left it. If you'd like to
-restart your job back where it *started*, just restart the previous job.
+restart your job back where it *started*, just restart the previous job. See the 
+restart workflow in action:
+
+![restart job image](../../img/restart_jupyter.gif)
 
 Jupyter Notebook jobs can also be restarted using Floyd CLI, as detailed below.
 
