@@ -29,9 +29,6 @@ Floyd can manage your experiment datasets and make them available when running y
 current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already 
 exists in Floyd. In case the dataset name does not exist, the CLI will open the create dataset page in your browser.
 
-The init command also creates a `.floydignore` file. Any files and directories you do not want Floyd to track can be added 
-to this file. When you upload this dataset to Floyd, these files will not be uploaded.
-
 ### Example
 Initialize a floyd dataset in your data directory.
 ```bash
@@ -56,6 +53,8 @@ Upload contents of the current directory as a new version of the dataset. This d
 At run time the data will be available at the `/input` path.
 
 Floyd also versions your data so you can choose any specific version to use in your runs.
+
+Currently this command does NOT respect a `.floydignore` file. This functionality may be added in the future.
 
 ### Example
 ```bash
