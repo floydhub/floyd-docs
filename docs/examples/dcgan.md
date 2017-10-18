@@ -20,7 +20,7 @@ in](../commands/login), clone the project and [initialize](../commands/init) a
 floyd project.
 
 ```bash
-$ git clone https://github.com/ReDeiPirati/dcgan.git
+$ git clone https://github.com/floydhub/dcgan.git
 $ cd dcgan
 $ floyd init dcgan
 ```
