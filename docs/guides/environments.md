@@ -9,8 +9,8 @@ If no `--env` is provided, it uses the `keras` image by default, which comes wit
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|
-| Keras | keras      | Tensorflow 1.1.0 + keras 2.0.4 on Python3.5. |  |
-|       | keras:py2  | Tensorflow 1.1.0 + keras 2.0.4 on Python2. |  |
+| Keras | keras      | Tensorflow 1.1.0 + keras 2.0.6 on Python3.5. |  |
+|       | keras:py2  | Tensorflow 1.1.0 + keras 2.0.6 on Python2. |  |
 | Tensorflow 1.3 | tensorflow-1.3  | Tensorflow 1.3.0 + Keras 2.0.6 on Python3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                | tensorflow-1.3:py2  | Tensorflow 1.3.0 + Keras 2.0.6 on Python2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.2 | tensorflow-1.2  | Tensorflow 1.2.0 + Keras 2.0.6 on Python3.5. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
