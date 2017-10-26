@@ -21,10 +21,10 @@ Note: You do *not* have to be in the project directory to run this command.
 
 ### Example
 ```bash
-$ floyd delete J2ggstKWTNmL24nQTgi36o qNcS5bXHtFdSiMZ35kkEPh
-Delete Run: floydhub/fastText:1? [y/N]: y
+$ floyd delete floydhub/projects/fastText/1 floydhub/projects/cnr/1
+Delete Run: floydhub/projects/fastText/1? [y/N]: y
 Experiment deleted
-Delete Run: floydhub/cnr:1? [y/N]: y
+Delete Run: floydhub/projects/cnr/1? [y/N]: y
 Experiment deleted
 ```
 

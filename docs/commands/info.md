@@ -21,19 +21,16 @@ If your job is running in [jupyter](../guides/jupyter) or [serve](../guides/styl
 
 ### Example
 ```bash
-$ floyd info floydhub/jupyter-notebook/1
------------  ----------------------------------------------------
-Run ID       Faa2xpokjAfJL5Jd7vCVXo
-Name         floydhub/jupyter-notebook/1
-Created      2 minutes ago
-Status       running
-Duration(s)  0
-Output ID    VB9bF6vtyvrHLdUsFbUuvW
-Instance     cpu
-Version      1
-Mode         jupyter
-Url          https://www.floydhub.com:8000/VB9bF6vtyvrHLdUsFbUuvW
------------  ----------------------------------------------------
+$ floyd info floydhub/projects/jupyter-notebook/1
+-----------  ----------------------------------------
+Job name     floydhub/projects/jupyter-notebook/1
+Output name  floydhub/projects/jupyter-notebook/1
+Created      19 hours ago
+Status       success
+Duration(s)  16
+Instance     g1
+Description
+-----------  ----------------------------------------
 ```
 
 {!contributing.md!}

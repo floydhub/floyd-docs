@@ -25,12 +25,12 @@ with [status](./status) command. To view the logs from your code use [logs](./lo
 ```bash
 $ floyd run "python train_tf.py -lr 0.01 -output /output/model.bin"
 Syncing code ...
-RUN ID                  NAME
-----------------------  -----------------------------
-dTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project/7
+NAME
+-----------------------------
+floydhub/projects/tensorflow-project/7
 
 ...
-$ floyd logs floydhub/tensorflow-project/7
+$ floyd logs floydhub/projects/tensorflow-project/7
 ```
 
 ### floyd_requirements.txt
