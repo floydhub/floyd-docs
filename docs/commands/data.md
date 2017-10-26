@@ -8,6 +8,7 @@ Manage your data sets on Floyd. The subcommands are:
 | floyd data status    | List all your datasets  |
 | floyd data clone     | Clone an existing dataset |
 | floyd data delete    | Delete your datasets |
+| floyd data add       | Add job output to dataset | 
 | floyd data output    | View contents of a dataset |
 
 ## floyd data init 
@@ -60,9 +61,9 @@ Currently this command does NOT respect a `.floydignore` file. This functionalit
 ```bash
 $ floyd data upload
 Creating data source. Uploading files ...
-DATA ID                 NAME                
-----------------------  ------------------
-GY3QRFFUA8KpbnqvroTPPW  alice/mnist-data:1  
+NAME
+--------------------
+alice/mnist-data:1  
 ```
 Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
 using this data id. See [here](../guides/data/mounting_data/#mounting-datasets) for more details.
@@ -89,10 +90,10 @@ Lists all your datasets on Floyd with more details.
 #### Example
 ```bash
 $ floyd data status
-DATA ID                 CREATED         DISK USAGE    NAME               
-----------------------  --------------  ------------  ------------------
-HYLEc2czGKRpYVm7rGtBoY  12 minutes ago  372.0 MB      floydhub/mnist:1  
-qNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7    
+DATA NAME                         CREATED         STATUS    DISK USAGE
+--------------------------------  --------------  --------  ------------
+alice/datasets/mnist-data/2       57 seconds ago  valid     180.0 KB
+alice/datasets/mnist-data/1       2 minutes ago   valid     10.0 KB
 ```
 
 ---------------------------------
@@ -120,10 +121,36 @@ Note: You do *not* have to be in the project directory to run this command.
 
 #### Example
 ```bash
-$ floyd data delete floydhub/csr:7
-Delete Data: floydhub/csr:7? [y/N]: y
+$ floyd data delete floydhub/datasets/csr/7
+Delete Data: floydhub/datasets/csr/7? [y/N]: y
 Data deleted
 ```
+
+---------------------------------
+
+## floyd data add
+
+Copy job output data to a dataset
+
+### Usage
+```bash
+floyd data add ID
+```
+
+### Description
+Add the contents of a job output to a dataset. This will appear as a new version of data in the dataset. This command is useful if you 
+want to save the output of specific jobs under a dataset. Note: You will be charged for the disk usage separately.
+This new data can now be referred to in the [run](./run.md) command.
+
+### Example
+```bash
+$ floyd data add alice/projects/mnist/1/output
+DATA NAME                         CREATED    STATUS    DISK USAGE
+--------------------------------  ---------  --------  ------------
+alice/datasets/mnist-data/3       just now   valid     10.0 KB
+```
+Floyd will generate a new version for the added data. This can be used in your future experiments, if needed,
+using this data id. See [here](../guides/data/mounting_data/#mounting-datasets) for more details.
 
 ---------------------------------
 
@@ -148,7 +175,7 @@ in your default browser.
 
 ### Example
 ```bash
-$ floyd data output floydhub/csr:11
+$ floyd data output floydhub/datasets/csr/11
 Opening output directory in your browser ...
 ```
 
