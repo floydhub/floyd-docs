@@ -58,7 +58,7 @@ $ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
 
 A great use case for the restart command is when you need to run a series of jobs with 
 different training parameters. You just need to make your training script take in all the 
-parameters from command line. After you run the first job using the floyd run command:
+parameters from the command line. After you run the first job using the `floyd run` command:
 
 ```
 # Run the first job with initial parameters
