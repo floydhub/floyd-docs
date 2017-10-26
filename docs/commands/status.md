@@ -16,11 +16,11 @@ the runs in the current project. You need to be in the project directory for thi
 
 ### Example
 ```bash
-$ floyd status
-RUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION
-----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------
-dTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2
-B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1
+JOB NAME                           CREATED       STATUS      DURATION(s)  INSTANCE    DESCRIPTION
+---------------------------------  ------------  --------  -------------  ----------  -------------
+floydhub/projects/quick-start/131  19 hours ago  success              16  g1
+floydhub/projects/quick-start/130  19 hours ago  success               3  c1
+floydhub/projects/quick-start/129  5 days ago    success              26  c1
 ```
 
 {!contributing.md!}

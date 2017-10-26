@@ -21,11 +21,6 @@ output url in your default browser.
 $ floyd output floydhub/projects/style-transfer/4
 Opening output directory in your browser ...
 ```
-or
-```bash
-$ floyd output dTe2cJJrNR2CBD74rSZXPA
-Opening output directory in your browser ...
-```
 
 ### Downloading output
 
