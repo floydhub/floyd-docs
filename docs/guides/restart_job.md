@@ -53,3 +53,32 @@ $ floyd restart mckay/projects/mnist/1 --gpu
 # Run the job with a new version of a dataset
 $ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
 ```
+
+## Parameter sweeping:
+
+A great use case for the restart command is when you need to run a series of jobs with 
+different training parameters. You just need to make your training script take in all the 
+parameters from command line. After you run the first job using the floyd run command:
+
+```
+# Run the first job with initial parameters
+$ floyd run --gpu "python train.py --learning-rate 0.01 --batch-size 8 --epochs 100"
+...
+JOB NAME
+--------------------------------
+mckay/projects/tf-grid-search/1
+```
+
+Now you can just restart this job with different set of parameters:
+
+```
+# Change the learning rate
+$ floyd restart mckay/projects/tf-grid-search/1 --gpu "python train.py --learning-rate 0.05 --batch-size 8 --epochs 100"
+```
+
+```
+# Change the number of epochs
+$ floyd restart mckay/projects/tf-grid-search/1 --gpu "python train.py --learning-rate 0.05 --batch-size 8 --epochs 500"
+```
+
+This gives you the ability to try a range of parameters without uploading your code each time.
