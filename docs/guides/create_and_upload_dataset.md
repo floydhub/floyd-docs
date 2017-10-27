@@ -18,6 +18,9 @@ an open source project, this is a great way to share and contribute to the
 FloydHub community. If your data is proprietary, please select `Private`. This
 will ensure that only you and your team will have access to this dataset.
 
+The section below shows how to upload a dataset from your local machine. If your 
+data is available on the internet, you can can [create a dataset out of it directly]().
+
 ## Upload a Dataset
 
 Once you have created a dataset, you can upload data from your terminal using
@@ -110,3 +113,57 @@ mckay/datasets/my_dataset/1  3 minutes ago  valid     82.96 MB
 
     It will not save you time to compress your dataset before uploading it,
     since Floyd CLI already compresses your dataset to minimize upload time.
+
+## Download large datasets directly from the internet
+
+Often times, it might not be practical to upload datasets from your local machine. Your 
+upload speeds might be too slow, or you don't want to download a large dataset from the 
+internet just to upload it again. Either way, if your data is already available on the 
+internet, you can create a dataset using it on FloydHub.
+
+### Step 1: Run a terminal on FloydHub servers
+
+You can create a terminal session on FloydHub. Here are the quick steps:
+
+- Run a Jupyter Notebook job using a CPU instance
+
+```
+$ floyd run --mode jupyter
+```
+
+- Once your Jupyter server starts, create a Terminal
+
+![Jupyter Notebook Terminal Button](../img/jupyter_terminal_button.jpg)
+
+- Now go to the `/output` directory in the terminal and download your data here
+
+
+
+Here is an example that downloads the MNIST training images
+
+```
+$ mkdir train
+$ cd train/
+$ wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz 
+```
+
+- Post process your data if you have to. 
+
+For example, if the file that you downloaded is a tar file, you can untar it here. Or 
+you can download multiple files and organize them here. Make sure to clean up the `/output` so only the files that you want in your dataset are present there.
+
+```
+Untar the files to the current dir
+
+$ tar xvzf train-images-idx3-ubyte.gz
+
+Remove the tar file
+
+$ rm -rf train-images-idx3-ubyte.gz
+
+Ensure that only the files you want are present in `/output`
+
+$ ls /output
+
+
+```
