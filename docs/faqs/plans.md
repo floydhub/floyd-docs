@@ -143,7 +143,7 @@ Dedicated instances have 99.95% job up time SLA.
 
 ### What is the difference between GPU vs. GPU+ and CPU vs. CPU+?
 
-GPU and CPU are preemptible instances. GPU+ and CPU+ are dedicated instances.
+GPU and CPU are [preemptible instances](#preemptible-instances). GPU+ and CPU+ are [dedicated instances](#dedicated-instances).
 
 ## Powerups
 
