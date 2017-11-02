@@ -154,7 +154,10 @@ python train_and_eval.py
 Let's execute the bash script using `floyd run`:
 
 ```bash
-$ floyd run "bash run.sh"
+$ floyd run \
+  --data alice/datasets/imagenet-train/1:train \
+  --data alice/datasets/imagenet-test/1:test \
+   "bash run.sh"
 ```
 
 Because the last line of our bash script runs our Python script, we can kick
