@@ -114,14 +114,13 @@ mckay/datasets/my_dataset/1  3 minutes ago  valid     82.96 MB
     It will not save you time to compress your dataset before uploading it,
     since Floyd CLI already compresses your dataset to minimize upload time.
 
-## Download large datasets directly from the internet
+## Download large datasets directly to FloydHub from the internet
 
-Often times, it might not be practical to upload datasets from your local machine. Your 
-upload speeds might be too slow, or you don't want to download a large dataset from the 
-internet just to upload it again. Either way, if your data is already available on the 
-internet, you can create a dataset using it on FloydHub.
+Often times, it might not be practical to upload datasets to FloydHub from your local machine. For example, your upload speeds might be too slow, or you just don't want to download a large dataset from the internet just to upload it again.
 
-### Step 1: Run a terminal on FloydHub servers
+If your data is already available on the internet, then you can create a dataset directly on FloydHub.
+
+### Step 1: Run a terminal on FloydHub servers using Jupyter mode
 
 You can create a terminal session on FloydHub. Here are the quick steps:
 
@@ -135,22 +134,19 @@ $ floyd run --mode jupyter
 
 ![Jupyter Notebook Terminal Button](../img/jupyter_terminal_button.jpg)
 
-- Now go to the `/output` directory in the terminal and download your data here
+- Once you're in the terminal, you'll automatically be in the `/output` directory, but you can always confirm with the `pwd` command. From here, you can download your data to your FloydHub instance.
 
-
-
-Here is an example that downloads the MNIST training images
+Here is an example that downloads a CSV with details about members of the United States Congress
 
 ```
-$ mkdir train
-$ cd train/
-$ wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz 
+$ mkdir congress
+$ cd congress/
+$ wget https://theunitedstates.io/congress-legislators/legislators-current.csv
 ```
 
-- Post process your data if you have to. 
+- Post process your data (if necessary)
 
-For example, if the file that you downloaded is a tar file, you can untar it here. Or 
-you can download multiple files and organize them here. Make sure to clean up the `/output` so only the files that you want in your dataset are present there.
+For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this session and transform your data even further. Just make sure to clean up the `/output` directory so that only the files that you want in your dataset are present there.
 
 ```
 Untar the files to the current dir
@@ -165,5 +161,20 @@ Ensure that only the files you want are present in `/output`
 
 $ ls /output
 
-
 ```
+
+### Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output
+
+Navigate to your current job's page on FloydHub and click the Cancel button to stop this active Jupyter session. Once the job has been shut down, you can click the `Create Dataset` button on the `Output` tab to open a modal that will help you turn this output into a FloydHub dataset. 
+
+![Job Output Page](../img/output.png)
+
+The modal will ask if you'd like to copy this output to one of your existing datasets or create a new dataset entirely.
+
+![Create Dataset Modal](../img/modal.png)
+
+Click the `Create Dataset from Output` button once you're ready, and you'll be navigated to your newly created Dataset on FloydHub.
+
+
+
+
