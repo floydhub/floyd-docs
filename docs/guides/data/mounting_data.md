@@ -125,7 +125,7 @@ just as you would to mount a dataset. For example:
 
 ```
 $ floyd run \
-  --data floydhub/projects/handwriting-recognition/12/output:filtered_training_data \
+  --data floydhub/projects/handwriting-recognition/12/output:/filtered_training_data \
   "python train.py"
 ```
 
