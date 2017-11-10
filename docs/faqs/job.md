@@ -87,10 +87,10 @@ Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodi
 You can view your saved Notebook using the [floyd output](../commands/output/) command. Example:
 
 ```bash
-$ floyd output saip/projects/mnist-pytorch/3
+$ floyd output redeipirati/projects/pytorch-fast-neural-style/3/output
 ```
 
-Or in the `Output` tab of your job on the web dashboard, example: `www.floydhub.com/saip/projects/mnist-pytorch/3/output`
+Or in the `Output` tab of your job on the web dashboard, example: `www.floydhub.com/redeipirati/projects/pytorch-fast-neural-style/3/output`
 
 
 ### Can I restart a stopped or timed out job?
@@ -104,7 +104,7 @@ In the meanwhile, you can follow these steps to do this manually:
 ```bash
 # Download the saved Notebook from previous job
 # NOTE: This will overwrite the contents of your current dir
-$ floyd data clone saip/projects/mnist-pytorch/3/output
+$ floyd data clone redeipirati/projects/pytorch-fast-neural-style/3/output
 
 # Start a new job
 $ floyd run --mode jupyter

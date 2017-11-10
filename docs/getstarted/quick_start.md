@@ -47,10 +47,10 @@ quick look at how easy it is to use FloydHub.
 
     JOB NAME
     ----------------------
-    alice/projects/mnist-cnn/1
+    mckay/projects/mnist-cnn/1
 
     To view logs enter:
-       floyd logs alice/projects/mnist-cnn/1
+       floyd logs mckay/projects/mnist-cnn/1
     ```
 
     Here's what Floyd did when you ran that command:
@@ -64,7 +64,7 @@ quick look at how easy it is to use FloydHub.
 5. View your job's logs in real time using the `floyd logs -t` command:
 
     ```
-    $ floyd logs -t alice/projects/mnist-cnn/1
+    $ floyd logs -t mckay/projects/mnist-cnn/1
     2017-09-27 14:14:40,364 INFO - Starting attempt 1 at 2017-09-27 14:14:40.358414
     2017-09-27 14:14:40,399 INFO - Downloading and setting up data sources
     2017-09-27 14:14:40,534 INFO - Pulling Docker image: floydhub/tensorflow:1.3.0-py3_aws.12

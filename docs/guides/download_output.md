@@ -26,7 +26,7 @@ To open the browsing window from the CLI, use the
 job's output:
 
 ```
-$ floyd data clone mckay/projects/my_proj/1/output
+$ floyd data clone mckay/projects/quick-start/1/output
 Opening output directory in your browser ...
 ```
 

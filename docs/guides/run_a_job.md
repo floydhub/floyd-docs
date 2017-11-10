@@ -173,7 +173,7 @@ reviewing past jobs that you'd like to iterate on.
 Example:
 
 ```
-$ floyd run -m "lorem ipsum" "python my_first_script.py"
+$ floyd run -m "lorem ipsum" "echo 'hello world'"
 Creating project run. Total upload size: 195.0B
 Syncing code ...
 [================================] 1254/1254 - 00:00:00
@@ -257,7 +257,7 @@ But you can feel free to get creative!
     ```
 
     ```
-    $ floyd run --env pytorch-0.2 --mode serve --data a/datasets/b/1:mount
+    $ floyd run --env pytorch-0.2 --mode serve --data mckay/datasets/mnist/1:mount
     ```
 
 {!contributing.md!}
