@@ -19,7 +19,7 @@ as shown in the screenshot below:
 ![restart job image](../../img/restart_jupyter.jpg)
 
 This will start your Jupyter Notebook where you last left it. If you'd like to
-restart your job back where it *started*, just restart the previous job. See the 
+restart your job back where it *started*, just restart the previous job. See the
 restart workflow in action:
 
 ![restart job image](../../img/restart_jupyter.gif)
@@ -37,27 +37,27 @@ parameters of the job (like upgrading its instance type) or overriding the
 `[COMMAND]` that was used in the job.
 
 Below are a few examples. Each examples restarts/re-runs the
-`mckay/projects/mnist/1` job, but overrides different parts of the job:
+`mckay/projects/quick-start/1` job, but overrides different parts of the job:
 
 ```
 # Override the command
-$ floyd restart mckay/projects/mnist/1 "python train.py"
+$ floyd restart mckay/projects/quick-start/1 "python train.py"
 ```
 
 ```
 # Run the job on a GPU server
-$ floyd restart mckay/projects/mnist/1 --gpu
+$ floyd restart mckay/projects/quick-start/1 --gpu
 ```
 
 ```
 # Run the job with a new version of a dataset
-$ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
+$ floyd restart mckay/projects/quick-start/1 --data mckay/datasets/mnist/1:mnist
 ```
 
 ## Parameter sweeping:
 
-A great use case for the restart command is when you need to run a series of jobs with 
-different training parameters. You just need to make your training script take in all the 
+A great use case for the restart command is when you need to run a series of jobs with
+different training parameters. You just need to make your training script take in all the
 parameters from the command line. After you run the first job using the `floyd run` command:
 
 ```

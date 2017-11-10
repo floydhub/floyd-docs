@@ -36,7 +36,7 @@ $ floyd restart mckay/projects/mnist/1 --gpu
 
 ```
 # Run the job with a new version of a dataset
-$ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
+$ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/1:mnist
 ```
 
 {!contributing.md!}

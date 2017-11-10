@@ -1,6 +1,6 @@
 You can delete a project by clicking **Delete project** button on the Settings tab of the project on the web dashboard.
 
-Example: `https://www.floydhub.com/alice/projects/quick-start/settings`
+Example: `https://www.floydhub.com/mckay/projects/quick-start/settings`
 
 ![Project settings](../../img/project-settings.jpg)
 ![Delete project](../../img/delete-project.jpg)

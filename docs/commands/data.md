@@ -8,10 +8,10 @@ Manage your data sets on Floyd. The subcommands are:
 | floyd data status    | List all your datasets  |
 | floyd data clone     | Clone an existing dataset |
 | floyd data delete    | Delete your datasets |
-| floyd data add       | Add job output to dataset | 
+| floyd data add       | Add job output to dataset |
 | floyd data output    | View contents of a dataset |
 
-## floyd data init 
+## floyd data init
 
 Initialize a Floyd dataset.
 
@@ -26,16 +26,16 @@ floyd data init DATASET_NAME
 | DATASET_NAME    |         | Name of the dataset (Pick a name from the dataset page in web dashboard)    |
 
 ### Description
-Floyd can manage your experiment datasets and make them available when running your projects.This command initializes the 
-current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already 
+Floyd can manage your experiment datasets and make them available when running your projects.This command initializes the
+current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already
 exists in Floyd. In case the dataset name does not exist, the CLI will open the create dataset page in your browser.
 
 ### Example
 Initialize a floyd dataset in your data directory.
 ```bash
 $ cd /data/mnist
-$ floyd data init mnist-data
-Data source "mnist-data" initialized in current directory
+$ floyd data init mnist
+Data source "mnist" initialized in current directory
 ```
 
 ---------------------------------
@@ -63,7 +63,7 @@ $ floyd data upload
 Creating data source. Uploading files ...
 NAME
 --------------------
-alice/mnist-data:1  
+alice/mnist-data:1
 ```
 Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
 using this data id. See [here](../guides/data/mounting_data/#mounting-datasets) for more details.
@@ -92,8 +92,8 @@ Lists all your datasets on Floyd with more details.
 $ floyd data status
 DATA NAME                         CREATED         STATUS    DISK USAGE
 --------------------------------  --------------  --------  ------------
-alice/datasets/mnist-data/2       57 seconds ago  valid     180.0 KB
-alice/datasets/mnist-data/1       2 minutes ago   valid     10.0 KB
+mckay/datasets/zeroes/1            57 seconds ago  valid     180.0 KB
+mckay/datasets/mnist/1             2 minutes ago   valid     10.0 KB
 ```
 
 ---------------------------------
@@ -114,15 +114,15 @@ floyd data delete [OPTIONS] [NAMES or IDS]
 | `--yes`, `-y` | False  | Skip delete confirmation step |
 
 ### Description
-Deletes your datasets from FloydHub. This data will no longer 
+Deletes your datasets from FloydHub. This data will no longer
 be accessible.
 
 Note: You do *not* have to be in the project directory to run this command.
 
 #### Example
 ```bash
-$ floyd data delete floydhub/datasets/csr/7
-Delete Data: floydhub/datasets/csr/7? [y/N]: y
+$ floyd data delete mckay/datasets/mnist/1
+Delete Data: mckay/datasets/mnist/1? [y/N]: y
 Data deleted
 ```
 
@@ -138,16 +138,16 @@ floyd data add ID
 ```
 
 ### Description
-Add the contents of a job output to a dataset. This will appear as a new version of data in the dataset. This command is useful if you 
+Add the contents of a job output to a dataset. This will appear as a new version of data in the dataset. This command is useful if you
 want to save the output of specific jobs under a dataset. Note: You will be charged for the disk usage separately.
 This new data can now be referred to in the [run](./run.md) command.
 
 ### Example
 ```bash
-$ floyd data add alice/projects/mnist/1/output
+$ floyd data add mckay/projects/mnist/1/output
 DATA NAME                         CREATED    STATUS    DISK USAGE
 --------------------------------  ---------  --------  ------------
-alice/datasets/mnist-data/3       just now   valid     10.0 KB
+mckay/datasets/mnist/1            just now   valid     10.0 KB
 ```
 Floyd will generate a new version for the added data. This can be used in your future experiments, if needed,
 using this data id. See [here](../guides/data/mounting_data/#mounting-datasets) for more details.
@@ -170,12 +170,12 @@ floyd data output [OPTIONS] ID
 | NAME or ID |      | NAME or ID of your data. |
 
 ### Description
-The output command gives the url to access a dataset. This command by default opens the data url 
+The output command gives the url to access a dataset. This command by default opens the data url
 in your default browser.
 
 ### Example
 ```bash
-$ floyd data output floydhub/datasets/csr/11
+$ floyd data output mckay/datasets/mnist/1
 Opening output directory in your browser ...
 ```
 

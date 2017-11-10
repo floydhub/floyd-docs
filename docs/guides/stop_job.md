@@ -16,7 +16,7 @@ A job can be stopped using the `floyd stop` command and passing it the name of
 your job, as shown below:
 
 ```
-$ floyd stop mckay/projects/my-project/4
+$ floyd stop mckay/projects/ssh/2
 Experiment shutdown request submitted. Check status to confirm shutdown
 ```
 
@@ -24,10 +24,10 @@ To check the status of your job to make sure it has shut down properly, use the
 `floyd status` command, as shown below:
 
 ```
-$ floyd status mckay/projects/my-project/4
+$ floyd status mckay/projects/ssh/2
 JOB NAME                     CREATED         STATUS      DURATION(s)  INSTANCE    DESCRIPTION
 ---------------------------  --------------  --------  -------------  ----------  -------------
-mckay/projects/my-project/4  47 seconds ago  shutdown              0  c1
+mckay/projects/ssh/2         47 seconds ago  shutdown             24  c1
 ```
 
 ## Using floydhub.com

@@ -130,10 +130,10 @@ Syncing code ...
 
 JOB NAME
 ----------------------
-alice/projects/mnist/1
+mckay/projects/quick-start/1
 
 To view logs enter:
-   floyd logs alice/projects/mnist/1
+   floyd logs mckay/projects/quick-start/1
 ```
 
 Congratulations! Your first job is now running on FloydHub's GPU servers.
@@ -266,6 +266,7 @@ For more details on how to save and reuse job output, see
 
 Now let's evaluate our model by checking it against our evaluation script.
 
+
 ## Evaluate Your Model
 
 To finish off this tutorial, we'll evaluate the model we trained in our first
@@ -287,7 +288,7 @@ as mounting a dataset. We just use the name of the output instead of the name
 of a dataset when we use the `--data` flag:
 
 ```
---data alice/projects/quick-start/1/output:/model
+--data mckay/projects/quick-start/1/output:/model
 ```
 
 Notice that we specify `/model` as the mountpoint because we know our
@@ -300,7 +301,7 @@ For more information on reusing output, check out
 
 Follow this command to run your second job. Note that we are mounting our
 dataset again at `/mnist` and also mounting our model at `/model`. Be sure to
-replace `mckay/projects/quickstart/1/output` with the name of the output you
+replace `mckay/projects/quick-start/1/output` with the name of the output you
 want to mount (something like `<username>/projects/quick-start/<run_number>/output`)
 
 ```
@@ -309,7 +310,7 @@ $ floyd run \
 --gpu \
 --env tensorflow-1.3 \
 --data mckay/datasets/mnist/1:/mnist \
---data alice/projects/quick-start/1/output:/model \
+--data mckay/projects/quick-start/1/output:/model \
 'python eval.py'
 
 Creating project run. Total upload size: 26.3KiB
@@ -345,7 +346,7 @@ You can always view details on all of the jobs in your current project with the
 `floyd status` command from your terminal, or by visiting the `Project URL` in
 your browser.
 
-Example: `www.floydhub.com/alice/quick-start`
+Example: `www.floydhub.com/mckay/quick-start`
 
 ![Project view](../img/project_view.jpg)
 

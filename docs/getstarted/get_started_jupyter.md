@@ -69,7 +69,7 @@ Syncing code ...
 [================================] 23333/23333 - 00:00:00
 NAME
 --------------------
-saip/projects/mnist-pytorch/3
+mckay/projects/mnist-pytorch/2
 
 Setting up your instance and waiting for Jupyter notebook to become available ..............
 
@@ -101,10 +101,10 @@ Alternatively, you can view the status from your terminal using the
 [`floyd status`](../commands/status.md) command:
 
 ```bash
-$ floyd status saip/mnist-pytorch/projects/3
-JOB NAME                CREATED         STATUS      DURATION(s)  INSTANCE    DESCRIPTION
-----------------------  --------------  --------  -------------  ----------  -------------
-saip/mnist-pytorch/projects/3    16 minutes ago  running               0  gpu
+$ floyd status mckay/mnist-pytorch/projects/2
+JOB NAME                          CREATED         STATUS      DURATION(s)  INSTANCE    DESCRIPTION
+----------------------            --------------  --------  -------------  ----------  -------------
+mckay/mnist-pytorch/projects/2    16 minutes ago  running               0  gpu
 ```
 
 ### Stopping your Notebook

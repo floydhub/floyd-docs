@@ -116,8 +116,8 @@ Here's the command in full:
 
 ```bash
 $ floyd run \
-  --data alice/datasets/imagenet-train/1:train \
-  --data alice/datasets/imagenet-test/1:test \
+  --data udacity/datasets/bike-sharing-dataset/1:train \
+  --data floydhub/datasets/mnist-test/1:test \
   "mkdir -p /data && ln -s /train /data && ln -s /test /data && python train_and_eval.py"
 ```
 
@@ -155,8 +155,8 @@ Let's execute the bash script using `floyd run`:
 
 ```bash
 $ floyd run \
-  --data alice/datasets/imagenet-train/1:train \
-  --data alice/datasets/imagenet-test/1:test \
+  --data floydhub/datasets/imagenet-vgg-verydeep-19/1:train \
+  --data floydhub/datasets/mnist/1:test \
    "bash run.sh"
 ```
 

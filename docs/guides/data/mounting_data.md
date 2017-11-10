@@ -117,20 +117,20 @@ You can link jobs by mounting the output of one job as the input of a new job.
 This allows you to iterate on the ouput of a past job.
 
 You can refer to the output of a job by its name with `/output` appended to it.
-For example: `floydhub/projects/handwriting-recognition/12/output` refers to
-the output of the job `floydhub/projects/handwriting-recognition/12`
+For example: `mckay/projects/quick-start/1/output` refers to
+the output of the job `mckay/projects/quick-start/1`
 
 Use the `--data` flag in the `floyd run` command, mount past output to a job,
 just as you would to mount a dataset. For example:
 
 ```
 $ floyd run \
-  --data floydhub/projects/handwriting-recognition/12/output:/filtered_training_data \
-  "python train.py"
+  --data mckay/projects/quick-start/1/output:/model
+  'python eval.py'
 ```
 
-This will make the output of `floydhub/projects/handwriting-recognition/12`
-available at `/filtered_training_data` for the new job to use.
+This will make the output of `mckay/projects/quick-start/1`
+available at `/model` for the new job to use.
 
 Note: You need to have access to a job to be able to mount its output.
 
@@ -141,12 +141,12 @@ point is unique.
 
 ```
 $ floyd run \
-  --data floydhub/datasets/mnist/2:training \
-  --data floydhub/datasets/digits/1:test \
+  --data udacity/datasets/mnist/1:digits \
+  --data udacity/datasets/celeba/1:celeb \
   "python script.py"
 ```
 
-In this case, the above datasets will be mounted at `/training` and `/test`,
+In this case, the above datasets will be mounted at `/digits` and `/celeb`,
 respectively.
 
 ### Viewing mounted datasets in the web dashboard
@@ -182,7 +182,7 @@ consists of three parts:
   2. Dataset Name
   3. Version
 
-For example: `floydhub/datasets/mnist/2`
+For example: `udacity/datasets/mnist/1`
 
 ### Default mount points
 

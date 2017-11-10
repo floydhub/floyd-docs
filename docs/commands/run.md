@@ -23,14 +23,14 @@ with [status](./status) command. To view the logs from your code use [logs](./lo
 
 ### Example
 ```bash
-$ floyd run "python train_tf.py -lr 0.01 -output /output/model.bin"
+$ floyd run --env tensorflow --gpu "python mnist_cnn.py"
 Syncing code ...
 NAME
 -----------------------------
-floydhub/projects/tensorflow-project/7
+floydhub/projects/lung-cancer/2
 
 ...
-$ floyd logs floydhub/projects/tensorflow-project/7
+$ floyd logs floydhub/projects/lung-cancer/2
 ```
 
 ### floyd_requirements.txt
@@ -65,7 +65,7 @@ also when you specify the data id to mount.
 
 #### Example:
 ```bash
-$ floyd run --data floydhub/datasets/cifar/1:training --data floydhub/datasets/faces/21:testing "python script.py"
+$ floyd run --data udacity/datasets/celeba/1:training --data udacity/datasets/mnist/1:testing "python script.py"
 ```
 The above datasets will be mounted at `/training` and `/testing` respectively.
 

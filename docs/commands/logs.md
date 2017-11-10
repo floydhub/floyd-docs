@@ -13,14 +13,14 @@ floyd logs [OPTIONS] ID
 | NAME or ID |      | Name or ID of your job. |
 
 ### Description
-Any data sent to STDOUT and STDERR by your code will become available here. Make sure your 
-logs are flushed out if you prefer to view logs in real-time. There will be some information from 
+Any data sent to STDOUT and STDERR by your code will become available here. Make sure your
+logs are flushed out if you prefer to view logs in real-time. There will be some information from
 Floyd servers before and after your project logs. They are usually useful for debugging purposes.
 
 ### Example
 ```bash
-$ floyd logs floydhub/projects/style-transfer/4
-Preparing to run 
+$ floyd logs floydhub/projects/deep-photo-styletransfer/4
+Preparing to run
 Starting container...
 
 #################################################
