@@ -100,7 +100,7 @@ even after your job ends, and can be used again in future jobs.
 You can view the saved output of a job using the `floyd output` command:
 
 ```bash
-$ floyd output mckay/projects/quick-start/1/
+$ floyd output mckay/projects/quick-start/1
 Opening output directory in your browser...
 ```
 
