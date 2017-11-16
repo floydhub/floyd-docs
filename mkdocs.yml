@@ -44,7 +44,7 @@ pages:
     - Floyd CLI:
         - 'Install Floyd CLI': guides/basics/install.md
         - 'Log In Using Floyd CLI': guides/basics/login.md
-        - 'Using Shortened Job and Dataset Names': guides/job_and_dataset_shortnames.md
+        - 'Using Shortened Job and Dataset Names': guides/shortnames.md
         - CLI Commands:
           - 'floyd': commands/index.md
           - 'floyd login': commands/login.md
