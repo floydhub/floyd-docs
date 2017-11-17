@@ -33,13 +33,27 @@ situation.
 
 ## Examples
 
-Here are some examples that demonstrate how to use shortnames. For these
-examples, we'll assume your username is `fooster`, the project you've
-initialized in the current directory is called `my_project`, and the last job
-you ran in `my_project` is number `3`. Each example will show two code
-snippets: the first showing a command using a shortened name, and a second
-showing the full-length equivalent of the first command.
+Below are some examples on how to use shortened names for jobs, datasets, and
+outout. While only a selection of Floyd CLI commands are used in these
+examples, anywhere job, output, or dataset name is used, a shortened name can
+be used.
 
+Below is a list of commands that take shortened names. Click on any item in the
+list to go to its documentation:
+
+- [`floyd status <job_name>`](../commands/status)
+- [`floyd clone <job_name>`](../commands/clone)
+- [`floyd info <job_name>`](../commands/info)
+- [`floyd logs <job_name>`](../commands/logs)
+- [`floyd output <job_name>`](../commands/output)
+- [`floyd stop <job_name>`](../commands/stop)
+- [`floyd delete <job_name>`](../commands/delete)
+- [`floyd restart <job_name>`](../commands/restart)
+- [`floyd run --data <dataset_or_output_name>:<mount_point>`](../guides/data/mounting_data)
+- [`floyd data status <dataset_name>`](../commands/data)
+- [`floyd data clone <dataset_or_output_name>`](../commands/data)
+- [`floyd data output <dataset_or_output_name>`](../commands/data)
+- [`floyd data delete <dataset_name>`](../commands/data)
 
 ## Job Name Examples
 
@@ -49,6 +63,8 @@ the project you've initialized in the current directory is called `my_project`,
 and the last job you ran in `my_project` is number `3`. Each example will show
 two code snippets: the first showing a command using a shortened name, and a
 second showing the full-length equivalent of the first command.
+
+Below, we leave the job name completely blank and fall back on all our defaults: current user's username, current project's name, and most recent job number:
 
 ```
 $ floyd logs
@@ -66,7 +82,9 @@ $ floyd logs 1
 $ floyd logs fooster/projects/my_project/1
 ```
 
-Here, we want to specify a job under a different project, but still a project owned by our user. Because we don't specify a job number, the latest job will be used (let's say it's 5):
+Here, we want to specify a job under a different project, but still a project
+owned by our user. Because we don't specify a job number, the latest job will
+be used (let's say it's 5):
 
 ```
 $ floyd logs other_project
@@ -102,7 +120,7 @@ $ floyd logs alice/projects/quick-start/1
 Here are some examples that demonstrate how to use shorter names when
 referencing a dataset. For these examples, we'll assume your username is `fooster`,
 the dataset you've initialized in the current directory is called `my_dataset`,
-and most recent version of the dataset is 2. Each example will show
+and the most recent version of the dataset is `2`. Each example will show
 two code snippets: the first showing a command using a shortened name, and a
 second showing the same command with the full-length equivalent of the
 shortened name.
@@ -116,7 +134,10 @@ $ floyd data status 1
 $ floyd data status fooster/datasets/my_dataset/1
 ```
 
-Here, we open the browser to view the most recent version of our dataset:
+Here, we open the browser to view the most recent version of our dataset.
+Specifying nothing uses all our defaults--the current user's username, the
+dataset initialized in the current directory, and the most recent version of
+the dataset:
 
 ```
 $ floyd data output
@@ -156,6 +177,7 @@ $ floyd run --data fooster/projects/my_project/3/output:/model 'python eval.py'
 ```
 
 Here we clone the output of job number 1 of our current project:
+
 ```
 $ floyd data clone 1/output
 ```

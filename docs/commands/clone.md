@@ -16,6 +16,8 @@ current directory. This will override any existing file or directory in the proc
 
 This command is a great way to get started on floyd by starting from an existing project.
 
+This command can take a [shortened job name](../guides/shortnames).
+
 ### Example
 ```bash
 $ floyd clone floydhub/projects/deep-photo-styletransfer/4

@@ -15,6 +15,8 @@ Sometimes you want to terminate a job before it can finish. The stop command sen
 to the server to stop the job. You can view the [status](./status) of the job to confirm. When you stop
 a job, you will be charged only for the duration your job was running.
 
+This command can take a [shortened job name](../guides/shortnames).
+
 ### Example
 ```bash
 $ floyd stop floydhub/projects/mnist-tensorboard/4

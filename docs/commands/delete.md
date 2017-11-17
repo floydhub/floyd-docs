@@ -12,12 +12,14 @@ floyd delete [IDS]
 | `--yes`, `-y` | False  | Skip delete confirmation step |
 
 ### Description
-Deletes a job from FloydHub. The experiment information is no longer 
-available. You will not be able to access the code uploaded to run the 
-experiment. You need to make sure that the project is currently not 
+Deletes a job from FloydHub. The experiment information is no longer
+available. You will not be able to access the code uploaded to run the
+experiment. You need to make sure that the project is currently not
 running. If so, you can use the [stop](stop.md) command for that.
 
 Note: You do *not* have to be in the project directory to run this command.
+
+This command can take a [shortened job name](../guides/shortnames).
 
 ### Example
 ```bash

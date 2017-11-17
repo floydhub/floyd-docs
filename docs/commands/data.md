@@ -87,6 +87,8 @@ floyd data status [NAME or ID]
 ### Description
 Lists all your datasets on Floyd with more details.
 
+This command can take a [shortened job name](../guides/shortnames).
+
 #### Example
 ```bash
 $ floyd data status
@@ -118,6 +120,7 @@ Deletes your datasets from FloydHub. This data will no longer
 be accessible.
 
 Note: You do *not* have to be in the project directory to run this command.
+This command can take a [shortened job name](../guides/shortnames).
 
 #### Example
 ```bash
@@ -142,6 +145,7 @@ Add the contents of a job output to a dataset. This will appear as a new version
 want to save the output of specific jobs under a dataset. Note: You will be charged for the disk usage separately.
 This new data can now be referred to in the [run](./run.md) command.
 
+This command can take a [shortened job name](../guides/shortnames).
 ### Example
 ```bash
 $ floyd data add mckay/projects/mnist/1/output

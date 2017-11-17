@@ -30,7 +30,8 @@ Jupyter Notebook jobs can also be restarted using Floyd CLI, as detailed below.
 
 All jobs can be restarted/re-run using Floyd CLI's `floyd restart` command. This
 command takes a `<job_name>`, and allows the same `[OPTIONS]` and `[COMMAND]`
-parameters as the `floyd run` command.
+parameters as the `floyd run` command. You can specify a [shortened job
+name](../guides/shortnames) to this command.
 
 This is most useful when you want to restart/re-run a job, but override certain
 parameters of the job (like upgrading its instance type) or overriding the
