@@ -64,7 +64,7 @@ quick look at how easy it is to use FloydHub.
 5. View your job's logs in real time using the `floyd logs -t` command:
 
     ```
-    $ floyd logs -t mckay/projects/mnist-cnn/1
+    $ floyd logs -t
     2017-09-27 14:14:40,364 INFO - Starting attempt 1 at 2017-09-27 14:14:40.358414
     2017-09-27 14:14:40,399 INFO - Downloading and setting up data sources
     2017-09-27 14:14:40,534 INFO - Pulling Docker image: floydhub/tensorflow:1.3.0-py3_aws.12
@@ -74,9 +74,6 @@ quick look at how easy it is to use FloydHub.
     2017-09-27 14:14:42,489 INFO - Run Output:
     ...
     ```
-
-    Be sure to use the `JOB NAME` that was printed out when you ran the
-    `floyd run` command.
 
 Congratulations! You've trained and tested your first model on FloydHub 🎉
 

@@ -20,6 +20,22 @@ $ floyd stop mckay/projects/ssh/2
 Experiment shutdown request submitted. Check status to confirm shutdown
 ```
 
+Floyd CLI is fairly smart at resolving job names. It defaults to using your
+username, the project initialized in the directory you're working in, and the
+latest job number. So if you don't pass a job name to `floyd stop`, it will
+stop your most recent job. Here are a couple examples of shortened job names
+that are valid:
+
+```
+# Stops the most recent job for your user's project called 'foo'
+$ floyd stop foo
+```
+
+```
+# Stops job 2 for your user's project called 'foo'
+$ floyd stop foo/2
+```
+
 To check the status of your job to make sure it has shut down properly, use the
 `floyd status` command, as shown below:
 
@@ -29,6 +45,9 @@ JOB NAME                     CREATED         STATUS      DURATION(s)  INSTANCE  
 ---------------------------  --------------  --------  -------------  ----------  -------------
 mckay/projects/ssh/2         47 seconds ago  shutdown             24  c1
 ```
+
+The same job-name shortcuts available for `floyd stop` are available whenever
+you need to specify a job name, including with `floyd status <job_name>`.
 
 ## Using floydhub.com
 On the project page, click the `Cancel` button below the icon that shows the status of your job, as shown in the picture below:
