@@ -22,6 +22,8 @@ instance type), or override its `[COMMAND]`.
 When using `floyd restart`, a copy of your code is not uploaded (since the code
 of the previous job is used). This can save on startup time.
 
+This command can take a [shortened job name](../guides/shortnames).
+
 ### Examples
 
 ```

@@ -11,11 +11,14 @@ floyd status [NAME or ID]
 | Name or ID |      | ID of your job. |
 
 ### Description
-Shows the status of a run, if the ID is specified. It can also list the status of all
+Shows the status of a run, if the name is specified. It can also list the status of all
 the runs in the current project. You need to be in the project directory for this command to work.
 
-### Example
+This command can take a [shortened job name](../guides/shortnames).
+
+### Examples
 ```bash
+$ floyd status
 JOB NAME                                 CREATED       STATUS      DURATION(s)  INSTANCE    DESCRIPTION
 ---------------------------------        ------------  --------  -------------  ----------  -------------
 floydhub/projects/mnist-tensorboard/3    19 hours ago  success              16  g1

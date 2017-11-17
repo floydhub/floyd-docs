@@ -16,6 +16,8 @@ Most jobs generate output. Any output that needs to be retained after the job is
 This is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the
 output url in your default browser.
 
+This command can take a [shortened job name](../guides/shortnames).
+
 ### Example
 ```bash
 $ floyd output floydhub/projects/deep-photo-styletransfer/4

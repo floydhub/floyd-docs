@@ -52,7 +52,7 @@ command as detailed below.
 To properly use the `--data` flag with `floyd run`, you need to specify two
 things:
 
-  1. The name of the dataset you want to mount.
+  1. The name of the dataset you want to mount. (Note: this command can take [shortened dataset and output names](../shortnames))
   2. A name for the folder where the data will be
   accessible to your code during the job, we call this the "mount point". You
   can give this folder (mount point) any name you want.
