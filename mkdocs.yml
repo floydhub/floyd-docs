@@ -91,6 +91,7 @@ pages:
     - "": home/using_datasets.md
     - "": home/install.md
     - "": home/getting_started.md
+    - "": faqs/plans_legacy.md
 theme: material
 extra:
   # Use this to make a section open by default in the sidebar. These names have
