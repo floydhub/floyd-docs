@@ -47,18 +47,16 @@ Your usage includes compute (CPU / GPU) usage and storage consumption.
 
 ### When will my card be charged?
 
-For subscription plans, your card will be charged every month on the day you upgraded to the plan. For example, if you upgraded from the Free to the Data Scientist Pro plan on the 22nd of August, you will be charged immediately. You will be then billed on the 22nd of every month.
+For monthly subscription plans, your card will be charged every month on the day you upgraded to the plan. For example, if you upgraded from the Free to the Data Scientist plan on the 22nd of August, you will be charged immediately. You will be then billed on the 22nd of every month.
 
 When you purchase Powerups, either directly from the [Powerups Dashboard](https://www.floydhub.com/settings/powerups) or via auto-refresh, you will be charged at the time of purchase.
 
 ### Can I upgrade or downgrade my plan?
 
-You can upgrade or downgrade your subscriptions at anytime from your [Plans page](https://www.floydhub.com/settings/plan) under Settings on your dashboard.
+You can upgrade or downgrade your subscriptions at anytime from your [Plans page](https://www.floydhub.com/settings/plan) under Settings on your dashboard. 
+You will be immediately changed to the new plan. 
 
-When you upgrade, you will be immediately elevated to the new plan. When you downgrade, your new plan will start at the end of your billing cycle (since you will have already paid for the month in advance).
-
-Upgrades and downgrades inside the Data Scientist plans do not affect any Powerups you 
-may have purchased.
+Upgrades and downgrades do not affect any Powerups you may have purchased.
 
 ### How do upgrades work?
 
@@ -70,13 +68,11 @@ When you upgrade from one paid plan to another, you will be charged for your new
 
 You can downgrade at any time to a lower or Free plan. 
 
-If you are over the usage limits for the plan you are downgrading to, you will have to handle that first. For example, if you are downgrading from the Data Scientist Pro to Base plan, but have 300GB data, you will have to delete some of your data before downgrading since the Base plan only offers 100 GB.
-
-If you downgrade to the Free plan, you will no longer have access to any Powerups that you may have purchased.
+If you are over the usage limits for the plan you are downgrading to, you will have to handle that first. For example, lets say you are downgrading from the Data Scientist to Beginner plan, but have 50GB data and private projects. You will have to delete some of your data and all your private projects before downgrading, since the Beginner plan only offers 10 GB and public projects.
 
 ### How do I remove my credit card?
 
-Please downgrade to the Free plan. We will remove your credit card at the end of your billing cycle.
+Please downgrade to the Beginner plan and remove your credit card on file.
 
 ### Do my remaining compute credits roll over each month if I don't use them all?
 
