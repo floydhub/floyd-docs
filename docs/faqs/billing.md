@@ -47,7 +47,7 @@ Your usage includes compute (CPU / GPU) usage and storage consumption.
 
 ### When will my card be charged?
 
-For monthly subscription plans, your card will be charged every month on the day you upgraded to the plan. For example, if you upgraded from the Free to the Data Scientist plan on the 22nd of August, you will be charged immediately. You will be then billed on the 22nd of every month.
+For monthly subscription plans, your card will be charged every month on the day you upgraded to the plan. For example, if you upgraded from the Beginner to the Data Scientist plan on the 22nd of August, you will be charged immediately. You will be then billed on the 22nd of every month.
 
 When you purchase Powerups, either directly from the [Powerups Dashboard](https://www.floydhub.com/settings/powerups) or via auto-refresh, you will be charged at the time of purchase.
 
@@ -60,15 +60,15 @@ Upgrades and downgrades do not affect any Powerups you may have purchased.
 
 ### How do upgrades work?
 
-When you upgrade from the Free plan to a paid plan, you will be charged immediately. You will then be billed on the 1 month anniversary of your subscription date every month. For example, if you upgrade on August 20th, 2017, you will be charged on that day and on the 20th of every subsequent month.
+When you upgrade from the Beginner plan to a paid plan, you will be charged immediately. You will then be billed on the 1 month anniversary of your subscription date every month. For example, if you upgrade on August 20th, 2017, you will be charged on that day and on the 20th of every subsequent month.
 
-When you upgrade from one paid plan to another, you will be charged for your new plan on a pro-rated basis. Lets say your billing cycle is on the 20th of every month. If you upgrade from the Data Scientist Base to the Pro plan on the 5th, you will be charged for the new plan on a pro-rated basis (5th to 20th).
+When you upgrade from one paid plan to another, you will be charged for your new plan on a pro-rated basis. Lets say your billing cycle is on the 20th of every month. If you upgrade from the Beginner to the Pro plan on the 5th, you will be charged for the new plan on a pro-rated basis (5th to 20th).
 
 ### How do downgrades work?
 
-You can downgrade at any time to a lower or Free plan. 
+You can downgrade at any time to a lower or Beginner plan. 
 
-If you are over the usage limits for the plan you are downgrading to, you will have to handle that first. For example, lets say you are downgrading from the Data Scientist to Beginner plan, but have 50GB data and private projects. You will have to delete some of your data and all your private projects before downgrading, since the Beginner plan only offers 10 GB and public projects.
+[comment]: <> (If you are over the usage limits for the plan you are downgrading to, you will have to handle that first. For example, lets say you are downgrading from the Data Scientist to Beginner plan, but have 50GB data and private projects. You will have to delete some of your data and all your private projects before downgrading, since the Beginner plan only offers 10 GB and public projects.)
 
 ### How do I remove my credit card?
 
