@@ -7,6 +7,26 @@
 You can use the [floyd login](../../commands/login.md) command to log in to
 your FloydHub account through your command line
 
+### Logging In Using Username and Password
+
+`floyd login` has a `--username` (or `-u`) flag and a `--password` (or `-p`)
+flag that are used for logging in with the username and password. You can pass
+both at the same time, or if you pass only the `-u` (or `--username`) flag with
+your username, you'll be prompted for you password:
+
+```
+$ floyd login -u mckay
+Please enter your password:
+Login Successful as mckay
+```
+
+### Logging in Using an Auth Token
+
+If you don't pass the `-u` (or `--username`) flag to `floyd login`, you will be
+logging in using an auth token.
+
+Here's an example of the standard workflow:
+
 ```bash
 $ floyd login
 Authentication token page will now open in your browser. Continue? [Y/n]: y
@@ -24,7 +44,7 @@ your web dashboard).
 
 Copy the token and paste it in your terminal.
 
-### Logging in without opening a browser
+### Logging in with an Auth Token Without Opening a Browser
 
 Sometimes you may need to log in to Floyd on a computer that can't open a
 browser. Using your
