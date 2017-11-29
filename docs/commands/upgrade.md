@@ -6,7 +6,8 @@ floyd upgrade
 ```
 
 ### Description
-This will upgrade the floyd cli to the latest version using pip.
+This will upgrade the floyd cli to its latest version using `conda` if you are
+using an anaconda distribution of Python; otherwise, `pip` will be used.
 
 ### Example
 ```bash
