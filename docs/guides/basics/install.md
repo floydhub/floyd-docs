@@ -1,9 +1,30 @@
+!!! important "Quick Look"
+
+    ## Using conda:
+
+    ```
+    $ conda install -y -c conda-forge -c floydhub floyd-cli
+    ```
+
+    ## Using pip:
+
+    ```
+    $ pip install -U floyd-cli
+    ```
+
 Floyd CLI (`floyd-cli`) is a Python-based command line tool to interact with FloydHub from your terminal.
 
-`floyd-cli` is available on [pypi](https://pypi.python.org/pypi/floyd-cli) and
-runs on both Python 2.7 and Python 3.5, and works on Windows, MacOS, and Linux.
+`floyd-cli` is available on [pypi](https://pypi.python.org/pypi/floyd-cli) and [anaconda.org](https://anaconda.org/floydhub/floyd-cli) and
+runs on Python 2.7, Python 3.5, and Python 3.6. `floyd-cli` works on Windows, MacOS, and Linux.
 
-Use `pip` to install the CLI.
+## Using `conda`:
+
+```bash
+$ conda install -y -c conda-forge -c floydhub floyd-cli
+```
+
+
+## Using `pip`:
 
 ```bash
 $ pip install -U floyd-cli
