@@ -23,6 +23,8 @@ If no `--env` is provided, it uses the `keras` image by default, which comes wit
 |                | tensorflow-1.0:py2  | Tensorflow 1.0.0 + Keras 2.0.6 on Python2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 0.12 | tensorflow-0.12  | Tensorflow 0.12.1 + Keras 1.2.2 on Python3.5. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                 | tensorflow-0.12:py2  | Tensorflow 0.12.1 + Keras 1.2.2 on Python2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
+| PyTorch 0.3 | pytorch-0.3     | PyTorch 0.3.0 on Python 3. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
+|             | pytorch-0.3:py2 | PyTorch 0.3.0 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 | PyTorch 0.2 | pytorch-0.2     | PyTorch 0.2.0 on Python 3. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 |             | pytorch-0.2:py2 | PyTorch 0.2.0 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 | PyTorch 0.1 | pytorch-0.1     | PyTorch 0.1.12 on Python 3. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
