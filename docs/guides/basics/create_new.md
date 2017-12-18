@@ -27,3 +27,8 @@ FloydHub will display a README file for your project, if you include a README fi
 To add a README to your Project, simply add a Markdown-styled text file to your project called `README.md` and FloydHub will automatically display that README file when you run your next job.
 
 ![Project Readme](../../img/readmegif.gif)
+
+### Video Tutorial
+#### Organizing your jobs with FloydHub Projects
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NTGIQ2iU_tc?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>

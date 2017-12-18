@@ -46,6 +46,8 @@ Follow this guide to learn how to spin up a Jupyter Notebook on FloydHub's deep-
 
 Congratulations! You've just started your first Jupyter Notebook on FloydHub 🎉
 
-To go a bit more in depth and learn more about using Jupyter Notebooks on FloydHub, check out the [Getting Started Tutorial - Jupyter Notebook](get_started_jupyter)
+To go a bit more in-depth and learn more about using Jupyter Notebooks on FloydHub, check out the [Getting Started Tutorial - Jupyter Notebook](get_started_jupyter) or you can watch this 3-minute Lightning Video on running Jupyter Notebooks on FloydHub:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XPcRp_U-wZY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 
