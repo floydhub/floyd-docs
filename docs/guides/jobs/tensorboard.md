@@ -124,3 +124,10 @@ tensorboard --logdir=tensorboard_output
 Then you can view the Tensorboard dashboard on your machine running at 
 [http://127.0.0.1:6006/](http://127.0.0.1:6006/)
 
+
+## Video Tutorial on Tensorboard
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HZADAKZOf6U?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+
