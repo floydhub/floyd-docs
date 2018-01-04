@@ -12,7 +12,7 @@ If you want to run your jobs with GPU support, you can purchase [GPU Powerups](#
 
 #### Data Scientist Plan
 The Data Scientist plan is for, well, data scientists. It offers private projects/datasets and higher levels of 
-[job concurrency](#what-is-job-concurrency) and storage. You can also purchase [Powerups](#powerups) to add more GPU compute hours to supplement your plan.
+[job concurrency](#what-is-job-concurrency) and storage. As in the Beginner Plan, it comes with 20 hours of CPU compute time per month. You can also purchase [Powerups](#powerups) to add GPU compute hours to supplement your plan.
 
 For more details on our different plans, visit our [pricing
 page](https://www.floydhub.com/pricing).
