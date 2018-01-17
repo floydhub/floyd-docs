@@ -122,7 +122,7 @@ requirements:
 
 - Contains a file called `app.py` that contains a Flask application that will
   listen on port 5000.
-- Contains a `requirements.txt` file that contains the line `flask`, which
+- Contains a `floyd_requirements.txt` file that contains the line `flask`, which
   declares it as a dependency.
 
 !!! warning
