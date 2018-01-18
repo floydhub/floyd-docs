@@ -5,7 +5,7 @@ First, let's review some basics about FloydHub datasets.
 
 A Floyd dataset is a directory (folder) of data that can be used during a
 job. To create a new dataset, please follow
-[this guide](../basics/create_new/#create-a-new-dataset). You can view the
+[this guide](../create_and_upload_dataset.md). You can view the
 datasets you have created in the datasets page in the dashboard. You can also
 view public datasets by searching for them on FloydHub.
 

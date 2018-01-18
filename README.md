@@ -1,5 +1,5 @@
 # FloydHub Documentation
-This code generates FloydHub's documentation: [http://docs.floydhub.com/](http://docs.floydhub.com/). 
+This code generates FloydHub's documentation: [http://docs.floydhub.com/](http://docs.floydhub.com/).
 
 ## Contributing
 Please feel free to make pull requests or file issues if you think there's anything missing or if there's something we should explain more clearly.

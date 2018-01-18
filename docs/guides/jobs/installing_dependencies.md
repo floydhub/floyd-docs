@@ -86,4 +86,28 @@ You can also use this method to install non-Python packages. For example, to ins
 
 ![Install non-Python package inside Jupyter Notebook](../../img/jupyter_command_non-python.jpg)
 
+## Installing and Enabling Unofficial Jupyter Notebook Extensions
+
+All the [Unfofficial Jupyter Notebook Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions) are provided as python packages, therefore take a look at the above section about [how to install Python dependencies](./#installing-pythondependencies).
+
+You can enable the extensions in two ways (we will show you how to do it for the [RISE extension](https://github.com/damianavila/RISE)):
+
+1. [Open a Terminal](../ssh.md) and run the configuration steps:
+    ```
+    root@task-instance-container:/output# jupyter-nbextension install rise --py --sys-prefix
+    root@task-instance-container:/output# jupyter-nbextension enable rise --py --sys-prefix
+
+    ```
+
+2. Run the bash command(through Jupyter Magic) inside a Code Cell:
+
+    ![Enable extensions with Jupyter Magic](../../img/rise-ext-code.png)
+
+
+Then, when you open the notebook/reload the page, you will see the button extensions:
+
+![Rise ext enabled](../../img/rise-ext.png)
+
+
+
 {!contributing.md!}
