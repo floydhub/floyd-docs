@@ -16,7 +16,7 @@ deep-learning model. However, he/she doesn't change the underlying data nearly
 as often, if at all.
 
 Each time you run a job on FloydHub, a copy of your code is uploaded to
-FloydHub and run on one of FloyHub's powerful deep-learning servers. Because
+FloydHub and run on one of FloydHub's powerful deep-learning servers. Because
 your data isn't changing from job to job, it wouldn't make sense to keep your
 data with your code and upload it with each job. Instead, we upload a
 dataset once, and attach, or "mount", it to each job. This saves a
