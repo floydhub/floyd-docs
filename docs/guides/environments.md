@@ -43,7 +43,8 @@ If no `--env` is provided, it uses the `keras` image by default, which comes wit
 |              | chainer-1.23:py2 | Chainer 1.23.0 on Python 2. | [floydhub/chainer](https://hub.docker.com/r/floydhub/chainer/) |
 | Chainer 2.0 | chainer-2.0 | Chainer 1.23.0 on Python 3. | [floydhub/chainer](https://hub.docker.com/r/floydhub/chainer/) |
 |             | chainer-2.0:py2 | Chainer 1.23.0 on Python 2. | [floydhub/chainer](https://hub.docker.com/r/floydhub/chainer/) |
-| MxNet (beta) | mxnet:py2 | MxNet 0.9.3a on Python 2. | [floydhub/mxnet](https://hub.docker.com/r/floydhub/mxnet/) |
+| MxNet 1.0 | mxnet | MxNet 1.0.0 on Python 3.6. | [floydhub/mxnet](https://hub.docker.com/r/floydhub/mxnet/) |
+|           | mxnet:py2 | MxNet 1.0.0 on Python 2. | [floydhub/mxnet](https://hub.docker.com/r/floydhub/mxnet/) |
 | Kur | kur | Kur 0.3.0 on Python 3. | [floydhub/kur](https://hub.docker.com/r/floydhub/kur/) |
 
 All environments are available for both CPU and GPU execution. For example,
