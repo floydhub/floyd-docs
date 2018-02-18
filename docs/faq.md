@@ -2,13 +2,13 @@
 
 ### How does the free CPU / GPU hours work?
 
-Every one who signups to Floydhub will receive 2 hours of free CPU / GPU time for running 
+Every one who signups to Floydhub will receive 2 hours of free CPU / GPU time for running
 your projects. We hope this will give you enough time to evaluate Floydhub for your needs.
 We are working on a new free plan right now to better help new users explore the platform.
 
 ### Is there a student discount?
 
-Not at the moment, but we are currently working out a Student Plan. We will post the details 
+Not at the moment, but we are currently working out a Student Plan. We will post the details
 very soon :)
 
 
@@ -16,39 +16,39 @@ very soon :)
 
 ### Why does `floyd status` return an empty list even though I have several runs in my account?
 
-Floyd CLI uses the project directory to store the run information (similar to git). So you need 
-to be in the directory where you initialized the project and you should be able to see all your 
-runs. You can also use the [web dashboard](https://www.floydhub.com/experiments) to view all your 
+Floyd CLI uses the project directory to store the run information (similar to git). So you need
+to be in the directory where you initialized the project and you should be able to see all your
+runs. You can also use the [web dashboard](https://www.floydhub.com/experiments) to view all your
 projects in one place.
 
 
 ### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
 
-Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact 
+Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact
 us from the [pricing](https://www.floydhub.com/pricing) page.
 
 
 ### I get "Too many open files" error when I run my project.
 
-Floyd CLI throws this error when you have too many files in your current directory that needs to be uploaded. 
+Floyd CLI throws this error when you have too many files in your current directory that needs to be uploaded.
 The actual limit depends on your OS / machine specs.
 
 You can either:
 
-1. Remove unnecessary files from the directory (like build directory, docs etc.) 
-2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories. 
+1. Remove unnecessary files from the directory (like build directory, docs etc.)
+2. Add them to `.floydignore` file. Floyd CLI will just ignore these directories.
 See the [floydignore](home/floyd_ignore) documentation to understand how this can be configured.
 3. Tar them into a single file and untar them at runtime.
 
-Alternatively, instead of uploading files from your local machine, you can also 
-[download files](./guides/data/mounting_data/#creating-a-dataset-from-downloads) from a remote URL 
+Alternatively, instead of uploading files from your local machine, you can also
+[download files](./guides/create_and_upload_dataset/#download-large-datasets-directly-to-floydhub-from-the-internet) from a remote URL
 directly into Floyd servers.
 
 
 ### I ran my project in Jupyter mode but the url does not seem to work.
 
-Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway" 
-or similar error when you access the URL. You can check the status of the Jupyter notebook 
+Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway"
+or similar error when you access the URL. You can check the status of the Jupyter notebook
 by running the [logs](../commands/logs) command.
 
 
@@ -62,28 +62,28 @@ Jobs are run on CPU instances by default. You can specify `--gpu` to run them on
 Floyd CLI uploads *all* the files in your current directory before starting your experiment.
 There are a few ways to make this go faster:
 
-1. Remove unnecessary files from the directory (like build directory, docs etc.) 
+1. Remove unnecessary files from the directory (like build directory, docs etc.)
 2. Add sub-directories to `.floydignore` file. Floyd CLI will ignore and not upload these sub-directories.
 See the [init](../commands/init#description) command to understand how this can be configured.
-3. If you have large data files consider uploading them separately as a [data source](../commands/data). 
+3. If you have large data files consider uploading them separately as a [data source](../commands/data).
 You can then [refer](../home/mounting_data#mounting-datasets) to use them in your project.
 
 
 ### My job finished but how I do I see my output?
 
-You can use the floyd [output](../commands/output) command to view the output of your 
+You can use the floyd [output](../commands/output) command to view the output of your
 project. If you want to use this output in your next run view [this guide](../home/managing_output)
 
 
 ### Do I have to pay for the entire time my Jupyter Notebook is running?
 
-Unfortunately, yes. As much as we would like to, we are unable to charge you only for the *computation time*. 
+Unfortunately, yes. As much as we would like to, we are unable to charge you only for the *computation time*.
 
-This is an engineering challenge. When you start a Jupyter Notebook instance and start executing commands, 
-your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the 
+This is an engineering challenge. When you start a Jupyter Notebook instance and start executing commands,
+your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the
 entire duration of your notebook, not just when you are executing commands.
 
-For example, when you execute `import tensorflow` 
+For example, when you execute `import tensorflow`
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
 
 
@@ -95,7 +95,7 @@ Currently, we accept credit or debit cards, including Visa, MasterCard and Ameri
 
 ### Do you keep my credit card information?
 
-No, we do not retain any credit card information. We use [Stripe](https://stripe.com/) to 
+No, we do not retain any credit card information. We use [Stripe](https://stripe.com/) to
 process payments.
 
 ### When will my credit card be charged?
