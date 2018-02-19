@@ -26,14 +26,14 @@ See the [floydignore](../guides/floyd_ignore) documentation to understand how th
 3. Tar them into a single file and untar them at runtime.
 
 Alternatively, instead of uploading files from your local machine, you can also
-[download files](../guides/download_dataset) from a remote URL
+[download files](../guides/create_and_upload_dataset/#download-large-datasets-directly-to-floydhub-from-the-internet) from a remote URL
 directly into Floyd servers.
 
 
 ### Why do I get an "Experiments limit reached" error when I run a job?
 
-FloydHub currently allows only 1 active job in the free Trial plan and 3 active jobs in the Individual plan. 
-If you see an `Error: Experiments limit reached` message when you run a job, it means you have maxed out your 
+FloydHub currently allows only 1 active job in the free Trial plan and 3 active jobs in the Individual plan.
+If you see an `Error: Experiments limit reached` message when you run a job, it means you have maxed out your
 concurrency limits. Please stop you running job(s) or wait for them to finish, and try again.
 
 We have to enforce this concurrency constraint because we have a finite number of GPU machines and have to ensure that no single user is starving the group. In the near future, we will support queueing of jobs so that you can queue multiple jobs to be run as slots become available.
@@ -114,7 +114,7 @@ $ floyd run --mode jupyter
 
 ### Why is my job in the "Queued" state for several minutes?
 
-This means that a machine is being prepared to run your job. 
+This means that a machine is being prepared to run your job.
 
 Most times, we have several CPU and GPU machines that are ready and your job can start execution in a few seconds. During high traffic periods, we may not have a machine ready for you and have to spin up a new instance for your job on-demand (details below). This might take up to 10 minutes in some cases. We are actively working on reducing this wait time.
 
@@ -154,7 +154,7 @@ sys.stdout.flush()
 
 ### Why did my job timeout after 1 hour?
 
-You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that. 
+You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that.
 
 ![1HourTimeout](../img/1HrTimeout.jpg)
 
@@ -174,7 +174,7 @@ Occasionally, you may notice that your CPU job died without warning. The output 
 2017-07-24 03:34:04,381 INFO - >> loading UNet of size 1152x256...
 2017-07-24 03:34:10,942 INFO - Epoch 1/100
 2017-07-24 03:35:17,221 INFO - Killed
-2017-07-24 03:35:18,680 INFO - 
+2017-07-24 03:35:18,680 INFO -
 ################################################################################
 ```
 
