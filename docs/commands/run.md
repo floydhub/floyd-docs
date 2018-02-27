@@ -79,7 +79,7 @@ See [serve](../examples/style_transfer/#serve-mode) page for more details.
 ```bash
 $ floyd run --mode serve
 ...
-Path to service endpoint: https://www.floydhub.com/expose/vbKSKgVYGgZqmM9i3LjLBb
+URL to service endpoint: https://www.floydlabs.com/expose/mkxjJa46aJBdwP4AEdKxfU
 ```
 
 {!contributing.md!}

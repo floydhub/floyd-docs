@@ -124,14 +124,12 @@ you need to create a `floyd_requirements.txt` and declare the flask requirement 
 ```bash
 $ floyd run --env tensorflow-0.12:py2 --data narenst/datasets/neural-style-transfer-pre-trained-models/1:input --mode serve
 Syncing code ...
-RUN ID                  NAME                              VERSION
-----------------------  ------------------------------  ---------
-DJSdJAVa3u7AsFEMZMBBL5  floydhub/fast-style-transfer:5          5
+JOB NAME
+-------------------------------------------
+narenst/projects/fast-style-transfer/5
 
-Path to service endpoint: https://www.floydhub.com/expose/t4AdkU6awahkT3ooNazw8c
-
-To view logs enter:
-    floyd logs DJSdJAVa3u7AsFEMZMBBL5
+URL to job: https://www.floydhub.com/narenst/projects/fast-style-transfer/5
+URL to service endpoint: https://www.floydlabs.com/expose/mkxjJa46aJBdwP4AEdKxfU
 ```
 
 
@@ -140,7 +138,7 @@ To view logs enter:
 Now you can send any image file as request to this api and it will return the style transferred image.
 
 ```bash
-curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydhub.com/expose/t4AdkU6awahkT3ooNazw8c
+curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydlabs.com/expose/mkxjJa46aJBdwP4AEdKxfU
 ```
 
 ![Jupyter](../img/taipei_muse.jpg)
