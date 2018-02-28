@@ -19,6 +19,7 @@ pages:
         - 'Run a Job': guides/run_a_job.md
         - 'Stop a Job': guides/stop_job.md
         - 'Restart a Job': guides/restart_job.md
+        - 'Metrics': guides/jobs/metrics.md
         - 'Enable Tensorboard': guides/jobs/tensorboard.md
         - 'Delete a Job': guides/delete_job.md
         - 'Ignore Files': guides/floyd_ignore.md
