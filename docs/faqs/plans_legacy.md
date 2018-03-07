@@ -4,6 +4,18 @@ Please see here for [Billing FAQs](./billing.md)
 
 ### Note that these plans are no longer available. The following FAQs are for users who signed up before November 20, 2017. For the latest FAQs, please see [Plans FAQs](./plans.md)
 
+### Preemptible Instances deprecation notice
+
+Starting March 7, 2018 we are no longer supporting premptible instances on FloydHub. All instances will now be dedicated 
+instances. This change was made in response to AWS (our cloud provider) making changes to the way Spot instances behaved for the 
+purposes of running Machine Learning training jobs. The spot instances were preempted too frequently and led to a poor 
+user experience and low SLA. So we made the decision to upgrade all the instances our fleet to dedicated instances.
+
+If you are using any preemptible instance Powerups they will be deprecated soon and you will not be able to purchase new powerups 
+of the same kind. Existing preemptible powerups will continue to work but autorefreshes will be turned off on April 5, 2018.
+So we recommend that you switch to the new Powerups before the cut-off date. Contact support@floydhub.com if you have any 
+questions about this.
+
 ### Which Plan is right for me?
 
 #### Free Plan
