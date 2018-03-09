@@ -1,44 +1,45 @@
-Floyd run command has a [serve mode](../commands/run.md#serve). After the syncronization step (where the content of your local project folder is uploaded to the Job), the remote instance will run the `python app.py` command to start a Flask web server which provide a servable API. In order to serve your model, the user require an `app.py` file which handles the incoming request and execute all the steps to evaluate the model on the processed data.
+You can use FloydHub to deploy your trained models as REST APIs with a single command: `floyd run --mode serve`.
 
 !!! important
 	Note that this feature is in *preview mode* and *is not production ready* yet.
 	Contact us at [support@floydhub.com](mailto:support@floydhub.com) for production ready serving support (in closed beta).
 
-!!! important
-	Before serving your model through REST API, you need to create a [floyd_requirements.txt](../commands/run.md##floyd_requirementstxt) and declare the flask requirement in it.
+The `floyd run` command has a [serve mode](../commands/run.md#serve). Executing `floyd run --mode serve` from your terminal, starts a Flask web server on FloydHub's servers and returns a REST endpoint that you can query. 
 
-
-Here's the skeleton/template of an `app.py` file:
+In order to serve your model, you need to provide an `app.py` file (Flask application) which handles the incoming request and executes all the steps to evaluate the model. Below is the scaffold for the `app.py` file. You can also view a complete example [here](https://github.com/floydhub/fast-style-transfer/blob/master/app.py):
 
 ```python
 
 from flask import Flask
 
-"""Here the code to import all the dependencies you need to
-load the model, data preprocess and sanity check
+"""
+Import all the dependencies you need to load the model, 
+preprocess and postprocess your data
 """
 app = Flask(__name__)
-MODEL_PATH = ... # Path to the model to load
+MODEL_PATH = ... # TODO: Insert path to the model to load
 
 def load_model(MODEL_PATH):
 	"""Load the model, you can also choose to load different model at runtime"""
-	# CODE
+	# TODO: INSERT CODE
 
 def data_preprocessing(data):
 	"""Process the data to fit into the model"""
-	# CODE
+	# TODO: INSERT CODE
 
-# Every POST requests that will hit the end point will run `evaluate`
-# The request method is POST (this method enabling us to send arbitrary data to the endpoint, including images, JSON, encoded-data, etc.)
+# Every incoming POST request will run the `evaluate` method
+# The request method is POST (this method enables your to send arbitrary data to the endpoint in the request body, including images, JSON, encoded-data, etc.)
 @app.route('/<path:path>', methods=["POST"])
 def evaluate(path):
 	""""Preprocessing the data and evaluate the model""""
-	# Sanity check
+	# TODO: Sanity check
+	
     if flask.request.method == "POST":
     	# CODE FOR DATA PREPROCESSING
     	data_preprocessing(data)
-    	# CODE FOR EVALUATION
-    	# RETURN THE PREDICTION
+	
+    	# TODO: CODE FOR EVALUATION
+    	# TODO: RETURN THE PREDICTION
 
 # Load the model and run the server
 if __name__ == "__main__":
@@ -48,9 +49,12 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0')
 ```
 
+!!! important
+	Before serving your model through REST API, you need to create a [floyd_requirements.txt](../commands/run.md##floyd_requirementstxt) and add `flask` as a requirement in it.
+
 ## Example: Style Transfer Example
 
-We will use a pre-trained Style Transfered model to show you how to serve your model. At the end you will be able to send any image to this API as a HTTPs request and it will be returned the style transfered image.
+We will use a pre-trained Neural Style Transfer model to demonstrate how model serving works on FloydHub. In the end you will be able to send any image to this API as a HTTPs request and it will be returned the style transfered image.
 
 ### Setup
 
@@ -66,9 +70,9 @@ Project "fast-style-transfer" initialized in the current directory
 
 ### Serve Mode
 
-As mentioned before, for serving it is required the `app.py` file. You can see the
+As mentioned before, serving requires an `app.py` file. You can see the
 [app.py](https://github.com/floydhub/fast-style-transfer/blob/master/app.py) file in the sample repository. This file handles the
-incoming request(take your images), executes the code in `evaluate.py`(run the model evaluation) and returns the styled output.
+incoming request (take your image), executes the code in `evaluate.py` (run the model evaluation) and returns the style-transferred output image.
 
 ```bash
 $ floyd run --env tensorflow-0.12:py2 --data narenst/datasets/neural-style-transfer-pre-trained-models/1:input --mode serve
@@ -98,9 +102,7 @@ You will see the default style ([la_muse](https://github.com/floydhub/fast-style
 
 Here a list of Frequetly Asked Questions about FloydHub serving.
 
-### Where can I find others serving example?
-
-All the Examples provide the serve feature section:
+### Where can I find others serving examples?
 
 - [Style Transfer Example](../examples/style_transfer.md#model-api)
 - [Deep Text Correctot Example](../examples/deep_corrector#serve-model-through-rest-api)
@@ -108,14 +110,16 @@ All the Examples provide the serve feature section:
 
 You can also check the projects of the [PyTorch collection](https://www.floydhub.com/explore/frameworks/pytorch).
 
-### Have I to pay for the entire time that the instance is running?
+### Do I have to pay for the entire duration that my serving endpoint is active?
 
-When serving models, you will be charged for the full duration your service is up. Serving is only a beta feature now. But we have planned different improvement in our roadmap such as charging users based on the number of API calls.
+When serving models, you will be charged for the full duration that your serving endpoint is active. So, remember to [stop your job](../guides/stop_job.md) when you are no longer using the endpoint. 
+
+Serving is currently a beta feature. In the near future we will be able to charge users per API call.
 
 ### What is the maximum uptime for serving?
 
-In preview mode the API has a maximum uptime of 7 days. The 7 day timeout is common across all the instances you start on FloydHub - may it be Jupyter notebooks, command jobs or serve jobs. We are planning to remove this constraint in the next version.
+In preview mode the API has a maximum uptime of 7 days. The 7 day timeout is common across all jobs you run on FloydHub, whether it be Jupyter notebooks, command jobs or serve jobs. 
 
 ### Is there any API rate limit?
 
-There isn't a limit, but the Flask web server can handle only 1 request at a time. This mean that it will block all other requests during that time.
+There is no limit, but the Flask web server can handle only 1 request at a time. This mean that it will block all other requests during that time.
