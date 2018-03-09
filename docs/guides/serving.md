@@ -4,9 +4,9 @@ You can use FloydHub to deploy your trained models as REST APIs with a single co
 	Note that this feature is in *preview mode* and *is not production ready* yet.
 	Contact us at [support@floydhub.com](mailto:support@floydhub.com) for production ready serving support (in closed beta).
 
-The `floyd run` command has a [serve mode](../commands/run.md#serve). Executing `floyd run --mode serve` from your terminal, starts a Flask web server on FloydHub's servers and returns a REST endpoint that you can query. 
+The `floyd run` command has a [serve mode](../commands/run.md#serve). Executing `floyd run --mode serve` from your terminal starts a Flask web server on FloydHub's servers and returns a REST endpoint that you can query. 
 
-In order to serve your model, you need to provide an `app.py` file (Flask application) which handles the incoming request and executes all the steps to evaluate the model. Below is the scaffold for the `app.py` file. You can also view a complete example [here](https://github.com/floydhub/fast-style-transfer/blob/master/app.py):
+In order to serve your model, you need to provide an `app.py` file (Flask application) which handles the incoming request and executes all the steps necessary to evaluate the model. Below is the scaffold for the `app.py` file. You can also view a complete example [here](https://github.com/floydhub/fast-style-transfer/blob/master/app.py):
 
 ```python
 
@@ -14,17 +14,17 @@ from flask import Flask
 
 """
 Import all the dependencies you need to load the model, 
-preprocess and postprocess your data
+preprocess your request and postprocess your result
 """
 app = Flask(__name__)
 MODEL_PATH = ... # TODO: Insert path to the model to load
 
 def load_model(MODEL_PATH):
-	"""Load the model, you can also choose to load different model at runtime"""
+	"""Load the model"""
 	# TODO: INSERT CODE
 
 def data_preprocessing(data):
-	"""Process the data to fit into the model"""
+	"""Preprocess the request data to transform it to a format that the model understands"""
 	# TODO: INSERT CODE
 
 # Every incoming POST request will run the `evaluate` method
@@ -50,11 +50,11 @@ if __name__ == "__main__":
 ```
 
 !!! important
-	Before serving your model through REST API, you need to create a [floyd_requirements.txt](../commands/run.md##floyd_requirementstxt) and add `flask` as a requirement in it.
+	Before serving your model, you need to create a [floyd_requirements.txt](../commands/run.md##floyd_requirementstxt) and add `flask` as a requirement in it.
 
 ## Example: Style Transfer Example
 
-We will use a pre-trained Neural Style Transfer model to demonstrate how model serving works on FloydHub. In the end you will be able to send any image to this API as a HTTPs request and it will be returned the style transfered image.
+We will use a pre-trained Neural Style Transfer model to demonstrate how model serving works on FloydHub. In the end you will be able to send any image to this API as a HTTPs request and it will return the style transfered image.
 
 ### Setup
 
