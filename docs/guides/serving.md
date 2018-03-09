@@ -50,9 +50,9 @@ if __name__ == "__main__":
 ```
 
 !!! important
-	Before serving your model, you need to create a [floyd_requirements.txt](../commands/run.md##floyd_requirementstxt) and add `flask` as a requirement in it.
+	Before serving your model, you need to create a [floyd_requirements.txt](../commands/run.md#floyd_requirementstxt) and add `flask` as a requirement in it.
 
-## Example: Style Transfer Example
+## Example: Deploying a Neural Style Transfer Model
 
 We will use a pre-trained Neural Style Transfer model to demonstrate how model serving works on FloydHub. In the end you will be able to send any image to this API as a HTTPs request and it will return the style transfered image.
 
