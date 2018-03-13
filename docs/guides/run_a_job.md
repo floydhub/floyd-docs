@@ -3,7 +3,7 @@
 
     **[[OPTIONS]](#options_1):**
 
-    - [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu+` **or** `--gpu+`
+    - [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu2` **or** `--gpu2`
     - [Dataset(s)](#datasets): `--data <name_of_datasource>:<mount_point_on_server>`
     - [Mode](#mode): `--mode <mode_name>`
     - [Environment](#environment): `--env <environment_name>`
@@ -26,7 +26,7 @@ quick reference.
 ## Parts of the `floyd run` Command
 
 ### [[OPTIONS]](#options_1)
-- [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu+` **or** `--gpu+`
+- [Instance Type](#instance-type): `--cpu` **or** `--gpu` **or** `--cpu2` **or** `--gpu2`
 - [Dataset(s)](#datasets): `--data`
 - [Mode](#mode): `--mode`
 - [Environment](#environment): `--env`
@@ -46,27 +46,20 @@ one. (The software environment is declared with the
 You have four instance type options to choose from when running a job as
 detailed below:
 
-|`floyd run` Flag|Instance Type|Description           |
-|:------------|:--------------:|:---------------------|
-|`--gpu`      |GPU             |Preemptible GPU server|
-|`--gpu+`     |GPU             |Dedicated GPU server  |
-|`--cpu`      |CPU             |Preemptible CPU server|
-|`--cpu+`     |CPU             |Dedicated CPU server  |
+|`floyd run` Flag|Instance Type|Description                  |
+|:------------|:--------------:|:----------------------------|
+|`--gpu`      |GPU             |Tesla K80 GPU machine        |
+|`--gpu2`     |GPU             |Tesla V100  GPU machine      |
+|`--cpu`      |CPU             |2 Core low perf CPU machine  |
+|`--cpu2`     |CPU             |8 Core high perf CPU machine |
 
 !!! important
 
     - The default instance flag is `--cpu`. This means that if you don't pass
       any of the above flags to `floyd run`, your job will be run on a
-      preemptible CPU server.
+      CPU server.
     - If you pass more than one instance flag, this is the order of precedence:
-      `--gpu+`, `--cpu+`, `--gpu`, `--cpu`
-
-#### What is the difference between a preemptible and a dedicated instance?
-
-Refer to [this section](../faqs/plans/#preemptible-vs-dedicated-instances) of
-the documentation for more information about dedicated and preemptible
-instances.
-
+      `--gpu`, `--cpu`, `--gpu2`, `--cpu2`
 
 ### Dataset(s)
 
