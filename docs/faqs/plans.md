@@ -179,3 +179,36 @@ Note that you are only responsible for the data that you own. For example, if yo
 Yes, you can purchase Storage Powerups to increase your storage limits from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups)
 
 {!contributing.md!}
+
+## Teams Plan
+
+### How many members do I get in a team?
+
+Each team plan starts at 5 members. If you need more than 5 team members, then please let us know at support@floydhub.com and we'll add them to your team at your plan's member rate.
+
+### How do I add a team member?
+
+You can easily add a teammate to your team in your team's settings page. You can find your team settings page in either the dropdown in the navbar, or in the "Teams Settings" panel of your Settings page. The People section of your team's settings is where you can manage your team:
+
+* Add new members
+* Remove members
+* Change member roles
+
+This demonstration shows how to find your team settings, add a member, and change their role from Member to Owner
+
+![Create new dataset](../../img/add-member.gif)
+
+### What's the difference between a Member and an Owner on a team?
+
+A Member can:
+
+* Run jobs
+* Create projects and datasets
+* Upload dataset versions
+* View all team jobs, projects, datasets, and team members
+
+An Owner can additionally:
+
+* View usage and billing information for the team
+* Purchase Powerups for the team
+* Manage the team (add members, remove members, and change roles)
