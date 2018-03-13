@@ -178,8 +178,6 @@ Note that you are only responsible for the data that you own. For example, if yo
 
 Yes, you can purchase Storage Powerups to increase your storage limits from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups)
 
-{!contributing.md!}
-
 ## Teams Plan
 
 ### How many members do I get in a team?
@@ -212,3 +210,5 @@ An Owner can additionally:
 * View usage and billing information for the team
 * Purchase Powerups for the team
 * Manage the team (add members, remove members, and change roles)
+
+{!contributing.md!}
