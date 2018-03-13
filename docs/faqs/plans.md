@@ -14,6 +14,10 @@ If you want to run your jobs with GPU support, you can purchase [GPU Powerups](#
 The Data Scientist plan is for, well, data scientists. It offers private projects/datasets and higher levels of 
 [job concurrency](#what-is-job-concurrency) and storage. As in the Beginner Plan, it comes with 20 hours of CPU compute time per month. You can also purchase [Powerups](#powerups) to add GPU compute hours to supplement your plan.
 
+
+#### Teams Plan
+If you're on a data science team at work, then the Teams Plan is for you! The Teams Plan offers a centralized, secure hub for your entire team's model development, training, and deployment pipeline. The Teams plan includes consolidated billing, centralized usage tracking, collaborative experiment management, and roles-based permissioning.
+
 For more details on our different plans, visit our [pricing
 page](https://www.floydhub.com/pricing).
 
@@ -41,7 +45,7 @@ can buy the GPU+ or CPU+ Powerups.
 
 Job concurrency is the number of jobs you can run in parallel. Each plan has a limit
 on the number of concurrent jobs you can run. For example, in the Beginner plan,
-you can only run 1 job at a time. In the Data Scientist plan, you can run up
+you can only run 1 job at a time. In the Data Scientist plan and Teams plan, you can run up
 to 8 jobs in parallel.
 
 Having a higher concurrency is useful when you want to parallelize your training, for
@@ -162,17 +166,16 @@ Your compute hours will be consumed in the following order:
 
 ### How much storage do I get?
 
-Each plan comes with its own storage limit. Please see the [feature comparison
-table](https://www.floydhub.com/pricing/#features) for details.
+Each plan comes with its own storage limit. The Beginner plan starts at 10 GB storage, and the Data Scientist and Team plans start at 100 GB. If you need more storage, then you can purchase a Storage powerup - no matter which plan you're on.
 
 ### What counts against my storage?
 
-Storage is consumed by the datasets that you upload, your code and the data that your jobs output.
+Storage is consumed by the datasets that you upload, your code, and the data that your jobs output.
 
 Note that you are only responsible for the data that you own. For example, if you use a public dataset in your job, you won't be charged for it.
 
 ### Can I buy more storage than my plan offers?
 
-You can purchase Storage Powerups to increase your storage limits from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups)
+Yes, you can purchase Storage Powerups to increase your storage limits from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups)
 
 {!contributing.md!}
