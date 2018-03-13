@@ -19,6 +19,15 @@ Whether you're using our web dashboard or our command line interface, our tools 
 - Full reproducibility of jobs
 - Deploy models as REST endpoints to integrate with your apps
 
+### Productivity for teams
+FloydHub's Team Plan is a collaborative tool for data science teams of all sizes:
+
+- Centralized, secure hub for all your team's machine learning experiments
+- Team management with roles-based permissioning
+- Consolidated billing and usage tracking
+- High priority customer support
+
+
 ### Deep learning community
 
 FloydHub hosts open source Projects and Datasets that you can discover, clone, and reproduce (or reconfigure with your own Dataset).
