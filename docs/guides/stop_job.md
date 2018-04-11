@@ -59,3 +59,12 @@ Then click the `Confirm` button in the modal that pops up:
 
 The status of your job will update to `Shutdown` when your job has successfully
 been canceled.
+
+
+## Notification when job is stopped
+Once a job has stopped, notifications can be sent to Slack via webhook.  Please see
+[Slack documentation](https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack)
+on how to configure an incoming webhook.
+
+In floydhub, go to [Notifications settings](https://www.floydhub.com/settings/notifications), paste in the Slack webhook url, and click save.
+Going forward, all CLI based jobs that are **finished**, **canceled**, or **failed**, will be notified via Slack.
