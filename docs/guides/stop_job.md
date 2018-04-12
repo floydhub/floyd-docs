@@ -66,5 +66,5 @@ Once a job has stopped, notifications can be sent to Slack via webhook.  Please 
 [Slack documentation](https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack)
 on how to configure an incoming webhook.
 
-In floydhub, go to [Notifications settings](https://www.floydhub.com/settings/notifications), paste in the Slack webhook url, and click save.
+In Floydhub, go to [Notifications settings](https://www.floydhub.com/settings/notifications), paste in the Slack webhook url, and click save.
 Going forward, all CLI based jobs that are **finished**, **canceled**, or **failed**, will be notified via Slack.
