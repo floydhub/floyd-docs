@@ -25,6 +25,7 @@ pages:
         - 'Delete a Job': guides/delete_job.md
         - 'Ignore Files': guides/floyd_ignore.md
         - 'SSH into a Job': guides/ssh.md
+        - 'Slack Notification': guides/slack_notification.md
         - 'Troubleshooting & FAQs': faqs/job.md
     - Data:
         - 'Create and Upload a Dataset': guides/create_and_upload_dataset.md
