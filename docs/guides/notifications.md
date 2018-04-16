@@ -1,10 +1,9 @@
 You can setup Slack notifications to receive alerts on your jobs.  You will receive a notification when:
 
 * Job completes successfully
-* Idel Jupyter job is shutdown automatically
-* Job fails due to error in code
-* Job fails due to timeout or insufficient powerup credits
-* User manually cancels the job
+* Idle Jupyter job is shutdown automatically
+* Job is manually shutdown
+* Job failed, i.e. error in code, timeout, or insufficient powerup credits
 
 
 Steps to create an incoming webhook in your Slack:
