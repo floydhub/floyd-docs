@@ -44,6 +44,12 @@ print('{"metric": "<choose_metric_name>", "value": <int_or_float>}')
 For example, if you want to report accuracy values:
 ```python
 print('{"metric": "accuracy", "value": 0.985}')
+# {"metric": "accuracy", "value": 0.985}
+```
+Or loss:
+```python
+print('{{"metric": "loss", "value": {}}}'.format(loss))
+# {"metric": "loss", "value": 1.000000}
 ```
 
 You can send any metric you want as a Training Metric, however the only values we accept currently are `float` or `integer` values. If you are interested in sending other values as custom training metrics, please let us know by sending an email to support@floydhub.com
