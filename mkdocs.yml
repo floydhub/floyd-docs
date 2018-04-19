@@ -1,6 +1,7 @@
 site_name: FloydHub Documentation
-site_url: https://www.floydhub.com
+site_url: https://docs.floydhub.com
 site_author: FloydHub Team
+site_description: FloydHub is a zero setup Deep Learning platform for productive data science teams.
 repo_url: https://github.com/floydhub/floyd-docs
 theme_dir: 'theme_overrides'
 google_analytics: ['UA-90905407-1', 'floydhub.com']
