@@ -8,36 +8,34 @@ floyd login
 ### Options
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
-| `--token`       |  False  | If specified, browser will not open. You can paste your token in the command line. <br>**Note**: This is only supported with `version 0.7.2+` of `floyd-cli`. If you get an error, please upgrade using `pip install -U floyd-cli` and try again|
 | `--username`    |  False  | FloydHub username. If specified, must include `--password` |
 | `--password`    |  False  | FloydHub password |
+| `--token`       |  False  | If specified, authentication token will be used instead of credentials |
 
 ### Description
-You need to login to Floyd before running any other command. The login flow will require an access token from the Floydhub 
-website. You will be prompted to enter you credentials to get your access token. Copy and paste the token on the command line 
-to complete login.
-
-Alternatively, you can use the username and password parameters to directly login from the command line. In case you
-run in to any issues logging in with username / password, try logging in with the token as explain above.
+You need to login to FloydHub before running any other command. You can use your FloydHub username and password to 
+login. Alternatively you can also use the access token available in the 
+[Auth Token](https://www.floydhub.com/settings/security) page on the website to login.
 
 ### Example
-To automatically open your browser
+
 ```bash
 $ floyd login
-Authentication token page will now open in your browser. Continue? [Y/n]:
-Please paste the token here:
+Login with your FloydHub username and password to run jobs.
+Username [alice]: alice
+Password: 
 Login Successful as alice
 ```
 
-In case you use remote machines and do not have access to the browser, you can copy the token from the 
-[dashboard](https://www.floydhub.com/welcome) and use the `--token` parameter when you login.
+For automated systems use the authentication token.
 ```bash
 $ floyd login --token
-Please copy and paste the token here:
+Please paste the authentication token from https://www.floydhub.com/settings/security.
+This is an invisible field. Paste token and press ENTER:
 Login Successful as alice
 ```
 
-If you are using the credentials directly:
+You can also specify the credentials on the command line.
 ```bash
 $ floyd login --username alice --password <redacted>
 Login Successful as alice
