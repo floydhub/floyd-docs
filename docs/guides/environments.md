@@ -4,13 +4,11 @@ Below is the list of Deep Learning environments supported by FloydHub. Any of
 these can be specified in the floyd [run](../commands/run.md) command using the
 `--env` option.
 
-If no `--env` is provided, it uses the `keras` image by default, which comes with Python
+If no `--env` is provided, it uses the `tensorflow-1.5` image by default, which comes with Python
 3.6, Keras 2.1.3 and Tensorflow 1.5.0 pre-installed.
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|
-| Keras | keras      | Tensorflow 1.5.0 + keras 2.1.3 on Python3.6. |  |
-|       | keras:py2  | Tensorflow 1.5.0 + keras 2.1.3 on Python2. |  |
 | Tensorflow 1.7 | tensorflow-1.7  | Tensorflow 1.7.0 + Keras 2.1.5 on Python3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                | tensorflow-1.7:py2  | Tensorflow 1.7.0 + Keras 2.1.5 on Python2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.5 | tensorflow-1.5  | Tensorflow 1.5.0 + Keras 2.1.3 on Python3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
