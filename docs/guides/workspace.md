@@ -1,0 +1,127 @@
+# Workspace (beta)
+
+Workspace is an interactive environment ([Jupyter Lab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)) for developing and running code. You can run Jupyter notebooks, Python scripts and much more. All the files and data in your workspace will be preserved for you, across restarts. You can think of it as your persistent, on-demand machine on the cloud.
+
+![Workspace UI](../img/workspace/workspace_ui.png)
+
+!!! important "Beta feature"
+    Workspace is currently in beta and under active development. If you have feedback or feature requests, please let us know - via the chat bubble in your Workspace or email [support@floydhub.com](mailto:support@floydhub.com)
+
+## Basics
+
+### Creating a new workspace
+
+To create a new workspace click the *Create Workspace* button in your project page. Choose the environment you need and the machine you want to use.
+
+![create workspace](https://dzwonsemrish7.cloudfront.net/items/1k2S1l273L2A1o1F1e04/Image%202018-05-05%20at%202.34.38%20PM.png)
+
+*Currently, you can create only one workspace in a project. You can delete the existing workspace to create a new one.*
+
+### Stopping a workspace
+
+You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the *Shutdown* button. All your files and directories in the current directory (`/floyd/code`) will be saved and persisted.
+
+![image](https://dzwonsemrish7.cloudfront.net/items/0t36131c3j2d0s130W22/Image%202018-05-04%20at%203.04.20%20PM.png)
+
+*Important: Save all your notebooks and files before shutting down the workspace. All running notebooks and scripts will be stopped during Shutdown.*
+
+!!! error "Billing"
+    You will be charged for the entire duration that your workspace is *running*. Please make sure to shutdown the workspace if you are no longer actively using it. You can [purchase powerups](https://www.floydhub.com/settings/powerups) if you are low on runtime to start a workspace.
+
+### Resuming a workspace
+
+You can resume working on a stopped workspace by clicking the *Resume* button in the project page. This will restore the workspace to its previous state.
+
+![image](https://dzwonsemrish7.cloudfront.net/items/1S1A2j0W3z1E0t0A0E1F/%5Bb53674349b29b7d68696f30142a8345f%5D_Image+2018-05-04+at+3.09.45+PM.png)
+
+## Code
+
+Your workspace is located at `/floyd/code` on the filesystem. *Only* code and data files that you store in this directory will be preserved across restarts.
+
+!!! warning "Store your files in /floyd/code"
+    FloydHub only persists files that are stored under `/floyd/code`. Make sure you store all the files you want persisted here. Files stored in any other location will **not** be saved when your workspace is shutdown.
+
+### Uploading code from local computer
+
+You can upload your code and other files from your local machine using the upload button in the File Viewer panel (on the left).
+
+![image](../img/workspace/upload_code.png)
+
+*Make sure you upload your code into the `/floyd/code` directory.*
+
+### Downloading code from Github
+
+If your code is on Github (or any online repository), you can also clone your repository using the `git clone` command.
+
+[Using the Terminal](#using-terminal):
+
+![image](../img/workspace/git_clone_terminal.png)
+
+Or, via your Jupyter Notebook cell:
+
+![image](../img/workspace/git_clone.png)
+
+You can now start working on your project. Open and run any Notebook or Python script. You can also edit code files and run them [using the terminal](#using-terminal).
+
+## Using Terminal
+
+You can open a Bash terminal (console) inside your workspace to run code, debug or inspect your files. To open a new terminal, click the *+* button in the File Viewer panel (on the left) and click *terminal* icon.
+
+![start terminal](https://dzwonsemrish7.cloudfront.net/items/3Z3A1A392A0T1L0L0840/terminal_icon.png)
+
+!!! note "Frozen terminal"
+    If you terminal freezes due to inactivity, right click and select *Refresh Terminal*
+
+    ![refresh terminal](https://dzwonsemrish7.cloudfront.net/items/1D231V0h2f0W0R3c2o0n/Screen%20Shot%202018-05-05%20at%202.05.26%20PM.png)
+
+## Data
+
+### Downloading data from internet
+
+If your data is available on the internet, you can also download it directly into your workspace [using the Terminal](#using-terminal).
+
+```
+# Ensure you're in your workspace directory
+cd /floyd/code
+
+wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+```
+
+### Attaching FloydHub datasets
+
+FloydHub provides an easy way to manage large datasets that you can use across projects. Instead of downloading your data everytime you start a workspace, you can [upload your data as a FloydHub dataset](https://docs.floydhub.com/guides/create_and_upload_dataset/). 
+
+You can attach FloydHub datasets to your workspace using the right panel. You need to specify the name of the dataset and the directory where you want to attach it. Once the data mounting finishes, you can start using the files in your code.
+
+Example: Attaching the MNIST dataset [https://www.floydhub.com/mckay/datasets/mnist/1](https://www.floydhub.com/mckay/datasets/mnist/1)
+![mount data](https://dzwonsemrish7.cloudfront.net/items/1U0X1m400U0z2L3f002J/Screen%20Recording%202018-05-05%20at%2002.19%20PM.gif)
+
+Once you attach a dataset, it will be available even when you stop and resume the workspace. Currently there is no option to remove a mounted dataset.
+
+*Tip:* You can hide the panel on the right by clicking the *>>* arrow on the panel.
+
+#### Viewing attached datasets
+
+All FloydHub datasets are attached under `/floyd/data`. You can view your attached datasets using the File Viewer panel. Make sure to click the *Home* icon and select the `data` dirctory.
+
+![View attached dataset](../img/workspace/view_attached_datasets.png)
+
+You can also view them using [the Terminal](#using-terminal):
+
+```bash
+ls /floyd/data
+```
+
+## Switching between CPU and GPU
+
+You can easily switch the instance type of your workspace using the *Restart* button. 
+
+For example: if you are working on a Jupyter notebook in a CPU instance, you can switch to a GPU instance to speed up your training. To restart your workspace click the "Restart" button and select the new instance you want to use. 
+
+![restart workspace](https://dzwonsemrish7.cloudfront.net/items/0U3Q1O2Q0A192x3H0P2q/Screen%20Recording%202018-05-04%20at%2003.40%20PM.gif)
+
+You can [purchase powerups](https://www.floydhub.com/settings/powerups) if you are low on runtime to start a workspace.
+
+!!! warning "Save your files before shutdown"
+    Save all your notebooks and files before restarting the workspace. All running notebooks and scripts will be stopped during Restart.
+

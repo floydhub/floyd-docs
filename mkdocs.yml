@@ -16,6 +16,8 @@ pages:
     - Projects:
         - 'Create a New Project': guides/basics/create_new.md
         - 'Delete a Project': guides/basics/delete.md
+    - Workspace:
+        - 'Workspace': guides/workspace.md
     - Jobs:
         - 'Run a Job': guides/run_a_job.md
         - 'Stop a Job': guides/stop_job.md
@@ -106,6 +108,7 @@ extra:
   # when you open the parent, the child will be open
   nav_items_open_by_default:
     - Projects
+    - Workspace
     - Jobs
     - Data
     - Environments
