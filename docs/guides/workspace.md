@@ -13,7 +13,7 @@ Workspace is an interactive environment ([Jupyter Lab](https://blog.jupyter.org/
 
 To create a new workspace click the *Create Workspace* button in your project page. Choose the environment you need and the machine you want to use.
 
-![create workspace](https://dzwonsemrish7.cloudfront.net/items/1k2S1l273L2A1o1F1e04/Image%202018-05-05%20at%202.34.38%20PM.png)
+![create workspace](../img/workspace/create_workspace.png)
 
 *Currently, you can create only one workspace in a project. You can delete the existing workspace to create a new one.*
 
