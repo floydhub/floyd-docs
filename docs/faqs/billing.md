@@ -4,10 +4,10 @@ Please see here for [Plan FAQs](./plans.md)
 
 ### What forms of payments do you accept?
 
-We accept Visa, MasterCard, American Express and Discover credit and debit cards. We do not accept prepaid cards at the moment. 
+We accept Visa, MasterCard, American Express and Discover credit, debit and prepaid cards.
 
-We are a US based company. If you are outside the US, please ensure your card has 
-international transactions enabled.
+We are a US based company. If you are outside the US, *please ensure your card has
+international transactions enabled.*
 
 ### Do you keep my credit card information?
 
@@ -22,26 +22,23 @@ When you submit your payment details, you may received a "Error: Payment process
 
 Some common causes are:
 
-- **Credit and Debit cards only**: We currently accept only Visa, Mastercard and AmEx credit and debit cards. We do not accept prepaid cards. Please ensure you are using a valid credit or debit card.
 - **Balance**: We issue a small $0-1 transaction on your card as a pending authorization request between our billing system and the bank that issued your credit or debit card. If this authorization fails, you won't be able to add your card. Please ensure you have enough balance and are using a valid card. *Note*: This is an authorization request only, not an actual charge.
 - **Fraud Detection**: We use Stripe for managing all our payments. They have their own fraud detection algorithm which can decline some cards. Please try a different payment method.
 - **International Cards**: We are a US based company. If you are outside the US please ensure your card has international transactions enabled.
 
 If you are still unable to add your payment, please contact us directly at [support@floydhub.com](mailto:support@floydhub.com).
 
-
-
 ## Billing Questions
 
 ### What am I billed for?
 
-Your usage includes compute (CPU / GPU) usage and storage consumption. 
+Your usage includes compute (CPU / GPU) usage and storage consumption.
 
 - **Compute**: You will be billed exactly for the duration that your job runs, rounded off to the nearest second.
 
     Note that you are only charged for compute when your job is in the *Running* state. You will *not* be charged when your job is in any other state, including *Queued* and *Shutdown*.
 
-- **Storage**: You will also be charged for the storage you consume, rounded off to the nearest kB. 
+- **Storage**: You will also be charged for the storage you consume, rounded off to the nearest kB.
 
     Storage is consumed by the datasets that you upload, your code and the data that your jobs output.
 
@@ -53,8 +50,8 @@ When you purchase Powerups, either directly from the [Powerups Dashboard](https:
 
 ### Can I upgrade or downgrade my plan?
 
-You can upgrade or downgrade your subscriptions at anytime from your [Plans page](https://www.floydhub.com/settings/plan) under Settings on your dashboard. 
-You will be immediately changed to the new plan. 
+You can upgrade or downgrade your subscriptions at anytime from your [Plans page](https://www.floydhub.com/settings/plan) under Settings on your dashboard.
+You will be immediately changed to the new plan.
 
 Upgrades and downgrades do not affect any Powerups you may have purchased.
 
@@ -66,7 +63,7 @@ When you upgrade from one paid plan to another, you will be charged for your new
 
 ### How do downgrades work?
 
-You can downgrade at any time to a lower or Beginner plan. 
+You can downgrade at any time to a lower or Beginner plan.
 
 [comment]: <> (If you are over the usage limits for the plan you are downgrading to, you will have to handle that first. For example, lets say you are downgrading from the Data Scientist to Beginner plan, but have 50GB data and private projects. You will have to delete some of your data and all your private projects before downgrading, since the Beginner plan only offers 10 GB and public projects.)
 
