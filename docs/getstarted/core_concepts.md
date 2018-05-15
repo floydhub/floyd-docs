@@ -155,6 +155,6 @@ back to a previous output and start again from there. Knowing how to store
 output is key to optimizing your deep learning workflow.
 
 [Saving](../guides/data/storing_output) and [reusing](../guides/reusing_output)
-output on FloydHub can feel foriegn to users who are used to working on their
+output on FloydHub can feel foreign to users who are used to working on their
 own machines. But once you learn how to do it, it becomes very simple and is
 one of the most valuable parts of the FloydHub workflow.

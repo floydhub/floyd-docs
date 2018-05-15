@@ -48,6 +48,22 @@ Congratulations! You've just started your first Jupyter Notebook on FloydHub ðŸŽ
 
 To go a bit more in-depth and learn more about using Jupyter Notebooks on FloydHub, check out the [Getting Started Tutorial - Jupyter Notebook](get_started_jupyter) or you can watch this 3-minute Lightning Video on running Jupyter Notebooks on FloydHub:
 
+## Stopping your Notebook
+
+On the project page, click the `Cancel` button below the icon that shows the status of your job, as shown in the picture below:
+
+![Stop Job](../img/stop_job.jpg)
+
+Then click the `Confirm` button in the modal that pops up:
+![Stop Job Confirm](../img/stop_job_modal.jpg)
+
+!!! warning
+    Jupyter Notebooks are designed for interactive development. Your job starts running on FloydHub's server when you execute the `floyd run --mode jupyter` command and it continues to be active till you explicitly stop your job.
+
+    Hence, even if you are not actively executing code inside your Notebook, the Jupyter server is still active on FloydHub and you are billed for the time.
+
+## Video Tutorial
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XPcRp_U-wZY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-
+{!contributing.md!}
