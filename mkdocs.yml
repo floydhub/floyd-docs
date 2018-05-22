@@ -18,6 +18,7 @@ pages:
         - 'Delete a Project': guides/basics/delete.md
     - Workspace:
         - 'Workspace': guides/workspace.md
+        - 'Insights': guides/insights.md
     - Jobs:
         - 'Run a Job': guides/run_a_job.md
         - 'Stop a Job': guides/stop_job.md
