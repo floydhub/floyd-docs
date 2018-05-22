@@ -14,7 +14,7 @@ There are three levels of Insight (in ascending levels of severity):
 |------|-------|------------------|
 |<span style="color:orange"> Info </span>| ![Info](../img/insight_info.png) | You are seeing out of ordinary behavior with this metric. You should take a look to make sure this is expected |
 |<span style="color:red"> Warning </span> | ![Warning](../img/insight_warning.png) | The metric is continuing to behave unusually. Investigate to avoid training failure or wasted resources. |
-|<span style="color:red"> Alert </span> | ![Warning](../img/insight_alert.gif) | You action is required immediately. In unattended, this could lead to failure of your training instance or wasted resources. |
+|<span style="color:red"> Alert </span> | ![Warning](../img/insight_alert_example.gif) | You action is required immediately. In unattended, this could lead to failure of your training instance or wasted resources. |
 
 
 !!! important "Beta feature"
