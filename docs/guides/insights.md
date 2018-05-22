@@ -34,6 +34,14 @@ When you see this Insight, you can try the following approaches to better utiliz
 
 Also, for some tasks, it is many not be possible to fully utilize the GPU capacity due to the nature of the model you are building. For example, if your training requires resource intensive pre / post-processing on CPU - your GPU may not be fully utilized.
 
+#### Insights
+
+| Type | Reason|
+|------|-------|
+|<span style="color:orange"> Info </span>| GPU Utilization has been under 70% of capacity for the last five (5) minutes |
+|<span style="color:red"> Warning </span> | GPU Utilization has been under 70% of capacity for the last fifteen (15) minutes |
+|<span style="color:red"> Alert </span> | GPU Utilization has been under 80% of capacity for the last thirty (30) minutes |
+
 #### Why is my GPU usage at 0%?
 
 Verify that your framework supports GPU acceleration. Tensorflow [automatically enables GPU](https://www.tensorflow.org/programmers_guide/using_gpu) and uses it for your training. 
@@ -47,14 +55,6 @@ Note: All the operations can be placed on the GPU. Some frameworks provide an AP
 
 !!! important "Real-time monitoring"
 	For a more fine grained monitoring of the machine resources we recommend running these commands from a terminal: `top` and `nvidia-smi -l 2`
-
-#### Insights
-
-| Type | Reason|
-|------|-------|
-|<span style="color:orange"> Info </span>| GPU Utilization has been under 70% of capacity for the last five (5) minutes |
-|<span style="color:red"> Warning </span> | GPU Utilization has been under 70% of capacity for the last fifteen (15) minutes |
-|<span style="color:red"> Alert </span> | GPU Utilization has been under 80% of capacity for the last thirty (30) minutes |
 
 ### RAM (Memory) Utilization
 
