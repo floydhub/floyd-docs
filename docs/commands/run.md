@@ -15,6 +15,7 @@ floyd run [OPTIONS] [COMMAND]
 | `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
 | `--tensorboard` |   | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
+| `--max-runtime` |   | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
 | command |      | Command to execute when running your project on Floyd. |
 
 ### Description
@@ -56,6 +57,20 @@ $ floyd run --mode jupyter
 ...
 Path to jupyter notebook: https://www.floydhub.com/notebooks/g8uGRZFQz85meArJGToEcs
 ```
+
+### Maximum Runtime (in seconds)
+
+The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job 
+exceeds its maximum runtime, FloydHub will stop the job and save any output that was 
+generated until that point.
+
+#### Example
+```bash
+$ floyd run --mode jupyter --max-runtime 3600
+...
+Path to jupyter notebook: https://www.floydhub.com/notebooks/g8uGRZFQz85meArJGToEcs
+```
+This notebook job will automatically be terminated after 1 hour.
 
 ### Attaching multiple datasets
 
