@@ -23,13 +23,12 @@ be grouped under this project, and we'll be able to go back and review each job
 later. For more information about projects, check out our [Core Concepts
 page](../getstarted/core_concepts/#projects).
 
-To create the project, visit [www.floydhub.com/projects](), and click the
-`New Project` button in the top right corner of the screen. Complete the form
-to create a new project. (Note that private projects are only available on our
+To create a new project project click the `+` button in the top bar on FloydHub 
+dashboard. Select `New Project` and complete the form to create a new project. 
+(Note that private projects are only available on our
 [Data Scientist Plans](https://www.floydhub.com/pricing).)
 
-If you're a new user, then you should already see a default project named
-`quick-start` in your [projects dashboard](https://www.floydhub.com/projects). If you don't see it, go ahead and create a project named 'quick-start'.
+![create jupyter notebook](../img/create_quick_start_project.jpg)
 
 When you visit [www.floydhub.com/projects]() you should see your quick-start
 project, as shown below:
