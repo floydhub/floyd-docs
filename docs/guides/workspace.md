@@ -1,11 +1,11 @@
-# Workspace (beta)
+# Workspace
 
 Workspace is an interactive environment ([Jupyter Lab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)) for developing and running code. You can run Jupyter notebooks, Python scripts and much more. All the files and data in your workspace will be preserved for you, across restarts. You can think of it as your persistent, on-demand machine on the cloud.
 
 ![Workspace UI](../img/workspace/workspace_ui.png)
 
-!!! important "Beta feature"
-    Workspace is currently in beta and under active development. If you have feedback or feature requests, please let us know - via the chat bubble in your Workspace or email [support@floydhub.com](mailto:support@floydhub.com)
+!!! important "Feedback request"
+    Workspace is currently under active development. If you have feedback or feature requests, please let us know - via the chat bubble in your Workspace or email [support@floydhub.com](mailto:support@floydhub.com)
 
 ## Basics
 

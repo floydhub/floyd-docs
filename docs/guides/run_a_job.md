@@ -109,6 +109,13 @@ available. If you don't want your browser to automatcially open, pass the `--no-
     2. You want to open an **interactive shell** on the FloydHub server where your code
        is running. For details on how to do that, see [this article](../guides/ssh)
 
+
+!!! warning
+    If you're working with Jupyter Notebooks, then we suggest using a Workspace
+    instead of a Jupyter mode job. A workspace provides an better experience for
+    interactively developing your models on FloydHub. To learn more about Workspaces,
+    you can see [this article](../guides/workspace)
+
 #### `--mode serve`
 
 This mode is for serving your deep learning models as an API endpoint. To use
