@@ -45,7 +45,7 @@ training jobs, including pre-processing, data exploration, and other activities.
 !!! tip "Quick Look"
     A workspace is an interative development environment on FloydHub for model
     development, pre-processing data, and other steps in your deep learning
-    workflow.
+    workflow. ![Workspace UI](../img/workspace/workspace_ui.png)
 
 A workspace is a data-oriented cloud IDE (based on JupyterLab) built for deep 
 learning and machine learning tasks. When you create a workspace, you'll select
