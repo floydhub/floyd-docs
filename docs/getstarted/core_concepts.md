@@ -4,6 +4,7 @@ The essential points for understanding and effectively using FloydHub can be
 grouped into the following categories:
 
 - [Projects](#projects)
+- [Workspaces](#workspaces)
 - [Jobs](#jobs)
 - [Datasets](#datasets)
 - [Environments](#environments)
@@ -16,8 +17,9 @@ documentation that you can explore.
 ## Projects
 
 !!! tip "Quick Look"
-    A project is a group of [jobs]() aimed at accomplishing the same goal. A
-    project keeps track of each job, along with its [output](#output) and logs.
+    A project is a group of jobs and workspaces aimed at accomplishing the same goal. A
+    project keeps track of each job, along with its [output](#output) and logs. It also 
+    tracks your workspaces.
 
 !!! warning "Key Points of Understanding"
     - [Creating a project](../guides/basics/create_new)
@@ -33,9 +35,28 @@ model that meets your needs.
 
 On FloydHub, a project is a collection of all the work and iterations you
 perform when developing a deep learning model. In contrast to a typical deep
-learning workflow, your experiments and iterations (we call them
+learning workflow, your experiments and training iterations (we call them
 [jobs](#jobs)) will be versioned and kept organized for you to reference in the
-future.
+future. Workspaces provide interactive environments for you to prepare your 
+training jobs, including pre-processing, data exploration, and other activities.
+
+## Workspaces
+
+!!! tip "Quick Look"
+    A workspace is an interative development environment on FloydHub for model
+    development, pre-processing data, and other steps in your deep learning
+    workflow. ![Workspace UI](../img/workspace/workspace_ui.png)
+
+A workspace is a data-oriented cloud IDE (based on JupyterLab) built for deep 
+learning and machine learning tasks. When you create a workspace, you'll select
+the environment  and machine you'd like to use for your work. Once inside a 
+workspace, you can easily attach FloydHub datasets, open up a terminal, or 
+even restart your workspace with a different configuration (like switching 
+from a CPU machine to a GPU machine)
+
+You can create a workspace within a Project by clicking the "Create Workspace"
+button. You'll be able to create a blank workspace or import code from a public
+GitHub repository to bootstrap your workspace.
 
 ## Jobs
 
