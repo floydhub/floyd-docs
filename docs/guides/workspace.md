@@ -19,7 +19,7 @@ To create a new workspace click the *Create Workspace* button in your project pa
 
 ### Stopping a workspace
 
-You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the *Shutdown* button. All your files and directories in the current directory (`/floyd/code`) will be saved and persisted.
+You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the *Shutdown* button. All your files and directories in the current directory (`/floyd/input`) will be saved and persisted.
 
 ![image](https://dzwonsemrish7.cloudfront.net/items/0t36131c3j2d0s130W22/Image%202018-05-04%20at%203.04.20%20PM.png)
 
@@ -36,10 +36,10 @@ You can resume working on a stopped workspace by clicking the *Resume* button in
 
 ## Code
 
-Your workspace is located at `/floyd/code` on the filesystem. *Only* code and data files that you store in this directory will be preserved across restarts.
+Your workspace is located at `/floyd/input` on the filesystem. *Only* code and data files that you store in this directory will be preserved across restarts.
 
-!!! warning "Store your files in /floyd/code"
-    FloydHub only persists files that are stored under `/floyd/code`. Make sure you store all the files you want persisted here. Files stored in any other location will **not** be saved when your workspace is shutdown.
+!!! warning "Store your files in /floyd/input"
+    FloydHub only persists files that are stored under `/floyd/input`. Make sure you store all the files you want persisted here. Files stored in any other location will **not** be saved when your workspace is shutdown.
 
 ### Uploading code from local computer
 
@@ -47,7 +47,7 @@ You can upload your code and other files from your local machine using the uploa
 
 ![image](../img/workspace/upload_code.png)
 
-*Make sure you upload your code into the `/floyd/code` directory.*
+*Make sure you upload your code into the `/floyd/input` directory.*
 
 ### Downloading code from Github
 
@@ -82,14 +82,14 @@ If your data is available on the internet, you can also download it directly int
 
 ```
 # Ensure you're in your workspace directory
-cd /floyd/code
+cd /floyd/input
 
 wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
 ```
 
 ### Attaching FloydHub datasets
 
-FloydHub provides an easy way to manage large datasets that you can use across projects. Instead of downloading your data everytime you start a workspace, you can [upload your data as a FloydHub dataset](https://docs.floydhub.com/guides/create_and_upload_dataset/). 
+FloydHub provides an easy way to manage large datasets that you can use across projects. Instead of downloading your data everytime you start a workspace, you can [upload your data as a FloydHub dataset](https://docs.floydhub.com/guides/create_and_upload_dataset/).
 
 You can attach FloydHub datasets to your workspace using the right panel. You need to specify the name of the dataset and the directory where you want to attach it. Once the data mounting finishes, you can start using the files in your code.
 
@@ -102,21 +102,21 @@ Once you attach a dataset, it will be available even when you stop and resume th
 
 #### Viewing attached datasets
 
-All FloydHub datasets are attached under `/floyd/data`. You can view your attached datasets using the File Viewer panel. Make sure to click the *Home* icon and select the `data` dirctory.
+All FloydHub datasets are attached under `/floyd/input`. You can view your attached datasets using the File Viewer panel. Make sure to click the *Home* icon and select the `data` dirctory.
 
 ![View attached dataset](../img/workspace/view_attached_datasets.png)
 
 You can also view them using [the Terminal](#using-terminal):
 
 ```bash
-ls /floyd/data
+ls /floyd/input
 ```
 
 ## Switching between CPU and GPU
 
-You can easily switch the instance type of your workspace using the *Restart* button. 
+You can easily switch the instance type of your workspace using the *Restart* button.
 
-For example: if you are working on a Jupyter notebook in a CPU instance, you can switch to a GPU instance to speed up your training. To restart your workspace click the "Restart" button and select the new instance you want to use. 
+For example: if you are working on a Jupyter notebook in a CPU instance, you can switch to a GPU instance to speed up your training. To restart your workspace click the "Restart" button and select the new instance you want to use.
 
 ![restart workspace](https://dzwonsemrish7.cloudfront.net/items/0U3Q1O2Q0A192x3H0P2q/Screen%20Recording%202018-05-04%20at%2003.40%20PM.gif)
 
