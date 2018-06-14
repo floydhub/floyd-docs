@@ -40,4 +40,4 @@ Try it now with the [Neural Style Transfer](http://docs.floydhub.com/examples/st
 
 ## We're here to help!
 
-We're always happy to help with any questions you might have! [Search](http://docs.floydhub.com/) our documentation or check answers to [frequently asked questions](http://docs.floydhub.com/faqs/installation/). The [FloydHub community forum](https://forum.floydhub.com/) is another place to ask questions, request features, or share cool Projects. For more help, [send us an email]((mailto:support@floydhub.com)).
+We're always happy to help with any questions you might have! [Search](http://docs.floydhub.com/) our documentation or check answers to [frequently asked questions](http://docs.floydhub.com/faqs/installation/). The [FloydHub community forum](https://forum.floydhub.com/) is another place to ask questions, request features, or share cool Projects. For more help, [send us an email](mailto:support@floydhub.com).

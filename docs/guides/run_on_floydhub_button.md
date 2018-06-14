@@ -2,7 +2,7 @@
 
 The 'Run on FloydHub' button enables users to run CPU or GPU-powered workspaces on FloydHub with little or no configuration. The button is ideal for sharing open-source projects, reproducing academic research papers, teaching educational courses to students, and anywhere else you want people to be able to quickly run and reproduce your projects.
 
-The button is well-suited for use in README files, and is intended to serve as a replacement the manual configuration of your environment, code, and data required to reproduce your work.
+The button is well-suited for use in README files, and is intended to serve as a replacement for the manual configuration of your environment, code, and data required to reproduce your work.
 
 Here's an example button that trains a sentiment analysis TensorFlow model on FloydHub (including attaching the required datasets):
 
@@ -54,19 +54,19 @@ Once you've verified that your `floyd.yml` file is valid and working as expected
 
 There are two ways of referencing the template source code repository:
 
-* Resolve template implicitly. This is best for GitHub-hosted documentation on your project's README. If you don't specific a `template` parameter, FloydHub infers it from the location of the button using the `referrer` header. This makes the button stable under forks of the repository.
+* **Basic Setup** This is the preferred approach. Add the button code without specifying the URL of your repository. This is best for GitHub-hosted documentation on your project's README. If you don't specify a `template` parameter, FloydHub infers it from the location of the button using the `referrer` header. This makes the button stable under forks of the repository.
 
-* Using an explicit `template` query paramter that points to the repo. This is useful for buttons sitting outside of GitHub, such as in blog posts or documentation (like this!)
+* **Advanced Setup**: Using an explicit `template` query parameter that points to the repo. This is useful for buttons sitting outside of GitHub, such as in blog posts or documentation (like this page!)
 
 
-### Using an implicit template
+### Basic Setup
 
 If you're embedding the button in a GitHub repository's README file, FloydHub will automatically infer the repository URL from the `referrer` header when someone clicks the button.
 
 !!! important "Using an implicit template"
     This is convenient because it avoids hard-coding the specific repository URL into the button, allowing forks of the repository to work properly without a change to the button href.
 
-Here's an example.
+Here's an example that you can copy and paste directly into your own project's README file:
 
 ```markdown
 [![Run on FloydHub](https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png)](https://floydhub.com/run)
@@ -80,7 +80,7 @@ Here's the equivalent content as HTML:
 </a>
 ```
 
-### Adding an explicit parameter
+### Advanced Setup
 
 Use the following Markdown snippet as a template, changing the `template` query paramter to the URL of your repository:
 
@@ -121,4 +121,4 @@ Yes.
 
 ### Where can I ask more questions or provide feedback on the Run on FloydHub button?
 
-We'd love to hear your questions and feedback on the Run on FloydHub button, so please [send us an email]((mailto:support@floydhub.com)).
+We'd love to hear your questions and feedback on the Run on FloydHub button, so please [send us an email](mailto:support@floydhub.com).
