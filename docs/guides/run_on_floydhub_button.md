@@ -109,7 +109,7 @@ https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png
 
 ### Does this work with private repos?
 
-No, not right now. We are planning to add support for running form private repos.
+No, not right now. We are planning to add support for running for private repos.
 
 ### Does this work with branches?
 
