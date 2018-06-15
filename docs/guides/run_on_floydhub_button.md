@@ -6,7 +6,7 @@ The button is well-suited for use in README files, and is intended to serve as a
 
 Here's an example button that trains a sentiment analysis TensorFlow model on FloydHub (including attaching the required datasets):
 
-[![Run](https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png)](https://floydhub.com/run?template=https://github.com/floydhub/sentiment-analysis-template)
+[![Run](https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.svg)](https://floydhub.com/run?template=https://github.com/floydhub/sentiment-analysis-template)
 
 This document describes the requirements for using the 'Run on FloydHub' button, and how to use these buttons to make it easy to run, reproduce, and share your projects on FloydHub.
 
@@ -69,14 +69,14 @@ If you're embedding the button in a GitHub repository's README file, FloydHub wi
 Here's an example that you can copy and paste directly into your own project's README file:
 
 ```markdown
-[![Run on FloydHub](https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png)](https://floydhub.com/run)
+[![Run on FloydHub](https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.svg)](https://floydhub.com/run)
 ```
 
 Here's the equivalent content as HTML:
 
 ```html
 <a href="https://floydhub.com/run">
-    <img src="https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png" alt="Run">
+    <img src="https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.svg" alt="Run">
 </a>
 ```
 
@@ -85,23 +85,23 @@ Here's the equivalent content as HTML:
 Use the following Markdown snippet as a template, changing the `template` query paramter to the URL of your repository:
 
 ```markdown
-[![Run on FloydHub](https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png)](https://floydhub.com/run?template=https://github.com/floydhub/sentiment-analysis-template)
+[![Run on FloydHub](https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.svg)](https://floydhub.com/run?template=https://github.com/floydhub/sentiment-analysis-template)
 ```
 
 Here's the equivalent content as HTML:
 
 ```html
 <a href="https://floydhub.com/run?template=https://github.com/floydhub/sentiment-analysis-template">
-    <img src="https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png" alt="Run">
+    <img src="https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.svg" alt="Run">
 </a>
 ```
 
 ### Button image
 
-You can access the link to the 'Run on FloydHub' button image (as a PNG file) here:
+You can access the link to the 'Run on FloydHub' button image (as a SVG file) here:
 
 ```
-https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.png
+https://s3-us-west-2.amazonaws.com/floydhub-assets/button/button.svg
 ```
 
 
