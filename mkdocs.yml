@@ -70,6 +70,7 @@ pages:
           - 'floyd upgrade': commands/upgrade.md
           - 'floyd version': commands/version.md
           - 'floyd restart': commands/restart.md
+    - Floyd Config File: floyd_config.md
     - Examples:
         - 'Style Transfer': examples/style_transfer.md
         - 'Deep Text Corrector': examples/deep_corrector.md

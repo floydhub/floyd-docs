@@ -119,7 +119,7 @@ each piece of the command.)
 ```bash
 $ floyd run \
 --gpu \
---data mckay/datasets/mnist/1:/mnist \
+--data mckay/datasets/mnist/1:mnist \
 --env tensorflow-1.3 \
 "python train.py"
 
@@ -158,21 +158,21 @@ jobs. [More info here](../../guides/run_a_job/#instance-type).
 Specifies that we want our job run on a GPU server. More info
 on instance types [here](../../guides/run_a_job/#instance-type).
 
-### --data mckay/datasets/mnist/1:/mnist
+### --data mckay/datasets/mnist/1:mnist
 
 The `train.py` script expects the [MNIST
 data](https://www.floydhub.com/mckay/datasets/mnist/1) to be located at
-`/mnist` on the computer where the script runs. We can use the `--data` flag to
-ensure that our dataset is available to our code at `/mnist`.
+`/floyd/input/mnist` or `../input/mnist` on the computer where the script runs. We can use the `--data` flag to
+ensure that our dataset is available to our code at `/floyd/input/mnist`.
 
 We pass the `--data` flag the name of our dataset (`mckay/datasets/mnist/1`)
 and the location on the server where we want our dataset to be available
-(`/mnist`), separated by a colon (`:`).
+(`/floyd/input/mnist`), separated by a colon (`:`).
 
 Putting that all together, we get:
 
 ```
---data mckay/datasets/mnist/1:/mnist
+--data mckay/datasets/mnist/1:mnist
 ```
 
 We have an entire article in our docs about mounting datasets to your jobs.
@@ -300,17 +300,18 @@ For more information on reusing output, check out
 ### Run Your Second Job
 
 Follow this command to run your second job. Note that we are mounting our
-dataset again at `/mnist` and also mounting our model at `/model`. Be sure to
-replace `mckay/projects/quick-start/1/output` with the name of the output you
-want to mount (something like `<username>/projects/quick-start/<run_number>/output`)
+dataset again at `/floyd/input/mnist` and also mounting our model at
+`/floyd/input/model`. Be sure to replace `mckay/projects/quick-start/1/output`
+with the name of the output you want to mount (something like
+`<username>/projects/quick-start/<run_number>/output`)
 
 ```
 
 $ floyd run \
 --gpu \
 --env tensorflow-1.3 \
---data mckay/datasets/mnist/1:/mnist \
---data mckay/projects/quick-start/1/output:/model \
+--data mckay/datasets/mnist/1:mnist \
+--data mckay/projects/quick-start/1/output:model \
 'python eval.py'
 
 Creating project run. Total upload size: 26.3KiB
