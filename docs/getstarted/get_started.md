@@ -288,7 +288,7 @@ as mounting a dataset. We just use the name of the output instead of the name
 of a dataset when we use the `--data` flag:
 
 ```
---data mckay/projects/quick-start/1/output:/model
+--data mckay/projects/quick-start/1/output:model
 ```
 
 Notice that we specify `/model` as the mountpoint because we know our

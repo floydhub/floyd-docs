@@ -130,13 +130,13 @@ contribute with new ideas.
 
 If you want to try out a pre-trained model, FloydHub has a public dataset model
 with the checkpoints (300 epochs training) for this located [here](https://www.floydhub.com/redeipirati/datasets/dcgan-300-epochs-models/1). You can mount it with
-`--data redeipirati/datasets/dcgan-300-epochs-models/1:/model`.
+`--data redeipirati/datasets/dcgan-300-epochs-models/1:model`.
 
 ```bash
 floyd run \
 --gpu \
 --env pytorch-0.2 \
---data redeipirati/datasets/dcgan-300-epochs-models/1:/model \
+--data redeipirati/datasets/dcgan-300-epochs-models/1:model \
 "python generate.py --netG /model/netG_epoch_299.pth --ngpu 1 --cuda"
 ```
 
@@ -145,7 +145,7 @@ This model should perform better compared to the previous one. You can also prov
 ```bash
 floyd run --gpu \
 --env pytorch-0.2  \
---data redeipirati/datasets/dcgan-300-epochs-models/1:/model \
+--data redeipirati/datasets/dcgan-300-epochs-models/1:model \
 "python generate.py --netG /model/netG_epoch_299.pth --Zvector /model/zvector.pth --ngpu 1 --cuda"
 ```
 

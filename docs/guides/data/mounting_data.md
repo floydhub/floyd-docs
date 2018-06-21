@@ -71,33 +71,22 @@ The command below will mount FloydHub's public
 [Udacity GAN](https://www.floydhub.com/floydhub/datasets/udacity-gan/1)
  dataset at `/my_data`
 ```
-floyd run --data floydhub/datasets/udacity-gan/1:/my_data "python my_script.py"
+floyd run --data floydhub/datasets/udacity-gan/1:my_data "python my_script.py"
 ```
 
 A couple of things to note:
 
   - There is no space between the name of the dataset
-    (`floydhub/datasets/udacity-gan/1`) and the mount point name (`/my_data`).
+    (`floydhub/datasets/udacity-gan/1`) and the mount point name (`my_data`).
   - A colon (`:`) is used to separate the name of the dataset and the
     mount point.
-  - Datasets are always mounted at the root directory (`/`). This means that if
-    you specify `/foo` as the mountpoint, your data will be mounted at `/foo`.
-    If you specify `foo` as the mount point, your data will still be mounted
-    at `/foo`. Preceding the mount point with a `/` is optional‒your data will
-    be mounted at the same location either way. You'll see us use both
-    variations in this guide.
+  - Datasets are always mounted at directory (`/floyd/intput`). This means that if
+    you specify `foo` as the mountpoint, your data will be mounted at `/floyd/input/foo`.
   - Nested mount points are not supported. This means mount points like
     `my_data/foo` or `/home/me/data` will not work. If you need your data
     available at a nested directory, check out the [Symlinking mounted
     data](./symlink_mounted_data) guide.
 
-!!! important
-    A common mistake is to for code to reference a mounted dataset without a
-    preceding `/`. If you specify `my_data` as the mount point for your
-    dataset, your code needs to look in `/my_data` to find the dataset. Without
-    the preceding `/`, your code will look for the dataset in the wrong place
-    (the directory the code is running in). In your code, always precede your
-    references to the mount point with a `/`.
 
 #### Example 2
 

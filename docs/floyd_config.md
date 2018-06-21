@@ -1,6 +1,6 @@
 # Floyd Config File
 
-Floyd config file (floyd.yml) is a powerup tool you can use to automate and drive various workflows in FloydHub. It sits at the root directory of your project folder (directory where you ran floyd init). The config file should be written in standard YAML syntax.
+Floyd config file (floyd.yml) is a powerful tool you can use to automate and drive various workflows in FloydHub. It sits at the root directory of your project folder (directory where you ran floyd init). The config file should be written in standard YAML syntax.
 
 
 ## Provide default arguments for floyd run
@@ -56,7 +56,7 @@ Let's say we usually run the following commands within a project:
 floyd run --gpu2 --env pytorch-0.4 -m "train with lstm" --data foo/datasets/wine-reviews/1:input "train.py /floyd/input/input"
 
 # create job to test a model
-floyd run --gpu --env pytorch-0.4 -m "evaluate model1" --data foo/projects/nlp/1/output:model --data foo/datasets/wine-reviews-test/1:test "test.py --model /floyd/input/model --data /floyd/input/test"
+floyd run --gpu --env pytorch-0.4 -m "evaluate model1" --data foo/projects/nlp/1/output:model --data foo/datasets/wine-reviews-test/1:test "python test.py --model /floyd/input/model --data /floyd/input/test"
 
 # create job to serve a model
 floyd run --cpu --mode serve --env pytorch-0.4 --data foo/projects/nlp/1/output:model
