@@ -47,14 +47,14 @@ Also, for some tasks, it is many not be possible to fully utilize the GPU capaci
 Verify that your framework supports GPU acceleration. Tensorflow [automatically enables GPU](https://www.tensorflow.org/programmers_guide/using_gpu) and uses it for your training. 
 For PyTorch you need to [enable cuda](https://pytorch.org/docs/master/notes/cuda.html). For other frameworks, please consult the framework docs for this.
 
-Note: All the operations can be placed on the GPU. Some frameworks provide an API for the device placement of specific operations and variables - this can be a really useful tool for debugging this issue. Please consult the framework docs for this.
+**Note**: *Not all the operations can be placed on the GPU.* Some frameworks provide an API for the device placement of specific operations and variables - this can be a really useful tool for debugging this issue. Please consult the framework docs for this.
 
 !!! warning "Metrics frequency"
 	The system metrics on FloydHub are collected every 60 seconds. If your computation is not consistently high it will fall within the sampling frequency and you may not see the change in system metrics.
     For example: training a shallow network on the MNIST data will finish within a few seconds.
 
 !!! important "Real-time monitoring"
-	For a more fine grained monitoring of the machine resources we recommend running these commands from a terminal: `top` and `nvidia-smi -l 2`
+	For a more fine grained monitoring of the machine resources we recommend running these commands from a terminal: `top` and `watch -n1 nvidia-smi` (or `nvidia-smi -l 2`)
 
 ### RAM (Memory) Utilization
 
