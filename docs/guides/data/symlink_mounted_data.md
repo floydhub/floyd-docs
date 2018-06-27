@@ -170,7 +170,7 @@ code, and keeps things clean.
 
 ##### Example 2
 
-Your data is mounted under `/vgg` using `--data
+Your data is mounted under `/floyd/input/vgg` using `--data
 floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg`. However, your code expects the
 data to be present at `/home/data/vgg/2017`. Let's create a symlink to make
 your data available at `/home/data/vgg/2017`. Here's an example of a bash
@@ -184,7 +184,7 @@ calls our training script.
 mkdir -p /home/data/vgg
 
 # Symlink our data at /home/data/vgg/2017
-ln -s /vgg /home/data/vgg/2017
+ln -s /floyd/input/vgg /home/data/vgg/2017
 
 # Call our training script
 python train.py

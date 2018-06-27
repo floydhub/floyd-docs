@@ -12,10 +12,10 @@ just as you would to mount a dataset. For example:
 
 ```
 $ floyd run \
-  --data mckay/projects/quick-start/1/output:/model "python train.py"
+  --data mckay/projects/quick-start/1/output:model "python train.py"
 ```
 
 This will make the output of `mckay/projects/quick-start/12`
-available at `/model` for the new job to use.
+available at `/floyd/input/model` for the new job to use.
 
 Note: You need to have access to a job to be able to mount its output.

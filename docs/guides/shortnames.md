@@ -153,10 +153,10 @@ version of the dataset (which we'll say is `2`), so we don't specify the
 version number.
 
 ```
-$ floyd run --data my_dataset:/model 'python train.py'
+$ floyd run --data my_dataset:model 'python train.py'
 ```
 ```
-$ floyd run --data fooster/datasets/hello/2:/model 'python train.py'
+$ floyd run --data fooster/datasets/hello/2:model 'python train.py'
 ```
 
 ## Output Name Examples
@@ -170,10 +170,10 @@ initialized in the current directory. Here are a couple examples:
 Below, we want to mount the output of `fooster/projects/my_project/3/output` at `/model`:
 
 ```
-$ floyd run --data 3/output:/model 'python eval.py'
+$ floyd run --data 3/output:model 'python eval.py'
 ```
 ```
-$ floyd run --data fooster/projects/my_project/3/output:/model 'python eval.py'
+$ floyd run --data fooster/projects/my_project/3/output:model 'python eval.py'
 ```
 
 Here we clone the output of job number 1 of our current project:
