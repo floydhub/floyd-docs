@@ -23,7 +23,7 @@ When this file is present in the project's root directory, any job that is run i
 
 #### Notes
 
-- **Only Python packages**: This will only install Python packages available in [PyPi](https://pypi.python.org/pypi). Please ensure that the package you are trying to install is available.
+- **Only Python packages**: This will only install Python packages available in [PyPI](https://pypi.python.org/pypi). Please ensure that the package you are trying to install is available.
 - **One package per line**: Ensure that you have only one package per line in `floyd_requirements.txt`
 - **Installing specific versions**: You can install specific versions of packages using the `<package>==<version>` notation. For example, an entry `tqdm` will install the latest version of the package, but `tqdm==4.11.2` will force install that specific version.
 
