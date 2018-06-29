@@ -24,7 +24,7 @@ Additionally, for any GPU-powered jobs, you will receive:
 * **GPU Utilization:** Percentage of GPU usage by your training job
 * **GPU Memory Utilization:** Percentage GPU Memory by your training job
 
-These metrics provide insight to help you optimize your training jobs. For example, the GPU Memory Utilization metric might indicate that you shouold increase or decreate your batch size to ensure that you're fully utilizing your GPU. It can also help you debug failed jobs due to out-of-memory (OOM) errors.
+These metrics provide insight to help you optimize your training jobs. For example, the GPU Memory Utilization metric might indicate that you should increase or decrease your batch size to ensure that you're fully utilizing your GPU. It can also help you debug failed jobs due to out-of-memory (OOM) errors.
 
 ## Training Metrics
 
