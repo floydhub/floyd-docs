@@ -201,7 +201,7 @@ The `--tensorboard` flag allows you to enable Tensorboard on your job. For more 
 
 ### Maximum Runtime
 
-The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job
+The `--max-runtime` flag lets you set a maximum runtime duration (in seconds) for your job. If a running job
 exceeds its maximum runtime, FloydHub will stop the job and save any output that was
 generated until that point.
 
