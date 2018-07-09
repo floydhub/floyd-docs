@@ -10,6 +10,7 @@
     - [Message](#message) `--message` **or** `-m`
     - [Tensorboard](#tensorboard): `--tensorboard`
     - [Maximum Runtime](#maximum-runtime): `--max-runtime` **or** `-r`
+    - [Follow](#follow): `--follow` **or** `-f`
 
     **[[COMMAND]](#command_1)**
 
@@ -34,6 +35,7 @@ quick reference.
 - [Message](#message) `--message` **or** `-m`
 - [Tensorboard](#tensorboard): `--tensorboard`
 - [Maximum Runtime](#maximum-runtime): `--max-runtime` **or** `-r`
+- [Follow](#follow): `--follow` **or** `-f`
 
 ### [[COMMAND]](#command_1)
 
@@ -199,14 +201,18 @@ The `--tensorboard` flag allows you to enable Tensorboard on your job. For more 
 
 ### Maximum Runtime
 
-The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job 
-exceeds its maximum runtime, FloydHub will stop the job and save any output that was 
+The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job
+exceeds its maximum runtime, FloydHub will stop the job and save any output that was
 generated until that point.
 
-This feature is very useful if you want to set an upper bound to the duration of a job. This 
+This feature is very useful if you want to set an upper bound to the duration of a job. This
 will also act as a safety in case you forget to turn off your jupyter notebook job.
 
 Currently there is no option to change this duration once it set at the start of the job.
+
+### Follow
+
+The `--follow` flag allows you to immediately display the Logs of the running Job without launching the `floyd logs` command.
 
 ## [COMMAND]
 

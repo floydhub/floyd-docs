@@ -61,8 +61,8 @@ Path to jupyter notebook: https://www.floydhub.com/notebooks/g8uGRZFQz85meArJGTo
 
 ### Maximum Runtime (in seconds)
 
-The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job 
-exceeds its maximum runtime, FloydHub will stop the job and save any output that was 
+The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job
+exceeds its maximum runtime, FloydHub will stop the job and save any output that was
 generated until that point.
 
 #### Example
@@ -72,6 +72,35 @@ $ floyd run --mode jupyter --max-runtime 3600
 Path to jupyter notebook: https://www.floydhub.com/notebooks/g8uGRZFQz85meArJGToEcs
 ```
 This notebook job will automatically be terminated after 1 hour.
+
+### Follow
+
+The `--follow` flag allows you to immediately display the Logs of the running Job without launching the `floyd logs` command.
+
+```bash
+$ floyd run --env tensorflow --gpu --follow "python mnist_cnn.py"
+Creating project run. Total upload size: 1.1MB
+Syncing code ...
+[================================] 1300/1300 - 00:00:00
+Opening logs ...
+Waiting for logs ...
+
+2018-07-09 07:03:23,744 INFO - Preparing to run TaskInstance ...
+
+#################################################
+
+2018-07-09 07:03:25,596 INFO - Run Output:
+...
+
+#################################################
+
+2018-07-09 07:03:40,202 INFO - Waiting for container to complete...
+2018-07-09 07:03:40,358 INFO - Persisting outputs...
+2018-07-09 07:03:42,181 INFO - Creating data module for output...
+2018-07-09 07:03:42,212 INFO - Data module created for output.
+2018-07-09 07:03:42,212 INFO - Persisting data in home...
+2018-07-09 07:03:42,333 INFO - Home data persisted.
+```
 
 ### Attaching multiple datasets
 
