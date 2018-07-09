@@ -8,15 +8,16 @@ floyd run [OPTIONS] [COMMAND]
 ### Options
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
-| `--gpu/--cpu` |  cpu    | If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
+| `--gpu/--gpu2/--cpu/--cpu2` |  cpu  | If specified, runs the job on a GPU (K80) / GPU2 (V100) instance or CPU (2 cores) / CPU2 (8 cores) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
 | `--data <ID:mount>` |    | `ID` of the data source to link to. `mount` specifies the path to mount it at. You can use this parameter multiple times. See [data](../guides/data/mounting_data) section for more details. |
 | `--mode [jupyter|serve]` |  command  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [jupyter](../guides/jupyter) and [serve](#serve) sections for more info on them. |
-| `--no-open` |   | You can disable the CLI from opening the jupyter notebook url. It will print the URL instead. |
-| `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
+| `--no-open` |    | You can disable the CLI from opening the jupyter notebook url. It will print the URL instead. |
+| `--env [tensorflow|tensorflow:py2|...]` |  tensorflow  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
-| `--tensorboard` |   | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
-| `--max-runtime` |   | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
-| command |      | Command to execute when running your project on Floyd. |
+| `--tensorboard` |    | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
+| `--max-runtime <time_in_seconds>` |    | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
+| `-f`, `--follow` |    | Stream the logs (alias for -t/--tail) |
+| command |    | Command to execute when running your project on Floyd. |
 
 ### Description
 This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress
