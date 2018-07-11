@@ -1,9 +1,5 @@
 You can use FloydHub to deploy your trained models as REST APIs with a single command: `floyd run --mode serve`.
 
-!!! important
-	Note that this feature is in *preview mode* and *is not production ready* yet.
-	Contact us at [support@floydhub.com](mailto:support@floydhub.com) for production ready serving support (in closed beta).
-
 The `floyd run` command has a [serve mode](../commands/run.md#serve). Executing `floyd run --mode serve` from your terminal starts a Flask web server on FloydHub's servers and returns a REST endpoint that you can query. 
 
 In order to serve your model, you need to provide an `app.py` file (Flask application) which handles the incoming request and executes all the steps necessary to evaluate the model. Below is the scaffold for the `app.py` file. You can also view a complete example [here](https://github.com/floydhub/fast-style-transfer/blob/master/app.py):
@@ -118,7 +114,7 @@ Serving is currently a beta feature. In the near future we will be able to charg
 
 ### What is the maximum uptime for serving?
 
-In preview mode the API has a maximum uptime of 7 days. The 7 day timeout is common across all jobs you run on FloydHub, whether it be Jupyter notebooks, command jobs or serve jobs. 
+Any serving jobs has a maximum uptime of 7 days. The 7 day timeout is common across all jobs you run on FloydHub, whether it be Jupyter notebooks, command jobs, or serve jobs.
 
 ### Is there any API rate limit?
 

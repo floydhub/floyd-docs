@@ -127,10 +127,6 @@ requirements:
 - Contains a `floyd_requirements.txt` file that contains the line `flask`, which
   declares it as a dependency.
 
-!!! warning
-    This mode is currently in preview, and is not appropriate for production
-    use.
-
 ### Environment
 
 Specifying the environment means choosing what major deep-learning software
