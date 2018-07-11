@@ -114,7 +114,7 @@ Serving is currently a beta feature. In the near future we will be able to charg
 
 ### What is the maximum uptime for serving?
 
-Any serving jobs has a maximum uptime of 7 days. The 7 day timeout is common across all jobs you run on FloydHub, whether it be Jupyter notebooks, command jobs, or serve jobs.
+Any serving job has a maximum uptime of 7 days. The 7 day timeout is common across all jobs you run on FloydHub, whether it be Jupyter notebooks, command jobs, or serve jobs.
 
 ### Is there any API rate limit?
 
