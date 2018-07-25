@@ -9,12 +9,14 @@ If no `--env` is provided, it uses the `tensorflow-1.5` image by default, which 
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|
+| Tensorflow 1.9 | tensorflow-1.9  | Tensorflow 1.9.0 + Keras 2.2.0 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
+|                | tensorflow-1.9:py2  | Tensorflow 1.9.0 + Keras 2.2.0 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.8 | tensorflow-1.8  | Tensorflow 1.8.0 + Keras 2.1.6 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                | tensorflow-1.8:py2  | Tensorflow 1.8.0 + Keras 2.1.6 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-| Tensorflow 1.7 | tensorflow-1.7  | Tensorflow 1.7.0 + Keras 2.1.5 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-|                | tensorflow-1.7:py2  | Tensorflow 1.7.0 + Keras 2.1.5 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-| Tensorflow 1.5 | tensorflow-1.5  | Tensorflow 1.5.0 + Keras 2.1.3 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-|                | tensorflow-1.5:py2  | Tensorflow 1.5.0 + Keras 2.1.3 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
+| Tensorflow 1.7 | tensorflow-1.7  | Tensorflow 1.7.0 + Keras 2.1.6 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
+|                | tensorflow-1.7:py2  | Tensorflow 1.7.0 + Keras 2.1.6 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
+| Tensorflow 1.5 | tensorflow-1.5  | Tensorflow 1.5.0 + Keras 2.1.6 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
+|                | tensorflow-1.5:py2  | Tensorflow 1.5.0 + Keras 2.1.6 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.4 | tensorflow-1.4  | Tensorflow 1.4.0 + Keras 2.0.8 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                | tensorflow-1.4:py2  | Tensorflow 1.4.0 + Keras 2.0.8 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.3 | tensorflow-1.3  | Tensorflow 1.3.0 + Keras 2.0.6 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
