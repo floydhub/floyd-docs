@@ -104,6 +104,7 @@ Here a list of Frequetly Asked Questions about FloydHub serving.
 
 ### Where can I find others serving examples?
 
+- [Colornet Example](https://github.com/floydhub/colornet-template)
 - [Style Transfer Example](../examples/style_transfer.md#model-api)
 - [Deep Text Correctot Example](../examples/deep_corrector#serve-model-through-rest-api)
 - [Deep Convolutional Generative Adversarial Networks Example](../examples/dcgan#serve-the-model-with-a-rest-api)
