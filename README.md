@@ -1,3 +1,5 @@
+[Website](https://www.floydhub.com) • [Docs](https://docs.floydhub.com) • [Forum](https://forum.floydhub.com) • [Twitter](https://twitter.com/floydhub_) • [We're Hiring](https://angel.co/floydhub)
+
 # FloydHub Documentation
 This code generates FloydHub's documentation: [http://docs.floydhub.com/](http://docs.floydhub.com/).
 
