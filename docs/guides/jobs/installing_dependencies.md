@@ -29,7 +29,7 @@ When this file is present in the project's root directory, any job that is run i
 
 ## Installing Non-Python Dependencies
 
-You might want to install non-Python packages or other packages that have custom installation steps. If you are using a Jupyter Notebook, you can follow [these steps](#installing-dependencies-inside-jupyter-notebook) to install arbitrary packages interactively.
+You might want to install non-Python packages or other packages that have custom installation steps. If you are using a Jupyter Notebook with FloydHub Workspaces, you can follow [these steps](#installing-dependencies-inside-jupyter-notebook) to install arbitrary packages interactively.
 
 If you are running a script using the `floyd run "<command>"` command, you can do one of the following:
 
