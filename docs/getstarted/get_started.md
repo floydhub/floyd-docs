@@ -350,5 +350,3 @@ your browser.
 Example: `www.floydhub.com/mckay/quick-start`
 
 ![Project view](../img/project_view.jpg)
-
-{!contributing.md!}

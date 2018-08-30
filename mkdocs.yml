@@ -10,9 +10,7 @@ pages:
     - Get Started:
         - 'Core Concepts': getstarted/core_concepts.md
         - 'Quick Start': getstarted/quick_start.md
-        - 'Quick Start - Jupyter Notebook': getstarted/quick_start_jupyter.md
-        - 'Getting Started Tutorial': getstarted/get_started.md
-        - 'Getting Started Tutorial - Jupyter Notebook': getstarted/get_started_jupyter.md
+        - 'Tutorial': getstarted/get_started.md
     - Projects:
         - 'Create a New Project': guides/basics/create_new.md
         - 'Delete a Project': guides/basics/delete.md
@@ -75,8 +73,6 @@ pages:
         - 'Style Transfer': examples/style_transfer.md
         - 'Deep Text Corrector': examples/deep_corrector.md
         - 'Deep Convolutional Generative Adversarial Networks': examples/dcgan.md
-    - Videos:
-        - 'Lightning Videos': videos/videos.md
     - Troubleshooting & FAQs:
         - 'Installation': faqs/installation.md
         - 'Signup and Login': faqs/authentication.md
@@ -103,6 +99,8 @@ pages:
     - "": home/install.md
     - "": home/getting_started.md
     - "": faqs/plans_legacy.md
+    - "": getstarted/quick_start_jupyter.md
+    - "": getstarted/get_started_jupyter.md
 theme: material
 extra:
   # Use this to make a section open by default in the sidebar. These names have
