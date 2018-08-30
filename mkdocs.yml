@@ -27,7 +27,6 @@ pages:
         - 'Serving Trained Model': guides/serving.md
         - 'Delete a Job': guides/delete_job.md
         - 'Ignore Files': guides/floyd_ignore.md
-        - 'SSH into a Job': guides/ssh.md
         - 'Slack Notifications': guides/notifications.md
         - 'Troubleshooting & FAQs': faqs/job.md
     - Data:
@@ -40,7 +39,6 @@ pages:
         - 'Install Extra Dependencies': guides/jobs/installing_dependencies.md
         - 'Using CPU vs GPU': guides/basics/using_gpu.md
         - 'Troubleshooting & FAQs': faqs/environments.md
-        - 'SSH into a Job': guides/ssh.md
     - Output:
         - 'Save Output': guides/data/storing_output.md
         - 'Delete Output': guides/delete_output.md
@@ -99,8 +97,10 @@ pages:
     - "": home/install.md
     - "": home/getting_started.md
     - "": faqs/plans_legacy.md
+    # Replaced these with the Workspace page
     - "": getstarted/quick_start_jupyter.md
     - "": getstarted/get_started_jupyter.md
+    - "": guides/ssh.md
 theme: material
 extra:
   # Use this to make a section open by default in the sidebar. These names have

@@ -9,7 +9,7 @@ Metrics are grouped into two categories:
 
 ## System Metrics
 
-System metrics provide insight into the system stats of your FloydHub training machine. These metrics will be automatically collected for all types of jobs - Command Mode, Jupyter Mode, and Serving Mode.
+System metrics provide insight into the system stats of your FloydHub training machine. These metrics will be automatically collected for all types of jobs - Command Mode and Serving Mode.
 
 ![Delete job](../../img/system.png)
 
@@ -54,4 +54,4 @@ print('{{"metric": "loss", "value": {}}}'.format(loss))
 
 You can send any metric you want as a Training Metric, however the only values we accept currently are `float` or `integer` values. If you are interested in sending other values as custom training metrics, please let us know by sending an email to support@floydhub.com
 
-Training metrics are currently only available for `Command Mode` jobs - not Jupyter Notebook jobs or Serving jobs.
+Training metrics are currently only available for `Command Mode` jobs - not Serving jobs.

@@ -1,32 +1,8 @@
 !!! important "Quick Look"
 
-    ## Jupyter Notebook Jobs in Web Dashboard:
-
-    ![restart job image](../../img/restart_jupyter.jpg)
-
-    ## Using Floyd CLI:
-
     ```
     $ floyd restart mckay/projects/mnist/1 --gpu "python train.py"
     ```
-
-## Jupyter Notebook Job in Web Dashboard:
-
-Jupyter Notebook jobs can be restarted through the web dashboard. Navigate to
-the job's detail page, and click the `Restart` button in the top right corner
-as shown in the screenshot below:
-
-![restart job image](../../img/restart_jupyter.jpg)
-
-This will start your Jupyter Notebook where you last left it. If you'd like to
-restart your job back where it *started*, just restart the previous job. See the
-restart workflow in action:
-
-![restart job image](../../img/restart_jupyter.gif)
-
-Jupyter Notebook jobs can also be restarted using Floyd CLI, as detailed below.
-
-## Using Floyd CLI:
 
 All jobs can be restarted/re-run using Floyd CLI's `floyd restart` command. This
 command takes a `<job_name>`, and allows the same `[OPTIONS]` and `[COMMAND]`

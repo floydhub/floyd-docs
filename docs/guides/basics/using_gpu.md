@@ -48,6 +48,6 @@ Mon Jul 31 22:45:14 2017
 +-----------------------------------------------------------------------------+
 ```
 
-If you are using a Jupyter Notebook, you can also just execute the `!nvidia-smi` command inside it. (*Make note* of the `!` character at the beginning of the command)
+If you are using a Workspace, you can also just execute the `!nvidia-smi` command inside of a Jupyter Notebook. (*Make note* of the `!` character at the beginning of the command)
 
 ![nvidia-smi Jupyter Notebook](../../img/nvidia-smi-jupyter.jpg)
