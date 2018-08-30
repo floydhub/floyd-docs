@@ -3,6 +3,9 @@ Saving information generated during a job is easy.
 
 Every artefacts(file, folder, dataset etc...) your code will save in the current working directory (`/floyd/home`), it will be returned in the **Files** tab of your Job page or from the Workspace's **File Viewer** when the workspace is not in *Running* state.
 
+!!! tip "Current Working Directory"
+    Current Working Directory (`/floyd/home/`) is the only persistent folder for CLI Jobs and Workspace. It is set as the default working directory your Job and Workspace.
+
 Anything saved in this directory at the time a job or a Workspace finishes will be preserved
 and can be accessed and reused later.
 

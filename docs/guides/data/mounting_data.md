@@ -102,36 +102,43 @@ The Jupyter Notebook will have access to the VGGNet pre-trained models under
 ![Mounted Data](../../img/mounted_data.jpg)
 
 ### Mounting the output of another job
+
 You can link jobs by mounting the output of one job as the input of a new job.
 This allows you to iterate on the ouput of a past job.
 
-You can refer to the output of a job by its name with `/output` appended to it.
-For example: `mckay/projects/quick-start/1/output` refers to
-the output of the job `mckay/projects/quick-start/1`
+You can refer to the output of a job by its name.
+For example: `alice/projects/quick-start/1` refers to
+the output of the job `alice/projects/quick-start/1`
 
 Use the `--data` flag in the `floyd run` command, mount past output to a job,
 just as you would to mount a dataset. For example:
 
 ```
 $ floyd run \
-  --data mckay/projects/quick-start/1/output:/model
+  --data alice/projects/quick-start/1:/model
   'python eval.py'
 ```
 
-This will make the output of `mckay/projects/quick-start/1`
+This will make the output of `alice/projects/quick-start/1`
 available at `/model` for the new job to use.
 
 Note: You need to have access to a job to be able to mount its output.
 
 ### Mounting multiple datasources
+
 You can attach up to five datasources (datasets and/or job outputs) to a job
 using the `--data` flag in the `floyd run` command. Ensure that each mount
 point is unique.
+
+!!! tip "Mounting multiple datasources"
+    You will be able to mount up to 5 different datasets or dataset versions.
+
 
 ```
 $ floyd run \
   --data udacity/datasets/mnist/1:digits \
   --data udacity/datasets/celeba/1:celeb \
+  --data udacity/datasets/celeba/2:celeb \
   "python script.py"
 ```
 
@@ -141,9 +148,9 @@ respectively.
 ### Viewing mounted datasets in the web dashboard
 
 You can view the mounted datasets and their respective mount points for a
-specific job by going to the Data tab:
+specific job by going to the **Data** tab:
 
-![Data Mounts](../../img/job_data_view.jpg)
+![Data Mounts](../../img/mounting_data/view_data.png)
 
 ### Symlinking your mounted data
 
@@ -186,6 +193,6 @@ If, however, you do not specify a mount point, the default values are:
 - Multiple data mounts: If you mount multiple datasource without specifying
   mount points, they will each be mounted under their respective GUIDs (e.g.
   `/xKduBzTr4LAsc6eVPZVPVd`). GUIDs are 32-character random strings that
-  difficult to track down, so we highly discourage this pattern.
+  difficult to track down, so **we highly discourage this pattern**.
 
 {!contributing.md!}
