@@ -82,16 +82,9 @@ command, Tensorflow will allocate the entire GPU memory to the current session a
 
 ### Can I view my Jupyter Notebook after my job has stopped?
 
-Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodically in the `/output` dir. So, your work is not lost after your job has ended, shutdown or timed out.
+Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodically in the current working directory (`/floyd/home`). So, your work is not lost after your job has ended, shutdown or timed out.
 
-You can view your saved Notebook using the [floyd output](../commands/output/) command. Example:
-
-```bash
-$ floyd output redeipirati/projects/pytorch-fast-neural-style/3/output
-```
-
-Or in the `Output` tab of your job on the web dashboard, example: `www.floydhub.com/redeipirati/projects/pytorch-fast-neural-style/3/output`
-
+You can check the output from the `Files` tab of your job on the web dashboard.
 
 ### Can I restart a stopped or timed out job?
 
@@ -104,7 +97,7 @@ In the meanwhile, you can follow these steps to do this manually:
 ```bash
 # Download the saved Notebook from previous job
 # NOTE: This will overwrite the contents of your current dir
-$ floyd data clone redeipirati/projects/pytorch-fast-neural-style/3/output
+$ floyd data clone redeipirati/projects/pytorch-fast-neural-style/3
 
 # Start a new job
 $ floyd run --mode jupyter
