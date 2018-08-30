@@ -118,23 +118,13 @@ mckay/datasets/mnist/1       3 minutes ago  valid     82.96 MB
 
 Often times, it might not be practical to upload datasets to FloydHub from your local machine. For example, your upload speeds might be too slow, or you just don't want to download a large dataset from the internet just to upload it again.
 
-If your data is already available on the internet, then you can create a dataset directly on FloydHub.
+If your data is already available on the internet, then you can create a dataset directly on FloydHub using Workspaces.
 
-### Step 1: Run a terminal on FloydHub servers using Jupyter mode
+### Step 1: Open a terminal from a running Workspace on Floydhub and download your data:
 
-You can create a terminal session on FloydHub. Here are the quick steps:
+You can [create a terminal](./workspace/#using-terminal) session on FloydHub within any of your running Workspaces.
 
-- Run a Jupyter Notebook job using a CPU instance
-
-```
-$ floyd run --mode jupyter
-```
-
-- Once your Jupyter server starts, create a Terminal
-
-![Jupyter Notebook Terminal Button](../img/jupyter_terminal_button.jpg)
-
-- Once you're in the terminal, you'll automatically be in the `/output` directory, but you can always confirm with the `pwd` command. From here, you can download your data to your FloydHub instance.
+Once you're in the terminal, you can download your data to your FloydHub instance.
 
 Here is an example that downloads a CSV with details about members of the United States Congress
 
@@ -146,7 +136,7 @@ $ wget https://theunitedstates.io/congress-legislators/legislators-current.csv
 
 - Post process your data (if necessary)
 
-For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this session and transform your data even further. Just make sure to clean up the `/output` directory so that only the files that you want in your dataset are present there.
+For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this Workspace and transform your data even further. 
 
 ```
 Untar the files to the current dir
@@ -156,25 +146,42 @@ $ tar xvzf train-images-idx3-ubyte.gz
 Remove the tar file
 
 $ rm -rf train-images-idx3-ubyte.gz
-
-Ensure that only the files you want are present in `/output`
-
-$ ls /output
-
 ```
 
-### Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output
+### Step 2: Create a new dataset on the FloydHub Dashboard
 
-Navigate to your current job's page on FloydHub and click the Cancel button to stop this active Jupyter session. Once the job has been shut down, you can click the `Create Dataset` button on the `Output` tab to open a modal that will help you turn this output into a FloydHub dataset.
+Navigate to the [new dataset](https://www.floydhub.com/datasets/create) page on Floydhub, and create your new dataset. 
 
-![Job Output Page](../img/output.png)
+To continue with our Congress members example, let's call our new dataset: `my-congress-members`
 
-The modal will ask if you'd like to copy this output to one of your existing datasets or create a new dataset entirely.
+### Step 3: Use the floyd-cli to add your data to this new Dataset
 
-![Create Dataset Modal](../img/modal.png)
+Now, back in the terminal session of your Workspace, you can use the `floyd-cli` to add your current directory's files to this new dataset.
 
-Click the `Create Dataset from Output` button once you're ready, and you'll be navigated to your newly created Dataset on FloydHub.
+```
+floyd data init my-congress-members
+floyd data upload
+```
 
+And you're done! If it works correctly, you should see something like this in the terminal of your Workspace:
 
+```
+root@floydhub:/floyd/home/congress# floyd data upload
+Compressing data...
+Making create request to server...
+Initializing upload...
+Uploading compressed data. Total upload size: 59.0KiB
+[================================] 60411/60411 - 00:00:00
+Removing compressed data...
+Upload finished.
+Waiting for server to unpack data.
+You can exit at any time and come back to check the status with:
+        floyd data upload -r
+Waiting for unpack....
 
+NAME
+----------------------------------------
+alice/datasets/my-congress-members/1
+```
 
+Feel free to navigate over to that Dataset in your FloydHub Dashboard to explore the dataset further.

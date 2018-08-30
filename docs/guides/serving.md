@@ -94,7 +94,7 @@ Now you can send any image file as request to this API and it will return the st
 curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydlabs.com/expose/mkxjJa46aJBdwP4AEdKxfU
 ```
 
-![Jupyter](../img/taipei_muse.jpg)
+![Muse](../img/taipei_muse.jpg)
 
 You will see the default style ([la_muse](https://github.com/floydhub/fast-style-transfer/blob/master/examples/style/la_muse.jpg)) is applied to the input image.
 
@@ -119,7 +119,7 @@ Serving is currently a beta feature. In the near future we will be able to charg
 
 ### What is the maximum uptime for serving?
 
-In preview mode the API has a maximum uptime of 7 days. The 7 day timeout is common across all jobs you run on FloydHub, whether it be Jupyter notebooks, command jobs or serve jobs. 
+In preview mode the API has a maximum uptime of 7 days. The 7 day timeout is common across all jobs you run on FloydHub, whether it be command jobs or serve jobs. 
 
 ### Is there any API rate limit?
 
