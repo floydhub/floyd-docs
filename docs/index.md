@@ -5,7 +5,7 @@ The fastest way to get up and running is to use our [quickstart guide](http://do
 
 ## Deep learning without the DevOps:
 
-### Frictionless data science
+### Build, train, and deploy AI models
 Why worry about provisioning GPUs, installing drivers, or managing software dependency hell? With FloydHub, we take care of your entire deep learning DevOps workflow - so you can focus on the science.
 
 Training a TensorFlow model using GPUs on the cloud is as simple as executing this command on your terminal: 
