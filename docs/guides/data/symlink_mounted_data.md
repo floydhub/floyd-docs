@@ -196,16 +196,3 @@ Now let's tie it all together with our `floyd run command`:
 $ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg "bash run.sh"
 ```
 
-#### 3. For Jupyter Notebooks
-Symlinking with Jupyter Notebooks follows the same principles that a regular
-job does. Here's an example:
-
-##### Example 1
-Your data is mounted under `/vgg` using `--data
-floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg`, but you want your data to be
-present at `/home/data/vgg/2017`. The notebook below accomplishes that with a
-symlink:
-
-![Symlink Jupyter](../../img/symlink_jupyter.jpg)
-{!contributing.md!}
-
