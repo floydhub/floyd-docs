@@ -10,7 +10,7 @@ floyd run [OPTIONS] [COMMAND]
 | --------------- | ------- | ----------- |
 | `--gpu/--cpu` |  cpu    | If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
 | `--data <ID:mount>` |    | `ID` of the data source to link to. `mount` specifies the path to mount it at. You can use this parameter multiple times. See [data](../guides/data/mounting_data) section for more details. |
-| `--mode [command|serve]` |  command  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [serve](#serve) section for more info. |
+| `--mode [job|serve]` |  job  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [serve](#serve) section for more info. |
 | `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
 | `--tensorboard` |   | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |

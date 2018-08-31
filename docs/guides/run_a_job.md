@@ -80,14 +80,14 @@ For more detailed information on mounting data to jobs, see
 
 FloydHub jobs can currently be run in one of two modes:
 
-1. `--mode command` (DEFAULT)
+1. `--mode job` (DEFAULT)
 2. `--mode serve`
 
 Here is a description of each mode:
 
-#### `--mode command`
+#### `--mode job`
 
-This is the default mode so there is no need to specify `--mode command` when
+This is the default mode so there is no need to specify `--mode job` when
 running `floyd run`. You can think of this mode as "regular mode". When you run your job in this mode, your code is sent up to a FloydHub deep-learning server and the [[COMMAND]](#command) portion of `floyd run` is executed.
 
 #### `--mode serve`

@@ -66,6 +66,15 @@ You can then [refer](../home/mounting_data#mounting-datasets) to use them in you
 You can use the floyd [output](../commands/output) command to view the output of your
 project. If you want to use this output in your next run view [this guide](../home/managing_output)
 
+## Workspaces
+
+### Do I have to pay for the entire time my Workspace is running?
+
+Unfortunately, yes. As much as we would like to, we are unable to charge you only for the *computation time*.
+
+This is an engineering challenge. When you start a Workspace instance and start executing commands, your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the entire duration of your Workspace, not just when you are executing commands.
+
+For example, when you execute `import tensorflow` command in a Jupyter Notebook on Workspaces, TensorFlow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Workspace is alive.
 
 ## Billing
 

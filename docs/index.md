@@ -13,7 +13,6 @@ Training a TensorFlow model using GPUs on the cloud is as simple as executing th
 floyd run --gpu --env tensorflow "python train.py"
 ```
 
-
 Try it now with our [quickstart guide](https://docs.floydhub.com/getstarted/quick_start).
 
 ### Powerful workflow tools
@@ -31,17 +30,6 @@ FloydHub's Team Plan is a collaborative tool for data science teams of all sizes
 - Team management with roles-based permissioning
 - Consolidated billing and usage tracking
 - High priority customer support
-
-
-### Deep learning community
-
-FloydHub hosts open source Projects and Datasets that you can discover, clone, and reproduce (or reconfigure with your own Dataset).
-
-Try it now with the [Neural Style Transfer](https://docs.floydhub.com/examples/style_transfer/).
-
-<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/starry_night_google.jpg" height="200px">
-<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/hoovertowernight.jpg" height="200px">
-<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/outputs/starry_stanford_bigger.png" width="710px">
 
 ## We're here to help!
 

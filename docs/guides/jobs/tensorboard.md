@@ -87,7 +87,7 @@ Tensorboard will become inaccessible when the job finishes in any of the `Succes
 
 ### Tensorboard with Workspaces
 
-Tensorboard can be run with Workspaces. Open the Tensorboard link the bottom navbar next to the System Metrics to view Tensorboard from your running Workspace.
+Tensorboard is always run inside Workspaces. Open the Tensorboard link in the bottom navbar next to the System Metrics to view Tensorboard from your running Workspace.
 
 ## Offline Training
 
