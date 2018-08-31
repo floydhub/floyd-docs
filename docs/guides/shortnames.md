@@ -12,7 +12,7 @@ $ floyd data status mckay/datasets/mnist/1
 
 Job Output:
 ```
-$ floyd status mckay/projects/quick-start/1/output
+$ floyd status mckay/projects/quick-start/1
 ```
 
 Floyd CLI allows you to use shortened names instead of full-length ones. When
@@ -24,9 +24,7 @@ you leave out parts of a name, the CLI does the following:
 3. When a job number or a dataset version number is missing, the most recent version is used.
 4. If you leave out the `/projects/` or `/datasets/` part of the name, it is
     inferred based on the command and other parts of the name. In most cases,
-    you shouldn't have to specify these parts of the name. However, if you want
-    to specify an output, you'll need to make sure your name has `/output` at the
-    end of it, output names are otherwise the same as job names.
+    you shouldn't have to specify these parts of the name.
 
 These assumptions allow you to avoid typing out a full name in almost any
 situation.
@@ -161,26 +159,22 @@ $ floyd run --data fooster/datasets/hello/2:model 'python train.py'
 
 ## Output Name Examples
 
-When referring to the output of a job, you'll need to be sure to tack `/output`
-onto the end of the shortened name so the CLI knows you're referring to the
-job's output, and not the job itself. In the examples below, We'll assume that
-our username is `fooster` and that we have a project named `my_project`
-initialized in the current directory. Here are a couple examples:
+In the examples below, We'll assume that our username is `fooster` and that we have a project named `my_project` initialized in the current directory. Here are a couple examples:
 
-Below, we want to mount the output of `fooster/projects/my_project/3/output` at `/model`:
+Below, we want to mount the output of `fooster/projects/my_project/3` at `/model`:
 
 ```
 $ floyd run --data 3/output:model 'python eval.py'
 ```
 ```
-$ floyd run --data fooster/projects/my_project/3/output:model 'python eval.py'
+$ floyd run --data fooster/projects/my_project/3:model 'python eval.py'
 ```
 
 Here we clone the output of job number 1 of our current project:
 
 ```
-$ floyd data clone 1/output
+$ floyd data clone 1/
 ```
 ```
-$ floyd data clone fooster/projects/my_project/1/output
+$ floyd data clone fooster/projects/my_project/1
 ```
