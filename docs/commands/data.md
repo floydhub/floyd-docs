@@ -148,7 +148,7 @@ This new data can now be referred to in the [run](./run.md) command.
 This command can take a [shortened job name](../guides/shortnames).
 ### Example
 ```bash
-$ floyd data add mckay/projects/mnist/1/output
+$ floyd data add mckay/projects/mnist/1
 DATA NAME                         CREATED    STATUS    DISK USAGE
 --------------------------------  ---------  --------  ------------
 mckay/datasets/mnist/1            just now   valid     10.0 KB

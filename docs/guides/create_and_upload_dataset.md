@@ -1,6 +1,6 @@
 ## Create a new Dataset
 
-A [Dataset]() is a collection of data. If you have used Github, datasets in
+A **Dataset** is a collection of data. If you have used Github, datasets in
 FloydHub are a lot like code repositories, except they are for storing and
 versioning data.
 
@@ -8,9 +8,11 @@ To create a new Dataset, visit
 [www.floydhub.com/datasets](https://www.floydhub.com/datasets) and click on the
 "New Dataset" button on the top right hand corner.
 
-![Create new dataset](../../img/create_new_dataset.jpg)
+![Create new dataset](../../img/create_dataset/create_dataset.png)
 
-Give the dataset a name and an apt description.
+Give the dataset a name and a description.
+
+The `Owner` field defines the user space under which this dataset belong. If you are inside a Team select the name of your Team to create the dataset under the Team space.
 
 The `Visibility` field indicates who can see your dataset. If you set it to
 `Public`, anyone can see your dataset and data versions. If you are working on
@@ -43,6 +45,16 @@ Compressing data...
 
     Depending on the size of your dataset and the speed of your internet
     connection, uploading a dataset can take a while.
+
+Let's make another example where Alice is a member of the `Wonderland` Team and want to upload the same dataset of above inside the Team space:
+
+```bash
+$ floyd data init wonderland/imagenet-2017
+Dataset "imagenet-2017" initialized in current directory
+...
+$ floyd data upload
+Compressing data...
+```
 
 ### Resuming an Upload
 
@@ -134,7 +146,7 @@ $ floyd run --mode jupyter
 
 ![Jupyter Notebook Terminal Button](../img/jupyter_terminal_button.jpg)
 
-- Once you're in the terminal, you'll automatically be in the `/output` directory, but you can always confirm with the `pwd` command. From here, you can download your data to your FloydHub instance.
+- Once you're in the terminal, you'll automatically be in the default working directory (`/floyd/home`), but you can always confirm with the `pwd` command. From here, you can download your data to your FloydHub instance.
 
 Here is an example that downloads a CSV with details about members of the United States Congress
 
@@ -146,7 +158,7 @@ $ wget https://theunitedstates.io/congress-legislators/legislators-current.csv
 
 - Post process your data (if necessary)
 
-For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this session and transform your data even further. Just make sure to clean up the `/output` directory so that only the files that you want in your dataset are present there.
+For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this session and transform your data even further. Just make sure to clean up the `/floyd/home` directory so that only the files that you want in your dataset are present there.
 
 ```
 Untar the files to the current dir
@@ -157,15 +169,15 @@ Remove the tar file
 
 $ rm -rf train-images-idx3-ubyte.gz
 
-Ensure that only the files you want are present in `/output`
+Ensure that only the files you want are present in `/floyd/home` path
 
-$ ls /output
+$ pwd
 
 ```
 
 ### Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output
 
-Navigate to your current job's page on FloydHub and click the Cancel button to stop this active Jupyter session. Once the job has been shut down, you can click the `Create Dataset` button on the `Output` tab to open a modal that will help you turn this output into a FloydHub dataset.
+Navigate to your current job's page on FloydHub and click the Cancel button to stop this active Jupyter session. Once the job has been shut down, you can click the `Create Dataset` button on the `Files` tab to open a modal that will help you turn this output into a FloydHub dataset.
 
 ![Job Output Page](../img/output.png)
 
