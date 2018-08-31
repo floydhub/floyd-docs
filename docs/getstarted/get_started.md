@@ -197,8 +197,8 @@ name (e.g. `floyd status alice/quick-start/1`) to get its status, or the
 
 ```bash
 $ floyd status
-JOB NAME             CREATED        STATUS    DURATION(s)  INSTANCE    DESCRIPTION
--------------------  ---------      --------  -----------  ---------   -----------
+JOB NAME             CREATED        STATUS    DURATION(s)  INSTANCE    DESCRIPTION   METRICS
+-------------------  ---------      --------  -----------  ---------   -----------   --------
 alice/quick-start:1  just now       running            15  gpu
 ```
 
