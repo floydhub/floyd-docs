@@ -12,8 +12,8 @@ floyd output [OPTIONS] ID
 | NAME or ID |      | Name or ID of your job. |
 
 ### Description
-Most jobs generate output. Any output that needs to be retained after the job is finished should be send to `/output` path.
-This is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the
+Most jobs generate output. Any output that needs to be retained after the job is finished should be saved inside working directory (`/floyd/home`).
+This is the only path Floyd will preserve across Jobs and Workspaces. The output command gives the url to access this output. This command by default opens the
 output url in your default browser.
 
 This command can take a [shortened job name](../guides/shortnames).
