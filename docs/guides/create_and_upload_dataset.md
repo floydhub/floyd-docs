@@ -93,9 +93,9 @@ the first time:
 Your dataset will be versioned for you, so you can still reference the old one
 if you'd like. Datasets will be named with sequential numbers, like this:
 
-- mckay/datasets/foo/1
-- mckay/datasets/foo/2
-- mckay/datasets/foo/3
+- alice/datasets/foo/1
+- alice/datasets/foo/2
+- alice/datasets/foo/3
 - ...
 
 When using a dataset in a job, be sure to reference to the dataset version that
@@ -113,10 +113,10 @@ You can check the status of your upload using `floyd data status` with the name
 of your dataset, as shown below:
 
 ```
-$ floyd data status mckay/datasets/mnist/1
+$ floyd data status alice/datasets/mnist/1
 DATA NAME                    CREATED        STATUS    DISK USAGE
 ---------------------------  -------------  --------  ------------
-mckay/datasets/mnist/1       3 minutes ago  valid     82.96 MB
+alice/datasets/mnist/1       3 minutes ago  valid     82.96 MB
 ```
 
 `valid` is the state you're looking for. That means that your dataset has finished being unpacked and is ready to use.
