@@ -78,43 +78,17 @@ For more detailed information on mounting data to jobs, see
 
 ### Mode
 
-FloydHub jobs can currently be run in one of three modes:
+FloydHub jobs can currently be run in one of two modes:
 
 1. `--mode job` (DEFAULT)
-2. `--mode jupyter`
-3. `--mode serve`
+2. `--mode serve`
 
 Here is a description of each mode:
 
 #### `--mode job`
 
 This is the default mode so there is no need to specify `--mode job` when
-running `floyd run`. You can think of this mode as "regular mode" or "command
-mode". When you run your job in this mode, your code is sent up to a FloydHub
-deep-learning server and the [[COMMAND]](#command) portion of `floyd run`
-is executed.
-
-#### `--mode jupyter`
-
-This is Jupyter Notebook mode. When you specify `--mode jupyter`, your code is
-uploaded to a FloydHub deep-learning server, and a Jupyter Notebook session is
-started in the directory containing your code.
-
-FloyHub serves this Jupyter Notebook session for you. Your Jupyter Notebook
-session will be automatically opened in a web browser when it becomes
-available. If you don't want your browser to automatcially open, pass the `--no-open` flag to `floyd run`.
-
-!!! important "Use This Mode When:"
-    1. You want to work with a **Jupyter Notebook**.
-    2. You want to open an **interactive shell** on the FloydHub server where your code
-       is running. For details on how to do that, see [this article](../guides/ssh)
-
-
-!!! warning
-    If you're working with Jupyter Notebooks, then we suggest using a Workspace
-    instead of a Jupyter mode job. A workspace provides an better experience for
-    interactively developing your models on FloydHub. To learn more about Workspaces,
-    you can see [this article](../guides/workspace)
+running `floyd run`. You can think of this mode as "regular mode". When you run your job in this mode, your code is sent up to a FloydHub deep-learning server and the [[COMMAND]](#command) portion of `floyd run` is executed.
 
 #### `--mode serve`
 
@@ -203,8 +177,7 @@ The `--max-runtime` flag lets you set a maximum runtime duration for your job. I
 exceeds its maximum runtime, FloydHub will stop the job and save any output that was 
 generated until that point.
 
-This feature is very useful if you want to set an upper bound to the duration of a job. This 
-will also act as a safety in case you forget to turn off your jupyter notebook job.
+This feature is very useful if you want to set an upper bound to the duration of a job.
 
 Currently there is no option to change this duration once it set at the start of the job.
 
@@ -261,16 +234,8 @@ But you can feel free to get creative!
 
 !!! note
 
-    Jupyter Note book mode (`--mode jupyter`) and serve mode (`--mode serve`)
-    do not take a `[COMMAND]`. You'll kick off your job without passing a
-    `[COMMAND],` with something like the following:
-
-    ```
-    $ floyd run --env pytorch-0.2 --mode jupyter
-    ```
+    Serve mode (`--mode serve`) does not take a `[COMMAND]`. You'll kick off your job without passing a `[COMMAND],` with something like the following:
 
     ```
     $ floyd run --env pytorch-0.2 --mode serve --data mckay/datasets/mnist/1:mount
     ```
-
-{!contributing.md!}

@@ -38,12 +38,6 @@ concurrency limits. Please stop you running job(s) or wait for them to finish, a
 
 We have to enforce this concurrency constraint because we have a finite number of GPU machines and have to ensure that no single user is starving the group. In the near future, we will support queueing of jobs so that you can queue multiple jobs to be run as slots become available.
 
-### I ran my project in Jupyter mode but the url does not seem to work.
-
-Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway"
-or similar error when you access the URL. You can check the status of the Jupyter notebook
-by running the [logs](../commands/logs) command.
-
 
 ### Am I using the GPU instance by default?
 
@@ -68,50 +62,6 @@ You can use the floyd [output](../commands/output) command to view the output of
 project. If you want to use this output in your next run view [this guide](../guides/data/mounting_data#mounting-the-output-of-another-job).
 
 
-### Do I have to pay for the entire time my Jupyter Notebook is running?
-
-Unfortunately, yes. As much as we would like to, we are unable to charge you only for the *computation time*.
-
-This is an engineering challenge. When you start a Jupyter Notebook instance and start executing commands,
-your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the
-entire duration of your notebook, not just when you are executing commands.
-
-For example, when you execute `import tensorflow`
-command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
-
-
-### Can I view my Jupyter Notebook after my job has stopped?
-
-Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodically in the `/output` dir. So, your work is not lost after your job has ended, shutdown or timed out.
-
-You can view your saved Notebook using the [floyd output](../commands/output/) command. Example:
-
-```bash
-$ floyd output redeipirati/projects/pytorch-fast-neural-style/3/output
-```
-
-Or in the `Output` tab of your job on the web dashboard, example: `www.floydhub.com/redeipirati/projects/pytorch-fast-neural-style/3/output`
-
-
-### Can I restart a stopped or timed out job?
-
-Unfortunately, not directly. We will be implementing a single command to do this soon!
-
-In the meanwhile, you can follow these steps to do this manually:
-
-- **Jupyter Notebook**: Your Notebook is [saved periodically](#can-i-view-my-jupyter-notebook-after-my-job-has-stopped). To restart your Notebook after your job has stopped, please download the output of your stopped job to your machine and start another job. Example:
-
-```bash
-# Download the saved Notebook from previous job
-# NOTE: This will overwrite the contents of your current dir
-$ floyd data clone redeipirati/projects/pytorch-fast-neural-style/3/output
-
-# Start a new job
-$ floyd run --mode jupyter
-```
-
-- **Script**: If you are running a script/command, you will have to start a new job using the `floyd run "<command>"` command.
-
 ### Why is my job in the "Queued" state for several minutes?
 
 This means that a machine is being prepared to run your job.
@@ -123,20 +73,8 @@ Most times, we have several CPU and GPU machines that are ready and your job can
 - Provision a CPU or GPU instance on the cloud
 - Set up a deep learning environment with GPU drivers and the correct environment (as specified by `--env`) installed using Docker
 - Mount any data you specify using the `--data` flag
-- Spin up a Jupyter server, if `--mode jupyter` flag
 
 Each of these steps can take up to a couple of minutes. Usually Steps 1 and 2 are already done, but during peak usage hours, we might have to do this on-demand.
-
-
-### Why do I see "Setting up your instance..." for several minutes when running a Jupyter Notebook?
-
-The *Setting up your instance...* message is displayed when a machine is being prepared to run your Jupyter Notebook.
-
-![1HourTimeout](../img/SettingUpInstance.jpg)
-
-When you execute a `floyd run --mode jupyter` command, the CLI waits for a CPU or GPU machine to be ready before it opens up an interactive Jupyter Notebook for your work on. Usually, this takes a few seconds, but during high traffic periods it can take up to 10 minutes in some cases.
-
-For more details on why it takes time, please see [Why is my job in the "Queued" state for several minutes?](#why-is-my-job-in-the-queued-state-for-several-minutes)
 
 
 ### Why are my logs not displayed in real-time?
@@ -183,12 +121,3 @@ This happens when your machine runs out of memory (OOM). i.e. your job consumes 
 All jobs run on FloydHub are executed inside a Docker container. Our current CPU machines have [7GB memory](https://www.floydhub.com/pricing). When memory used by your job exceeds 7GB, Docker automatically kills the job to protect the system and avoid abuse.
 
 The resolution is to optimize your code to consume less memory. For example, read less data into your in-memory datastructures or reduce your batch size. We will be introducing more powerful CPUs, which higher memory in the near future.
-
-
-### Why did I get a "Long running FloydHub Jupyter job detected" email?
-
-FloydHub monitors Jupyter notebook instances that are no longer actively used and notifies the owner. This is a reminder in case the user forgot to turn off the instance after use and should help save resources.
-
-Note: If you create [Terminals within Jupyter notebooks](../guides/ssh/), this feature will not work. This is because FloydHub cannot reliably detect if the instance is being used or not.
-
-{!contributing.md!}

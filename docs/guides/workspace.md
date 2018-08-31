@@ -15,8 +15,6 @@ To create a new workspace click the *Create Workspace* button in your project pa
 
 ![create workspace](../img/workspace/create_workspace.png)
 
-*Currently, you can create only one workspace in a project. You can delete the existing workspace to create a new one.*
-
 ### Stopping a workspace
 
 You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the *Shutdown* button. All your files and directories in the current directory (`/floyd/input`) will be saved and persisted.

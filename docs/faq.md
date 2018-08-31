@@ -44,14 +44,6 @@ Alternatively, instead of uploading files from your local machine, you can also
 [download files](./guides/create_and_upload_dataset/#download-large-datasets-directly-to-floydhub-from-the-internet) from a remote URL
 directly into Floyd servers.
 
-
-### I ran my project in Jupyter mode but the url does not seem to work.
-
-Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway"
-or similar error when you access the URL. You can check the status of the Jupyter notebook
-by running the [logs](../commands/logs) command.
-
-
 ### Am I using the GPU instance by default?
 
 Jobs are run on CPU instances by default. You can specify `--gpu` to run them on GPU instances.
@@ -74,18 +66,15 @@ You can then [refer](../home/mounting_data#mounting-datasets) to use them in you
 You can use the floyd [output](../commands/output) command to view the output of your
 project. If you want to use this output in your next run view [this guide](../home/managing_output)
 
+## Workspaces
 
-### Do I have to pay for the entire time my Jupyter Notebook is running?
+### Do I have to pay for the entire time my Workspace is running?
 
 Unfortunately, yes. As much as we would like to, we are unable to charge you only for the *computation time*.
 
-This is an engineering challenge. When you start a Jupyter Notebook instance and start executing commands,
-your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the
-entire duration of your notebook, not just when you are executing commands.
+This is an engineering challenge. When you start a Workspace instance and start executing commands, your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the entire duration of your Workspace, not just when you are executing commands.
 
-For example, when you execute `import tensorflow`
-command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.
-
+For example, when you execute `import tensorflow` command in a Jupyter Notebook on Workspaces, TensorFlow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Workspace is alive.
 
 ## Billing
 

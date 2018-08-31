@@ -25,9 +25,7 @@ page](https://www.floydhub.com/pricing).
 
 All new users get a free 2 hour [GPU Powerup](#powerups) for a 14 day trial period.
 
-Once you've signed up, take FloydHub for a spin with our [Quick Start
-Guide](../getstarted/quick_start.md) or [Jupyter Notebook
-Guide](../getstarted/quick_start_jupyter.md)!
+Once you've signed up, take FloydHub for a spin with our [Quick Start Guide](../getstarted/quick_start.md)
 
 ### How can I run GPU jobs?
 
