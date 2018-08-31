@@ -4,7 +4,7 @@ Saving information generated during a job is easy.
 Every artefacts(file, folder, dataset etc...) your code will save in the current working directory (`/floyd/home`), it will be returned in the **Files** tab of your Job page or from the Workspace's **File Viewer** when the workspace is not in *Running* state.
 
 !!! tip "Current Working Directory"
-    Current Working Directory (`/floyd/home/`) is the only persistent folder for CLI Jobs and Workspace. It is set as the default working directory your Job and Workspace.
+    Current Working Directory (`/floyd/home/`) is the only persistent folder for CLI Jobs and Workspace. It is set as the default working directory for Job and Workspace.
 
 Anything saved in this directory at the time a job or a Workspace finishes will be preserved
 and can be accessed and reused later.
@@ -81,7 +81,7 @@ useful and realistic.
 #### Example 3
 Here is a sample Tensorflow example that saves a model checkpoint. Because we
 write (save) the data to the `models` directory (a folder inside the current working directory), we'll be able to use it later. A future job can use this model checkpoint as a starting point.
-Consider this partial code, and note the call to `saver.save(sess,'/models/model.ckpt')`:
+Consider this partial code, and note the call to `saver.save(sess,'models/model.ckpt')`:
 
 ```python
 import tensorflow as tf
@@ -92,7 +92,7 @@ saver = tf.train.Saver()
 with tf.Session() as sess:
     sess.run(init)
     ...
-    save_path = saver.save(sess, '/models/model.ckpt')
+    save_path = saver.save(sess, 'models/model.ckpt')
     print("Model saved in file: %s" % save_path)
     ...
 ```
