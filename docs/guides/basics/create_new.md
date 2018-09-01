@@ -8,7 +8,7 @@ To create a new Project, visit [www.floydhub.com/projects](https://www.floydhub.
 
 Give the project a name and a description.
 
-The `Owner` field defines the user space under which this project belong. If you are inside a Team select the name of your Team to create the project under the Team space.
+The `Owner` field defines the user namespace to which this project belongs. If you are part of a Team select the name of your Team.
 
 The `Visibility` field indicates who can see your project. If you set it to `Public`, anyone can see your project, your code and data. If you are working on an open source project, this is a great way to share and contribute to the FloydHub community. If your code or data is proprietary, please select `Private`. This will ensure that only you and your team will have access to this project.
 
@@ -22,7 +22,7 @@ $ floyd run --gpu --env tensorflow-1.9 'python train.py'
 Syncing code ...
 ```
 
-Let's make another example where Alice is a member of the `Wonderland` Team and want to run the same CLI Job of above inside the Team space:
+Here is another example where Alice is a member of the `wonderland` team and wants to run the same CLI Job but in her team namespace:
 
 ```bash
 $ floyd init wonderland/quick-start

@@ -1,15 +1,15 @@
 #### Overview
 Saving information generated during a job is easy.
 
-Every artefacts(file, folder, dataset etc...) your code will save in the current working directory (`/floyd/home`), it will be returned in the **Files** tab of your Job page or from the Workspace's **File Viewer** when the workspace is not in *Running* state.
+All the files saved in the working directory (`/floyd/home`) will be preserved after the job or workspace finishes. In case of jobs, you will see this under the **Files** tab. For workspaces, you can open the workspace page to view the files.
 
 !!! tip "Current Working Directory"
-    Current Working Directory (`/floyd/home/`) is the only persistent folder for CLI Jobs and Workspace. It is set as the default working directory for Job and Workspace.
+    Current Working Directory (`/floyd/home/`) is the only persistent directory for CLI Jobs and Workspace. It is set as the default working directory for Job and Workspace.
 
 Anything saved in this directory at the time a job or a Workspace finishes will be preserved
 and can be accessed and reused later.
 
-The most common thing users save is model checkpoints, but anything that ends up in the current working directory and its subfolders at the end of a job or a workspace session will be saved (use your imagination!).
+The most common thing users save is model checkpoints, but anything that ends up in the working directory and its subdirectories at the end of a job or a workspace session will be saved (use your imagination!).
 
 Let's work through a couple of examples to see how to save data during a job.
 
@@ -42,7 +42,13 @@ Here's the file in the **Files** tab:
 
 ![hello world output result](../../img/storing_output/hello_world_storing_output.png)
 
-If you want to try on Workspace, create and launch a new workspace, open the Terminal, run `echo "Hello, world!" > hello.txt` and stop the Workspace. Then you will be able to retrieve instanteniously the `hello.txt` file from the Workspace's **File Viewer** as showed in this picture:
+If you want to try this in a Workspace:
+
+- create and launch a new workspace
+- open the Terminal
+- run `echo "Hello, world!" > hello.txt`
+- stop the Workspace.
+Then you can view the `hello.txt` file from the workspace page:
 
 ![Workspace File Viewer](../../img/storing_output/workspace_file_viewer.png)
 
@@ -70,10 +76,10 @@ $ floyd run "python save_example.py"
 Creating project run. Total upload size: 267.0B
 Syncing code ...
 ```
-Success! We can now view the output as before from the **Files** tab and navigate inside the newly created subfolder, download it, or even use it again in
+Success! We can now view the output as before from the **Files** tab and navigate inside the newly created subdirectory, download it, or even use it again in
 future jobs.
 
-![save inside a subfolder](../../img/storing_output/save_in_subfolder.png)
+![save inside a subdirectory](../../img/storing_output/save_in_subfolder.png)
 
 Now that we've completed a couple trivial examples, let's do something more
 useful and realistic.

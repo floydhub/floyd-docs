@@ -12,7 +12,7 @@ To create a new Dataset, visit
 
 Give the dataset a name and a description.
 
-The `Owner` field defines the user space under which this dataset belong. If you are inside a Team select the name of your Team to create the dataset under the Team space.
+The `Owner` field defines the user namespace to which this dataset belongs. If you are part of a Team select the name of your Team.
 
 The `Visibility` field indicates who can see your dataset. If you set it to
 `Public`, anyone can see your dataset and data versions. If you are working on
@@ -46,7 +46,7 @@ Compressing data...
     Depending on the size of your dataset and the speed of your internet
     connection, uploading a dataset can take a while.
 
-Let's make another example where Alice is a member of the `Wonderland` Team and want to upload the same dataset of above inside the Team space:
+Here is another example where Alice is a member of the `wonderland` team and wants to upload the same dataset but in her team namespace:
 
 ```bash
 $ floyd data init wonderland/imagenet-2017

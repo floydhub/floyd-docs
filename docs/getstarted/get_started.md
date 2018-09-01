@@ -248,9 +248,7 @@ will look something like
 We want to save the model we trained so we can use it later, maybe to iterate
 on it or to check its accuracy using an evaluation script.
 
-To save something during our job that we want to save for later, we just need
-to make sure it gets saved in the current working directory during our job. Anything in this folder
-at the end of a job will be saved for us and we can reuse it later.  Take a
+To save something during our job that we want to save for later, we just need to make sure it gets saved in the current working directory during our job. Anything in this directory at the end of a job will be saved for us and we can reuse it later. Take a
 look at [line
 108](https://github.com/floydhub/quick-start/blob/master/train.py#L108) of our
 `train.py` script. Here's the line:
