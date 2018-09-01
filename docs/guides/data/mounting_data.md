@@ -87,20 +87,6 @@ A couple of things to note:
     available at a nested directory, check out the [Symlinking mounted
     data](./symlink_mounted_data) guide.
 
-
-#### Example 2
-
-This example spins up a Jupyter Notebook and mounts the
-[VGG 19-layers](https://www.floydhub.com/floydhub/datasets/vgg-ilsvrc-19-layers/1)
-dataset under `/vgg`:
-```
-floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter
-```
-The Jupyter Notebook will have access to the VGGNet pre-trained models under
-`/vgg`.
-
-![Mounted Data](../../img/mounted_data.jpg)
-
 ### Mounting the output of another job
 
 You can link jobs by mounting the output of one job as the input of a new job.
@@ -192,7 +178,6 @@ If, however, you do not specify a mount point, the default values are:
 
 - Multiple data mounts: If you mount multiple datasource without specifying
   mount points, they will each be mounted under their respective GUIDs (e.g.
-  `/xKduBzTr4LAsc6eVPZVPVd`). GUIDs are 32-character random strings that
-  difficult to track down, so **we highly discourage this pattern**.
+  `/xKduBzTr4LAsc6eVPZVPVd`). GUIDs are 32-character random strings that difficult to track down, so **we highly discourage this pattern**.
 
 {!contributing.md!}

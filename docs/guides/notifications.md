@@ -3,7 +3,6 @@
 You can setup Slack notifications to receive alerts on your FloydHub jobs.  You will receive a notification when:
 
 * Job completes successfully
-* Idle Jupyter job is shutdown automatically
 * Job is manually shutdown
 * Job failed, i.e. error in code, timeout, or insufficient powerup credits
 

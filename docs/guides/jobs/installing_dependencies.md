@@ -29,7 +29,7 @@ When this file is present in the project's root directory, any job that is run i
 
 ## Installing Non-Python Dependencies
 
-You might want to install non-Python packages or other packages that have custom installation steps. If you are using a Jupyter Notebook, you can follow [these steps](#installing-dependencies-inside-jupyter-notebook) to install arbitrary packages interactively.
+You might want to install non-Python packages or other packages that have custom installation steps. If you are using a Jupyter Notebook with FloydHub Workspaces, you can follow [these steps](#installing-dependencies-inside-jupyter-notebook) to install arbitrary packages interactively.
 
 If you are running a script using the `floyd run "<command>"` command, you can do one of the following:
 
@@ -74,9 +74,9 @@ If you are running a script using the `floyd run "<command>"` command, you can d
     Your job will run in a Linux environment. You can use the APT package
     manager to install dependencies using `apt-get`.
 
-## Installing Dependencies Inside Jupyter Notebook
+## Installing Dependencies Inside Workspace
 
-You can install packages (Python or otherwise) interactively inside Jupyter Notebooks. To execute a non-Python command inside a Notebook, prepend it with `!`.
+You can install packages (Python or otherwise) interactively inside Workspaces. To execute a non-Python command inside a Jupyter Notebook on Workspaces, prepend it with `!`.
 
 For example, to install `textblob`, you can execute `!pip install textblob` inside your Notebook:
 
@@ -88,20 +88,16 @@ You can also use this method to install non-Python packages. For example, to ins
 
 ## Installing and Enabling Unofficial Jupyter Notebook Extensions
 
-All the [Unfofficial Jupyter Notebook Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions) are provided as python packages, therefore take a look at the above section about [how to install Python dependencies](./#installing-pythondependencies).
+All the [Unofficial Jupyter Notebook Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions) are provided as python packages, therefore take a look at the above section about [how to install Python dependencies](./#installing-pythondependencies).
 
 Here are the steps to enable the extensions (we will show you how to do it for the [RISE extension](https://github.com/damianavila/RISE)):
 
-1. [Open a Terminal](../ssh.md) and run the configuration steps:
+1. [Open a Terminal on a Workspace](../workspace/#using-terminal) and run the configuration steps:
     ```bash
-    root@task-instance-container:/output# jupyter-nbextension install rise --py --sys-prefix
-    root@task-instance-container:/output# jupyter-nbextension enable rise --py --sys-prefix
+    $ jupyter-nbextension install rise --py --sys-prefix
+    $ jupyter-nbextension enable rise --py --sys-prefix
     ```
 
 2. When you open a notebook, you will see the button extension:
 
     ![Rise ext enabled](../../img/rise-ext.png)
-
-
-
-{!contributing.md!}

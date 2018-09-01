@@ -13,8 +13,7 @@ dashboards that are present in the Tensorboard UI.
 ## Enabling Tensorboard in your job
 
 To enable Tensorboard in your job, you need to specify a `--tensorboard` flag
-when you run the job. Tensorboard can be enabled for both CLI jobs and when running
-Jupyter notebooks.
+when you run the job. Tensorboard can be enabled for both CLI jobs and when running Workspaces.
 
 ### Example
 
@@ -86,12 +85,9 @@ to stop it explicitly. It will be up until your job finishes and then stop autom
 Tensorboard will become inaccessible when the job finishes in any of the `Success`, `Failed`,
 `Timeout` or `Shutdown` states.
 
-### Tensorboard in Jupyter mode
+### Tensorboard with Workspaces
 
-Tensorboard can be run in Jupyter mode as well. You will notice that the links for both
-the Jupyter notebook and the Tensorboard appear in the Job page.
-
-![Tensorboard and Jupyter](../../img/tensorboard_jupyter.png)
+Tensorboard is always run inside Workspaces. Open the Tensorboard link in the bottom navbar next to the System Metrics to view Tensorboard from your running Workspace.
 
 ## Offline Training
 

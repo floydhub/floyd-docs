@@ -39,10 +39,7 @@ All users that sign up on FloydHub are automatically enrolled in the Free plan.
 Refer to our [pricing page](https://www.floydhub.com/pricing/#features) for
 details on the Free plan.
 
-
-Once you've signed up, take FloydHub for a spin with our [Quick Start
-Guide](../getstarted/quick_start.md) or [Jupyter Notebook
-Guide](../getstarted/quick_start_jupyter.md)!
+Once you've signed up, take FloydHub for a spin with our [Quick Start Guide](../getstarted/quick_start.md)
 
 ### Do the plans come with preemptible or dedicated instances?
 
