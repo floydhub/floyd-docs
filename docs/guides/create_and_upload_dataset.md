@@ -1,6 +1,6 @@
 ## Create a new Dataset
 
-A [Dataset]() is a collection of data. If you have used Github, datasets in
+A **Dataset** is a collection of data. If you have used Github, datasets in
 FloydHub are a lot like code repositories, except they are for storing and
 versioning data.
 
@@ -8,9 +8,11 @@ To create a new Dataset, visit
 [www.floydhub.com/datasets](https://www.floydhub.com/datasets) and click on the
 "New Dataset" button on the top right hand corner.
 
-![Create new dataset](../../img/create_new_dataset.jpg)
+![Create new dataset](../../img/create_dataset/create_dataset.png)
 
-Give the dataset a name and an apt description.
+Give the dataset a name and a description.
+
+The `Owner` field defines the user namespace to which this dataset belongs. If you are part of a Team select the name of your Team.
 
 The `Visibility` field indicates who can see your dataset. If you set it to
 `Public`, anyone can see your dataset and data versions. If you are working on
@@ -43,6 +45,16 @@ Compressing data...
 
     Depending on the size of your dataset and the speed of your internet
     connection, uploading a dataset can take a while.
+
+Here is another example where Alice is a member of the `wonderland` team and wants to upload the same dataset but in her team namespace:
+
+```bash
+$ floyd data init wonderland/imagenet-2017
+Dataset "imagenet-2017" initialized in current directory
+...
+$ floyd data upload
+Compressing data...
+```
 
 ### Resuming an Upload
 
@@ -81,9 +93,9 @@ the first time:
 Your dataset will be versioned for you, so you can still reference the old one
 if you'd like. Datasets will be named with sequential numbers, like this:
 
-- mckay/datasets/foo/1
-- mckay/datasets/foo/2
-- mckay/datasets/foo/3
+- alice/datasets/foo/1
+- alice/datasets/foo/2
+- alice/datasets/foo/3
 - ...
 
 When using a dataset in a job, be sure to reference to the dataset version that
@@ -101,10 +113,10 @@ You can check the status of your upload using `floyd data status` with the name
 of your dataset, as shown below:
 
 ```
-$ floyd data status mckay/datasets/mnist/1
+$ floyd data status alice/datasets/mnist/1
 DATA NAME                    CREATED        STATUS    DISK USAGE
 ---------------------------  -------------  --------  ------------
-mckay/datasets/mnist/1       3 minutes ago  valid     82.96 MB
+alice/datasets/mnist/1       3 minutes ago  valid     82.96 MB
 ```
 
 `valid` is the state you're looking for. That means that your dataset has finished being unpacked and is ready to use.
@@ -136,9 +148,9 @@ $ wget https://theunitedstates.io/congress-legislators/legislators-current.csv
 
 - Post process your data (if necessary)
 
-For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this Workspace and transform your data even further. 
+For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this Workspace and transform your data even further.
 
-```
+```bash
 Untar the files to the current dir
 
 $ tar xvzf train-images-idx3-ubyte.gz
@@ -150,7 +162,7 @@ $ rm -rf train-images-idx3-ubyte.gz
 
 ### Step 2: Create a new dataset on the FloydHub Dashboard
 
-Navigate to the [new dataset](https://www.floydhub.com/datasets/create) page on Floydhub, and create your new dataset. 
+Navigate to the [new dataset](https://www.floydhub.com/datasets/create) page on Floydhub, and create your new dataset.
 
 To continue with our Congress members example, let's call our new dataset: `my-congress-members`
 

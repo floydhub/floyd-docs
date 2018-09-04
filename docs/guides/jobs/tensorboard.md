@@ -26,22 +26,21 @@ cd tensorflow-examples/tensorboard
 
 # Initialize the current directory to an existing or new project
 floyd init mnist-tensorboard
-floyd run --tensorboard "python mnist_tensorboard.py --log_dir /output/mnist --max_steps 5000"
+floyd run --tensorflow-1.5 --tensorboard "python mnist_tensorboard.py --log_dir tb_mnist_logs --max_steps 5000"
 ```
 
 !!! important ""
-    Notice that the the `log_dir` parameter is set to a path in the `/output` directory.
-    On Floydhub, `/output` is a special directory that Tensorboard watches. Be sure to send
-    all data meant for Tensorboard to any directory under `/output` path.
+    Notice that the the `log_dir` parameter is set to the current working directory.
+    Be sure to send all data meant for Tensorboard to any directory under `/floyd/home` path.
 
-Now you can view the job on your Project dashboard.
+Click on the job that was just started.
 
-![Project Dashboard](../../img/tensorboard_dashboard.png)
+![Project Dashboard](../../img/tensorboard/tb_dashboard.png)
 
-Click on the job that was just started. You will notice that the job page now has a link
+You will notice that the job page now has a link
 to Tensorboard. Click on it to open the Tensorboard dashboard in a new tab.
 
-![Tensonboard URL](../../img/tensorboard_url.png)
+![Tensorboard Dashboard](../../img/tensorboard/tb_command.png)
 
 ### Tensorboard Dashboard
 
@@ -89,6 +88,10 @@ Tensorboard will become inaccessible when the job finishes in any of the `Succes
 
 Tensorboard is always run inside Workspaces. Open the Tensorboard link in the bottom navbar next to the System Metrics to view Tensorboard from your running Workspace.
 
+!!! important ""
+    Notice that the the `log_dir` parameter is set to the current working directory.
+    Be sure to send all data meant for Tensorboard to any directory under `/floyd/home` path.
+
 ## Offline Training
 
 Until now, we saw how to use Tensorboard directly on Floydhub _while_ your job is actively running.
@@ -100,7 +103,7 @@ machine.
 
 ```bash
 mkdir tensorboard_output && cd tensorboard_output
-floyd data clone floydhub/mnist-tensorboard/6/output
+floyd data clone alice/mnist-tensorboard/1/
 ```
 
 Then you need to install tensorflow in your local machine. The instructions depend

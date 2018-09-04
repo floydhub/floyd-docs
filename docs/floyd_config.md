@@ -56,10 +56,10 @@ Let's say we usually run the following commands within a project:
 floyd run --gpu2 --env pytorch-0.4 -m "train with lstm" --data foo/datasets/wine-reviews/1:input "train.py /floyd/input/input"
 
 # create job to test a model
-floyd run --gpu --env pytorch-0.4 -m "evaluate model1" --data foo/projects/nlp/1/output:model --data foo/datasets/wine-reviews-test/1:test "python test.py --model /floyd/input/model --data /floyd/input/test"
+floyd run --gpu --env pytorch-0.4 -m "evaluate model1" --data foo/projects/nlp/1:model --data foo/datasets/wine-reviews-test/1:test "python test.py --model /floyd/input/model --data /floyd/input/test"
 
 # create job to serve a model
-floyd run --cpu --mode serve --env pytorch-0.4 --data foo/projects/nlp/1/output:model
+floyd run --cpu --mode serve --env pytorch-0.4 --data foo/projects/nlp/1:model
 ```
 
 We can capture all these use-cases in floyd config file:
@@ -80,7 +80,7 @@ task:
     machine: gpu
     description: evaluate model1
     input:
-      - source: foo/projects/nlp/output
+      - source: foo/projects/nlp
         destination: model
       - source: foo/datasets/wine-reviews-test/1
         destination: test
@@ -90,7 +90,7 @@ task:
     machine: cpu
     mode: serve
     input:
-      - source: foo/projects/nlp/output
+      - source: foo/projects/nlp
         destination: model
 ```
 

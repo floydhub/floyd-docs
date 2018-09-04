@@ -43,13 +43,13 @@ directory of your project. These dependencies will be installed before running y
 $ cat floyd_requirements.txt
 Pillow
 scipy
-$ floyd run "python train_tf.py -lr 0.01 -output /output/model.bin"
+$ floyd run "python train_tf.py -lr 0.01 -output models/model.bin"
 ```
 
 ### Maximum Runtime (in seconds)
 
-The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job 
-exceeds its maximum runtime, FloydHub will stop the job and save any output that was 
+The `--max-runtime` flag lets you set a maximum runtime duration for your job. If a running job
+exceeds its maximum runtime, FloydHub will stop the job and save any output that was
 generated until that point.
 
 #### Example

@@ -59,7 +59,7 @@ You can then [refer](../guides/mounting_data) to them in your project.
 ### My job finished but how I do I see my output?
 
 You can use the floyd [output](../commands/output) command to view the output of your
-project. If you want to use this output in your next run view [this guide](../guides/data/mounting_data#mounting-the-output-of-another-job).
+Job. If you want to use this output in your next run view [this guide](../guides/data/mounting_data#mounting-the-output-of-another-job).
 
 
 ### Why is my job in the "Queued" state for several minutes?

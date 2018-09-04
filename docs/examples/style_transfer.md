@@ -37,7 +37,7 @@ You can mount this at runtime using the `--data` parameter.
 ### Training
 
 ```bash
-$ floyd run --gpu --env tensorflow-0.12:py2 --data narenst/datasets/coco-train-2014/1:images --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models --data floydhub/datasets/imagenet-vgg-verydeep-19/3:vgg "python style.py --vgg-path /vgg/imagenet-vgg-verydeep-19.mat --train-path /images/train2014 --style examples/style/la_muse.jpg --base-model-path /models/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output"
+$ floyd run --gpu --env tensorflow-0.12:py2 --data narenst/datasets/coco-train-2014/1:images --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models --data floydhub/datasets/imagenet-vgg-verydeep-19/3:vgg "python style.py --vgg-path /vgg/imagenet-vgg-verydeep-19.mat --train-path /images/train2014 --style examples/style/la_muse.jpg --base-model-path /models/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir ./checkpoints"
 ```
 
 This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress
@@ -59,7 +59,7 @@ You can evaluate the generated model by running `evaluate.py` on sample images. 
 as the datasource in this step. Add any image you want to style transfer to the `images` directory. Then run `evaluate.py`.
 
 ```bash
-floyd run --env tensorflow-0.12:py2 --data <REPLACE_WITH_OUTPUT_NAME>:input "python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/"
+floyd run --env tensorflow-0.12:py2 --data <REPLACE_WITH_OUTPUT_NAME>:input "python evaluate.py --allow-different-dimensions  --checkpoint /input/checkpoints/fns.ckpt --in-path ./images/ --out-path ./checkpoints"
 ```
 You can track the status of the run with the status or logs command.
 
@@ -89,7 +89,7 @@ You can play with any of these model and style transfer any image you prefer. Ju
 right model in the `--checkpoint` parameter.
 
 ```bash
-floyd run --env tensorflow-0.12:py2 --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models "python evaluate.py --allow-different-dimensions  --checkpoint /models/la_muse.ckpt --in-path ./images/ --out-path /output/"
+floyd run --env tensorflow-0.12:py2 --data narenst/datasets/neural-style-transfer-pre-trained-models/1:models "python evaluate.py --allow-different-dimensions  --checkpoint /models/checkpoints/la_muse.ckpt --in-path ./images/ --out-path ./checkpoints"
 ```
 
 You can track the status of the run with the status command.
@@ -116,13 +116,10 @@ You can now host this model as a REST API. This means you can send any image to 
 Floyd [run](../commands/run.md) command has a `serve` mode. This will upload the files in the current directory and run a special command -
 `python app.py`. Floyd expects this file to contain the code to run a web server and listen on port `5000`. You can see the
 [app.py](https://github.com/floydhub/fast-style-transfer/blob/master/app.py) file in the sample repository. This file handles the
-incoming request, executes the code in `evaluate.py` and returns the output. Before serving your model through REST API,
-you need to create a `floyd_requirements.txt` and declare the flask requirement in it.
-
-*Note that this feature is in preview mode and is not production ready yet*
+incoming request, executes the code in `evaluate.py` and returns the output.
 
 ```bash
-$ floyd run --env tensorflow-0.12:py2 --data narenst/datasets/neural-style-transfer-pre-trained-models/1:input --mode serve
+$ floyd run --env tensorflow-1.5 --data narenst/datasets/neural-style-transfer-pre-trained-models/1:input --mode serve
 Syncing code ...
 JOB NAME
 -------------------------------------------
@@ -138,7 +135,7 @@ URL to service endpoint: https://www.floydlabs.com/expose/mkxjJa46aJBdwP4AEdKxfU
 Now you can send any image file as request to this api and it will return the style transferred image.
 
 ```bash
-curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydlabs.com/expose/mkxjJa46aJBdwP4AEdKxfU
+curl -o taipei_output.jpg -F "file=@./images/taipei101.jpg" https://www.floydlabs.com/serve/narenst/projects/fast-style-transfer
 ```
 
 ![Muse](../img/taipei_muse.jpg)
@@ -151,7 +148,7 @@ You will see the default style ([la_muse](https://github.com/floydhub/fast-style
 You can also pass in the name of the checkpoint to use and the image will be style transferred accordingly:
 
 ```bash
-curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.ckpt"  https://www.floydhub.com/expose/MUDFXViCLArG2drppvU3nm
+curl -o taipei_udnie.jpg -F "file=@./images/taipei101.jpg" -F "checkpoint=udnie.ckpt"  https://www.floydlabs.com/serve/narenst/projects/fast-style-transfer
 ```
 
 ![Udnie](../img/taipei_udnie.jpg)

@@ -23,8 +23,8 @@ be grouped under this project, and we'll be able to go back and review each job
 later. For more information about projects, check out our [Core Concepts
 page](../getstarted/core_concepts/#projects).
 
-To create a new project project click the `+` button in the top bar on FloydHub 
-dashboard. Select `New Project` and complete the form to create a new project. 
+To create a new project project click the `+` button in the top bar on FloydHub
+dashboard. Select `New Project` and complete the form to create a new project.
 (Note that private projects are only available on our
 [Data Scientist Plans](https://www.floydhub.com/pricing).)
 
@@ -197,8 +197,8 @@ name (e.g. `floyd status alice/quick-start/1`) to get its status, or the
 
 ```bash
 $ floyd status
-JOB NAME             CREATED        STATUS    DURATION(s)  INSTANCE    DESCRIPTION
--------------------  ---------      --------  -----------  ---------   -----------
+JOB NAME             CREATED        STATUS    DURATION(s)  INSTANCE    DESCRIPTION   METRICS
+-------------------  ---------      --------  -----------  ---------   -----------   --------
 alice/quick-start:1  just now       running            15  gpu
 ```
 
@@ -248,17 +248,15 @@ will look something like
 We want to save the model we trained so we can use it later, maybe to iterate
 on it or to check its accuracy using an evaluation script.
 
-To save something during our job that we want to save for later, we just need
-to make sure it gets saved at `/output` during our job. Anything in `/output`
-at the end of a job will be saved for us and we can reuse it later.  Take a
+To save something during our job that we want to save for later, we just need to make sure it gets saved in the current working directory during our job. Anything in this directory at the end of a job will be saved for us and we can reuse it later. Take a
 look at [line
 108](https://github.com/floydhub/quick-start/blob/master/train.py#L108) of our
 `train.py` script. Here's the line:
 
 ```
-builder = tf.saved_model.builder.SavedModelBuilder("/output/cnn_model")
+builder = tf.saved_model.builder.SavedModelBuilder("cnn_model")
 ```
-We're setting up our model to be saved under `/output`. This ensures that
+We're setting up our model to be saved under current working directory. This ensures that
 FloydHub will save it for us to use later.
 
 For more details on how to save and reuse job output, see
@@ -288,7 +286,7 @@ as mounting a dataset. We just use the name of the output instead of the name
 of a dataset when we use the `--data` flag:
 
 ```
---data mckay/projects/quick-start/1/output:model
+--data mckay/projects/quick-start/1:model
 ```
 
 Notice that we specify `/model` as the mountpoint because we know our
@@ -301,9 +299,9 @@ For more information on reusing output, check out
 
 Follow this command to run your second job. Note that we are mounting our
 dataset again at `/floyd/input/mnist` and also mounting our model at
-`/floyd/input/model`. Be sure to replace `mckay/projects/quick-start/1/output`
+`/floyd/input/model`. Be sure to replace `mckay/projects/quick-start/1/`
 with the name of the output you want to mount (something like
-`<username>/projects/quick-start/<run_number>/output`)
+`<username>/projects/quick-start/<run_number>/`)
 
 ```
 
@@ -311,7 +309,7 @@ $ floyd run \
 --gpu \
 --env tensorflow-1.3 \
 --data mckay/datasets/mnist/1:mnist \
---data mckay/projects/quick-start/1/output:model \
+--data mckay/projects/quick-start/1/:model \
 'python eval.py'
 
 Creating project run. Total upload size: 26.3KiB
