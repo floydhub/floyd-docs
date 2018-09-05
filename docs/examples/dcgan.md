@@ -92,7 +92,7 @@ analyzing the semantic information encoded during training.
 floyd run \
 --gpu \
 --env pytorch-0.2 \
---data <REPLACE_WITH_JOB_OUTPUT_NAME>:model \
+--data <REPLACE_WITH_JOB_NAME>:model \
 "python generate.py --netG /model/trained_models/<REPLACE_WITH_MODEL_CHECKPOINT_PATH> --ngpu 1 --cuda"
 ```
 
@@ -101,7 +101,7 @@ floyd run \
 floyd run \
 --gpu \
 --env pytorch-0.2 \
---data <REPLACE_WITH_JOB_OUTPUT_NAME>:model \
+--data <REPLACE_WITH_JOB_NAME>:model \
 "python generate.py --netG /model/trained_models/<REPLACE_WITH_MODEL_CHECKPOINT_PATH> --Zvector /model/trained_models/<REPLACE_WITH_SERIALIZED_Z_VECTOR_PATH> --ngpu 1 --cuda"
 ```
 
@@ -160,7 +160,7 @@ floyd run \
 --gpu \
 --mode serve \
 --env pytorch-0.3 \
---data <REPLACE_WITH_JOB_OUTPUT_NAME>:input
+--data <REPLACE_WITH_JOB_NAME>:input
 ```
 
 The above command will print out a service endpoint for this job in your terminal console.
