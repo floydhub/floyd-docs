@@ -1,7 +1,7 @@
 !!! important "Quick Look"
     On the job screen on floydhub.com:
 
-    ![Download Output](../img/browse_output_partial.jpg)
+    ![Download Output](../img/browsing_output/files.png)
 
     Or from the CLI:
     ```
@@ -18,13 +18,13 @@ documentation](reusing_output).
 From the job's page on floydhub.com, you can browse and download the output of
 the job by using the "Browse" and "Download" icons found on the "Files" tab:
 
-![Download Output](../img/browse_output_full.jpg)
+![Download Output](../img/browsing_output/viewer.png)
 
 ## From the CLI
 To open the browsing window from the CLI, use the
-[`floyd data clone`](../commands/data) command and pass it the path of the job:
+[`floyd output`](../commands/output) command and pass it the path of the job:
 
 ```bash
-$ floyd output alice/projects/quick-start/1
+$ floyd output alice/projects/download-output/1
 Opening output directory in your browser ...
 ```
