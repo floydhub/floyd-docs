@@ -36,7 +36,7 @@ You can train the deep corrector model by running `correct_text.py` script with 
 parameters. Below is the [command](../commands/run) to start a training job on Floyd:
 
 ```bash
-$ floyd run --gpu --env tensorflow-0.12:py2 --data floydhub/datasets/deep-text-corrector/2:input "python correct_text.py --num_steps 1000 --train_path /input/data/movie_dialog_train.txt --val_path /input/data/movie_dialog_val.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader"
+$ floyd run --gpu --env tensorflow-1.5:py2 --data floydhub/datasets/deep-text-corrector/2:input "python correct_text.py --num_steps 1000 --train_path /input/data/movie_dialog_train.txt --val_path /input/data/movie_dialog_val.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader"
 ```
 
 Notes:
@@ -74,7 +74,7 @@ inputs. You can update or add more strings to this file - one per line. You also
 use the output from the training step above as the datasource in this step.
 
 ```bash
-floyd run --env tensorflow-0.12:py2 --data <REPLACE_WITH_JOB_OUTPUT_NAME>:input "python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode"
+floyd run --env tensorflow-1.5:py2 --data <REPLACE_WITH_JOB_OUTPUT_NAME>:input "python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode"
 ```
 
 You can track the status of the run with the status or logs command. The logs should print the
@@ -113,7 +113,7 @@ This model should perform better on the given inputs compared to the previous on
 If you run a job with `--mode serve` flag, FloydHub will run the `app.py` file in your project and attach it to a dynamic service endpoint:
 
 ```bash
-floyd run --mode serve --env tensorflow-1.5 --data floydhub/deep-text-corrector/23/:input
+floyd run --mode serve --env tensorflow-1.5 --data <REPLACE_WITH_JOB_OUTPUT_NAME>:input
 ```
 
 The above command will print out a service endpoint for this job in your terminal console.
