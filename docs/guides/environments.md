@@ -9,6 +9,8 @@ If no `--env` is provided, it uses the `tensorflow-1.5` image by default, which 
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|
+| Tensorflow 1.10 | tensorflow-1.10  | Tensorflow 1.10.0 + Keras 2.2.0 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
+|                | tensorflow-1.10:py2  | Tensorflow 1.10.0 + Keras 2.2.0 on Python 2. | [floydhub/tensorflow]
 | Tensorflow 1.9 | tensorflow-1.9  | Tensorflow 1.9.0 + Keras 2.2.0 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                | tensorflow-1.9:py2  | Tensorflow 1.9.0 + Keras 2.2.0 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.8 | tensorflow-1.8  | Tensorflow 1.8.0 + Keras 2.1.6 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
@@ -37,8 +39,6 @@ If no `--env` is provided, it uses the `tensorflow-1.5` image by default, which 
 |             | pytorch-0.2:py2 | PyTorch 0.2.0 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 | PyTorch 0.1 | pytorch-0.1     | PyTorch 0.1.12 on Python 3. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 |             | pytorch-0.1:py2 | PyTorch 0.1.12 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
-| Theano 0.8 | theano-0.8  | Theano rel-0.8.2 + Keras 1.2.2 on Python3.5. | [floydhub/theano](https://hub.docker.com/r/floydhub/theano/) |
-|            | theano-0.8:py2  | Theano rel-0.8.2 + Keras 1.2.2 on Python2. | [floydhub/theano](https://hub.docker.com/r/floydhub/theano/) |
 | Theano 0.9 | theano-0.9  | Theano rel-0.8.2 + Keras 2.0.3 on Python3.5. | [floydhub/theano](https://hub.docker.com/r/floydhub/theano/) |
 |            | theano-0.9:py2  | Theano rel-0.8.2 + Keras 2.0.3 on Python2. | [floydhub/theano](https://hub.docker.com/r/floydhub/theano/) |
 | Caffe | caffe  | Caffe rc4 on Python3.5. | [floydhub/caffe](https://hub.docker.com/r/floydhub/caffe/) |
@@ -51,7 +51,6 @@ If no `--env` is provided, it uses the `tensorflow-1.5` image by default, which 
 |             | chainer-2.0:py2 | Chainer 1.23.0 on Python 2. | [floydhub/chainer](https://hub.docker.com/r/floydhub/chainer/) |
 | MxNet 1.0 | mxnet | MxNet 1.0.0 on Python 3.6. | [floydhub/mxnet](https://hub.docker.com/r/floydhub/mxnet/) |
 |           | mxnet:py2 | MxNet 1.0.0 on Python 2. | [floydhub/mxnet](https://hub.docker.com/r/floydhub/mxnet/) |
-| Kur | kur | Kur 0.3.0 on Python 3. | [floydhub/kur](https://hub.docker.com/r/floydhub/kur/) |
 
 All environments are available for both CPU and GPU execution. For example,
 
