@@ -10,7 +10,7 @@ If no `--env` is provided, it uses the `tensorflow-1.5` image by default, which 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|
 | Tensorflow 1.10 | tensorflow-1.10  | Tensorflow 1.10.0 + Keras 2.2.0 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-|                | tensorflow-1.10:py2  | Tensorflow 1.10.0 + Keras 2.2.0 on Python 2. | [floydhub/tensorflow]
+|                | tensorflow-1.10:py2  | Tensorflow 1.10.0 + Keras 2.2.0 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.9 | tensorflow-1.9  | Tensorflow 1.9.0 + Keras 2.2.0 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                | tensorflow-1.9:py2  | Tensorflow 1.9.0 + Keras 2.2.0 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.8 | tensorflow-1.8  | Tensorflow 1.8.0 + Keras 2.1.6 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
