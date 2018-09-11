@@ -1,11 +1,11 @@
 !!! important "Quick Look"
     On the job screen on floydhub.com:
 
-    ![Download Output](../img/download_output_partial.jpg)
+    ![Download Output](../img/download_output/files.png)
 
     Or from the CLI:
     ```
-    $ floyd data clone <username>/<project_name>/<run_number>/
+    $ floyd clone <username>/<project_name>/<run_number>/
     ```
 
 After you've [saved output](data/storing_output) from a job, you can download
@@ -18,7 +18,11 @@ To learn how to re-use output in a new job, see
 From the job's page on floydhub.com, you can browse and download the output of
 the job by using the "Browse" and "Download" icons found on the "Files" tab:
 
-![Download Output](../img/download_output_full.jpg)
+![Download Output](../img/download_output/viewer.png)
+
+Or you can download single files by browsing until the file you want to download and click on the download icon at the top-right of the opened file tab.
+
+![Download Output](../img/download_output/viewer2.png)
 
 ## From the CLI
 To open the browsing window from the CLI, use the
@@ -26,7 +30,7 @@ To open the browsing window from the CLI, use the
 job's output:
 
 ```
-$ floyd data clone mckay/projects/quick-start/1/
+$ floyd clone alice/projects/download-output/1/
 Opening output directory in your browser ...
 ```
 

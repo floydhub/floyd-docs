@@ -20,7 +20,7 @@ This command can take a [shortened job name](../guides/shortnames).
 
 ### Example
 ```bash
-$ floyd output floydhub/projects/deep-photo-styletransfer/4
+$ floyd output alice/projects/download-output/1
 Opening output directory in your browser ...
 ```
 
