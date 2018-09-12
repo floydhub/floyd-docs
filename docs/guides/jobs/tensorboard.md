@@ -30,8 +30,8 @@ floyd run --tensorflow-1.5 --tensorboard "python mnist_tensorboard.py --log_dir 
 ```
 
 !!! important ""
-    Notice that the the `log_dir` parameter is set to the current working directory.
-    Be sure to send all data meant for Tensorboard to any directory under `/floyd/home` path.
+    Notice that the `log_dir` parameter is set to the output directory.
+    Be sure to send all data meant for Tensorboard to any directory under `/output` path.
 
 Click on the job that was just started.
 
@@ -89,8 +89,8 @@ Tensorboard will become inaccessible when the job finishes in any of the `Succes
 Tensorboard is always run inside Workspaces. Open the Tensorboard link in the bottom navbar next to the System Metrics to view Tensorboard from your running Workspace.
 
 !!! important ""
-    Notice that the the `log_dir` parameter is set to the current working directory.
-    Be sure to send all data meant for Tensorboard to any directory under `/floyd/home` path.
+    Notice that the `log_dir` parameter is set to the output directory.
+    Be sure to send all data meant for Tensorboard to any directory under `/output` path.
 
 ## Offline Training
 
