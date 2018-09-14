@@ -71,16 +71,16 @@ $ floyd run --data udacity/datasets/celeba/1:training --data udacity/datasets/mn
 The above datasets will be mounted at `/training` and `/testing` respectively.
 
 ### Serve
-Floyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.
-Use `--mode serve` and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.
-It runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.
-See [serve](../examples/style_transfer/#serve-mode) page for more details.
+FloydHub can be used to host the model you generated as REST API. API can be used to evaluate your model over HTTP protocol.
+
+Use `--mode serve` and you will be presented with a URL to access your API. You do not need to specify a command in this mode.
+See [serving document](../guides/serving/) for more details.
 
 #### Example
 ```bash
 $ floyd run --mode serve
 ...
-URL to service endpoint: https://www.floydlabs.com/expose/mkxjJa46aJBdwP4AEdKxfU
+URL to service endpoint: https://www.floydlabs.com/serve/mkxjJa46aJBdwP4AEdKxfU
 ```
 
 {!contributing.md!}
