@@ -92,18 +92,8 @@ running `floyd run`. You can think of this mode as "regular mode". When you run 
 
 #### `--mode serve`
 
-This mode is for serving your deep learning models as an API endpoint. To use
-serve mode, you'll need to make sure your project's code meets a few
-requirements:
-
-- Contains a file called `app.py` that contains a Flask application that will
-  listen on port 5000.
-- Contains a `floyd_requirements.txt` file that contains the line `flask`, which
-  declares it as a dependency.
-
-!!! warning
-    This mode is currently in preview, and is not appropriate for production
-    use.
+This mode is for serving your machine learning models through API endpoints.
+See [serving document](../guides/serving) for more information.
 
 ### Environment
 
