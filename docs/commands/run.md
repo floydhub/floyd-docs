@@ -10,8 +10,7 @@ floyd run [OPTIONS] [COMMAND]
 | --------------- | ------- | ----------- |
 | `--gpu/--gpu2/--cpu/--cpu2` |  cpu  | If specified, runs the job on a GPU (K80) / GPU2 (V100) instance or CPU (2 cores) / CPU2 (8 cores) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
 | `--data <ID:mount>` |    | `ID` of the data source to link to. `mount` specifies the path to mount it at. You can use this parameter multiple times. See [data](../guides/data/mounting_data) section for more details. |
-| `--mode [jupyter|serve]` |  command  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [jupyter](../guides/jupyter) and [serve](#serve) sections for more info on them. |
-| `--no-open` |    | You can disable the CLI from opening the jupyter notebook url. It will print the URL instead. |
+| `--mode [job|serve]` |  job  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [serve](#serve) section for more info. |
 | `--env [tensorflow|tensorflow:py2|...]` |  tensorflow  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
 | `--tensorboard` |    | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
