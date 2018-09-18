@@ -8,13 +8,16 @@ floyd run [OPTIONS] [COMMAND]
 ### Options
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
-| `--gpu/--cpu` |  cpu    | If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
+| `--gpu/--gpu2/--cpu/--cpu2` |  cpu  | If specified, runs the job on a GPU (K80) / GPU2 (V100) instance or CPU (2 cores) / CPU2 (8 cores) instance. See instance specifications on the [pricing](https://www.floydhub.com/pricing) page. |
 | `--data <ID:mount>` |    | `ID` of the data source to link to. `mount` specifies the path to mount it at. You can use this parameter multiple times. See [data](../guides/data/mounting_data) section for more details. |
-| `--mode [job|serve]` |  job  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [serve](#serve) section for more info. |
-| `--env [tensorflow:py3|tensorflow:py2|...]` | keras:py3  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
+| `--mode [jupyter|serve]` |  command  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [jupyter](../guides/jupyter) and [serve](#serve) sections for more info on them. |
+| `--no-open` |    | You can disable the CLI from opening the jupyter notebook url. It will print the URL instead. |
+| `--env [tensorflow|tensorflow:py2|...]` |  tensorflow  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
-| `--tensorboard` |   | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
-| `--max-runtime` |   | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
+| `--tensorboard` |    | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
+| `--max-runtime <time_in_seconds>` |    | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
+| `-f`, `--follow` |    | Stream the logs (alias for -t/--tail) |
+| command |    | Command to execute when running your project on Floyd. |
 | command |      | Command to execute when running your project on Floyd. |
 
 ### Description
@@ -57,6 +60,35 @@ generated until that point.
 $ floyd run --max-runtime 3600
 ```
 This job will automatically be terminated after 1 hour.
+
+### Follow
+
+The `--follow` flag allows you to immediately display the Logs of the running Job without launching the `floyd logs` command.
+
+```bash
+$ floyd run --env tensorflow --gpu --follow "python mnist_cnn.py"
+Creating project run. Total upload size: 1.1MB
+Syncing code ...
+[================================] 1300/1300 - 00:00:00
+Opening logs ...
+Waiting for logs ...
+
+2018-07-09 07:03:23,744 INFO - Preparing to run TaskInstance ...
+
+#################################################
+
+2018-07-09 07:03:25,596 INFO - Run Output:
+...
+
+#################################################
+
+2018-07-09 07:03:40,202 INFO - Waiting for container to complete...
+2018-07-09 07:03:40,358 INFO - Persisting outputs...
+2018-07-09 07:03:42,181 INFO - Creating data module for output...
+2018-07-09 07:03:42,212 INFO - Data module created for output.
+2018-07-09 07:03:42,212 INFO - Persisting data in home...
+2018-07-09 07:03:42,333 INFO - Home data persisted.
+```
 
 ### Attaching multiple datasets
 
