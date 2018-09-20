@@ -17,7 +17,7 @@ To create a new workspace click the *Create Workspace* button in your project pa
 
 ### Stopping a workspace
 
-You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the *Shutdown* button. All your files and directories in the current directory (`/floyd/input`) will be saved and persisted.
+You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the *Shutdown* button. All your files and directories in the current directory (`/floyd/home`) will be saved and persisted.
 
 ![image](https://dzwonsemrish7.cloudfront.net/items/0t36131c3j2d0s130W22/Image%202018-05-04%20at%203.04.20%20PM.png)
 
@@ -34,10 +34,10 @@ You can resume working on a stopped workspace by clicking the *Resume* button in
 
 ## Code
 
-Your workspace is located at `/floyd/input` on the filesystem. *Only* code and data files that you store in this directory will be preserved across restarts.
+Your workspace is located at `/floyd/home` on the filesystem. *Only* code and data files that you store in this directory will be preserved across restarts.
 
-!!! warning "Store your files in /floyd/input"
-    FloydHub only persists files that are stored under `/floyd/input`. Make sure you store all the files you want persisted here. Files stored in any other location will **not** be saved when your workspace is shutdown.
+!!! warning "Store your files in /floyd/home"
+    FloydHub only persists files that are stored under `/floyd/home`. Make sure you store all the files you want persisted here. Files stored in any other location will **not** be saved when your workspace is shutdown.
 
 ### Uploading code from local computer
 
@@ -45,7 +45,7 @@ You can upload your code and other files from your local machine using the uploa
 
 ![image](../img/workspace/upload_code.png)
 
-*Make sure you upload your code into the `/floyd/input` directory.*
+*Make sure you upload your code into the `/floyd/home` directory.*
 
 ### Downloading code from Github
 
@@ -80,7 +80,7 @@ If your data is available on the internet, you can also download it directly int
 
 ```
 # Ensure you're in your workspace directory
-cd /floyd/input
+cd /floyd/home
 
 wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
 ```
@@ -92,7 +92,7 @@ FloydHub provides an easy way to manage large datasets that you can use across p
 You can attach FloydHub datasets to your workspace using the right panel. You need to specify the name of the dataset and the directory where you want to attach it. Once the data mounting finishes, you can start using the files in your code.
 
 Example: Attaching the MNIST dataset [https://www.floydhub.com/mckay/datasets/mnist/1](https://www.floydhub.com/mckay/datasets/mnist/1)
-![mount data](https://dzwonsemrish7.cloudfront.net/items/1U0X1m400U0z2L3f002J/Screen%20Recording%202018-05-05%20at%2002.19%20PM.gif)
+![mount data](../img/workspace/data.gif)
 
 Once you attach a dataset, it will be available even when you stop and resume the workspace. Currently there is no option to remove a mounted dataset.
 
