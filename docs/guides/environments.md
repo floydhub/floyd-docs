@@ -4,8 +4,8 @@ Below is the list of Deep Learning environments supported by FloydHub. Any of
 these can be specified in the floyd [run](../commands/run.md) command using the
 `--env` option.
 
-If no `--env` is provided, it uses the `tensorflow-1.5` image by default, which comes with Python
-3.6, Keras 2.1.3 and Tensorflow 1.5.0 pre-installed.
+If no `--env` is provided, it uses the `tensorflow-1.8` image by default, which comes with Python
+3.6, Keras 2.1.6 and Tensorflow 1.8.0 pre-installed.
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image |
 | --------- | ------------------ | ------------------------ |-------------|

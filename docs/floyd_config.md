@@ -25,7 +25,7 @@ description: CNN with 0.5 dropout
 command: python train_and_eval.py
 ```
 
-You can also override the arguments in `floyd run` comamnd to quickly test out a change. For example:
+You can also override the arguments in `floyd run` command to quickly test out a change. For example:
 
 ```bash
 floyd run --cpu2 -m "CNN with 0.25 dropout"

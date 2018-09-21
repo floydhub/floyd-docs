@@ -54,4 +54,5 @@ print('{{"metric": "loss", "value": {}}}'.format(loss))
 
 You can send any metric you want as a Training Metric, however the only values we accept currently are `float` or `integer` values. If you are interested in sending other values as custom training metrics, please let us know by sending an email to support@floydhub.com
 
-Training metrics are currently only available for `Command Mode` jobs - not Serving jobs.
+!!! important
+	Training metrics are currently only available for `Command Mode` jobs - not [Serving](../serving) jobs.
