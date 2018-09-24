@@ -5,13 +5,13 @@ Please see here for [Billing FAQs](./billing.md)
 ### Which Plan is right for me?
 
 #### Beginner Plan
-If you're just getting started with deep learning, the Beginner plan is for you. It is free! You can create unlimited public projects 
-and datasets, and can run 1 job at a time. It comes with 20 hours of CPU compute time per month. 
+If you're just getting started with deep learning, the Beginner plan is for you. It is free! You can create unlimited public projects
+and datasets, and can run 1 job at a time. It comes with 20 hours of CPU compute time per month.
 
 If you want to run your jobs with GPU support, you can purchase [GPU Powerups](#powerups).
 
 #### Data Scientist Plan
-The Data Scientist plan is for, well, data scientists. It offers private projects/datasets and higher levels of 
+The Data Scientist plan is for, well, data scientists. It offers private projects/datasets and higher levels of
 [job concurrency](#what-is-job-concurrency) and storage. As in the Beginner Plan, it comes with 20 hours of CPU compute time per month. You can also purchase [Powerups](#powerups) to add GPU compute hours to supplement your plan.
 
 
@@ -29,7 +29,7 @@ Once you've signed up, take FloydHub for a spin with our [Quick Start Guide](../
 
 ### How can I run GPU jobs?
 
-To run GPU jobs, you can purchase [GPU Powerups](#powerups) from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups). 
+To run GPU jobs, you can purchase [GPU Powerups](#powerups) from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups).
 
 ## Compute
 
@@ -55,8 +55,8 @@ You can also enable auto-refresh on your Powerups to ensure your long-running jo
 
 ### What are Powerups?
 
-Powerups are addons that offer you the flexibility of purchasing compute or storage depending on your needs. 
-You can buy Powerups for additional CPU or GPU computing hours, or for additional storage, from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups) 
+Powerups are addons that offer you the flexibility of purchasing compute or storage depending on your needs.
+You can buy Powerups for additional CPU or GPU computing hours, or for additional storage, from your [Powerups Dashboard](https://www.floydhub.com/settings/powerups)
 
 ### What Powerups should I buy?
 

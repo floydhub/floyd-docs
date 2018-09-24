@@ -1,11 +1,19 @@
-### Why does `floyd status` return an empty list even though I have several
-runs in my account?
+### Why does `floyd status` return an empty list even though I have several runs in my account?
 
 Floyd CLI uses the project directory to store the run information (similar to git). So you need
 to be in the directory where you initialized the project and you should be able to see all your
 runs. You can also use the [web dashboard](https://www.floydhub.com/projects) to view all your
 projects in one place.
 
+### How can I disable Job notification?
+
+At the bottom of the job notification email you can find the unsubscribe from this email link, after that you will no longer receive these emails.
+
+![unsubscribe from this email](../img/faq_job/unsubscribe.png)
+
+If you want to re-enable the Job notification email, reach us at support@floydhub.com or via the Intercom chat bubble.
+
+If you are a Slack user, you can also send notifications via slack. Take a look at the [Slack integration page](../guides/notifications/).
 
 ### What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
 
@@ -89,15 +97,6 @@ import sys
 print("Hello world")
 sys.stdout.flush()
 ```
-
-### Why did my job timeout after 1 hour?
-
-You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that.
-
-![1HourTimeout](../img/1HrTimeout.jpg)
-
-You can upgrade to the [Paid Plan](https://www.floydhub.com/pricing) to overcome these limits.
-
 
 ### Why was my CPU job Killed without warning?
 
