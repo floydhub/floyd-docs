@@ -18,15 +18,40 @@ When you submit [command jobs](../guides/run_a_job/), your code is uploaded to F
 
 This is an artifact of Jupyter Notebooks:
 
-"Anything already running in the notebook will keep running, and the kernel it started for that will stay running - so it won't lose your variables. However, any output produced while the notebook isn't open in a browser tab is lost; there isn't an easy way to change this until we have the notebook server able to track the document state, which has been on the plan for ages."
+*"Anything already running in the notebook will keep running, and the kernel it started for that will stay running - so it won't lose your variables. However, any output produced while the notebook isn't open in a browser tab is lost; there isn't an easy way to change this until we have the notebook server able to track the document state, which has been on the plan for ages."*  - Jupyter Team
 
 #### Workarounds
 
 Here are some workarounds that you can use:
 
-- Send all the output of your jupyter notebook to a log file that you can inspect anytime.
+- Send all the output of your jupyter notebook to a log file that you can inspect anytime. You can also consider [redirecting the std error](https://stackoverflow.com/questions/34145950/is-there-a-way-to-redirect-stderr-to-file-in-jupyter) and/or the [std output to a log file](https://stackoverflow.com/questions/4675728/redirect-stdout-to-a-file-in-python).
+
+```python
+def mylogger(message):
+    # Logging message to a log file (e.g. <your_notebook_name>.log)
+
+
+# Inside the Code Cells
+mylogger('Preprocessing')
+mylogger('Start training')
+...
+mylogger('End of Notebook')
+```
+
 - Send metrics to [Tensorboard](../guides/jobs/tensorboard/) - this way you will be able to view the training results later even if the code cell output is lost.
-- Convert your notebook to a python script and run the Job in command mode.
+- Convert your notebook to a python script and run the Job in command mode. You can also run a notebook directly from [Terminal](../guides/workspace/#using-terminal) or as a CLI Job with the `jupyter nbconverter`  command.
+
+```bash
+# Terminal
+$ jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=-1 <notebook_to_execute>
+
+# CLI Job
+$ floyd run ... 'jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeout=-1 <notebook_to_execute>'
+```
+
+This command will executed your notebook and replace the output of the notebook with the new one at the end of the execution. The [timeout](https://nbconvert.readthedocs.io/en/latest/config_options.html) was disabled for simplicity.
+
+For more about `nbconverter` see the related [docs](https://nbconvert.readthedocs.io/en/latest/index.html).
 
 ### Which type of machines do you provide?
 
