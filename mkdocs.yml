@@ -73,6 +73,7 @@ pages:
     - Troubleshooting & FAQs:
         - 'Installation': faqs/installation.md
         - 'Signup and Login': faqs/authentication.md
+        - 'Using FloydHub': faqs/using_floydhub.md
         - 'Job': faqs/job.md
         - 'Plans': faqs/plans.md
         - 'Billing': faqs/billing.md

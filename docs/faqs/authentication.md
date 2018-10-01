@@ -1,10 +1,26 @@
 ## Login
 
-### Windows
+## Social Accounts
+
+### How to login from the CLI after social signup?
+
+If you signed up with Google or GitHub login, you will not have set a password. So use the authentication token to login:
+
+1. Go to the settings page and copy the [token](https://www.floydhub.com/settings/security)
+2. If you haven't already, [install floyd-cli](../guides/basics/install/) command line tool
+3. Login using this command:
+```bash
+floyd login --token
+```
+4. Now paste the token from first step.
+
+If you are facing any issue, please take a look at the FAQs below or reach out to us.
+
+## Windows
 
 ### I get "Invalid Token" error on my Windows 10 machine when I run floyd login.
 
-If you are using Windows command shell, there is an issue with pasting the token using the 
+If you are using Windows command shell, there is an issue with pasting the token using the
 standard `Ctrl + V` shortcut. You need to use the Shell's Edit menu to paste the token. After copying the token from the browser, right click on the top bar of the command shell and select Edit -> Paste. See image below:
 
 ![Windows 10 Login](../img/login_win_10.jpg)
@@ -12,7 +28,7 @@ standard `Ctrl + V` shortcut. You need to use the Shell's Edit menu to paste the
 ### I still get the "Invalid Token" error after trying the above suggestion.
 
 In some windows shells (like Git Bash) there is an extra space added to the token field
-before you paste the token. So you need to hit Backspace and clear out the field before pasting 
+before you paste the token. So you need to hit Backspace and clear out the field before pasting
 the token. So the steps are:
 
 1. Type `floyd login` in the console.
@@ -40,7 +56,7 @@ After you signup on FloydHub, you have to verify your email address. You will re
 
 ### I did not receive my verification email
 
-As soon as you sign up on FloydHub, you should receive an automated email in your inbox with instructions to verify your email address. 
+As soon as you sign up on FloydHub, you should receive an automated email in your inbox with instructions to verify your email address.
 
 If you do not receive an email within a few minutes:
 

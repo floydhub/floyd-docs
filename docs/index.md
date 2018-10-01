@@ -1,4 +1,6 @@
-Welcome to [FloydHub](https://www.floydhub.com/)! 
+Welcome to [FloydHub](https://www.floydhub.com/)!
+
+[![FloydHub Logo](https://raw.githubusercontent.com/floydhub/static/master/Group.png)](https://www.floydhub.com)
 
 Here you'll find comprehensive information for training and deploying your deep learning and AI applications with our platform. We do our best to make this documentation clear and user friendly, but if you have unanswered questions, please visit the [community forum](https://forum.floydhub.com/) or [email us](mailto:support@floydhub.com).
 
