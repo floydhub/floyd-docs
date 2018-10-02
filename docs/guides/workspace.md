@@ -110,6 +110,23 @@ You can also view them using [the Terminal](#using-terminal):
 ls /floyd/input
 ```
 
+## Settings
+
+### Idle Timeout Detection
+
+The idle timeout detection feature is the silent guardian who is "watching" your activity inside the notebooks. Once it will not detect any activity, the timer will start the countdown and when it will reach the zero your Workspace will be automatically stopped. Consider this feature as your personal credits life-saver. If you will forget to shutdown your Workspace or you want to cap your session, it will promptly act!
+
+![Idle detection](../img/workspace/idle.png)
+
+!!! important "Idle timeout detection is disabled for terminals."
+     If you plan to run long running commands or training inside terminal, remember to disable the idle timeout setting from the Settings.
+
+### Config File Generator
+
+If you are interested in sharing and making your experiment reproducible, you can use the Config File Generator for this purpose. This feature will automatically create the related [floyd config file](/floyd_config.md) to reproduce the current Workspace session setup. Coupling this feature with the [Run on FloydHub button](./run_on_floydhub_button.md) will make your experiment increadibly easy to share.
+
+![confi file generator](../img/workspace/config.png)
+
 ## Switching between CPU and GPU
 
 You can easily switch the instance type of your workspace using the *Restart* button.
@@ -122,4 +139,5 @@ You can [purchase powerups](https://www.floydhub.com/settings/powerups) if you a
 
 !!! warning "Save your files before shutdown"
     Save all your notebooks and files before restarting the workspace. All running notebooks and scripts will be stopped during Restart.
+
 
