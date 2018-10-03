@@ -32,9 +32,9 @@ $ floyd run --gpu --env tensorflow-1.9 'python train.py'
 Syncing code ...
 ```
 
-### Adding a Project README
+### Adding project Notes
 
-Each project on FloydHub can display a README. Click the 'Edit' button the Project overview page to edit your project's README file. Markdown syntax is supported (and encouraged!)
+Each project on FloydHub displays a section for project Notes. Click the 'Edit' button the Project overview page to edit your project's Notes file. Markdown syntax is supported (and encouraged!)
 
 ![Project Readme](../../img/readmegif.gif)
 
