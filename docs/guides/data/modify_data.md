@@ -12,7 +12,7 @@ Once you are done, stop the Workspace and all the content in the `/floyd/home` d
 
 ## Modify Data FAQS
 
-Here a list of Frequetly Asked Questions about FloydHub Modify Data.
+Here a list of Frequently Asked Questions about FloydHub Modify Data.
 
 ### Can I use a different type of machine/environment when modify data?
 
