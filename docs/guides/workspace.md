@@ -114,7 +114,7 @@ ls /floyd/input
 
 ### Idle Timeout Detection
 
-The idle timeout detection feature is the silent guardian who is "watching" your activity inside the notebooks. Once it will not detect any activity, the timer will start the countdown and when it will reach the zero your Workspace will be automatically stopped. Consider this feature as your personal credits life-saver. If you will forget to shutdown your Workspace or you want to cap your session, it will promptly act!
+Workspaces have an idleness detection mechanism running in the background. If the workspace identifies that no jupyter is running in the workspace, it will start a timer and shutdown the workspace when that timer is up. You can configure or disable this timeout duration for within your workspace. The goal is to make sure you don't accidentally leave a workspace running and waste powerups.
 
 ![Idle detection](../img/workspace/idle.png)
 
