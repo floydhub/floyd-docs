@@ -123,7 +123,7 @@ Workspaces have an idleness detection mechanism running in the background. If th
 
 ### Config File Generator
 
-If you are interested in sharing and making your experiment reproducible, you can use the Config File Generator for this purpose. This feature will automatically create the related [floyd config file](/floyd_config.md) to reproduce the current Workspace session setup. Coupling this feature with the [Run on FloydHub button](./run_on_floydhub_button.md) will make your experiment increadibly easy to share.
+If you are interested in sharing and making your workspace reproducible, you can use the Config File Generator for this. This feature will automatically generate a [floyd config file](/floyd_config.md) to reproduce the current Workspace session setup. This along with the [Run on FloydHub button](./run_on_floydhub_button.md) will make your projects increadibly easy to share.
 
 ![confi file generator](../img/workspace/config.png)
 
