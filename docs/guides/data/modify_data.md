@@ -14,14 +14,14 @@ Once you are done, stop the Workspace and all the content in the `/floyd/home` d
 
 Here a list of Frequently Asked Questions about FloydHub Modify Data.
 
-### Can I use a different type of machine/environment when modify data?
+### Can I use a different type of machine/environment when modifying data?
 
-...
+No, you can only use the default machine (standard cpu machine) and environment (Tensorflow) to modify datasets. The modify dataset workflow is only meant for downloading new files and moving files around. If you wish to do processing on your datasets, you should use a full [workspace](../workspace.md).
 
 ### Can I automatize this process from the CLI?
 
-...
+No, this is currently a manual process and you need to use the browser to modify your dataset.
 
 ### I have accidentaly closed the Workspace related to a Modify Data session, and I'm not able to retrieve it from the web Dashboard, what can I do?
 
-...
+Your workspace will automatically timeout due to inactivity. But if you are not sure, please contact us via support and we can fix it for you.
