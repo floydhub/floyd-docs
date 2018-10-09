@@ -8,7 +8,6 @@
     - [Mode](#mode): `--mode <mode_name>`
     - [Environment](#environment): `--env <environment_name>`
     - [Message](#message) `--message` **or** `-m`
-    - [Tensorboard](#tensorboard): `--tensorboard`
     - [Maximum Runtime](#maximum-runtime): `--max-runtime` **or** `-r`
     - [Follow](#follow): `--follow` **or** `-f`
 
@@ -33,7 +32,6 @@ quick reference.
 - [Mode](#mode): `--mode`
 - [Environment](#environment): `--env`
 - [Message](#message) `--message` **or** `-m`
-- [Tensorboard](#tensorboard): `--tensorboard`
 - [Maximum Runtime](#maximum-runtime): `--max-runtime` **or** `-r`
 - [Follow](#follow): `--follow` **or** `-f`
 
@@ -158,10 +156,6 @@ Here are some examples of where the job message will be displayed on floydhub.co
 
 ![Job Message on Job Detail Page](../img/job_detail_message.jpg)
 ![Job Message on Project Detail Page](../img/project_detail_job_message.jpg)
-
-### Tensorboard
-
-The `--tensorboard` flag allows you to enable Tensorboard on your job. For more details, see [this article](../guides/jobs/tensorboard).
 
 ### Maximum Runtime
 
