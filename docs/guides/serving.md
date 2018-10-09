@@ -146,7 +146,7 @@ Open with your browser the URL specified in your Serving tab: e.g. https://www.f
 
 ## Serving FAQS
 
-Here a list of Frequently Asked Questions about FloydHub serving.
+Here is a list of Frequently Asked Questions about FloydHub serving.
 
 ### Where can I find others serving examples?
 
