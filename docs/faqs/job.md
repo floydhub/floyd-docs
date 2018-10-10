@@ -7,11 +7,11 @@ projects in one place.
 
 ### How can I disable Job notification?
 
-At the bottom of the job notification email you can find the unsubscribe from this email link, after that you will no longer receive these emails.
+Browse to the [notification page](https://www.floydhub.com/settings/notifications) under your account settings, and turn off the slider. After that you will no longer receive this email.
 
-![unsubscribe from this email](../img/faq_job/unsubscribe.png)
+![unsubscribe from this email](../img/faq_job/notification.png)
 
-If you want to re-enable the Job notification email, reach us at support@floydhub.com or via the Intercom chat bubble.
+You can enable it again by turning on the slider.
 
 If you are a Slack user, you can also send notifications via slack. Take a look at the [Slack integration page](../guides/notifications/).
 
