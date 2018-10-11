@@ -1,21 +1,20 @@
-[Tensorboard](https://www.tensorflow.org/get_started/summaries_and_tensorboard)
-is a visualization tool for Tensorflow projects. Tensorboard can help
-visualize the Tensorflow computation graph and plot quantitative metrics about your run. This
-guide will help you understand how to enable Tensorboard in your jobs.
+[TensorBoard](https://www.tensorflow.org/get_started/summaries_and_tensorboard)
+is a visualization tool for TensorFlow projects. TensorBoard can help
+visualize the TensorFlow computation graph and plot quantitative metrics about your run. This
+guide will help you understand how to enable TensorBoard in your jobs.
 
-## Key concepts of Tensorboard
+## Key concepts of TensorBoard
 
-If you would like to know more about the concepts of Tensorboard please check out
+If you would like to know more about the concepts of TensorBoard please check out
 the [Tensorboard README](https://github.com/tensorflow/tensorflow/blob/r1.2/tensorflow/tensorboard/README.md#key-concepts)
-file. This page also goes into the details of Tensorboard and explains the various
+file. This page also goes into the details of TensorBoard and explains the various
 dashboards that are present in the Tensorboard UI.
 
-## Enabling Tensorboard in your job
+## Enabling Tensorboard for your job or workspace
 
-To enable Tensorboard in your job, you need to specify a `--tensorboard` flag
-when you run the job. Tensorboard can be enabled for both CLI jobs and when running Workspaces.
+TensorBoard is enabled by default for all jobs and workspaces. No additional steps are needed to enable TensorBoard.
 
-### Example
+### Example Usage
 
 This code snipped will train an MNIST model and also store the training summary
 to a log directory.
@@ -26,12 +25,12 @@ cd tensorflow-examples/tensorboard
 
 # Initialize the current directory to an existing or new project
 floyd init mnist-tensorboard
-floyd run --tensorflow-1.5 --tensorboard "python mnist_tensorboard.py --log_dir tb_mnist_logs --max_steps 5000"
+floyd run --tensorflow-1.5 "python mnist_tensorboard.py --log_dir tb_mnist_logs --max_steps 5000"
 ```
 
 !!! important ""
     Notice that the the `log_dir` parameter is set to the current working directory.
-    Be sure to send all data meant for Tensorboard to any directory under `/floyd/home` path.
+    Be sure to send all data meant for TensorBoard to any directory under `/floyd/home` path.
 
 Click on the job that was just started.
 

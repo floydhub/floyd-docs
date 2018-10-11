@@ -53,7 +53,6 @@
         - [ ]: Installing dependencies
             - [ ]: `floyd_requirements.txt`
         - [ ]: Tensorboard
-            - [ ]: Using `--tensorboard` flag and viewing from dashboard
             - [ ]: Using Tensorboard offline with output checkpoints
         - [ ]: `.floydignore`
 

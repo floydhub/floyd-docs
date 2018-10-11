@@ -13,7 +13,6 @@ floyd run [OPTIONS] [COMMAND]
 | `--mode [job|serve]` |  job  | Specify the mode you want to run the project. The default behavior executes the command you specify. See [serve](#serve) section for more info. |
 | `--env [tensorflow|tensorflow:py2|...]` |  tensorflow  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
-| `--tensorboard` |    | Starts tensorboard in the environment. Tensorboard URL can be found in the dashboard. |
 | `--max-runtime <time_in_seconds>` |    | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
 | `-f`, `--follow` |    | Stream the logs (alias for -t/--tail) |
 | command |    | Command to execute when running your project on Floyd. |
