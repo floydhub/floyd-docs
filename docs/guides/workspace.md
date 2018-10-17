@@ -110,6 +110,23 @@ You can also view them using [the Terminal](#using-terminal):
 ls /floyd/input
 ```
 
+## Settings
+
+### Idle Timeout Detection
+
+Workspaces have an idleness detection mechanism running in the background. If the workspace identifies that no jupyter is running in the workspace, it will start a timer and shutdown the workspace when that timer is up. You can configure or disable this timeout duration for within your workspace. The goal is to make sure you don't accidentally leave a workspace running and waste powerups.
+
+![Idle detection](../img/workspace/idle.png)
+
+!!! important "Idle timeout detection is disabled for terminals."
+     If you plan to run long running commands or training inside terminal, remember to disable the idle timeout setting from the Settings.
+
+### Config File Generator
+
+If you are interested in sharing and making your workspace reproducible, you can use the Config File Generator for this. This feature will automatically generate a [floyd config file](/floyd_config.md) to reproduce the current Workspace session setup. This along with the [Run on FloydHub button](./run_on_floydhub_button.md) will make your projects increadibly easy to share.
+
+![config file generator](../img/workspace/config.png)
+
 ## Switching between CPU and GPU
 
 You can easily switch the instance type of your workspace using the *Restart* button.
@@ -122,4 +139,5 @@ You can [purchase powerups](https://www.floydhub.com/settings/powerups) if you a
 
 !!! warning "Save your files before shutdown"
     Save all your notebooks and files before restarting the workspace. All running notebooks and scripts will be stopped during Restart.
+
 

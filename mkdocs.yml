@@ -34,6 +34,7 @@ pages:
         - 'Delete a Dataset': guides/delete_dataset.md
         - 'Mount Data to a Job': guides/data/mounting_data.md
         - 'Symlink Mounted Data': guides/data/symlink_mounted_data.md
+        - 'Modify Data': guides/data/modify_data.md
     - Environments:
         - 'List of Available Environments': guides/environments.md
         - 'Install Extra Dependencies': guides/jobs/installing_dependencies.md
