@@ -1,4 +1,4 @@
-# Tensorflow
+# TensorFlow
 
 ![Tensorflow Logo](https://lh3.googleusercontent.com/I1Dpp7I9RZIGl0rVMlPfnhfl-bkl_2uDHZwVC87BWmqtPaAs1irMWOdJxTmTEQJB-VGfLryCyHxqvyNchVIVLL-vqGrF3Q=s688)
 
@@ -6,9 +6,9 @@ Below is the list of python packages already installed with the Tensorflow envir
 
 !!! important
 
-    Installing a different `Tensorflow` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
+    Installing a different `TensorFlow` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
 
-## Tensorflow-1.11
+## TensorFlow-1.11
 
 Nvidia Setup:
 
@@ -172,7 +172,7 @@ xgboost==0.80
 zmq==0.0.0
 ```
 
-## Tensorflow-1.10
+## TensorFlow-1.10
 
 Nvidia Setup:
 
@@ -332,7 +332,7 @@ xgboost==0.80
 zmq==0.0.0
 ```
 
-## Tensorflow-1.9
+## TensorFlow-1.9
 
 Nvidia Setup:
 
@@ -493,7 +493,7 @@ xgboost==0.80
 zmq==0.0.0
 ```
 
-## Tensorflow-1.8
+## TensorFlow-1.8
 
 Nvidia Setup:
 
@@ -652,7 +652,7 @@ xgboost==0.80
 zmq==0.0.0
 ```
 
-## Tensorflow-1.7
+## TensorFlow-1.7
 
 Nvidia Setup:
 
@@ -811,7 +811,7 @@ xgboost==0.80
 zmq==0.0.0
 ```
 
-## Tensorflow-1.5
+## TensorFlow-1.5
 
 Nvidia Setup:
 

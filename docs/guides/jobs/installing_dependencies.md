@@ -23,7 +23,7 @@ When this file is present in the project's root directory, any job that is run i
 
 !!! important
 
-    Installing a different `Tensorflow` or `PyTorch` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
+    Installing a different `TensorFlow` or `PyTorch` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
 
 #### Notes
 
