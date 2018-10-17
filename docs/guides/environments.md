@@ -8,7 +8,7 @@ If no `--env` is provided, it uses the `tensorflow-1.8` image by default, which 
 3.6, Keras 2.1.6 and Tensorflow 1.8.0 pre-installed.
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image | Packages and Nvidia Settings
-| --------- | --------------------------- | ------------------------- |------------- | ------------------------ |
+| --------- | --------------------------- | ------------------------- |------------- | ---------------------------- |
 | Tensorflow 1.11 | tensorflow-1.11  | Tensorflow 1.11.0 + Keras 2.2.4 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [Tensorflow-1.11](./tensorflow.md#tensorflow-111)
 |                | tensorflow-1.11:py2  | Tensorflow 1.11.0 + Keras 2.2.4 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | Tensorflow 1.10 | tensorflow-1.10  | Tensorflow 1.10.0 + Keras 2.2.0 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [Tensorflow-1.10](./tensorflow.md#tensorflow-110)
