@@ -4,6 +4,10 @@
 
 Below is the list of python packages already installed with the Tensorflow environments. Don't worry if the package you are looking for is missing, you can easily install extra-dependencies by following [this guide](jobs/installing_dependencies.md).
 
+!!! important
+
+    Installing a different `Tensorflow` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
+
 ## Tensorflow-1.11
 
 Nvidia Setup:

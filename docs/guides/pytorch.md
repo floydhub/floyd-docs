@@ -4,6 +4,10 @@
 
 Below is the list of python packages already installed with the PyTorch environments. Don't worry if the package you are looking for is missing, you can easily install extra-dependencies by following [this guide](jobs/installing_dependencies.md).
 
+!!! important
+
+    Installing a different `PyTorch` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
+
 ## PyTorch-1.0 (Preview)
 
 Nvidia Setup:
