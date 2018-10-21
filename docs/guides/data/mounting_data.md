@@ -80,7 +80,7 @@ A couple of things to note:
     (`floydhub/datasets/udacity-gan/1`) and the mount point name (`my_data`).
   - A colon (`:`) is used to separate the name of the dataset and the
     mount point.
-  - Datasets are always mounted at directory (`/floyd/intput`). This means that if
+  - Datasets are always mounted at directory (`/floyd/input`). This means that if
     you specify `foo` as the mountpoint, your data will be mounted at `/floyd/input/foo`.
   - Nested mount points are not supported. This means mount points like
     `my_data/foo` or `/home/me/data` will not work. If you need your data
