@@ -21,6 +21,10 @@ tqdm==4.11.2
 
 When this file is present in the project's root directory, any job that is run inside this project will have the `redis` and `tqdm` (version `4.11.2`) packages installed and available at runtime.
 
+!!! important
+
+    Installing a different `TensorFlow` or `PyTorch` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
+
 #### Notes
 
 - **Only Python packages**: This will only install Python packages available in [PyPI](https://pypi.python.org/pypi). Please ensure that the package you are trying to install is available.

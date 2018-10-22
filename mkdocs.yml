@@ -37,6 +37,8 @@ pages:
         - 'Modify Data': guides/data/modify_data.md
     - Environments:
         - 'List of Available Environments': guides/environments.md
+        - 'Environment: TensorFlow': guides/tensorflow.md
+        - 'Environment: PyTorch': guides/pytorch.md
         - 'Install Extra Dependencies': guides/jobs/installing_dependencies.md
         - 'Using CPU vs GPU': guides/basics/using_gpu.md
         - 'Troubleshooting & FAQs': faqs/environments.md
