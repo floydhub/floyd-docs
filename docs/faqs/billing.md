@@ -34,9 +34,9 @@ If you are still unable to add your payment, please contact us directly at [supp
 
 Your usage includes compute (CPU / GPU) usage and storage consumption.
 
-- **Compute**: You will be billed exactly for the duration that your job runs, rounded off to the nearest second.
+- **Compute**: You will be billed exactly for the duration that your job/workspace runs, rounded off to the nearest second.
 
-    Note that you are only charged for compute when your job is in the *Running* state. You will *not* be charged when your job is in any other state, including *Queued* and *Shutdown*.
+    Note that you are only charged for compute when your job/workspace is in the *Running* state. You will *not* be charged when your job/workspace is in any other state, including *Queued* and *Shutdown*.
 
 - **Storage**: You will also be charged for the storage you consume, rounded off to the nearest kB.
 
