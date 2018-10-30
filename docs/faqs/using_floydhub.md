@@ -81,7 +81,7 @@ All our environments come with a variable with this purpose: `FLOYDHUB=1`. Here'
 ```python
 import os
 
-if os.environ['FLOYDHUB']:
+if os.environ.get('FLOYDHUB'):
 	# Running on FloydHub
 else:
 	# Running locally or in other platforms
