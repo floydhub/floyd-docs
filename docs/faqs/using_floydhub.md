@@ -73,3 +73,16 @@ We have only a datacenter that is located in Oregon, USA.
 ![Oregon, USA map](../img/faqs_using_fh/Oregon.png)
 
 We have plans to add new datacenters in Europe and Asia in the future. Let us know if you need that for your projects.
+
+### How can I automate my script to recognize that is running on FloydHub?
+
+All our environments come with a variable with this purpose: `FLOYDHUB=1`. Here's a code snippet that you can apply in your scripts:
+
+```python
+import os
+
+if os.environ.get('FLOYDHUB'):
+	# Running on FloydHub
+else:
+	# Running locally or in other platforms
+```

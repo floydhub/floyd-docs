@@ -51,6 +51,8 @@ if __name__ == "__main__":
 
 You can also view a complete example [here](https://github.com/floydhub/fast-style-transfer/blob/master/app.py).
 
+!!! important "Pay attention to Race Conditions!" 
+    The uswgi application server will spawn 2 workers (processes) for serving your application. This can be a source of [race conditions](https://en.wikipedia.org/wiki/Race_condition#software)! Writing on disk when serving a model is considered not recommended, but if your use-case requires it, remember to lock the disk resources every time you write to them. 
 
 ## Example: Deploying a Neural Style Transfer Model
 
