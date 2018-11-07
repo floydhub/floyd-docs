@@ -18,6 +18,15 @@ floyd run [OPTIONS] [COMMAND]
 | command |    | Command to execute when running your project on Floyd. |
 | command |      | Command to execute when running your project on Floyd. |
 
+!!! warning "Encoding issue!"
+    _This is a common issue between **Windows users**_: it could happens that your Terminal is using a different encoding from the one expected from the remote machine. Here are some examples:
+    
+    1. Slash and single quote issue: `floyd run \ --data alice/datasets/test \  'python test_Sony.py'` is translated as `floyd run --data alice/datasets/test '\ \ \ \ '"'"'python test_Sony.py'"'"''`  
+    2. Double quotes issue: `floyd run "python test_Sony.py"` is translated as `floyd run  ''"'"'python test_Sony.py'"'"''`
+
+    Unfortunately, there isn't a silver bullet, but you can use the `Command` view of the Job's Overview page to help at debugging it. More in general, if you will notice this issue, you can try to switch single quotes with double or viceversa, and remove the slash if you are indenting the commands on multiple lines - these usually fix the issue in 99% of the case. If it will not be the case, please reach out us at support@floydhub.com.
+
+
 ### Description
 This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress
 with [status](./status) command. To view the logs from your code use [logs](./logs) command.
