@@ -24,7 +24,7 @@ pages:
         - 'Restart a Job': guides/restart_job.md
         - 'Metrics': guides/jobs/metrics.md
         - 'Enable Tensorboard': guides/jobs/tensorboard.md
-        - 'Serving Trained Model': guides/serving.md
+        - 'Serving Trained Model (aka Model API)': guides/serving.md
         - 'Delete a Job': guides/delete_job.md
         - 'Ignore Files': guides/floyd_ignore.md
         - 'Slack Notifications': guides/notifications.md

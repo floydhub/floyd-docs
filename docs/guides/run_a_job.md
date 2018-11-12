@@ -24,6 +24,14 @@ The `floyd run` command can be broken down into the two main parts: the
 you, as well as how to use the `[COMMAND]` properly. Use the links below as a
 quick reference.
 
+!!! warning "Encoding issue!"
+    _This is a common issue for **Windows users**_: This occurs when your Windows terminal is using a different encoding from the one expected by the remote machine. Here are some examples: 
+    
+    1. Slash and single quote issue: `floyd run \ --data alice/datasets/test \  'python test_Sony.py'` is translated as `floyd run --data alice/datasets/test '\ \ \ \ '"'"'python test_Sony.py'"'"''`  
+    2. Double quotes issue: `floyd run "python test_Sony.py"` is translated as `floyd run  ''"'"'python test_Sony.py'"'"''`
+
+    Unfortunately, there isn't a silver bullet to identifying this issue, but you can use the `Command` view of the Job's Overview page to help debug and identify this issue. More generally, if you notice this issue, you can try to switch single quotes with double or vice versa, and remove the slash if you are indenting the commands on multiple lines - these changes usually fix the issue in 99% of the cases. If not, please reach out to us at support@floydhub.com.
+
 ## Parts of the `floyd run` Command
 
 ### [[OPTIONS]](#options_1)
