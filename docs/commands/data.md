@@ -46,8 +46,13 @@ Upload a new version of dataset
 
 ### Usage
 ```bash
-floyd data upload
+floyd data upload [OPTIONS]
 ```
+
+### Options
+| Name, shorthand | Default | Description |
+| --------------- | ------- | ----------- |
+| `--message <message_str>` |    | Attach a message to the specific version of a dataset. |
 
 ### Description
 Upload contents of the current directory as a new version of the dataset. This data can now be referred to in the [run](./run.md) command.
@@ -57,13 +62,24 @@ Floyd also versions your data so you can choose any specific version to use in y
 
 Currently this command does NOT respect a `.floydignore` file. This functionality may be added in the future.
 
+Similarly to [flody run](./run.md) command, you can attach a message to the specific version of the dataset.
+
 ### Example
 ```bash
+# e.g. 1
 $ floyd data upload
 Creating data source. Uploading files ...
 NAME
 --------------------
 alice/mnist-data:1
+
+
+# e.g. 2
+$ floyd data upload --message mnist-edited
+Creating data source. Uploading files ...
+NAME
+--------------------
+alice/mnist-data:2
 ```
 Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
 using this data id. See [here](../guides/data/mounting_data/#mounting-datasets) for more details.
@@ -96,6 +112,48 @@ DATA NAME                         CREATED         STATUS    DISK USAGE
 --------------------------------  --------------  --------  ------------
 mckay/datasets/zeroes/1            57 seconds ago  valid     180.0 KB
 mckay/datasets/mnist/1             2 minutes ago   valid     10.0 KB
+```
+
+---------------------------------
+
+## floyd data clone
+
+Clone the output of a job or a dataset.
+
+### Usage
+```bash
+floyd data clone [OPTIONS] JOB_NAME or DATASET_NAME
+```
+
+### Options
+| Name, shorthand | Default | Description |
+| --------------- | ------- | ----------- |
+| JOB_NAME or DATASET_NAME |      | Name of your job or dataset. |
+| `--path <dir_path>`, `-p <dir_path>` |      | Download files in a specific path from job output or dataset. |
+
+### Description
+Use this command to clone an existing job output or floydhub dataset. The output or data used for the job/dataset is downloaded to the
+current directory. This will override any existing file or directory in the process.
+
+Note: You do *not* have to be in the project directory to run this command.
+This command can take a [shortened job name](../guides/shortnames).
+
+### Example
+
+Example1: Download the full Job.
+```bash
+$ floyd data clone floydhub/projects/deep-photo-styletransfer/4
+Downloading the tar file to the current directory ...
+Untarring the contents of the file ...
+Cleaning up the tar file ...
+```
+
+Example2: Download the content of the `models` directory from the `deep-photo-styletransfer/4` job.
+```bash
+$ floyd data clone -p models floydhub/projects/deep-photo-styletransfer/4
+Downloading the tar file to the current directory ...
+Untarring the contents of the file ...
+Cleaning up the tar file ...
 ```
 
 ---------------------------------
