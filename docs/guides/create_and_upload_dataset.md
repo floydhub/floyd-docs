@@ -129,11 +129,9 @@ alice/datasets/mnist/1       3 minutes ago  valid     82.96 MB
 
 Often times, it might not be practical to upload datasets to FloydHub from your local machine. For example, your upload speeds might be too slow, or you just don't want to download a large dataset from the internet just to upload it again.
 
-If your data is already available on the internet, then you can create a dataset directly on FloydHub using Workspaces or from a Job.
+If your data is already available on the internet, then you can create a dataset directly on FloydHub using Workspaces. Although it is possible to create dataset from jobs, using workspace is the simpler option for downloading from the internet and tweaking it before creating a new dataset.
 
-### Workspace
-
-#### Step 1: Open a terminal from a running Workspace on Floydhub and download your data
+### Step 1: Open a terminal from a running Workspace on Floydhub and download your data
 
 You can [create a terminal](./workspace/#using-terminal) session on FloydHub within any of your running Workspaces.
 
@@ -161,13 +159,13 @@ Remove the tar file
 $ rm -rf train-images-idx3-ubyte.gz
 ```
 
-#### Step 2: Create a new dataset on the FloydHub Dashboard
+### Step 2: Create a new dataset on the FloydHub Dashboard
 
 Navigate to the [new dataset](https://www.floydhub.com/datasets/create) page on Floydhub, and create your new dataset.
 
 To continue with our Congress members example, let's call our new dataset: `my-congress-members`
 
-#### Step 3: Use the floyd-cli to add your data to this new Dataset
+### Step 3: Use the floyd-cli to add your data to this new Dataset
 
 Now, back in the terminal session of your Workspace, you can use the `floyd-cli` to add your current directory's files to this new dataset.
 
@@ -199,9 +197,11 @@ alice/datasets/my-congress-members/1
 
 Feel free to navigate over to that Dataset in your FloydHub Dashboard to explore the dataset further.
 
-### Job
+## Promote job output to a dataset
 
-#### Step 1: Download the dataset with a CLI Job
+With this feature, users will be able to save model files, data downloaded from the internet or processed dataset as a FloydHub dataset directly from a job output.
+
+### Step 1: Run a CLI Job
 
 Initialized a project folder then you can launch your job:
 
@@ -232,7 +232,7 @@ Open the Job in your browser and click on the Files view.
 
 #### Step 3: Click the Create Dataset button
 
-This will open a model that it will ask you if the job output will define a new dataset or if it will become a new dataset version.
+This will open a modal that it will ask if the job output will define a new dataset or if it will become a new dataset version.
 
 ![Create dataset Modal](../../img/create_dataset/modal-data-download.png)
 
