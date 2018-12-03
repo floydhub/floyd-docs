@@ -9,7 +9,7 @@ floyd logs [OPTIONS] ID
 | Name, shorthand | Default | Description |
 | --------------- | ------- | ----------- |
 | `--url`, `-u` |      | Only print the URL. The logs can be viewed in the browser. |
-| `--tail`, `-t` |      | Stream the output of your code in real-time. |
+| `--f`, `-follow` |      | Stream the output of your code in real-time. |
 | NAME or ID |      | Name or ID of your job. |
 
 ### Description
