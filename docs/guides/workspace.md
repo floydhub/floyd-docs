@@ -67,6 +67,11 @@ You can open a Bash terminal (console) inside your workspace to run code, debug 
 
 ![start terminal](https://dzwonsemrish7.cloudfront.net/items/3Z3A1A392A0T1L0L0840/terminal_icon.png)
 
+!!! important "How to Copy and Paste for Windows users"
+
+	- To paste: `Ctrl+Shift+V` (*not Ctrl+V*)
+	- To copy: Select text, then `Shift+RightClick`. This will show the system menu for copy, paste, etc.
+
 !!! note "Frozen terminal"
     If you terminal freezes due to inactivity, right click and select *Refresh Terminal*
 

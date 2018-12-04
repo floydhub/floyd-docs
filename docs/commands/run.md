@@ -14,7 +14,7 @@ floyd run [OPTIONS] [COMMAND]
 | `--env [tensorflow|tensorflow:py2|...]` |  tensorflow  | Specify the environment you want to use for your project. See [environments](../guides/environments) for the full list. |
 | `--message <message_str>` |    | Attach a message to the specific run of the project. |
 | `--max-runtime <time_in_seconds>` |    | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
-| `-f`, `--follow` |    | Stream the logs (alias for -t/--tail) |
+| `-f`, `--follow` |    | Stream the output of your code in real-time. |
 | command |    | Command to execute when running your project on Floyd. |
 | command |      | Command to execute when running your project on Floyd. |
 
