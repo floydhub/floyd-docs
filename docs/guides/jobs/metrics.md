@@ -64,13 +64,24 @@ Here is the basic format. Notice that you'll need to provide an integer value fo
 print('{"metric": "<metric_name>", "value": <int_or_float>, "step": <int>}')
 ```
 
-We will also display `epoch` as a Step if you emit this value. Here's an example:
+And here is an example:
+```python
+print('{"metric": "accuracy", "value": 0.985, "step": 3}')
+# {"metric": "accuracy", "value": 0.985. "step": 3}
+```
+
+We will also display `epoch` as a Step if you emit this value as an integer. Here's the format:
 ```python
 print('{"metric": "<metric_name>", "value": <int_or_float>, "epoch": <int>}')
 ```
 
-We'll automatically identify and parse the "Epoch" for Keras logs, and Training Metrics will use this value as the "Step" value in the Training Metrics Charts.
+And here's an example with `epoch`:
+```python
+print('{"metric": "accuracy", "value": 0.985, "epoch": 5}')
+# {"metric": "accuracy", "value": 0.985. "epoch": 5}
+```
 
+We'll automatically identify and parse the "Epoch" for Keras logs -- your Keras job will use this value as the "Step" value in its Training Metrics charts.
 
 !!! important
 	Training metrics are currently only available for `Command Mode` jobs - not [Serving](../serving) jobs.
