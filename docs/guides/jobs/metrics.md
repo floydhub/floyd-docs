@@ -52,7 +52,36 @@ print('{{"metric": "loss", "value": {}}}'.format(loss))
 # {"metric": "loss", "value": 1.000000}
 ```
 
+
 You can send any metric you want as a Training Metric, however the only values we accept currently are `float` or `integer` values. If you are interested in sending other values as custom training metrics, please let us know by sending an email to support@floydhub.com
+
+### Steps
+
+By default, Training Metrics will show `Time` as the x-axis. However, you can also toggle the Training Metrics to display steps, as long as you provide that information in your logs.
+
+Here is the basic format. Notice that you'll need to provide an integer value for the `step` field:
+```python
+print('{"metric": "<metric_name>", "value": <int_or_float>, "step": <int>}')
+```
+
+And here is an example:
+```python
+print('{"metric": "accuracy", "value": 0.985, "step": 3}')
+# {"metric": "accuracy", "value": 0.985. "step": 3}
+```
+
+We will also display `epoch` as a Step if you emit this value as an integer. Here's the format:
+```python
+print('{"metric": "<metric_name>", "value": <int_or_float>, "epoch": <int>}')
+```
+
+And here's an example with `epoch`:
+```python
+print('{"metric": "accuracy", "value": 0.985, "epoch": 5}')
+# {"metric": "accuracy", "value": 0.985. "epoch": 5}
+```
+
+We'll automatically identify and parse the "Epoch" for Keras logs -- your Keras job will use this value as the "Step" value in its Training Metrics charts.
 
 !!! important
 	Training metrics are currently only available for `Command Mode` jobs - not [Serving](../serving) jobs.
