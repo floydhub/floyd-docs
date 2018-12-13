@@ -6,13 +6,13 @@ Please see here for [Billing FAQs](./billing.md)
 
 #### Beginner Plan
 If you're just getting started with deep learning, the Beginner plan is for you. It is free! You can create unlimited public projects
-and datasets, and can run 1 job at a time. It comes with 20 hours of CPU compute time per month.
+and datasets, and can run 1 job at a time. It comes with 20 hours of CPU compute time when you sign up.
 
 If you want to run your jobs with GPU support, you can purchase [GPU Powerups](#powerups).
 
 #### Data Scientist Plan
 The Data Scientist plan is for, well, data scientists. It offers private projects/datasets and higher levels of
-[job concurrency](#what-is-job-concurrency) and storage. As in the Beginner Plan, it comes with 20 hours of CPU compute time per month. You can also purchase [Powerups](#powerups) to add GPU compute hours to supplement your plan.
+[job concurrency](#what-is-job-concurrency) and storage. You can also purchase [Powerups](#powerups) to add GPU compute hours to supplement your plan.
 
 
 #### Teams Plan
