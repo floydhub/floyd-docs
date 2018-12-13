@@ -166,18 +166,4 @@ consists of three parts:
 
 For example: `udacity/datasets/mnist/1`
 
-### Default mount points
-
-We highly recommend that you explicitly specify the mount points for your data
-using the `--data <data_name>:<mount_point>` convention.
-
-If, however, you do not specify a mount point, the default values are:
-
-- Single data mount: If you only mount one datasource without specifying a
-  mount point, it is mounted at `/input`
-
-- Multiple data mounts: If you mount multiple datasource without specifying
-  mount points, they will each be mounted under their respective GUIDs (e.g.
-  `/xKduBzTr4LAsc6eVPZVPVd`). GUIDs are 32-character random strings that difficult to track down, so **we highly discourage this pattern**.
-
 {!contributing.md!}
