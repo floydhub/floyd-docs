@@ -33,8 +33,8 @@ If no `--env` is provided, it uses the `tensorflow-1.8` image by default, which 
 |                | tensorflow-1.0:py2  | TensorFlow 1.0.0 + Keras 2.0.6 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | TensorFlow 0.12 | tensorflow-0.12  | TensorFlow 0.12.1 + Keras 1.2.2 on Python 3.5. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                 | tensorflow-0.12:py2  | TensorFlow 0.12.1 + Keras 1.2.2 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-| PyTorch 1.0 (preview) | pytorch-1.0     | PyTorch 1.0.0 + fastai 1.0.4 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-1.0](./pytorch.md#pytorch-10-preview)
-|             | pytorch-1.0:py2 | PyTorch 1.0.0 + fastai 1.0.4 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
+| PyTorch 1.0 | pytorch-1.0     | PyTorch 1.0.0 + fastai 1.0.32 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-1.0](./pytorch.md#pytorch-10-preview)
+|             | pytorch-1.0:py2 | PyTorch 1.0.0 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 | PyTorch 0.4 | pytorch-0.4     | PyTorch 0.4.1 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-0.4](./pytorch.md#pytorch-04)
 |             | pytorch-0.4:py2 | PyTorch 0.4.1 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 | PyTorch 0.3 | pytorch-0.3     | PyTorch 0.3.1 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-0.3](./pytorch.md#pytorch-03)

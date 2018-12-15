@@ -8,7 +8,7 @@ Below is the list of python packages already installed with the PyTorch environm
 
     Installing a different `PyTorch` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
 
-## PyTorch-1.0 (Preview)
+## PyTorch-1.0
 
 Nvidia Setup:
 
@@ -16,6 +16,9 @@ Machine | Nvidia CUDA | Nvidia CuDNN
 --------|-------------|-------------
 GPU | Cuda v9.1.85 | CuDNN 7.1.2
 GPU2 | Cuda v9.1.85 | CuDNN 7.1.2
+
+!!! important "PyTorch + MAGMA"
+	PyTorch is compiled from source to provide [MAGMA](https://developer.nvidia.com/magma) support.
 
 Python packages:
 ```bash
@@ -45,7 +48,7 @@ decorator==4.3.0
 dill==0.2.8.2
 dlib==19.15.0
 entrypoints==0.2.3
-fastai==1.0.4
+fastai==1.0.32
 fastprogress==0.1.9
 fastrlock==0.3  (GPU machines)
 Flask==1.0.2
