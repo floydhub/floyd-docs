@@ -21,7 +21,7 @@ questions about this.
 #### Free Plan
 If you're just exploring, the Free plan is for you! You are automatically
 enrolled in the Free plan when you sign up on FloydHub. It includes 20 hours of
-free CPU every month. You cannot, however, use a GPU or run multiple jobs in
+free CPU when you sign up. You cannot, however, use a GPU or run multiple jobs in
 parallel.
 
 #### Data Scientist Plan
