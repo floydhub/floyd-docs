@@ -4,6 +4,14 @@ Workspace is an interactive environment ([Jupyter Lab](https://blog.jupyter.org/
 
 ![Workspace UI](../img/workspace/workspace_ui.png)
 
+!!! warning "3rd party cookies, Ads blocker, proxy and firewall"
+    Given the interactive web experience of Workspace, there can be possible rough-edges which will can ruin the experience.
+    Make sure to accept cookies and connections from the following domains:
+
+        - floydhub.com
+        - floydlabs.com
+
+
 !!! important "Feedback request"
     Workspace is currently under active development. If you have feedback or feature requests, please let us know - via the chat bubble in your Workspace or email [support@floydhub.com](mailto:support@floydhub.com)
 

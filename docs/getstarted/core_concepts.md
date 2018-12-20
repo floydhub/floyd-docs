@@ -24,6 +24,9 @@ documentation that you can explore.
 !!! warning "Key Points of Understanding"
     - [Creating a project](../guides/basics/create_new)
 
+!!! important "Billing"
+    Learn for what you will be charged for from the [Billing page and FAQs](../faqs/billing.md)
+
 The project is the most central construct of the FloydHub platform.
 Understanding what a project is on FloydHub isn't too difficult because it
 directly correlates with what you'd think of as a deep learning project outside
@@ -46,6 +49,13 @@ training jobs, including pre-processing, data exploration, and other activities.
     A workspace is an interative development environment on FloydHub for model
     development, pre-processing data, and other steps in your deep learning
     workflow. ![Workspace UI](../img/workspace/workspace_ui.png)
+
+!!! warning "3rd party cookies, Ads blocker, proxy and firewall"
+    Given the interactive web experience of Workspace, there can be possible rough-edges which will can ruin the experience.
+    Make sure to accept cookies and connections from the following domains:
+
+        - floydhub.com
+        - floydlabs.com
 
 A workspace is a data-oriented cloud IDE (based on JupyterLab) built for deep 
 learning and machine learning tasks. When you create a workspace, you'll select
