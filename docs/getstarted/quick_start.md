@@ -61,10 +61,10 @@ quick look at how easy it is to use FloydHub.
     - Stored the output logs and generated output data
     - Terminated the GPU instance once the command finished executing
 
-5. View your job's logs in real time using the `floyd logs -t` command:
+5. View your job's logs in real time using the `floyd logs -f` command:
 
     ```
-    $ floyd logs -t
+    $ floyd logs -f
     2017-09-27 14:14:40,364 INFO - Starting attempt 1 at 2017-09-27 14:14:40.358414
     2017-09-27 14:14:40,399 INFO - Downloading and setting up data sources
     2017-09-27 14:14:40,534 INFO - Pulling Docker image: floydhub/tensorflow:1.3.0-py3_aws.12
