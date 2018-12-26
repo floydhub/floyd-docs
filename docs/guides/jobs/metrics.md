@@ -35,7 +35,11 @@ Training metrics come from the logs of the Python training script used by your j
 
 ![Delete job](../../img/training.png)
 
-Currently, our system can identify and parse the default Keras logs (here's an example of line that the service is able to parse: `700000/700000 [==============================] - 20s - loss: 0.4097 - acc: 0.8078 - val_loss: 0.4582 - val_acc: 0.781`), and FloydHub will automatically convert them to Training Metrics.
+Currently, our system can identify and parse the default Keras logs and FloydHub will automatically convert them to Training Metrics. Here's an example of a Keras log line:
+
+```
+700000/700000 [==============================] - 20s - loss: 0.4097 - acc: 0.8078 - val_loss: 0.4582 - val_acc: 0.781
+```
 
 If you are using a different framework, such as PyTorch, you can still send your own training metrics data to `stdout.` FloydHub will not parse them automatically, but if you send them in JSON format with one metric per line, then we will be able to display them as Training Metrics.
 
@@ -87,7 +91,7 @@ We'll automatically identify and parse the "Epoch" for Keras logs -- your Keras 
 
 ### How to integrate Training Metrics in your code
 
-Here are some useful resources for helping you at integrate Training Metrics in your code.
+Here are some useful resources for helping you add Training Metrics to your project.
 
 #### TensorFlow
 
@@ -150,7 +154,7 @@ class FloydHubMetricHook(tf.train.SessionRunHook):
 
 #### Keras
 
-Keras provides a tremendous degree of flexibility with the [Callbacks API](https://keras.io/callbacks/). Here's a simple template that you can use for the Training Metrics integration.
+Keras offers a lot of flexibility with the [Callbacks API](https://keras.io/callbacks/). Here's a callback that you can use for integrating Training Metrics:
 
 ```python
 import keras
@@ -171,7 +175,7 @@ model.fit(..., epochs=10, verbose=2, callbacks=[FloydhubTrainigMetricsCallback()
 
 #### PyTorch
 
-Unlike TensorFlow and Keras, PyTorch doesn't provide any callbacks or training hooks for this use-case, but you can easily integrate Training Metrics in your code with a function at the end of your epoch or batch loop.
+Unlike TensorFlow and Keras, PyTorch does not provide any callbacks or training hooks for this use-case. But you can easily integrate Training Metrics in your code with a function at the end of your epoch or batch loop.
 
 ```python
 import torch.nn.functional as F
