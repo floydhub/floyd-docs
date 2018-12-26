@@ -5,8 +5,7 @@ Workspace is an interactive environment ([Jupyter Lab](https://blog.jupyter.org/
 ![Workspace UI](../img/workspace/workspace_ui.png)
 
 !!! warning "3rd party cookies, Ads blocker, proxy and firewall"
-    Given the interactive web experience of Workspace, there can be possible rough-edges which will can ruin the experience.
-    Make sure to accept cookies and connections from the following domains:
+    Given the interactive web experience of Workspace, ensure that your browser accept cookies, javascript and connections from the following domains. Otherwise you may encounter a sub-par experience with Workspaces:
 
         - floydhub.com
         - floydlabs.com
