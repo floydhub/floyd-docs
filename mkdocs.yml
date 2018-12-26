@@ -80,6 +80,7 @@ pages:
         - 'Job': faqs/job.md
         - 'Plans': faqs/plans.md
         - 'Billing': faqs/billing.md
+    - Need Help?: help.md
     # REDIRECTS:
     # To set up a redirect, add the file you want to redirect from in to the
     # list below, using this pattern:
