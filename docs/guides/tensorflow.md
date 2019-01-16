@@ -8,6 +8,175 @@ Below is the list of python packages already installed with the Tensorflow envir
 
     Installing a different `TensorFlow` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
 
+## TensorFlow-1.12
+
+Nvidia Setup:
+
+Machine | Nvidia CUDA | Nvidia CuDNN
+--------|-------------|-------------
+GPU | Cuda v9.1.85 | CuDNN 7.1.2
+GPU2 | Cuda v9.1.85 | CuDNN 7.1.2
+
+Python packages:
+
+```bash
+absl-py==0.6.1
+annoy==1.15.0
+args==0.1.0
+astor==0.7.1
+atari-py==0.1.7
+backcall==0.1.0
+bleach==3.0.2
+box2d-py==2.3.8
+cachetools==3.0.0
+certifi==2018.11.29
+chardet==3.0.4
+click==6.7
+clint==0.5.1
+cloudpickle==0.6.1
+cupy==5.1.0  (GPU machines)
+cupy-cuda91==5.1.0  (GPU machines)
+cycler==0.10.0
+cymem==2.0.2
+Cython==0.29.2
+cytoolz==0.9.0.1
+dask==1.0.0
+decorator==4.3.0
+defusedxml==0.5.0
+dill==0.2.8.2
+dlib==19.16.0
+entrypoints==0.2.3
+fastrlock==0.4  (GPU machines)
+Flask==1.0.2
+floyd-cli==0.11.17
+ftfy==4.4.3
+funcsigs==1.0.2
+future==0.17.1
+gast==0.2.0
+grpcio==1.17.1
+gym==0.10.9
+gym-retro==0.6.0
+h5py==2.8.0
+html5lib==1.0.1
+idna==2.8
+ijson==2.3
+importlib-metadata==0.8
+incremental==17.5.0
+ipykernel==5.1.0
+ipython==7.2.0
+ipython-genutils==0.2.0
+ipywidgets==7.4.2
+itsdangerous==1.1.0
+jedi==0.13.2
+Jinja2==2.10
+jsonschema==2.6.0
+jupyter==1.0.0
+jupyter-client==5.2.4
+jupyter-console==6.0.0
+jupyter-core==4.4.0
+jupyterlab==0.33.12
+jupyterlab-launcher==0.11.2
+kaggle==1.5.1.1
+Keras==2.2.4
+Keras-Applications==1.0.6
+Keras-Preprocessing==1.0.5
+kiwisolver==1.0.1
+Markdown==3.0.1
+MarkupSafe==1.1.0
+marshmallow==2.17.0
+matplotlib==3.0.2
+menpo==0.8.1
+mistune==0.8.4
+mock==2.0.0
+mpmath==1.1.0
+msgpack==0.5.6
+msgpack-numpy==0.4.3.2
+murmurhash==1.0.1
+nbconvert==5.4.0
+nbformat==4.4.0
+networkx==2.2
+nltk==3.4
+notebook==5.6.0
+numpy==1.15.4
+opencv-contrib-python==3.4.0.12
+pandas==0.23.4
+pandocfilters==1.4.2
+parso==0.3.1
+path.py==11.5.0
+pathlib2==2.3.3
+pbr==5.1.1
+pexpect==4.6.0
+pickleshare==0.7.5
+Pillow==5.4.0
+plac==0.9.6
+plotly==3.4.2
+preshed==2.0.1
+prometheus-client==0.5.0
+prompt-toolkit==2.0.7
+protobuf==3.6.1
+ptyprocess==0.6.0
+pydot==1.4.1
+pyemd==0.5.1
+pyglet==1.3.2
+Pygments==2.3.1
+pynvrtc==9.2
+PyOpenGL==3.1.0
+PyOpenGL-accelerate==3.1.0
+pyparsing==2.3.0
+Pyphen==0.9.5
+python-dateutil==2.7.5
+python-Levenshtein==0.12.0
+python-slugify==2.0.1
+pytz==2018.7
+PyWavelets==1.0.1
+PyYAML==3.13
+pyzmq==17.1.2
+qtconsole==4.4.3
+raven==6.10.0
+regex==2018.1.10
+requests==2.21.0
+requests-toolbelt==0.8.0
+retrowrapper==0.3.0
+retrying==1.3.3
+scikit-image==0.14.1
+scikit-learn==0.20.2
+scikit-umfpack==0.3.2
+scipy==1.2.0
+seaborn==0.9.0
+Send2Trash==1.5.0
+singledispatch==3.4.0.3
+six==1.12.0
+sklearn==0.0
+spacy==2.0.18
+sympy==1.3
+tabulate==0.8.2
+tensorboard==1.12.2
+tensorflow==1.12.0
+termcolor==1.1.0
+terminado==0.8.1
+testpath==0.4.2
+textacy==0.6.2
+tflearn==0.3.2
+thinc==6.12.1
+toolz==0.9.0
+tornado==5.1.1
+tqdm==4.28.1
+traitlets==4.3.2
+ujson==1.35
+Unidecode==1.0.23
+urllib3==1.22
+uWSGI==2.0.17
+virtualenv==16.2.0
+wcwidth==0.1.7
+webencodings==0.5.1
+Werkzeug==0.14.1
+widgetsnbextension==3.4.2
+wrapt==1.10.11
+xgboost==0.81
+zipp==0.3.3  (GPU machines)
+zmq==0.0.0
+```
+
 ## TensorFlow-1.11
 
 Nvidia Setup:
