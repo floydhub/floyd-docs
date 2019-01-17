@@ -5,10 +5,12 @@ these can be specified in the floyd [run](../commands/run.md) command using the
 `--env` option.
 
 If no `--env` is provided, it uses the `tensorflow-1.8` image by default, which comes with Python
-3.6, Keras 2.1.6 and TensorFlow 1.8.0 pre-installed.
+3.6, Keras 2.2.0 and TensorFlow 1.9.0 pre-installed.
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image | Packages and Nvidia Settings
 | --------- | --------------------------- | ------------------------- |------------- | ---------------------------- |
+| TensorFlow 1.12 | tensorflow-1.12  | TensorFlow 1.12.0 + Keras 2.2.4 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [TensorFlow-1.12](./tensorflow.md#tensorflow-112)
+|                | tensorflow-1.12:py2  | TensorFlow 1.12.0 + Keras 2.2.4 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | TensorFlow 1.11 | tensorflow-1.11  | TensorFlow 1.11.0 + Keras 2.2.4 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [TensorFlow-1.11](./tensorflow.md#tensorflow-111)
 |                | tensorflow-1.11:py2  | TensorFlow 1.11.0 + Keras 2.2.4 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | TensorFlow 1.10 | tensorflow-1.10  | TensorFlow 1.10.0 + Keras 2.2.0 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [TensorFlow-1.10](./tensorflow.md#tensorflow-110)
@@ -33,7 +35,7 @@ If no `--env` is provided, it uses the `tensorflow-1.8` image by default, which 
 |                | tensorflow-1.0:py2  | TensorFlow 1.0.0 + Keras 2.0.6 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | TensorFlow 0.12 | tensorflow-0.12  | TensorFlow 0.12.1 + Keras 1.2.2 on Python 3.5. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                 | tensorflow-0.12:py2  | TensorFlow 0.12.1 + Keras 1.2.2 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-| PyTorch 1.0 | pytorch-1.0     | PyTorch 1.0.0 + fastai 1.0.32 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-1.0](./pytorch.md#pytorch-10-preview)
+| PyTorch 1.0 | pytorch-1.0     | PyTorch 1.0.0 + fastai 1.0.39 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-1.0](./pytorch.md#pytorch-10)
 |             | pytorch-1.0:py2 | PyTorch 1.0.0 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 | PyTorch 0.4 | pytorch-0.4     | PyTorch 0.4.1 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-0.4](./pytorch.md#pytorch-04)
 |             | pytorch-0.4:py2 | PyTorch 0.4.1 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
