@@ -3,8 +3,10 @@
 [![FloydHub Logo](https://github.com/floydhub/static/blob/master/Group.png)](https://www.floydhub.com)
 
 # FloydHub Documentation
-This code generates FloydHub's documentation: [http://docs.floydhub.com/](http://docs.floydhub.com/).
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6da180d6-ff32-42ea-8024-56258927e9cd/deploy-status)](https://app.netlify.com/sites/floydhub-docs/deploys)
+
+This code generates FloydHub's documentation: [http://docs.floydhub.com/](http://docs.floydhub.com/).
 
 ## Contributing
 Please feel free to make pull requests or file issues if you think there's anything missing or if there's something we should explain more clearly. We love pull requests!
