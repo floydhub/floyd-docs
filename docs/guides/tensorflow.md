@@ -14,8 +14,8 @@ Nvidia Setup:
 
 Machine | Nvidia CUDA | Nvidia CuDNN
 --------|-------------|-------------
-GPU | Cuda v9.1.85 | CuDNN 7.1.2
-GPU2 | Cuda v9.1.85 | CuDNN 7.1.2
+GPU | Cuda v9.2.148| CuDNN 7.4.1
+GPU2 | Cuda v9.2.148 | CuDNN 7.4.1
 
 Python packages:
 
