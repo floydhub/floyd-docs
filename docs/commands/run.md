@@ -16,7 +16,6 @@ floyd run [OPTIONS] [COMMAND]
 | `--max-runtime <time_in_seconds>` |    | Maximum runtime duration allowed for this job. FloydHub will terminate if job is running after this duration. |
 | `-f`, `--follow` |    | Stream the output of your code in real-time. |
 | command |    | Command to execute when running your project on Floyd. |
-| command |      | Command to execute when running your project on Floyd. |
 
 !!! warning "Encoding issue!"
     _This is a common issue for **Windows users**_: This occurs when your Windows terminal is using a different encoding from the one expected by the remote machine. Here are some examples:
