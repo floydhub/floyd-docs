@@ -63,7 +63,7 @@ Insights for RAM Utilization will indicate when your FloydHub machine's RAM is g
 When you see this Insight, you should try to:
 
 - Reduce the number of samples you are loading in memory - consider using a subset of your data
-- Switch to an machine with more RAM (If you are using CPU, consider CPU2)
+- Switch to a machine with more RAM (If you are using CPU, consider CPU2)
 
 This Insight will consistently track the latest reported value of your machine's RAM.
 
