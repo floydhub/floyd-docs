@@ -33,7 +33,8 @@ Created      19 hours ago
 Status       success
 Duration(s)  16
 Instance     g1
-Description
+Description  Test
+Metrics      Eval - Accuracy=98.93
 -----------  ----------------------------------------
 ```
 
