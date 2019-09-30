@@ -1,12 +1,199 @@
 # TensorFlow
 
-![Tensorflow Logo](https://lh3.googleusercontent.com/I1Dpp7I9RZIGl0rVMlPfnhfl-bkl_2uDHZwVC87BWmqtPaAs1irMWOdJxTmTEQJB-VGfLryCyHxqvyNchVIVLL-vqGrF3Q=s688)
+![Tensorflow Logo](https://www.gstatic.com/devrel-devsite/v2355ed73ae6b243a36832e70498f2cd0b3f352ff30481ebdfdc56826b566bf8a/tensorflow/images/lockup.svg)
 
 Below is the list of python packages already installed with the Tensorflow environments. Don't worry if the package you are looking for is missing, you can easily install extra-dependencies by following [this guide](jobs/installing_dependencies.md).
 
 !!! important
 
     Installing a different `TensorFlow` version from the one provided by the environment can break the existing environment and cause reproducibility issue. Be careful!
+
+
+!!! warning
+
+	Some packages may have different version according to the machine selected. 
+
+
+
+## TensorFlow-1.14
+
+Nvidia Setup:
+
+Machine | Nvidia CUDA | Nvidia CuDNN
+--------|-------------|-------------
+GPU | Cuda v9.2.148| CuDNN 7.4.1
+GPU2 | Cuda v9.2.148 | CuDNN 7.4.1
+
+
+Python packages:
+
+```bash
+absl-py==0.8.0
+annoy==1.16.0
+args==0.1.0
+astor==0.8.0
+atari-py==0.2.6
+attrs==19.1.0
+backcall==0.1.0
+bleach==3.0.2
+blis==0.2.4
+box2d-py==2.3.8
+cachetools==3.1.1
+certifi==2019.6.16
+cffi==1.12.3  (GPU machines)
+chardet==3.0.4
+click==6.7
+clint==0.5.1
+cloudpickle==1.2.1  (GPU machines)
+cudf-cuda92==0.6.1  (GPU machines)
+cuml-cuda92==0.6.1  (GPU machines)
+cupy==5.1.0         (GPU machines)
+cupy-cuda92==6.3.0  (GPU machines)
+cycler==0.10.0
+cymem==2.0.2
+Cython==0.29.2
+cytoolz==0.10.0
+decorator==4.3.0
+defusedxml==0.5.0   (GPU machines)
+dlib==19.17.0
+entrypoints==0.2.3
+fastrlock==0.4  (GPU machines)
+Flask==1.1.0
+floyd-cli==0.11.17
+funcsigs==1.0.2
+future==0.17.1
+gast==0.2.2
+google-pasta==0.1.7
+grpcio==1.23.0
+gym==0.14.0
+gym-retro==0.7.0
+h5py==2.9.0
+idna==2.8
+imageio==2.5.0
+importlib-metadata==0.8
+incremental==17.5.0
+ipykernel==5.1.0
+ipython==7.2.0
+ipython-genutils==0.2.0
+ipywidgets==7.4.2
+itsdangerous==1.1.0
+jedi==0.13.2
+jellyfish==0.6.1
+Jinja2==2.10.1
+joblib==0.13.2
+json5==0.8.5
+jsonschema==3.0.2
+jupyter==1.0.0
+jupyter-client==5.2.4
+jupyter-console==6.0.0
+jupyter-core==4.4.0
+jupyterlab==1.0.9
+jupyterlab-server==1.0.6
+kaggle==1.5.5
+Keras==2.2.4
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.0
+kiwisolver==1.0.1
+llvmlite==0.29.0  (GPU machines)
+Markdown==3.1.1
+MarkupSafe==1.1.0
+marshmallow==2.20.2
+matplotlib==3.0.2
+menpo==0.9.2
+mistune==0.8.4
+mock==3.0.5
+mpmath==1.1.0
+murmurhash==1.0.2
+nbconvert==5.4.0
+nbformat==4.4.0
+networkx==2.3
+nltk==3.4.5
+notebook==5.6.0
+numba==0.41.0  (GPU machines)
+numpy==1.15.4
+nvstrings-cuda92==0.3.0.post1  (GPU machines)
+opencv-contrib-python==3.4.0.12
+opencv-python==4.1.0.25
+pandas==0.23.4
+pandocfilters==1.4.2
+parso==0.3.1
+path.py==11.5.0
+pathlib2==2.3.4
+pbr==5.4.2
+pexpect==4.6.0
+pickleshare==0.7.5
+Pillow==5.4.0
+plac==0.9.6
+plotly==4.1.0
+preshed==2.0.1
+prometheus-client==0.5.0
+prompt-toolkit==2.0.7
+protobuf==3.9.1
+ptyprocess==0.6.0
+pyarrow==0.12.1  (GPU machines)
+pycparser==2.19  (GPU machines)
+pydot==1.4.1
+pyemd==0.5.1
+pyglet==1.3.2
+Pygments==2.3.1
+pynvrtc==9.2
+PyOpenGL==3.1.0
+PyOpenGL-accelerate==3.1.0
+pyparsing==2.3.0
+Pyphen==0.9.5
+pyrsistent==0.15.4
+python-dateutil==2.7.5
+python-slugify==3.0.3
+pytz==2018.7
+PyWavelets==1.0.3
+PyYAML==3.13
+pyzmq==17.1.2
+qtconsole==4.4.3
+raven==6.10.0
+requests==2.22.0
+requests-toolbelt==0.9.1
+retrowrapper==0.3.0
+retrying==1.3.3
+scikit-image==0.15.0
+scikit-learn==0.20.2
+scikit-umfpack==0.3.2
+scipy==1.2.0
+seaborn==0.9.0
+Send2Trash==1.5.0
+six==1.12.0
+sklearn==0.0
+spacy==2.1.8
+srsly==0.1.0
+sympy==1.3
+tabulate==0.8.3
+tensorboard==1.14.0
+tensorflow==1.14.0
+tensorflow-estimator==1.14.0
+termcolor==1.1.0
+terminado==0.8.1
+testpath==0.4.2
+text-unidecode==1.2
+textacy==0.8.0
+tflearn==0.3.2
+thinc==7.0.8
+toolz==0.10.0
+tornado==5.1.1
+tqdm==4.35.0
+traitlets==4.3.2
+urllib3==1.24.3
+uWSGI==2.0.18
+virtualenv==16.2.0
+wasabi==0.2.2
+wcwidth==0.1.7
+webencodings==0.5.1
+Werkzeug==0.15.5
+widgetsnbextension==3.4.2
+wrapt==1.11.2
+xgboost==0.81
+zipp==0.3.3  (GPU machines)
+zmq==0.0.0
+```
+
 
 ## TensorFlow-1.13
 
@@ -31,20 +218,20 @@ blis==0.2.4
 box2d-py==2.3.8
 cachetools==3.1.0
 certifi==2019.3.9
-cffi==1.12.3
+cffi==1.12.3  (GPU machines)
 chardet==3.0.4
 click==6.7
 clint==0.5.1
 cudf-cuda92==0.6.1  (GPU machines)
 cuml-cuda92==0.6.1  (GPU machines)
-cupy==5.1.0  (GPU machines)
+cupy==5.1.0         (GPU machines)
 cupy-cuda92==5.4.0  (GPU machines)
 cycler==0.10.0
 cymem==2.0.2
 Cython==0.29.2
 cytoolz==0.9.0.1
 decorator==4.3.0
-defusedxml==0.5.0
+defusedxml==0.5.0   (GPU machines)
 dlib==19.17.0
 entrypoints==0.2.3
 fastrlock==0.4  (GPU machines)
@@ -83,7 +270,7 @@ Keras==2.2.4
 Keras-Applications==1.0.7
 Keras-Preprocessing==1.0.9
 kiwisolver==1.0.1
-llvmlite==0.28.0
+llvmlite==0.28.0  (GPU machines)
 Markdown==3.1
 MarkupSafe==1.1.0
 marshmallow==2.19.2
@@ -99,7 +286,7 @@ nbformat==4.4.0
 networkx==2.3
 nltk==3.4.1
 notebook==5.6.0
-numba==0.41.0
+numba==0.41.0  (GPU machines)
 numpy==1.15.4
 nvstrings-cuda92==0.3.0.post1  (GPU machines)
 opencv-contrib-python==3.4.0.12
@@ -119,8 +306,8 @@ prometheus-client==0.5.0
 prompt-toolkit==2.0.7
 protobuf==3.7.1
 ptyprocess==0.6.0
-pyarrow==0.12.1
-pycparser==2.19
+pyarrow==0.12.1  (GPU machines)
+pycparser==2.19  (GPU machines)
 pydot==1.4.1
 pyemd==0.5.1
 pyglet==1.3.2
@@ -216,7 +403,7 @@ Cython==0.29.2
 cytoolz==0.9.0.1
 dask==1.0.0
 decorator==4.3.0
-defusedxml==0.5.0
+defusedxml==0.5.0  (GPU machines)
 dill==0.2.8.2
 dlib==19.16.0
 entrypoints==0.2.3
