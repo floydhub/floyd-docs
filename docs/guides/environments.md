@@ -9,6 +9,7 @@ If no `--env` is provided, it uses the `tensorflow-1.9` image by default, which 
 
 | Framework | Env name (--env parameter)  |  Description              | Docker Image | Packages and Nvidia Settings
 | --------- | --------------------------- | ------------------------- |------------- | ---------------------------- 
+| TensorFlow 1.14 | tensorflow-1.14  | TensorFlow 1.14.0 + Keras 2.2.5 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [TensorFlow-1.14](./tensorflow.md#tensorflow-114)
 | TensorFlow 1.13 | tensorflow-1.13  | TensorFlow 1.13.0 + Keras 2.2.4 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [TensorFlow-1.13](./tensorflow.md#tensorflow-113)
 | TensorFlow 1.12 | tensorflow-1.12  | TensorFlow 1.12.0 + Keras 2.2.4 on Python 3.6. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) | [TensorFlow-1.12](./tensorflow.md#tensorflow-112)
 |                | tensorflow-1.12:py2  | TensorFlow 1.12.0 + Keras 2.2.4 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
@@ -36,7 +37,8 @@ If no `--env` is provided, it uses the `tensorflow-1.9` image by default, which 
 |                | tensorflow-1.0:py2  | TensorFlow 1.0.0 + Keras 2.0.6 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 | TensorFlow 0.12 | tensorflow-0.12  | TensorFlow 0.12.1 + Keras 1.2.2 on Python 3.5. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
 |                 | tensorflow-0.12:py2  | TensorFlow 0.12.1 + Keras 1.2.2 on Python 2. | [floydhub/tensorflow](https://hub.docker.com/r/floydhub/tensorflow/) |
-| PyTorch 1.0 | pytorch-1.0     | PyTorch 1.0.0 + fastai 1.0.39 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-1.0](./pytorch.md#pytorch-10)
+| PyTorch 1.1 | pytorch-1.1     | PyTorch 1.1.0 + fastai 1.0.57 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-1.1](./pytorch.md#pytorch-11)
+| PyTorch 1.0 | pytorch-1.0     | PyTorch 1.0.0 + fastai 1.0.51 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-1.0](./pytorch.md#pytorch-10)
 |             | pytorch-1.0:py2 | PyTorch 1.0.0 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
 | PyTorch 0.4 | pytorch-0.4     | PyTorch 0.4.1 on Python 3.6. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) | [PyTorch-0.4](./pytorch.md#pytorch-04)
 |             | pytorch-0.4:py2 | PyTorch 0.4.1 on Python 2. | [floydhub/pytorch](https://hub.docker.com/r/floydhub/pytorch/) |
