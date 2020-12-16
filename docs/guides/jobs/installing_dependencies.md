@@ -92,7 +92,7 @@ You can also use this method to install non-Python packages. For example, to ins
 
 ## Installing and Enabling Unofficial Jupyter Notebook Extensions
 
-All the [Unofficial Jupyter Notebook Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions) are provided as python packages, therefore take a look at the above section about [how to install Python dependencies](./#installing-pythondependencies).
+All the [Unofficial Jupyter Notebook Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions) are provided as python packages, therefore take a look at the above section about [how to install Python dependencies](#installing-python-dependencies).
 
 Here are the steps to enable the extensions (we will show you how to do it for the [RISE extension](https://github.com/damianavila/RISE)):
 
