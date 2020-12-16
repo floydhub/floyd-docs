@@ -14,7 +14,7 @@ We don't support ssh access to the remote instance at the moment. However, you c
 When you submit [command jobs](../guides/run_a_job/), your code is uploaded to FloydHub and training is started in the cloud. You can close the browser or shutdown your machine and the job running in the cloud will not be affected. You can monitor the job anytime from the website and view the logs and metrics in realtime. When the training script ends it will be shutdown automatically by FloydHub.
 
 #### Workspaces
-[Workspaces]((../guides/workspace)) are interactive development environment. You can run jupyter notebooks and python scripts here. When running jupyter notebooks, you have to keep your browser tab open and connected to the internet to receive the output of your code cells. If you close your browser when your code cell is executing, you will lose the output printed by the cell but the code will continue to run. When you re-open the browser tab, the output of the code cell will be empty.
+[Workspaces](../guides/workspace) are interactive development environment. You can run jupyter notebooks and python scripts here. When running jupyter notebooks, you have to keep your browser tab open and connected to the internet to receive the output of your code cells. If you close your browser when your code cell is executing, you will lose the output printed by the cell but the code will continue to run. When you re-open the browser tab, the output of the code cell will be empty.
 
 This is an artifact of Jupyter Notebooks:
 
