@@ -66,7 +66,7 @@ project. You can turn these environments on and off as you need to use them.
 This is useful because it helps you avoid issues that arise when you need more
 than one version of the same package on your computer. If you'd like more
 information on `virtualenv`, check out its [user
-guide](https://virtualenv.pypa.io/en/stable/userguide/) or [this introductory
+guide](https://virtualenv.pypa.io/en/stable/user_guide.html) or [this introductory
 tutorial](http://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv/)
 
 We highly recommend using `virtualenv` for installing and using `floyd-cli`.
