@@ -6,7 +6,7 @@ When you run a job using the [floyd run](../../commands/run.md) command, it is e
 $ floyd run "python mnist_cnn.py"
 ```
 
-You can also force your job to execute on on a CPU using the `--cpu` flag
+You can also force your job to execute on a CPU using the `--cpu` flag
 
 ```bash
 $ floyd run --cpu "python mnist_cnn.py"
